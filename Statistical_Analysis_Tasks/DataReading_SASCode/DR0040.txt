@@ -1,0 +1,6 @@
+PROC IMPORT OUT=Neuralgia 
+     DATAFILE='/StatLLM/Statistical_Analysis_Tasks/TaskDatasets/DS0040/Neuralgia.csv' 
+     DBMS=CSV 
+     REPLACE; 
+     GETNAMES=YES; 
+RUN; 

@@ -1,0 +1,8 @@
+/* Create a scatter plot of corrosion resistance (loss) versus iron content (fe) */
+proc sgplot data=iron;
+  scatter x=fe y=loss;
+  xaxis label="Iron Content (fe)";
+  yaxis label="Corrosion Resistance (loss) in milligrams/square decimeter/day";
+  title "Scatter Plot of Corrosion Resistance (loss) versus Iron Content (fe)";
+run;
+

@@ -1,0 +1,1 @@
+For the iron dataset, fit linear model with iron content(fe) versus corrosion resistance(loss).

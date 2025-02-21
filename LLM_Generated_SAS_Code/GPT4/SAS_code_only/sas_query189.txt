@@ -1,0 +1,16 @@
+/* Assuming your dataset is named 'survey_data' */
+proc means data=survey_data N mean std min max;
+    var Q1-Q5;    /* Specifies variables Q1 through Q5 */
+    output out=summary_results
+        N=        /* Count of non-missing values for each variable */
+        mean=     /* Mean of each variable */
+        std=      /* Standard deviation of each variable */
+        min=      /* Minimum value for each variable */
+        max=      /* Maximum value for each variable */
+        /autoname;
+run;
+
+/* Print the results */
+proc print data=summary_results;
+run;
+

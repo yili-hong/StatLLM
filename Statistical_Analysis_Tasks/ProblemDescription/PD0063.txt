@@ -1,0 +1,1 @@
+For the imports dataset, fit ANOVA model for wheelbase versus fueltype, aspiration and drive wheels.

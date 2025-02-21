@@ -1,0 +1,14 @@
+
+/* Check the imported dataset */
+proc contents data=imports;
+run;
+
+/* Perform multiple linear regression */
+proc reg data=imports;
+    model enginesize = curbweight horsepower citympg;
+    output out=reg_results p=predicted_enginesize r=residuals;
+run;
+
+/* Print the regression results */
+proc print data=reg_results;
+run;

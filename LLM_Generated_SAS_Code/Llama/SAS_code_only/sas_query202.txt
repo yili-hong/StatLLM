@@ -1,0 +1,15 @@
+proc sgplot data=highlow;
+  xaxis label="Year";
+  yaxis label="Log(DowHigh)";
+  series x=Year y=log(DowHigh);
+  format DowHigh comma10.;
+run;
+
+proc sgplot data=highlow;
+  by Year;
+  xaxis label="Year";
+  yaxis label="Log(DowHigh)";
+  series x=Year y=log(DowHigh);
+  format DowHigh comma10.;
+run;
+

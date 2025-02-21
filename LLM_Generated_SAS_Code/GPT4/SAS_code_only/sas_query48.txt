@@ -1,0 +1,8 @@
+
+
+PROC UNIVARIATE DATA=sashelp.shoes NORMAL PLOT;
+     VAR Sales;
+     HISTOGRAM / NORMAL(COLOR=RED W=2) CFILL=BLUE CFRAME=LIGR;
+     PLOT / NORMAL;
+     TITLE 'Normality Test for Sales';
+RUN;

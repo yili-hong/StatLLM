@@ -1,0 +1,5 @@
+
+proc print data=chisq;
+  var df;
+run;
+

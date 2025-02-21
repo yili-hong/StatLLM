@@ -1,0 +1,5 @@
+PROC GLM data=copper;
+   CLASS temp pct;
+   MODEL warp = temp|pct;
+   MEANS temp|pct / hovtest=levene;
+RUN;

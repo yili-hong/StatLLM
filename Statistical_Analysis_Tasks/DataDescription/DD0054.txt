@@ -1,0 +1,6 @@
+The dataset called turbine turbine data with the following columns:
+
+Day: The date of the turbine reading.
+KWatts: The energy output of the turbine in kilowatts (KW).
+
+The dataset is primarily tracking the energy output of a turbine over time.

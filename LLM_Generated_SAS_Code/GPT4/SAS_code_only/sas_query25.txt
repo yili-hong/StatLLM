@@ -1,0 +1,8 @@
+
+PROC GLM DATA=retention;
+    CLASS Fe Zn;
+    MODEL FeRetention = Fe|Zn;
+    MEANS Fe|Zn / TUKEY;
+RUN;
+QUIT;
+

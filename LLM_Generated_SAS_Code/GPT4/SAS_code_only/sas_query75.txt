@@ -1,0 +1,13 @@
+
+
+/* subset data */
+DATA glass_subset;
+SET glass_data;
+IF Type_of_glass = 3 OR Type_of_glass = 7; /*assuming 3 = vehicle_windows and 7 = headlamps */
+RUN;
+
+/* calculate Pearson Correlation */
+PROC CORR DATA=glass_subset PEARSON;
+    VAR RI Na Al Si Ca;
+    ID glassid;
+RUN;

@@ -1,0 +1,7 @@
+proc glm data=lettuce_brand;
+    class fertilizer; 
+    model heads = fertilizer; 
+    means fertilizer / hovtest=levene; 
+    title "Levene's Test for Equality of Variances of Heads Across Fertilizer Groups";
+run;
+quit;

@@ -1,0 +1,6 @@
+PROC IMPORT OUT=glassid 
+     DATAFILE='/StatLLM/Statistical_Analysis_Tasks/TaskDatasets/DS0026/glassid.csv' 
+     DBMS=CSV 
+     REPLACE; 
+     GETNAMES=YES; 
+RUN; 

@@ -1,0 +1,2 @@
+proc print data = t2 (obs=10);
+run;

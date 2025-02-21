@@ -1,0 +1,9 @@
+For each of the 9 horses, a veterinary anatomist measured the density of nerve cells at specified sites in the intestine. The results for site I (mid region of jejunum) and site II (mesenteric region of jejunum) are measured. Each density value is the average of counts of nerve cells in 5 equal sections of tissue.  
+
+The variable horse gives the id for the horse.
+The variable site1 gives the measures at site 1. 
+The variable site2 gives the measures at site 2.
+The dataset is named as horse.
+
+
+

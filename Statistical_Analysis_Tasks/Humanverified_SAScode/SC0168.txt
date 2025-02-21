@@ -1,0 +1,3 @@
+PROC SORT data=sample2014;
+    BY gender descending bday;
+RUN;

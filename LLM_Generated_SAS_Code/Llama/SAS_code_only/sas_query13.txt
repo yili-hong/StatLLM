@@ -1,0 +1,10 @@
+
+/* Two-way ANOVA with interaction */
+
+proc anova data=toxic;
+    class poison treatment;
+    model life = poison treatment poison*treatment;
+    means poison treatment / hovtest=levene;
+    means poison*treatment;
+run;
+

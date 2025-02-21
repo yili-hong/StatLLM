@@ -1,0 +1,1 @@
+For the fitness data, do the FORWARD model selection methods for the response variable Oxygen.  Display only the selection summary table.

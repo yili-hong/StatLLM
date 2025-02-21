@@ -1,0 +1,1 @@
+For the dataset of smoke, perform logistic regression with whether student smokes versus whether his parents smoke. 

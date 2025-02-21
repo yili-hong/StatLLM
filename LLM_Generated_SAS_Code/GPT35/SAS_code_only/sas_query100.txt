@@ -1,0 +1,5 @@
+/* Fit a linear regression model */
+proc reg data=imports2;
+    model log_enginesize = curbweight;
+run;
+

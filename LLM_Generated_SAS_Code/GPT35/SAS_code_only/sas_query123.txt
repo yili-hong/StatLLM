@@ -1,0 +1,6 @@
+proc ttest data=FERT;
+    class Brand;
+    var Height;
+    title 'Two-sample T-test for Fertilizer Brands';
+run;
+

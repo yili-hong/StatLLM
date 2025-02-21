@@ -1,0 +1,15 @@
+proc glm data=pulse_data;
+   class group;
+   model pulse = group / solution;
+   store out=model1;
+run;
+
+proc glmselect data=pulse_data;
+   effect plot / include=(group);
+   model pulse = plot / selection=SCORE;
+   score data=pulse_data out=scored outstat=stats;
+run;
+
+proc reg data=stats;
+   model pulse = p_plot / influence plot r lclm uclm rstudent;
+run;

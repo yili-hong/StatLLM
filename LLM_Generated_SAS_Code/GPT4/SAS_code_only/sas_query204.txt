@@ -1,0 +1,30 @@
+* Load the dataset you are working with; assuming it's named grades;
+
+* PROC SGPLOT to create a vertical bar chart for ExamGrade1;
+proc sgplot data=grades;
+    histogram ExamGrade1 / scale=count; /* Default vertical bar, scale by count */
+    xaxis label='Exam Grade 1';
+    yaxis label='Frequency';
+    title 'Frequency Histogram for Exam Grade 1';
+run;
+
+* Assuming the dataset 'grades' is already created or loaded;
+libname datalib 'path/to/your/data-folder'; /* Adjust the path to your data */
+data grades;
+    set datalib.grade;  /* Ensure your dataset is already prepared with a variable ExamGrade1 */
+run;
+
+* PROC GCHART to create a vertical bar chart for ExamGrade1;
+proc gchart data=grades;
+    vbar ExamGrade1 / discrete 
+                      sumvar=ExamGrade1 
+                      type=freq 
+                      raxis=axis1 
+                      maxis=axis2;
+    format ExamGrade1 8.2;
+    title 'Vertical Bar Chart of ExamGrade1 Frequencies';
+    axis1 label=('Frequency');
+    axis2 label=('Exam Grade 1');
+run; 
+quit;
+

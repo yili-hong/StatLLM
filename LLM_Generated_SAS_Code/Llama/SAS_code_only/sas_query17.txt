@@ -1,0 +1,13 @@
+/* Calculate the 90% confidence interval for the population mean */
+proc ttest data=sleeptime alpha=0.10;
+  var time;
+  title "90% Confidence Interval for Population Mean";
+run;
+
+/* Test if the true population mean hours of sleep for college students is different from 7 hours */
+proc ttest data=sleeptime alpha=0.10;
+  var time;
+  h0: mean(time) = 7;
+  title "Test if True Population Mean is Different from 7 Hours";
+run;
+

@@ -1,0 +1,7 @@
+
+PROC GLM DATA = toxic;
+   CLASS poison treatment;
+   MODEL life = poison|treatment;
+   MEANS poison|treatment / hovtest=levene;
+RUN;
+

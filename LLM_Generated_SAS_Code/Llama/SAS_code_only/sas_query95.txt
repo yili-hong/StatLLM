@@ -1,0 +1,7 @@
+/* Fit ANOVA model for wheelbase as a function of fuel type and drive wheels */
+proc glm data=imports;
+  class fueltype drivewheels;
+  model wheelbase = fueltype drivewheels fueltype*drivewheels;
+  run;
+quit;
+

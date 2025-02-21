@@ -1,0 +1,5 @@
+/* Create a 2x2 contingency table for the relationship between age groups and weight groups */
+proc freq data=abalone;
+  tables agegroup*weightgroup / chisq;
+run;
+

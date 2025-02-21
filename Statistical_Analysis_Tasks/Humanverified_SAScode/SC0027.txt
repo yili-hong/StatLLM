@@ -1,0 +1,4 @@
+proc npar1way data=poplar;
+	 class treat;
+	  var weight;
+run;

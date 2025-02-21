@@ -1,0 +1,5 @@
+data t_squared;
+    set t;
+    squared_residual = Residuals**2;
+run;
+

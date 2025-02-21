@@ -1,0 +1,3 @@
+Using dataset baseball, build a model to understand simple linear relationship logSalary and predictors nhits, nruns, nrbi, nbb, yrmajor, crhits.
+
+

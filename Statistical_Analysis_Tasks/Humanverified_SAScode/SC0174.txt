@@ -1,0 +1,5 @@
+DATA sample_new_vars;
+    SET sample2014;
+    bmi = (weight / (height*height) ) * 703;
+    heightInMeters = height * 0.0254;
+RUN;

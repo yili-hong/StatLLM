@@ -1,0 +1,6 @@
+PROC IMPORT OUT=Phospholipid 
+     DATAFILE='/StatLLM/Statistical_Analysis_Tasks/TaskDatasets/DS0039/Phospholipid.csv' 
+     DBMS=CSV 
+     REPLACE; 
+     GETNAMES=YES; 
+RUN; 

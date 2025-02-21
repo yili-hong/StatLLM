@@ -1,0 +1,4 @@
+
+PROC CORR DATA=auto;
+VAR price mpg weight;
+RUN;

@@ -1,0 +1,24 @@
+/* Sorting data by NUMBER */
+proc sort data=diabetic;
+  by NUMBER;
+run;
+
+/* Paired t-test */
+proc ttest data=diabetic;
+  paired TREATMENT;
+  by NUMBER;
+run;
+
+
+/* Importing the dataset */
+data diabetic;
+  input NUMBER BEFORE AFTER;
+  datalines;
+1 28 40 2 43 55 3 50 65 4 60 70
+;
+
+/* Paired t-test */
+proc ttest data=diabetic;
+  paired BEFORE AFTER;
+run;
+

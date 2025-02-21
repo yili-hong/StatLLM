@@ -1,0 +1,23 @@
+PROC SORT data=crack;
+    BY id;
+RUN;
+
+PROC REG data=crack;
+    MODEL load=age agef / VIF;
+    OUTPUT OUT=outpredicted 
+           P=predicted 
+           R=residual;
+    ID id;
+RUN;
+
+PROC SGPLOT data=outpredicted;
+    scatter y=load x=id / markerattrs=(symbol=circlefilled color=blue);
+    series y=predicted x=id / lineattrs=(color=red thickness=2);
+    xaxis label='Observation ID';
+    yaxis label='Load';
+    title 'Overlay plot of actual and predicted load values';
+RUN;
+
+PROC PRINT data=outpredicted;
+    VAR id load predicted residual;
+RUN;

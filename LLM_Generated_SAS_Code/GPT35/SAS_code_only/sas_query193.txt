@@ -1,0 +1,10 @@
+
+proc means data=BoneMarrowTransplant;
+  class Group;
+  var T;
+  output out=DescriptiveStats mean=Mean median=Median;
+run;
+
+proc print data=DescriptiveStats;
+run;
+

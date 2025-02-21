@@ -1,0 +1,8 @@
+
+PROC SGPLOT DATA=iron;
+   SCATTER x=fe Y=loss;
+   TITLE 'Scatter Plot of Corrosion Resistance Loss vs Iron Content';
+   XAXIS LABEL='Iron Content (fe)';
+   YAXIS LABEL='Corrosion Resistance Loss (mg/sq. dm/day)';
+RUN;
+QUIT;

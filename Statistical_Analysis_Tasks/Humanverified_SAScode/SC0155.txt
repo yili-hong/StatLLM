@@ -1,0 +1,4 @@
+PROC CORR DATA=sample2014;
+   VAR weight height;
+RUN;
+

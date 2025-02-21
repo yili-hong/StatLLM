@@ -1,0 +1,11 @@
+DATA baseball;
+    SET sashelp.baseball;
+    logSalary = log(salary);
+RUN;
+
+PROC REG DATA=baseball;
+    MODEL logSalary = nhits nruns nrbi nbb yrmajor crhits;
+    ID name team league;
+RUN;
+
+QUIT;

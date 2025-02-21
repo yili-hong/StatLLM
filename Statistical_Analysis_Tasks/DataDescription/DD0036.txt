@@ -1,0 +1,28 @@
+1, Name: FERT
+
+2. Data Set Information: 
+A biologist experimenting with plant growth designs an experiment in which 15 seeds are randomly assigned to one of two fertilizers and the height of the resulting plant is measured after two weeks. She wants to know if one of the fertilizers provides more vertical growth than the other.
+
+3. Attribute Information:
+
+
+Attribute: Attribute Range
+
+(1). Brand: brand of fertilizer
+(2). Height: height of plant 
+
+
+ 
+
+
+
+Reference:
+
+https://www.stattutorials.com/SAS/TUTORIAL-PROC-TTEST-INDEPENDENT.htm
+
+Citation: required 
+
+
+
+
+

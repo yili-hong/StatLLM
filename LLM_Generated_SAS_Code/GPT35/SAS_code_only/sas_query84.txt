@@ -1,0 +1,9 @@
+data abalone_subset;
+    set abalone;
+    where (agegroup = 'middle' or agegroup = 'oldest') and (weightgroup = 'middle' or weightgroup = 'heaviest');
+run;
+
+proc freq data=abalone_subset;
+    tables agegroup * weightgroup / chisq;
+run;
+

@@ -1,0 +1,3 @@
+proc freq data=binary;
+tables _all_ / nopercent nocum;
+run;

@@ -1,0 +1,5 @@
+proc univariate data=sleeptime normal loccount;
+    var time;
+    ods select LocationTests;
+run;
+

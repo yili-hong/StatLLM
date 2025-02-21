@@ -1,0 +1,1 @@
+For the horse dataset, the question is to test whether the densities of two sites are different. The data of two sites (of the same horse) are dependent, futher analysis also shown that the data are not normally distributed.

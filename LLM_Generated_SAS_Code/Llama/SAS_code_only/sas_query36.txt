@@ -1,0 +1,25 @@
+/* Fit the regression model of Height on Weight */
+proc reg data=measurement;
+  model Height = Weight;
+  output out=residuals residual=residual;
+run;
+
+/* Check the linear relationship between Height and Weight */
+proc sgplot data=measurement;
+  reg x=Weight y=Height;
+  title 'Scatter Plot of Height vs Weight';
+run;
+
+/* Check the residuals for normality */
+proc univariate data=residuals normal;
+  var residual;
+  histogram residual / normal;
+  title 'Histogram of Residuals';
+run;
+
+/* Check the residuals for constant variance */
+proc sgplot data=residuals;
+  reg x=Weight y=residual;
+  title 'Scatter Plot of Residuals vs Weight';
+run;
+

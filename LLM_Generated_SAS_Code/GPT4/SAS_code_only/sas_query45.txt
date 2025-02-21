@@ -1,0 +1,17 @@
+
+PROC SQL;
+    CREATE TABLE temp AS 
+    SELECT
+        Region, 
+        MEAN(Sales) AS Avg_Sales, 
+        MIN(Sales) AS Min_Sales, 
+        MAX(Sales) AS Max_Sales,
+        STD(Sales) AS Std_Sales,
+        N(Sales) AS Count_Sales
+    FROM sashelp.shoes
+    GROUP BY Region;
+QUIT;
+
+PROC PRINT DATA=temp;
+RUN;
+

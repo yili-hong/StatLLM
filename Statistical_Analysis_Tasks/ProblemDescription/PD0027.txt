@@ -1,0 +1,1 @@
+For the poplar dataset, the research question is to test whether the poplar tree weights are different under the four treatments. The weight samples are not normally distributed.

@@ -1,0 +1,16 @@
+
+/* Calculate the total count */
+proc sql;
+    select sum(count) into :total_count from racecounts;
+quit;
+
+/* Calculate the expected counts based on the hypothesized distribution */
+data racecounts;
+set racecounts;
+expected_count = &total_count * 0.1;
+run;
+
+/* Perform a chi-square goodness-of-fit test */
+proc freq data=racecounts;
+tables race / chisq expected;
+run;

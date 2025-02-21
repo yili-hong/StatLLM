@@ -1,0 +1,6 @@
+
+proc univariate data=BPressure;
+var Systolic Diastolic;
+ods select ExtremeObs;
+run;
+

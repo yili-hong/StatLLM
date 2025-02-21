@@ -1,0 +1,1 @@
+For the sashelp.shoes dataset, which is avaialle through SAS help files. For the sales variable, suppose you want to calculate 97.5 and 99.5 percentiles.

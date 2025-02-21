@@ -1,0 +1,6 @@
+
+/* Procedure to calculate descriptive statistics */
+proc means data=highlow mean std;
+    var DowJonesHigh DowJonesLow;
+run;
+

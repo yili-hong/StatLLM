@@ -1,0 +1,30 @@
+*Remove Pete Rose's statistics;
+DATA baseball_no_rose;
+SET Sashelp.Baseball;
+IF name NE "Pete Rose";
+RUN;
+
+*Create a new dataset with log salary;
+DATA baseball_log;
+SET baseball_no_rose;
+logSalary = LOG(salary);
+RUN;
+
+*Generate a model;
+PROC REG DATA=baseball_log PLOTS=COOKSD;
+MODEL logSalary = nhits nruns nrbi nbb yrmajor yrmajor*yrmajor crhits crhits*crhits;
+ID name team league;
+RUN;
+
+*Plot Cook's D by observation;
+PROC SQL;
+CREATE VIEW work.cooks AS
+SELECT *, COOKD("logSalary","nhits","nruns","nrbi","nbb","yrmajor","crhits") AS cooks
+FROM baseball_log;
+QUIT;
+
+PROC SGPLOT DATA=work.cooks;
+SCATTER x=_N_ y=cooks;
+RUN;
+QUIT;
+

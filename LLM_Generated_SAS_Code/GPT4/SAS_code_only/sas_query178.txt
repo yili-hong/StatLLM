@@ -1,0 +1,13 @@
+/* SAS code to calculate frequency and percentage for the 'prog' variable in the 'mvreg' dataset */
+
+/* Ensure the dataset is available in the work library or appropriately libref-ed */
+data mvreg;
+    set mvreg; /* This line might change depending on where your dataset is actually stored */
+run;
+
+/* Using PROC FREQ to calculate frequency and percentages */
+proc freq data=mvreg;
+    tables prog / nocum nopercent missing; /* Change options if needed */
+    title 'Frequency and Percentage of Each Program Type in PROG';
+run;
+

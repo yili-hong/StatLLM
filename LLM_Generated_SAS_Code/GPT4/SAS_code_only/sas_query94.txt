@@ -1,0 +1,8 @@
+
+
+PROC GLM DATA=imports;
+    CLASS fueltype aspiration drivewheels;
+    MODEL wheelbase = fueltype aspiration drivewheels / SOLUTION;
+    MEANS fueltype aspiration drivewheels / TUKEY ALPHA=0.05;
+    TITLE 'Analysis of Variance of Wheelbase Across Fueltype, Aspiration and Drivewheels';
+RUN;

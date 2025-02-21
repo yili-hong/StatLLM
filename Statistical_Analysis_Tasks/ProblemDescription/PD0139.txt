@@ -1,0 +1,1 @@
+Using the dataset elemapi2, look at the simple effects of collcat at the different levels of mealcat on api00 using proc glm. 

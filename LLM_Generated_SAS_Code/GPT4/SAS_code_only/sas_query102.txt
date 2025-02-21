@@ -1,0 +1,13 @@
+
+/* Filter the dataset to include only cars with repair records of 3, 4, and 5 */
+data auto_filtered;
+   set auto;
+   if rep78 in (3, 4, 5) and not missing(mpg);
+run;
+
+/* Perform ANOVA to compare the mpg among cars in different repair groups */
+proc glm data=auto_filtered;
+   class rep78;
+   model mpg = rep78;
+   means rep78;
+run;

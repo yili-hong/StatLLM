@@ -1,0 +1,9 @@
+*Assuming data is already loaded in SAS environment as 'bmt';
+*Check if dataset is in the WORK library or specify the library name if it belongs to some other library;
+
+/* Step 1: Include PROC FREQ to analyze the frequency of the status for each group */
+proc freq data=work.bmt;
+   tables Group*Status / nocum nocol nopercent;
+   title "Frequency of Status for Each Group in BMT Data";
+run;
+

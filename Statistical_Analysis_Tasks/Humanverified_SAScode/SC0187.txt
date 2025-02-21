@@ -1,0 +1,6 @@
+proc tabulate data=year_sales;
+class SalesRep Type;
+var AmountSold;
+table SalesRep*Type,
+AmountSold;
+run;

@@ -1,0 +1,6 @@
+PROC IMPORT OUT=BPressure 
+     DATAFILE='/StatLLM/Statistical_Analysis_Tasks/TaskDatasets/DS0057/BPressure.csv' 
+     DBMS=CSV 
+     REPLACE; 
+     GETNAMES=YES; 
+RUN; 

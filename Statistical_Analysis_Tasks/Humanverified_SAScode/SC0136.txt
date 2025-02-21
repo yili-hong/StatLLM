@@ -1,0 +1,7 @@
+proc tabulate data=elemapi2;
+  class collcat mealcat ;
+  var api00;
+  table mealcat='mealcat', 
+        mean=' '*api00='API Index for 2000'*collcat='collcat'*F=10.2 
+        / RTS=13.;
+run;

@@ -1,0 +1,7 @@
+proc NPAR1WAY data=soil wilcoxon;
+	title "Nonparametric test to compare respiration between growth and gap area";
+	class condition;
+	var respiration;
+	exact wilcoxon;
+run;
+   

@@ -1,0 +1,53 @@
+
+proc sort data=horse;
+  by horse;
+run;
+
+proc transpose data=horse out=horse_trans;
+  by horse;
+  var site1 site2;
+run;
+
+proc univariate data=horse_trans normal;
+  var col1-col2;
+  histogram col1-col2 / normal;
+run;
+
+proc npar1way data=horse;
+  class horse;
+  var site1 site2;
+  exact;
+  wilcoxon;
+run;
+
+
+proc sort data=horse;
+  by horse;
+run;
+
+proc transpose data=horse out=horse_trans;
+  by horse;
+  var site1 site2;
+run;
+
+proc univariate data=horse_trans normal;
+  var col1-col2;
+  histogram col1-col2 / normal;
+run;
+
+data horse_diff;
+  set horse;
+  diff = site1 - site2;
+run;
+
+proc univariate data=horse_diff normal;
+  var diff;
+  histogram diff / normal;
+run;
+
+proc npar1way data=horse_diff;
+  var diff;
+  exact;
+  sign;
+run;
+

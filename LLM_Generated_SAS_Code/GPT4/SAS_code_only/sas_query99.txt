@@ -1,0 +1,6 @@
+
+
+PROC REG DATA=imports;
+   MODEL curbweight = enginesize;
+RUN;
+QUIT;

@@ -1,0 +1,40 @@
+1, Name: est
+
+2. Data Set Information: 
+This is a simulated data:
+A multivariate data set with 10 independent variables and one dependent variable was simulated from a
+known “true” model that is a linear function of a subset of the independent variables. SAS code is used to simulate 1000 observations for these 10 independent X variables and one dependent Y variable. The 10 independent X variables come from normal, lognormal, exponential and uniform distributions with various means and variances. Variables X5, X6 and X9 are correlated with other variables. The 10 independent X variables come from normal, lognormal, exponential and uniform distributions with various means and variances. Variables X5, X6 and X9 are correlated with other variables. 
+
+3. Attribute Information:
+
+Number of Obs: 1000
+Number of Variables: 11
+
+Attribute: Attribute Range
+
+(1). X1:  Normal(10, 25)
+(2). X2: lognormal 
+(3). X3: uniform 
+(4). X4: Normal(100, 2500)
+(5). X5: normal bimodal
+(6). X6: lognormal and exponential mixture
+(7). X7: lognormal
+(8). X8: uniform 
+(9). X9: lognormal, uniform and normal mix;
+(10).x10: normal(200, 8100)
+(11). Y: true model with no intercept term;
+
+ 
+
+
+
+Reference:
+
+The raw data comes from http://www.biostat.umn.edu/~wguan/class/PUBH7402/notes/lecture8_SAS.pdf 
+
+Citation: required 
+
+
+
+
+

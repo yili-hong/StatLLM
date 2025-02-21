@@ -1,0 +1,17 @@
+proc freq data=mvreg;
+  tables prog;
+  run;
+
+proc freq data=mvreg;
+  tables prog / nocum;
+  run;
+
+proc freq data=mvreg;
+  tables prog / nocum out=freq_table;
+  run;
+
+proc print data=freq_table;
+  var prog count percent;
+  label count='Frequency' percent='Percentage';
+  run;
+

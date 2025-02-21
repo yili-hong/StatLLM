@@ -1,0 +1,9 @@
+
+proc means data=sashelp.shoes;
+  class Region;
+  var Sales;
+  output out=stats mean=MeanSales std=StdSales min=MinSales max=MaxSales;
+  id Region;
+  extremeobs 5;
+run;
+

@@ -1,0 +1,3 @@
+proc corr data= elemapi;
+  var api00 ell meals yr_rnd mobility acs_k3 acs_46 full emer enroll ;
+run;

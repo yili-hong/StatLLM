@@ -1,0 +1,8 @@
+/* Assuming the dataset is named sample2014 and it's already imported into SAS */
+
+/* Step 1: Proc Means to calculate means and standard deviations by Gender */
+proc means data=sample2014 mean std;
+  class Gender;
+  var Writing;
+run;
+

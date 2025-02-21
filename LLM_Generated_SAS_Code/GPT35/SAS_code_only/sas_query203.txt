@@ -1,0 +1,14 @@
+* Log transformation of DowLow for each Year;
+data highlow_log;
+   set highlow;
+   LogDowLow = log(YearlyLow);
+run;
+
+* Plot the Log transformation of DowLow for each Year;
+proc sgplot data=highlow_log;
+   scatter x=Year y=LogDowLow / markerattrs=(symbol=circlefilled);
+   title 'Log Transformation of DowLow for Each Year';
+   xaxis label='Year';
+   yaxis label='Log(DowLow)';
+run;
+

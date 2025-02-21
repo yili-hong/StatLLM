@@ -1,0 +1,6 @@
+
+/* Crosstabulation of rep78 and foreign variables */
+proc freq data=auto;
+   tables rep78*foreign / chisq;
+run;
+/* End of SAS Program */

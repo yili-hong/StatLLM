@@ -1,0 +1,26 @@
+
+/* Use Group By statement by type of glass and then test for normality using proc univariate for refractive index */
+/* Let's do it for vehicle windows and building windows*/
+
+DATA glassid_Veh_Win;
+SET glassid;
+IF Type_of_glass = 3 OR Type_of_glass = 4;
+RUN;
+
+PROC UNIVARIATE DATA= glassid_Veh_Win NORMAL;
+VAR Ri;
+HISTOGRAM /NORMAL;
+TITLE 'Normality Test for RI of Vehicle Windows';
+RUN;
+
+DATA glassid_Build_Win;
+SET glassid;
+IF Type_of_glass = 1 OR Type_of_glass = 2;
+RUN;
+
+PROC UNIVARIATE DATA= glassid_Build_Win NORMAL;
+VAR Ri;
+HISTOGRAM /NORMAL;
+TITLE 'Normality Test for RI of Building Windows';
+RUN;
+

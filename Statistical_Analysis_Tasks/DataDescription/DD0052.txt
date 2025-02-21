@@ -1,0 +1,27 @@
+Create a new dataset t2 from t, a new variable rabs is added, which represents the absolute value of the residuals. The steps are as follows:
+
+sid: A unique identifier for each state or region in the dataset.
+
+state: The two-letter abbreviation of each U.S. state or the District of Columbia.
+
+crime: The total crime rate in the state, typically expressed per 100,000 residents.
+
+murder: The murder rate in the state, expressed per 100,000 residents.
+
+pctmetro: The percentage of the state’s population residing in metropolitan areas.
+
+pctwhite: The percentage of the state’s population that identifies as White.
+
+pcths: The percentage of the state’s adult population that has completed high school.
+
+poverty: The poverty rate in the state, typically expressed as the percentage of the population living below the poverty line.
+
+single: The percentage of single-parent households in the state.
+
+res: The residuals from a regression model or statistical analysis, representing the difference between observed and predicted values.
+
+cookd: Cook's distance, a measure used in regression analysis to identify influential data points that may disproportionately affect the model's results.
+
+lev: Leverage, a measure in regression analysis that quantifies the influence of an observation on the fitted values.
+
+rabs: The absolute value of the residuals (res) for each state. This column shows the magnitude of the residuals without considering their direction (positive or negative), which can be useful for understanding the overall deviation from the predicted values.

@@ -1,0 +1,2 @@
+For the dataset of hsb2, test whether there exists a relationship between the type of school attended (schtyp) and students’ gender (female). 
+

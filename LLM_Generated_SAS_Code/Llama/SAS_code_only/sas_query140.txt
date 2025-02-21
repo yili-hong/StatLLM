@@ -1,0 +1,19 @@
+/* Proc Contents to get an overview of the dataset */
+proc contents data=binary;
+run;
+
+/* Proc Means to summarize numerical variables */
+proc means data=binary n nmiss mean std min max;
+run;
+
+/* Proc Summary to get additional summaries if needed */
+proc summary data=binary;
+var _numeric_; /* This will consider all numeric variables */
+output out=summary_stats n=n nmiss mean std min max;
+run;
+
+/* Proc Freq to summarize categorical variables */
+proc freq data=binary;
+tables _character_; /* This will consider all character variables */
+run;
+

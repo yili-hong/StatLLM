@@ -1,0 +1,26 @@
+* Assuming mvreg data is already loaded in SAS;
+* If not, you would need a data import step here using PROC IMPORT;
+
+* Convert categorical variable 'prog' into dummy variables;
+proc glm data=mvreg;
+   class prog; * Declares 'prog' as a categorical variable;
+   model locus_of_control self_concept motivation = read write science prog / solution;
+   title 'Multivariate Regression Model';
+run;
+quit;
+
+* Checking for multicollinearity among independent variables;
+proc reg data=mvreg;
+   model read=write science;
+   model write=read science;
+   model science=read write;
+run;
+quit;
+
+* Checking correlations for all variables;
+proc corr data=mvreg;
+   var locus_of_control self_concept motivation read write science;
+   with prog;
+run;
+quit;
+

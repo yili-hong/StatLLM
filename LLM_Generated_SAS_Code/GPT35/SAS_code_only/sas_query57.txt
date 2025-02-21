@@ -1,0 +1,26 @@
+/* Load the sashelp.baseball dataset */
+proc datasets library=sashelp;
+run;
+
+data baseball;
+set sashelp.baseball;
+run;
+
+/* Exclude Pete Rose's statistics */
+data baseball;
+set baseball;
+where name ne 'Pete Rose';
+run;
+
+/* Apply log transformation to the salary variable */
+data baseball;
+set baseball;
+logSalary = log(salary);
+drop salary;
+run;
+
+/* Fit the linear regression model with logSalary as dependent variable and nhits, nruns, nrbi, nbb, yrmajor, and crhits as independent variables */
+proc reg data=baseball plots(only)=(cooksd);
+model logSalary = nhits nruns nrbi nbb yrmajor crhits / influence;
+run;
+

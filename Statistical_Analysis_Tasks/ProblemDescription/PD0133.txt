@@ -1,0 +1,2 @@
+Converts the data set hernio from the multivariate form to the univariate form. In
+the multivariate form the responses are stored in separate variables. The GLIMMIX procedure requires the univariate data structure.

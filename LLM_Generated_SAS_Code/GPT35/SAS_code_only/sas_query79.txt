@@ -1,0 +1,5 @@
+/* Perform Chi-Square test for association between weight and sex */
+proc freq data=abalone;
+   tables sex*whole_weight / chisq;
+run;
+

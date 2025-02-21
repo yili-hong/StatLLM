@@ -1,0 +1,5 @@
+proc means data=sample2014 mean std;
+  var Writing;
+  class Gender;
+run;
+

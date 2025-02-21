@@ -1,0 +1,2 @@
+For the toxic dataset, conduct an one-way ANOVA analysis for the respone variable life with respect to factor  poison. 
+ 

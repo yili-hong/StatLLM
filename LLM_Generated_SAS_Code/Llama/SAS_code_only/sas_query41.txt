@@ -1,0 +1,16 @@
+
+proc means data=sashelp.shoes;
+  var sales;
+run;
+
+
+proc means data=sashelp.shoes mean std min max;
+  var sales;
+run;
+
+
+proc means data=sashelp.shoes mean std min max;
+  var sales;
+  output out=summary;
+run;
+

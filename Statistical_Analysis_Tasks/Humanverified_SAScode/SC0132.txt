@@ -1,0 +1,4 @@
+proc corr data=measurement;
+	title "Example of correlation matrix";
+	var height weight age;
+	run;

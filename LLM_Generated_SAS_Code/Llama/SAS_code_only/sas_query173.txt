@@ -1,0 +1,10 @@
+proc freq data=sample2014;
+  tables Rank*LiveOnCampus;
+run;
+
+proc freq data=sample2014;
+  tables Rank*LiveOnCampus / norow nocol nocum;
+  format Rank 1='Freshman' 2='Sophomore' 3='Junior' 4='Senior'
+         LiveOnCampus 0='Off-campus' 1='On-campus';
+run;
+

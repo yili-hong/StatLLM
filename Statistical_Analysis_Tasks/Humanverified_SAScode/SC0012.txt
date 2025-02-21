@@ -1,0 +1,39 @@
+proc reg data=crack;
+    model load = age / p;
+    output out=crackreg p=pred r=resid cookd=cd;
+    title "Regression Output with Predicted Values, Residuals, and Cook's Distance";
+run;
+
+proc sgplot data=crackreg;
+    title "Residuals vs. Predicted Values";
+    scatter x=pred y=resid / markerattrs=(symbol=CircleFilled color=blue);
+    refline 0 / axis=y lineattrs=(pattern=solid color=red);
+    xaxis label="Predicted Load";
+    yaxis label="Residuals";
+run;
+
+proc sgplot data=crackreg;
+    title "Histogram of Residuals";
+    histogram resid / binwidth=1 fillattrs=(color=lightblue) transparency=0.5;
+    density resid / type=normal lineattrs=(color=red thickness=2);
+    xaxis label="Residuals";
+    yaxis label="Frequency";
+run;
+
+
+proc sgplot data=crackreg;
+    title "Normal Q-Q Plot of Residuals";
+    qqplot resid / distribution=normal(mu=est sigma=est) 
+                  markerattrs=(symbol=CircleFilled color=blue)
+                  lineattrs=(color=red pattern=solid);
+    xaxis label="Theoretical Quantiles";
+    yaxis label="Sample Quantiles";
+run;
+
+proc sgplot data=crackreg;
+    title "Cook's Distance for Each Observation";
+    scatter x=_N_ y=cd / markerattrs=(symbol=CircleFilled color=orange);
+    refline 4 / axis=y lineattrs=(pattern=dash color=red) legendlabel="Threshold (4/n)";
+    xaxis label="Observation Number";
+    yaxis label="Cook's Distance";
+run;

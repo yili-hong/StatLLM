@@ -1,0 +1,23 @@
+* Importing data from a dataset;
+data manova;
+  set manova;
+  input group useful difficulty importance;
+run;
+
+* Performing one-way ANOVA for variable 'useful' among groups;
+proc glm data=manova plots(only)=(means);
+  class group; /* Define group as categorical */
+  model useful = group / solution ss1 ss3; /* Model with main effects */
+  means group / hovtest welch anova duncan cl; /* Means comparison with post-hoc tests */
+run;
+
+quit;
+
+/* You can also use proc anova instead of proc glm if you prefer, although they will give similar results: */
+
+proc anova data=manova plots(only)=(means);
+  class group; 
+  model useful = group / summary; 
+run;
+
+quit;

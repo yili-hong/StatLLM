@@ -1,0 +1,1 @@
+For the dataset of grades, Create a horizontal bar chart of the frequency for the variable ExamGrade1

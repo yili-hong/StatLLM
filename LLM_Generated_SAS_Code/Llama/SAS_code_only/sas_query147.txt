@@ -1,0 +1,12 @@
+/* Assuming t is your original dataset */
+data t2;
+  set t;
+  /* Create a new variable rabs as the absolute value of Residuals */
+  rabs = abs(Residuals);
+run;
+
+/* Sort the dataset t2 by rabs in descending order */
+proc sort data=t2;
+  by descending rabs;
+run;
+

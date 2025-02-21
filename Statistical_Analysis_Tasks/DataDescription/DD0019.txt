@@ -1,0 +1,11 @@
+Suppose in a health screening, seven people take measurement on Gender, Height, Weight and Age. 
+ 
+The gender column gives the gender of the individuals.
+The height column gives the height of the individuals.
+The weight column gives the weight of the individuals.
+The age column gives the age of the individuals.
+
+The dataset is named as measurement.
+
+
+

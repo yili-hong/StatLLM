@@ -1,0 +1,18 @@
+kell
+proc anova data=retention;
+  class Fe Zn;
+  model FeRetention = Fe Zn;
+  run;
+
+
+proc anova data=retention;
+  class Fe Zn;
+  model FeRetention = Fe Zn Fe*Zn / noint;
+  run;
+
+
+proc glm data=retention;
+  class Fe Zn;
+  model FeRetention = Fe Zn;
+  run;
+

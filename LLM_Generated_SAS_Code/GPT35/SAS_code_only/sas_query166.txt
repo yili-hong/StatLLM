@@ -1,0 +1,17 @@
+
+/* Compute robust estimates of location and scale for Systolic */
+proc trimmean data=BPressure trim=.1;
+  var Systolic;
+  output out=TrimmedMeans;
+run;
+
+proc winsorize data=BPressure out=WinsorizedMeans winsorlimits=5;
+  var Systolic;
+  output out=WinsorizedMeans;
+run;
+
+proc robustreg data=BPressure method=mcd;
+  model Systolic = / scale=robust;
+  output out=RobustScale r=RobustScale;
+run;
+

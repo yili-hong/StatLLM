@@ -1,0 +1,16 @@
+/* Assuming the dataset name is BMT */
+proc means data=BMT mean median;
+    var T;
+    class Group;
+run;
+
+data BMT_events;
+    set BMT;
+    if Status = 1; /* Keep only event times (Status = 1) */
+run;
+
+proc means data=BMT_events mean median;
+    var T;
+    class Group;
+run;
+

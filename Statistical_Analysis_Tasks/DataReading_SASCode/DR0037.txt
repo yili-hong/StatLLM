@@ -1,0 +1,6 @@
+PROC IMPORT OUT=lettuce_brand 
+     DATAFILE='/StatLLM/Statistical_Analysis_Tasks/TaskDatasets/DS0037/lettuce_brand.csv' 
+     DBMS=CSV 
+     REPLACE; 
+     GETNAMES=YES; 
+RUN; 

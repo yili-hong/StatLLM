@@ -1,0 +1,4 @@
+proc freq data=mvreg;
+  tables prog / nopercent nocum;
+run;
+

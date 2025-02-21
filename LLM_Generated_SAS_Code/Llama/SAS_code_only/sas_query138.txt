@@ -1,0 +1,18 @@
+proc sgplot data=pred;
+  heatmap x=mealcat y=collcat color=api00 /
+    colormodel=(blue green red)
+    colorresponse=linear;
+  xaxis display=none;
+  yaxis display=none;
+run;
+
+proc sgplot data=pred;
+  series x=collcat y=api00 / group=mealcat;
+  keylegend / title="Meal Category";
+run;
+
+proc sgpanel data=pred;
+  panelby collcat;
+  vbar mealcat / response=api00 stat=mean;
+run;
+

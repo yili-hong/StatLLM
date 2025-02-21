@@ -1,0 +1,6 @@
+proc ANOVA data=words;
+	title "Example of one-way ANOVA";
+	class method;
+	model word = method;
+	means method / SNK alpha=0.05;
+run;

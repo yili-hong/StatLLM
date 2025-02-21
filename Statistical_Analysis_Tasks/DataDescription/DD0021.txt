@@ -1,0 +1,8 @@
+The Sashelp.Baseball data set contains salary and performance information for Major League Baseball players (excluding pitchers) who played at least one game in both the 1986 and 1987 seasons (Time Inc. 1987). The salaries are for the 1987 season, and the performance measures are from the 1986 season.  
+
+The dataset is availalbe in SASA help files. 
+
+The dataset is named as Sashelp.Baseball.
+
+
+

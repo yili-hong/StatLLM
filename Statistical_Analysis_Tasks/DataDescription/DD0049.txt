@@ -1,0 +1,12 @@
+Example 1:  Suppose that we are interested in the factors that influence whether a political candidate wins an election.  
+The outcome (response) variable is binary (0/1);  win or lose. The predictor variables of interest are the amount of money spent on the campaign, 
+the amount of time spent campaigning negatively, and whether the candidate is an incumbent. Example 2:  A researcher is interested in how variables, 
+such as GRE (Graduate Record Exam scores), GPA (grade point average) and prestige of the undergraduate institution, effect admission into graduate school. 
+The outcome variable, admit/don’t admit, is binary.
+
+Description of the data
+For our data analysis below, we are going to expand on Example 2 about getting into graduate school.  We have generated hypothetical data, which can be obtained from our website by clicking
+on https://stats.idre.ucla.edu/wp-content/uploads/2016/02/binary.sas7bdat. You can store this anywhere you like, but the syntax below assumes it has been stored in the directory c:data.
+This data set has a binary response (outcome, dependent) variable called admit, which is equal to 1 if the individual was admitted to graduate school, and 0 otherwise. 
+There are three predictor variables: gre, gpa, and rank. We will treat the variables gre and gpa as continuous. The variable rank takes on the values 1 through 4. 
+Institutions with a rank of 1 have the highest prestige, while those with a rank of 4 have the lowest. We start out by looking at some descriptive statistics.

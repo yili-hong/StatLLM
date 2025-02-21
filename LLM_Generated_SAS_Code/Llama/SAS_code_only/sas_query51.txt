@@ -1,0 +1,51 @@
+
+/* Calculate 20% Winsorized Mean for Sales variable in Sashelp.shoes dataset */
+
+proc univariate data=sashelp.shoes;
+  var sales;
+  output out=winsorized pctlpts=5 95 pctlpre=sales_;
+run;
+
+proc sort data=winsorized;
+  by sales_5;
+run;
+
+data winsorized;
+  set winsorized;
+  if sales_5 < sales then winsorized_sales = sales;
+  if sales_5 >= sales then winsorized_sales = sales_5;
+run;
+
+proc means data=winsorized;
+  var winsorized_sales;
+  output out=mean_winsorized mean=;
+run;
+
+proc print data=mean_winsorized;
+run;
+
+
+/* Calculate 20% Winsorized Mean for Sales variable in Sashelp.shoes dataset */
+
+proc univariate data=sashelp.shoes;
+  var sales;
+  output out=winsorized pctlpts=20 80 pctlpre=sales_;
+run;
+
+data winsorized;
+  set sashelp.shoes;
+  merge winsorized;
+  by _n_;
+  if sales < sales_20 then winsorized_sales = sales_20;
+  else if sales > sales_80 then winsorized_sales = sales_80;
+  else winsorized_sales = sales;
+run;
+
+proc means data=winsorized;
+  var winsorized_sales;
+  output out=mean_winsorized mean=;
+run;
+
+proc print data=mean_winsorized;
+run;
+

@@ -1,0 +1,6 @@
+PROC IMPORT OUT=sample2014 
+     DATAFILE='/StatLLM/Statistical_Analysis_Tasks/TaskDatasets/DS0055/sample2014.xlsx' 
+     DBMS=xlsx 
+     REPLACE; 
+     GETNAMES=YES; 
+RUN; 

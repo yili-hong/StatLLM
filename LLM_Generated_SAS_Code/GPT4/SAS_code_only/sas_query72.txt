@@ -1,0 +1,13 @@
+
+* Descriptive analysis of Sodium (Na) in glass type 'vehicle windows';
+PROC MEANS DATA=glass NOPRINT;
+  VAR Na;
+  BY Type_of_glass;
+  WHERE Type_of_glass = 3;
+  OUTPUT OUT=DescriptiveStats MEAN=Na_Mean STD=Na_Std MIN=Na_Min MAX=Na_Max;
+RUN;
+
+* Print the result;
+PROC PRINT DATA=DescriptiveStats;
+RUN;
+

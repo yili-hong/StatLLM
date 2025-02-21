@@ -1,0 +1,6 @@
+
+/* Perform the one-sample t-test */
+proc ttest data=mydata;
+   var write;
+   oneSampleTest / test=50;
+run;

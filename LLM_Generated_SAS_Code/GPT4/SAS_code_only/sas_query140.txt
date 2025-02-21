@@ -1,0 +1,18 @@
+/* PROC MEANS for continuous variables summary */
+proc means data=binary_data N mean std min max;
+   var continuous_variable1 continuous_variable2; /* replace with your actual continuous variable names */
+   title 'Summary Statistics for Continuous Variables';
+run;
+
+/* PROC FREQ for binary/categorical variables */
+proc freq data=binary_data;
+   tables binary_variable1 binary_variable2; /* replace with your actual binary variable names */
+   title 'Frequency Distribution of Binary Variables';
+run;
+
+/* Additional summary using PROC UNIVARIATE for detailed distribution analysis */
+proc univariate data=binary_data;
+   var continuous_variable1; /* Use it for each variable you want to investigate in detail */
+   histogram continuous_variable1; /* Optional: Creates a histogram */
+   title 'Detailed Distribution Analysis for Continuous Variables';
+run;

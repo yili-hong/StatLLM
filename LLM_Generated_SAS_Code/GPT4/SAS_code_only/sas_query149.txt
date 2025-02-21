@@ -1,0 +1,17 @@
+/* Step 1: Create dataset t2 by adding a new variable rabs */
+data t2;
+    set t;
+    rabs = abs(Residuals); /* Compute absolute value of Residuals */
+run;
+
+/* Step 2: Perform robust regression using Huber weights */
+proc robustreg data=t2 method=iwls;
+    model Residuals = Leverage CooksD; /* Replace Leverage CooksD with actual predictors */
+    output out=t3 r=residuals p=predicted_values weight=final_weights;
+    /* Adjust the model formula as needed */
+run;
+
+/* Step 3: Save the final dataset t3 with residuals, predicted values, and weights */
+proc print data=t3;
+run;
+

@@ -1,0 +1,16 @@
+/* Perform logistic regression */
+proc logistic data=smoke;
+  model student_smoke(event='1') = parents_smoke / link=logit;
+  freq count;
+  units parents_smoke = 1;
+  estimate 'Odds Ratio for Parents Smoke' intercept 1 parents_smoke 1 / exp;
+run;
+
+/* Note: 
+  In this code, we assume that the data is not already available in SAS and create a temporary dataset 'smoke' with the given data.
+  The 'model' statement is used to specify the logistic regression model. The 'event' option is used to specify the event of interest (i.e., student_smoke = 1).
+  The 'freq' statement is used to specify the frequency variable 'count'.
+  The 'units' statement is used to specify the units for the change in the odds ratio.
+  The 'estimate' statement is used to calculate the odds ratio and its confidence interval.
+*/
+

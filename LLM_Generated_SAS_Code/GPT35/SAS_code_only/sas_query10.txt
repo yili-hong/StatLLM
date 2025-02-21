@@ -1,0 +1,11 @@
+ods graphics on;
+proc sgplot data=crack;
+  title 'Load vs Age';
+  scatter x=age y=load;
+run;
+
+proc reg data=crack;
+  model load = age / STB;
+  output out=crackreg p=prediction r=residual;
+run;
+

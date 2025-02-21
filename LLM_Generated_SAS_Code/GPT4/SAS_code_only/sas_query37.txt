@@ -1,0 +1,46 @@
+/* Step 2: Explore the data */
+proc contents data=marketing_data;
+run;
+
+proc freq data=marketing_data;
+    tables Group Opened_Email Clicked_Link Purchased;
+run;
+
+proc means data=marketing_data;
+    var Revenue;
+run;
+
+/* Step 3: Logistic Regression Model to Predict Purchase */
+proc logistic data=marketing_data descending;
+    class Group(ref='Control') / param=ref;
+    model Purchased = Group Opened_Email Clicked_Link 
+                      Group*Opened_Email Group*Clicked_Link
+                      / expb selection=stepwise slentry=0.05 slstay=0.05;
+    output out=predicted p=predicted_prob;
+run;
+
+/* Step 4: Examine Predicted Probabilities */
+proc print data=predicted(obs=10);
+    var Customer_ID Group Opened_Email Clicked_Link Purchased predicted_prob;
+run;
+
+/* Step 5: Evaluate Model Performance */
+proc logistic data=marketing_data descending;
+    class Group(ref='Control') / param=ref;
+    model Purchased = Group Opened_Email Clicked_Link 
+                      Group*Opened_Email Group*Clicked_Link;
+    roc 'ROC Curve' / plot=roc;
+run;
+
+/* Step 6: Key Factors Analysis */
+proc logistic data=marketing_data descending;
+    class Group(ref='Control') / param=ref;
+    model Purchased = Group Opened_Email Clicked_Link 
+                      Group*Opened_Email Group*Clicked_Link
+                      / expb;
+    ods output ParameterEstimates=param_estimates;
+run;
+
+/* Step 7: Analyze the Parameter Estimates */
+proc print data=param_estimates;
+run;

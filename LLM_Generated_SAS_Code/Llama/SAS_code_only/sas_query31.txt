@@ -1,0 +1,15 @@
+/* Check the frequency of each opinion by gender */
+proc freq data=opinion;
+  tables opinion*gender / chisq;
+run;
+
+/* Perform a chi-square test to determine if there's a significant association between opinion and gender */
+proc freq data=opinion;
+  tables opinion*gender / chisq expected;
+  output out=chi_square pchi;
+run;
+
+/* Print the results */
+proc print data=chi_square;
+run;
+

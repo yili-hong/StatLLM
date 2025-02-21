@@ -1,0 +1,26 @@
+/* Import the elemapi2 dataset */
+data elemapi2;
+  set elemapi2;
+run;
+
+/* Create summary statistics table */
+proc means data=elemapi2 n mean std min max;
+  var api00 meals ell yr_rnd mobility acs_k3 acs_46 not_hsg hsg some_coll coll_grad grad_sch avg_ed full emer enroll;
+run;
+
+/* Create frequency tables for categorical variables */
+proc freq data=elemapi2;
+  tables mealcat collcat;
+run;
+
+/* Create summary statistics for api00 by mealcat and collcat */
+proc means data=elemapi2 n mean std min max;
+  class mealcat collcat;
+  var api00;
+run;
+
+/* Create a correlation matrix for api00 and other variables */
+proc corr data=elemapi2;
+  var api00 meals ell yr_rnd mobility acs_k3 acs_46 not_hsg hsg some_coll coll_grad grad_sch avg_ed full emer enroll;
+run;
+

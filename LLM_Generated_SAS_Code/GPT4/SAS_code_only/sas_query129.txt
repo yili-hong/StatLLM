@@ -1,0 +1,12 @@
+
+/* Descriptive statistics */
+PROC MEANS DATA=work.elemapi;
+	VAR api00 acs_k3 meals full;
+RUN;
+
+/* Regression analysis */
+PROC REG DATA=work.elemapi;
+	MODEL api00 = acs_k3 meals full / p;
+RUN;
+QUIT;
+

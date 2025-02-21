@@ -1,0 +1,1 @@
+For the dataset of ACHE, compare the time to relief of three headache medicines -- brands 1, 2, and 3.

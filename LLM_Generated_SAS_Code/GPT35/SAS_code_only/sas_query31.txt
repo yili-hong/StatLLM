@@ -1,0 +1,4 @@
+proc freq data=opinion;
+  tables opinion*gender / chisq;
+run;
+

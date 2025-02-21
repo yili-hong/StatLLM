@@ -1,0 +1,24 @@
+DATA imports;
+   set imports;
+
+   INPUT symboling normalized_losses make $ fueltype $ aspiration $ num_of_doors $
+         body_style $ drivewheels $ engine_location $ wheelbase length width height curbweight enginetype $ 
+         numofcylinders $ enginesize fuelsystem $ bore stroke compression_ratio hp peakrpm citympg highwaympg price;
+
+   IF drivewheels = '4wd' THEN drivewheels_num = 1;
+   ELSE IF drivewheels = 'fwd' THEN drivewheels_num = 2;
+   ELSE IF drivewheels = 'rwd' THEN drivewheels_num = 3;
+
+   IF fueltype = 'diesel' THEN fueltype_num = 1;
+   ELSE IF fueltype ='gas' THEN fueltype_num = 2;
+
+   LABEL fueltype_num = 'Fuel Type'
+         drivewheels_num = 'Drive Wheel Type'
+         wheelbase = 'Wheel Base';
+RUN;
+
+PROC GLM DATA=imports;
+   CLASS fueltype_num drivewheels_num;
+   MODEL wheelbase = fueltype_num drivewheels_num fueltype_num*drivewheels_num / SOLUTION;
+   MEANS fueltype_num drivewheels_num / TUKEY CLDIFF;
+RUN;

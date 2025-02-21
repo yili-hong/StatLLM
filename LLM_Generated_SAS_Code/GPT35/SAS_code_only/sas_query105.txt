@@ -1,0 +1,3 @@
+PROC REG data=imports;
+  MODEL enginesize = curbweight horsepower citympg;
+RUN;

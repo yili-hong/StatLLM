@@ -1,0 +1,8 @@
+
+/* Set AML-Low Risk (group=2) as the reference group and compute hazard ratios */
+proc phreg data=BMT;
+    class group(ref='2'); /* Set group=2 (AML-Low Risk) as the reference category */
+    model T*Status(0) = group / ties=EFRON; /* Disease-free survival time, with censoring at Status=0 */
+    /* ties=EFRON specifies the method for handling tied event times */
+    run;
+

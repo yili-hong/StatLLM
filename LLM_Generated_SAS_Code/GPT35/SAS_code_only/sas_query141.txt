@@ -1,0 +1,5 @@
+
+proc means data=binary mean std min p50 max;
+  var gre gpa; /* Specify the continuous variables for which you want to calculate statistics */
+run;
+

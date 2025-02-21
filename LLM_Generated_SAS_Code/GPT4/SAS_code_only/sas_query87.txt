@@ -1,0 +1,23 @@
+PROC PRINT DATA = abalone; RUN; 
+
+* Converting variables to numerical for analysis ;
+DATA abalone_converted ;
+SET abalone ;
+
+IF agegroup = 'youngest' THEN agegroup_num = 1 ;
+ELSE IF agegroup = 'middle' THEN agegroup_num = 2 ;
+ELSE IF agegroup = 'oldest' THEN agegroup_num = 3 ;
+
+IF weightgroup = 'lightest' THEN weightgroup_num = 1 ;
+ELSE IF weightgroup = 'middle' THEN weightgroup_num = 2 ;
+ELSE IF weightgroup = 'heaviest' THEN weightgroup_num = 3 ;
+
+KEEP agegroup_num weightgroup_num ;
+RUN ;
+
+PROC PRINT DATA = abalone_converted ; RUN ;
+
+* Chi-square test of independence ;
+PROC FREQ DATA = abalone_converted ;
+TABLES agegroup_num*weightgroup_num / CHISQ ;
+RUN ;

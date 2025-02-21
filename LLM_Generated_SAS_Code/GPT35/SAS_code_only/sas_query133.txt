@@ -1,0 +1,18 @@
+data univariate_hernio;
+  set hernio;
+  
+  if leave = 1 then do;
+    response = "Routine Recovery";
+    output;
+  end;
+  
+  if leave = 0 then do;
+    response = "Postoperative Intensive Care";
+    output;
+  end;
+  
+  condition = "Condition";
+  length = "Length of Hospital Stay";
+  drop leave los;
+run;
+

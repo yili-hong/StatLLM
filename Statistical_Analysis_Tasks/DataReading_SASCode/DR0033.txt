@@ -1,0 +1,6 @@
+PROC IMPORT OUT=diabetic 
+     DATAFILE='/StatLLM/Statistical_Analysis_Tasks/TaskDatasets/DS0033/diabetic.csv' 
+     DBMS=CSV 
+     REPLACE; 
+     GETNAMES=YES; 
+RUN; 

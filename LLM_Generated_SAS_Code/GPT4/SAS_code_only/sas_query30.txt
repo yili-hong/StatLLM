@@ -1,0 +1,8 @@
+PROC CONTENTS DATA=work.opinioncounts;
+RUN;
+
+PROC FREQ DATA=work.opinioncounts
+        ORDER=data;
+    TABLES opinion*gender / chisq;
+RUN;
+

@@ -1,0 +1,5 @@
+/* Run the Wilcoxon signed-rank test to compare the median writing score to 50 */
+proc npar1way data=hsb2 wilcoxon location=50;
+   var write;
+run;
+

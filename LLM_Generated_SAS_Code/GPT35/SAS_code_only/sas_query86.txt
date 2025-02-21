@@ -1,0 +1,6 @@
+
+
+* Performing simple linear regression;
+proc reg data=measurement;
+model Weight = Height;
+run;

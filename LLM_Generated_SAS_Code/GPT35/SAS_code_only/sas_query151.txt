@@ -1,0 +1,4 @@
+proc sort data=t3 out=t3_sorted;
+    by wgt;
+run;
+

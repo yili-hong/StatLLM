@@ -1,0 +1,24 @@
+/* Apply log transformation to salary */
+data baseball;
+set baseball;
+logsalary = log(salary);
+run;
+
+/* Omit Pete Rose's statistics */
+data baseball;
+set baseball;
+if name ne 'Pete Rose';
+run;
+
+/* Fit the model using polynomials of degree 2 for yrmajor and crhits */
+proc glm data=baseball;
+model logsalary = nhits nruns nrbi nbb yrmajor|poly2 crhits|poly2 / influence;
+output out=out glmstudent=r;
+run;
+
+/* Create a plot of Cook's D by observation */
+proc sgplot data=out;
+scatter x=_r_ y=_cooksd_;
+run;
+quit;
+

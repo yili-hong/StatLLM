@@ -1,0 +1,396 @@
+Region,Product,Subsidiary,Stores,Sales,Inventory,Returns
+Africa,Boot,Addis Ababa,12,29761.00 ,191821.00 ,769.00 
+Africa,Men's Casual,Addis Ababa,4,67242.00 ,118036.00 ,2284.00 
+Africa,Men's Dress,Addis Ababa,7,76793.00 ,136273.00 ,2433.00 
+Africa,Sandal,Addis Ababa,10,62819.00 ,204284.00 ,1861.00 
+Africa,Slipper,Addis Ababa,14,68641.00 ,279795.00 ,1771.00 
+Africa,Sport Shoe,Addis Ababa,4,1690.00 ,16634.00 ,79.00 
+Africa,Women's Casual,Addis Ababa,2,51541.00 ,98641.00 ,940.00 
+Africa,Women's Dress,Addis Ababa,12,108942.00 ,311017.00 ,3233.00 
+Africa,Boot,Algiers,21,21297.00 ,73737.00 ,710.00 
+Africa,Men's Casual,Algiers,4,63206.00 ,100982.00 ,2221.00 
+Africa,Men's Dress,Algiers,13,123743.00 ,428575.00 ,3621.00 
+Africa,Sandal,Algiers,25,29198.00 ,84447.00 ,1530.00 
+Africa,Slipper,Algiers,17,64891.00 ,248198.00 ,1823.00 
+Africa,Sport Shoe,Algiers,9,2617.00 ,9372.00 ,168.00 
+Africa,Women's Dress,Algiers,12,90648.00 ,266805.00 ,2690.00 
+Africa,Boot,Cairo,20,4846.00 ,18965.00 ,229.00 
+Africa,Men's Casual,Cairo,25,360209.00 ,1063251.00 ,9424.00 
+Africa,Men's Dress,Cairo,5,4051.00 ,45962.00 ,97.00 
+Africa,Sandal,Cairo,9,10532.00 ,50430.00 ,598.00 
+Africa,Slipper,Cairo,9,13732.00 ,54117.00 ,1216.00 
+Africa,Sport Shoe,Cairo,3,2259.00 ,20815.00 ,44.00 
+Africa,Women's Casual,Cairo,14,328474.00 ,940851.00 ,10124.00 
+Africa,Women's Dress,Cairo,3,14095.00 ,51145.00 ,745.00 
+Africa,Boot,Johannesburg,14,8365.00 ,33011.00 ,483.00 
+Africa,Sandal,Johannesburg,13,17337.00 ,63003.00 ,809.00 
+Africa,Slipper,Johannesburg,12,39452.00 ,130025.00 ,1565.00 
+Africa,Sport Shoe,Johannesburg,8,5172.00 ,29368.00 ,139.00 
+Africa,Women's Dress,Johannesburg,4,42682.00 ,120127.00 ,966.00 
+Africa,Boot,Khartoum,24,19282.00 ,105370.00 ,700.00 
+Africa,Men's Casual,Khartoum,1,9244.00 ,16230.00 ,478.00 
+Africa,Men's Dress,Khartoum,3,18053.00 ,51132.00 ,1177.00 
+Africa,Sandal,Khartoum,18,26427.00 ,81825.00 ,1281.00 
+Africa,Slipper,Khartoum,11,43452.00 ,143015.00 ,1573.00 
+Africa,Sport Shoe,Khartoum,7,2521.00 ,27041.00 ,84.00 
+Africa,Women's Casual,Khartoum,1,19582.00 ,30727.00 ,384.00 
+Africa,Women's Dress,Khartoum,6,48031.00 ,132679.00 ,1374.00 
+Africa,Boot,Kinshasa,16,13921.00 ,70736.00 ,553.00 
+Africa,Men's Dress,Kinshasa,5,57691.00 ,95663.00 ,1699.00 
+Africa,Sandal,Kinshasa,10,16662.00 ,104438.00 ,611.00 
+Africa,Slipper,Kinshasa,11,52807.00 ,183937.00 ,1440.00 
+Africa,Sport Shoe,Kinshasa,10,4888.00 ,27998.00 ,162.00 
+Africa,Women's Casual,Kinshasa,1,17919.00 ,21363.00 ,400.00 
+Africa,Women's Dress,Kinshasa,3,32928.00 ,87149.00 ,717.00 
+Africa,Boot,Luanda,8,6081.00 ,51572.00 ,325.00 
+Africa,Men's Casual,Luanda,3,62893.00 ,149864.00 ,1701.00 
+Africa,Men's Dress,Luanda,2,29582.00 ,67247.00 ,705.00 
+Africa,Sandal,Luanda,9,11145.00 ,19900.00 ,657.00 
+Africa,Slipper,Luanda,5,19146.00 ,97060.00 ,701.00 
+Africa,Sport Shoe,Luanda,2,801.00 ,3247.00 ,29.00 
+Africa,Women's Dress,Luanda,1,8467.00 ,47387.00 ,210.00 
+Africa,Boot,Nairobi,25,16282.00 ,66017.00 ,844.00 
+Africa,Men's Dress,Nairobi,1,8587.00 ,20877.00 ,363.00 
+Africa,Sandal,Nairobi,19,16289.00 ,47406.00 ,1175.00 
+Africa,Slipper,Nairobi,12,34955.00 ,87438.00 ,1320.00 
+Africa,Sport Shoe,Nairobi,10,2202.00 ,11328.00 ,174.00 
+Africa,Women's Dress,Nairobi,3,28515.00 ,62740.00 ,678.00 
+Asia,Boot,Bangkok,1,1996.00 ,9576.00 ,80.00 
+Asia,Men's Dress,Bangkok,1,3033.00 ,20831.00 ,52.00 
+Asia,Sandal,Bangkok,1,3230.00 ,15087.00 ,120.00 
+Asia,Slipper,Bangkok,1,3019.00 ,16075.00 ,127.00 
+Asia,Women's Casual,Bangkok,1,5389.00 ,16251.00 ,185.00 
+Asia,Boot,Seoul,17,60712.00 ,160589.00 ,1296.00 
+Asia,Men's Casual,Seoul,1,11754.00 ,2176.00 ,833.00 
+Asia,Men's Dress,Seoul,7,116333.00 ,251803.00 ,2443.00 
+Asia,Sandal,Seoul,3,4978.00 ,21483.00 ,105.00 
+Asia,Slipper,Seoul,21,149013.00 ,469007.00 ,2941.00 
+Asia,Sport Shoe,Seoul,1,937.00 ,455.00 ,10.00 
+Asia,Women's Casual,Seoul,2,20448.00 ,36576.00 ,790.00 
+Asia,Women's Dress,Seoul,7,78234.00 ,140628.00 ,1891.00 
+Asia,Sport Shoe,Tokyo,1,1155.00 ,15602.00 ,22.00 
+Canada,Boot,Calgary,8,17720.00 ,63280.00 ,472.00 
+Canada,Men's Dress,Calgary,1,12775.00 ,39663.00 ,353.00 
+Canada,Sandal,Calgary,7,2886.00 ,15838.00 ,147.00 
+Canada,Slipper,Calgary,2,5676.00 ,48061.00 ,253.00 
+Canada,Sport Shoe,Calgary,9,9745.00 ,38059.00 ,264.00 
+Canada,Women's Dress,Calgary,2,12601.00 ,54677.00 ,488.00 
+Canada,Boot,Montreal,25,40213.00 ,240132.00 ,1472.00 
+Canada,Men's Casual,Montreal,3,53929.00 ,187155.00 ,2241.00 
+Canada,Men's Dress,Montreal,11,112009.00 ,355170.00 ,3713.00 
+Canada,Sandal,Montreal,7,3002.00 ,18382.00 ,122.00 
+Canada,Slipper,Montreal,24,135305.00 ,500053.00 ,3395.00 
+Canada,Sport Shoe,Montreal,31,29435.00 ,178128.00 ,1129.00 
+Canada,Women's Casual,Montreal,2,24497.00 ,34808.00 ,832.00 
+Canada,Women's Dress,Montreal,12,132638.00 ,483637.00 ,2880.00 
+Canada,Boot,Ottawa,5,7892.00 ,28162.00 ,377.00 
+Canada,Men's Casual,Ottawa,1,19210.00 ,29249.00 ,578.00 
+Canada,Sandal,Ottawa,2,2600.00 ,1727.00 ,27.00 
+Canada,Slipper,Ottawa,10,30905.00 ,89576.00 ,1397.00 
+Canada,Sport Shoe,Ottawa,6,2598.00 ,15007.00 ,204.00 
+Canada,Women's Casual,Ottawa,1,18712.00 ,46064.00 ,427.00 
+Canada,Women's Dress,Ottawa,4,33824.00 ,84378.00 ,939.00 
+Canada,Boot,Toronto,16,33291.00 ,149118.00 ,994.00 
+Canada,Men's Casual,Toronto,2,15403.00 ,20811.00 ,1401.00 
+Canada,Men's Dress,Toronto,2,37519.00 ,84690.00 ,806.00 
+Canada,Sandal,Toronto,2,1190.00 ,6763.00 ,38.00 
+Canada,Slipper,Toronto,14,80352.00 ,302074.00 ,1908.00 
+Canada,Sport Shoe,Toronto,29,34585.00 ,164113.00 ,913.00 
+Canada,Women's Casual,Toronto,4,63492.00 ,149239.00 ,1700.00 
+Canada,Women's Dress,Toronto,7,53940.00 ,165711.00 ,1967.00 
+Canada,Boot,Vancouver,31,286497.00 ,882080.00 ,9160.00 
+Canada,Men's Casual,Vancouver,25,353361.00 ,671837.00 ,20470.00 
+Canada,Men's Dress,Vancouver,28,757798.00 ,1847559.00 ,16833.00 
+Canada,Sandal,Vancouver,15,5120.00 ,56325.00 ,294.00 
+Canada,Slipper,Vancouver,27,700513.00 ,2520085.00 ,21247.00 
+Canada,Sport Shoe,Vancouver,26,64026.00 ,370388.00 ,2297.00 
+Canada,Women's Casual,Vancouver,20,304106.00 ,665323.00 ,8278.00 
+Canada,Women's Dress,Vancouver,21,756347.00 ,2503387.00 ,19378.00 
+Central America/Caribbean,Boot,Kingston,33,102372.00 ,393376.00 ,4454.00 
+Central America/Caribbean,Men's Casual,Kingston,28,576112.00 ,1159556.00 ,20005.00 
+Central America/Caribbean,Men's Dress,Kingston,23,270863.00 ,618703.00 ,7447.00 
+Central America/Caribbean,Sandal,Kingston,15,200156.00 ,624163.00 ,8365.00 
+Central America/Caribbean,Slipper,Kingston,37,476638.00 ,1555357.00 ,15713.00 
+Central America/Caribbean,Sport Shoe,Kingston,23,18177.00 ,86162.00 ,944.00 
+Central America/Caribbean,Women's Casual,Kingston,18,215069.00 ,275321.00 ,7361.00 
+Central America/Caribbean,Women's Dress,Kingston,41,375817.00 ,1147300.00 ,11656.00 
+Central America/Caribbean,Boot,Managua,17,34660.00 ,162033.00 ,1775.00 
+Central America/Caribbean,Men's Casual,Managua,3,69276.00 ,79666.00 ,1861.00 
+Central America/Caribbean,Men's Dress,Managua,4,35393.00 ,72044.00 ,1456.00 
+Central America/Caribbean,Sandal,Managua,37,65478.00 ,261456.00 ,2524.00 
+Central America/Caribbean,Slipper,Managua,25,92539.00 ,289520.00 ,2800.00 
+Central America/Caribbean,Sport Shoe,Managua,14,5655.00 ,17155.00 ,269.00 
+Central America/Caribbean,Women's Casual,Managua,3,48567.00 ,118849.00 ,1318.00 
+Central America/Caribbean,Women's Dress,Managua,10,63238.00 ,163951.00 ,2308.00 
+Central America/Caribbean,Boot,Mexico City,21,20819.00 ,79994.00 ,814.00 
+Central America/Caribbean,Men's Casual,Mexico City,3,66216.00 ,70123.00 ,2198.00 
+Central America/Caribbean,Men's Dress,Mexico City,3,30157.00 ,78950.00 ,1012.00 
+Central America/Caribbean,Sandal,Mexico City,33,52233.00 ,175201.00 ,2127.00 
+Central America/Caribbean,Slipper,Mexico City,31,96113.00 ,340122.00 ,4028.00 
+Central America/Caribbean,Sport Shoe,Mexico City,3,2196.00 ,23183.00 ,59.00 
+Central America/Caribbean,Women's Casual,Mexico City,2,31301.00 ,91171.00 ,973.00 
+Central America/Caribbean,Women's Dress,Mexico City,7,69553.00 ,257437.00 ,1614.00 
+Central America/Caribbean,Boot,San Juan,31,32892.00 ,135309.00 ,1504.00 
+Central America/Caribbean,Men's Casual,San Juan,2,44909.00 ,182986.00 ,1355.00 
+Central America/Caribbean,Men's Dress,San Juan,8,68482.00 ,137355.00 ,2756.00 
+Central America/Caribbean,Sandal,San Juan,27,60515.00 ,210250.00 ,3287.00 
+Central America/Caribbean,Slipper,San Juan,7,217891.00 ,707919.00 ,6825.00 
+Central America/Caribbean,Sport Shoe,San Juan,4,936.00 ,4546.00 ,74.00 
+Central America/Caribbean,Women's Casual,San Juan,10,104420.00 ,318207.00 ,4240.00 
+Central America/Caribbean,Women's Dress,San Juan,16,109110.00 ,336513.00 ,3776.00 
+Eastern Europe,Boot,Budapest,22,74102.00 ,317515.00 ,3341.00 
+Eastern Europe,Men's Casual,Budapest,6,66936.00 ,87655.00 ,3944.00 
+Eastern Europe,Men's Dress,Budapest,3,37499.00 ,147214.00 ,930.00 
+Eastern Europe,Sandal,Budapest,5,1814.00 ,4894.00 ,96.00 
+Eastern Europe,Slipper,Budapest,17,111816.00 ,453821.00 ,4070.00 
+Eastern Europe,Sport Shoe,Budapest,23,16460.00 ,79416.00 ,790.00 
+Eastern Europe,Women's Casual,Budapest,3,49880.00 ,137093.00 ,1528.00 
+Eastern Europe,Women's Dress,Budapest,6,52022.00 ,144360.00 ,1452.00 
+Eastern Europe,Boot,Moscow,23,67476.00 ,329604.00 ,3142.00 
+Eastern Europe,Men's Casual,Moscow,3,55094.00 ,156554.00 ,1895.00 
+Eastern Europe,Men's Dress,Moscow,11,113119.00 ,302236.00 ,4004.00 
+Eastern Europe,Slipper,Moscow,11,127033.00 ,520271.00 ,3983.00 
+Eastern Europe,Sport Shoe,Moscow,23,21464.00 ,110822.00 ,859.00 
+Eastern Europe,Women's Casual,Moscow,6,104119.00 ,211220.00 ,2325.00 
+Eastern Europe,Women's Dress,Moscow,10,72671.00 ,196973.00 ,2227.00 
+Eastern Europe,Boot,Prague,11,86215.00 ,341326.00 ,3555.00 
+Eastern Europe,Men's Casual,Prague,12,150273.00 ,336151.00 ,7455.00 
+Eastern Europe,Men's Dress,Prague,9,102448.00 ,231514.00 ,2492.00 
+Eastern Europe,Sandal,Prague,2,712.00 ,3384.00 ,48.00 
+Eastern Europe,Slipper,Prague,29,128971.00 ,585026.00 ,5346.00 
+Eastern Europe,Sport Shoe,Prague,18,23708.00 ,117976.00 ,623.00 
+Eastern Europe,Women's Casual,Prague,1,15897.00 ,33800.00 ,414.00 
+Eastern Europe,Women's Dress,Prague,14,128497.00 ,425237.00 ,3434.00 
+Eastern Europe,Boot,Warsaw,26,78992.00 ,363358.00 ,3246.00 
+Eastern Europe,Men's Casual,Warsaw,15,304093.00 ,729044.00 ,9364.00 
+Eastern Europe,Men's Dress,Warsaw,10,82695.00 ,205338.00 ,2862.00 
+Eastern Europe,Sandal,Warsaw,3,1190.00 ,960.00 ,57.00 
+Eastern Europe,Slipper,Warsaw,16,141878.00 ,712365.00 ,6336.00 
+Eastern Europe,Sport Shoe,Warsaw,19,29570.00 ,139313.00 ,1053.00 
+Eastern Europe,Women's Casual,Warsaw,3,39360.00 ,102641.00 ,1365.00 
+Eastern Europe,Women's Dress,Warsaw,19,108936.00 ,425390.00 ,4465.00 
+Middle East,Boot,Al-Khobar,10,15062.00 ,44658.00 ,765.00 
+Middle East,Men's Casual,Al-Khobar,24,340201.00 ,616745.00 ,13251.00 
+Middle East,Men's Dress,Al-Khobar,22,261445.00 ,711246.00 ,6979.00 
+Middle East,Sandal,Al-Khobar,2,1380.00 ,13343.00 ,62.00 
+Middle East,Slipper,Al-Khobar,26,66796.00 ,201779.00 ,3052.00 
+Middle East,Sport Shoe,Al-Khobar,2,449.00 ,1836.00 ,43.00 
+Middle East,Women's Casual,Al-Khobar,13,226514.00 ,447377.00 ,5966.00 
+Middle East,Women's Dress,Al-Khobar,11,241820.00 ,611686.00 ,6167.00 
+Middle East,Boot,Dubai,15,90972.00 ,403259.00 ,4049.00 
+Middle East,Men's Casual,Dubai,29,419336.00 ,868115.00 ,17552.00 
+Middle East,Men's Dress,Dubai,25,324312.00 ,746970.00 ,8159.00 
+Middle East,Sandal,Dubai,24,17492.00 ,59985.00 ,734.00 
+Middle East,Slipper,Dubai,17,387680.00 ,1238698.00 ,12768.00 
+Middle East,Sport Shoe,Dubai,5,1487.00 ,11432.00 ,70.00 
+Middle East,Women's Casual,Dubai,19,233374.00 ,416012.00 ,8102.00 
+Middle East,Women's Dress,Dubai,19,435891.00 ,1292400.00 ,12999.00 
+Middle East,Boot,Tel Aviv,20,65248.00 ,222165.00 ,2320.00 
+Middle East,Men's Casual,Tel Aviv,11,1298717.00 ,2881005.00 ,57362.00 
+Middle East,Men's Dress,Tel Aviv,24,253814.00 ,631479.00 ,8727.00 
+Middle East,Sandal,Tel Aviv,17,16314.00 ,71094.00 ,574.00 
+Middle East,Slipper,Tel Aviv,21,208004.00 ,639427.00 ,7738.00 
+Middle East,Sport Shoe,Tel Aviv,4,2071.00 ,15121.00 ,47.00 
+Middle East,Women's Casual,Tel Aviv,19,288904.00 ,790386.00 ,12000.00 
+Middle East,Women's Dress,Tel Aviv,18,434496.00 ,1272531.00 ,17394.00 
+Pacific,Boot,Auckland,12,20141.00 ,97919.00 ,962.00 
+Pacific,Men's Dress,Auckland,1,4892.00 ,538.00 ,325.00 
+Pacific,Sandal,Auckland,1,325.00 ,23897.00 ,10.00 
+Pacific,Slipper,Auckland,11,33000.00 ,136625.00 ,1321.00 
+Pacific,Sport Shoe,Auckland,5,5117.00 ,35246.00 ,211.00 
+Pacific,Women's Casual,Auckland,1,18189.00 ,15241.00 ,421.00 
+Pacific,Women's Dress,Auckland,6,42760.00 ,158688.00 ,1278.00 
+Pacific,Boot,Canberra,21,32640.00 ,188437.00 ,1237.00 
+Pacific,Men's Casual,Canberra,1,24733.00 ,45172.00 ,614.00 
+Pacific,Men's Dress,Canberra,1,4231.00 ,346780.00 ,350.00 
+Pacific,Sandal,Canberra,1,1093.00 ,8711.00 ,21.00 
+Pacific,Slipper,Canberra,10,44121.00 ,155948.00 ,1252.00 
+Pacific,Sport Shoe,Canberra,10,12211.00 ,80393.00 ,336.00 
+Pacific,Women's Casual,Canberra,1,15032.00 ,42469.00 ,409.00 
+Pacific,Women's Dress,Canberra,5,21486.00 ,58824.00 ,1096.00 
+Pacific,Boot,Jakarta,6,11975.00 ,50645.00 ,523.00 
+Pacific,Men's Casual,Jakarta,12,373908.00 ,1139026.00 ,10960.00 
+Pacific,Men's Dress,Jakarta,22,186631.00 ,559904.00 ,6447.00 
+Pacific,Sandal,Jakarta,31,24940.00 ,134557.00 ,1112.00 
+Pacific,Slipper,Jakarta,7,22060.00 ,82215.00 ,861.00 
+Pacific,Sport Shoe,Jakarta,4,6110.00 ,26124.00 ,164.00 
+Pacific,Women's Casual,Jakarta,1,18761.00 ,27749.00 ,468.00 
+Pacific,Women's Dress,Jakarta,1,4659.00 ,19899.00 ,255.00 
+Pacific,Boot,Kuala Lumpur,15,25796.00 ,143063.00 ,1110.00 
+Pacific,Men's Casual,Kuala Lumpur,6,106657.00 ,310404.00 ,4092.00 
+Pacific,Men's Dress,Kuala Lumpur,7,55667.00 ,161328.00 ,2288.00 
+Pacific,Sandal,Kuala Lumpur,7,4130.00 ,24936.00 ,213.00 
+Pacific,Slipper,Kuala Lumpur,17,83212.00 ,382786.00 ,2568.00 
+Pacific,Sport Shoe,Kuala Lumpur,2,450.00 ,8136.00 ,42.00 
+Pacific,Women's Casual,Kuala Lumpur,2,36110.00 ,91052.00 ,995.00 
+Pacific,Women's Dress,Kuala Lumpur,8,61108.00 ,245543.00 ,1977.00 
+Pacific,Boot,Manila,21,31503.00 ,110179.00 ,1449.00 
+Pacific,Men's Casual,Manila,7,128309.00 ,264891.00 ,5285.00 
+Pacific,Men's Dress,Manila,14,144151.00 ,464158.00 ,4414.00 
+Pacific,Sandal,Manila,18,15759.00 ,65223.00 ,620.00 
+Pacific,Slipper,Manila,14,171735.00 ,708799.00 ,5544.00 
+Pacific,Sport Shoe,Manila,8,2281.00 ,15955.00 ,144.00 
+Pacific,Women's Casual,Manila,9,131794.00 ,265543.00 ,4241.00 
+Pacific,Women's Dress,Manila,12,229372.00 ,818328.00 ,7265.00 
+Pacific,Boot,Singapore,2,1520.00 ,374.00 ,120.00 
+Pacific,Men's Casual,Singapore,1,28761.00 ,89599.00 ,690.00 
+Pacific,Men's Dress,Singapore,3,30619.00 ,103585.00 ,1148.00 
+Pacific,Sandal,Singapore,1,2177.00 ,5897.00 ,35.00 
+Pacific,Slipper,Singapore,6,36612.00 ,139288.00 ,843.00 
+Pacific,Women's Dress,Singapore,5,40056.00 ,117217.00 ,1413.00 
+South America,Boot,Bogota,19,15312.00 ,35805.00 ,1229.00 
+South America,Men's Casual,Bogota,2,20835.00 ,43155.00 ,1136.00 
+South America,Men's Dress,Bogota,4,37187.00 ,62770.00 ,1424.00 
+South America,Sandal,Bogota,16,22712.00 ,62856.00 ,1292.00 
+South America,Slipper,Bogota,15,33723.00 ,88411.00 ,2033.00 
+South America,Sport Shoe,Bogota,19,4729.00 ,11597.00 ,333.00 
+South America,Women's Dress,Bogota,14,71736.00 ,117761.00 ,2646.00 
+South America,Boot,Buenos Aires,16,17027.00 ,39291.00 ,1073.00 
+South America,Men's Casual,Buenos Aires,1,16019.00 ,15889.00 ,498.00 
+South America,Men's Dress,Buenos Aires,1,14437.00 ,29932.00 ,354.00 
+South America,Sandal,Buenos Aires,21,18765.00 ,75358.00 ,604.00 
+South America,Slipper,Buenos Aires,8,11759.00 ,23822.00 ,939.00 
+South America,Sport Shoe,Buenos Aires,14,3545.00 ,6103.00 ,229.00 
+South America,Women's Casual,Buenos Aires,1,15470.00 ,19479.00 ,382.00 
+South America,Women's Dress,Buenos Aires,4,21261.00 ,31081.00 ,964.00 
+South America,Boot,Caracas,13,63697.00 ,307509.00 ,2731.00 
+South America,Men's Casual,Caracas,14,245757.00 ,445579.00 ,7918.00 
+South America,Men's Dress,Caracas,15,135371.00 ,275526.00 ,4710.00 
+South America,Sandal,Caracas,29,22973.00 ,118535.00 ,1096.00 
+South America,Slipper,Caracas,19,132853.00 ,457658.00 ,4609.00 
+South America,Sport Shoe,Caracas,4,1716.00 ,12360.00 ,79.00 
+South America,Women's Casual,Caracas,3,42654.00 ,68096.00 ,1525.00 
+South America,Women's Dress,Caracas,26,144302.00 ,454123.00 ,5274.00 
+South America,Boot,La Paz,21,36309.00 ,100618.00 ,2925.00 
+South America,Men's Casual,La Paz,6,124203.00 ,184499.00 ,4046.00 
+South America,Men's Dress,La Paz,11,131079.00 ,173417.00 ,3698.00 
+South America,Sandal,La Paz,31,27728.00 ,81525.00 ,945.00 
+South America,Slipper,La Paz,18,125763.00 ,338758.00 ,6501.00 
+South America,Sport Shoe,La Paz,15,8095.00 ,25212.00 ,254.00 
+South America,Women's Casual,La Paz,6,48260.00 ,138402.00 ,2547.00 
+South America,Women's Dress,La Paz,8,29069.00 ,73048.00 ,1648.00 
+South America,Boot,Montevideo,15,53703.00 ,150601.00 ,3226.00 
+South America,Men's Casual,Montevideo,3,52968.00 ,76200.00 ,1811.00 
+South America,Men's Dress,Montevideo,8,45566.00 ,125584.00 ,2708.00 
+South America,Sandal,Montevideo,12,27742.00 ,90767.00 ,1913.00 
+South America,Slipper,Montevideo,28,80525.00 ,236273.00 ,3419.00 
+South America,Sport Shoe,Montevideo,22,8365.00 ,39256.00 ,361.00 
+South America,Women's Casual,Montevideo,3,28343.00 ,66442.00 ,1374.00 
+South America,Women's Dress,Montevideo,5,21434.00 ,63913.00 ,1213.00 
+South America,Boot,Santiago,14,14907.00 ,39222.00 ,939.00 
+South America,Men's Dress,Santiago,3,23117.00 ,44160.00 ,1026.00 
+South America,Sandal,Santiago,22,12343.00 ,35668.00 ,631.00 
+South America,Slipper,Santiago,9,23260.00 ,46106.00 ,1224.00 
+South America,Sport Shoe,Santiago,6,4184.00 ,19113.00 ,112.00 
+South America,Women's Casual,Santiago,1,5709.00 ,6972.00 ,506.00 
+South America,Women's Dress,Santiago,3,21436.00 ,45398.00 ,759.00 
+South America,Boot,Sao Paulo,12,44720.00 ,173578.00 ,2471.00 
+South America,Men's Casual,Sao Paulo,5,85168.00 ,107413.00 ,3120.00 
+South America,Men's Dress,Sao Paulo,5,38912.00 ,89758.00 ,1740.00 
+South America,Sandal,Sao Paulo,18,33662.00 ,121645.00 ,1682.00 
+South America,Slipper,Sao Paulo,21,54768.00 ,217967.00 ,2675.00 
+South America,Sport Shoe,Sao Paulo,7,2427.00 ,10132.00 ,147.00 
+South America,Women's Casual,Sao Paulo,3,38791.00 ,117081.00 ,1438.00 
+South America,Women's Dress,Sao Paulo,13,68387.00 ,144670.00 ,2714.00 
+United States,Boot,Chicago,16,82483.00 ,305061.00 ,3735.00 
+United States,Men's Casual,Chicago,26,408978.00 ,831672.00 ,17907.00 
+United States,Men's Dress,Chicago,28,261607.00 ,824485.00 ,8915.00 
+United States,Sandal,Chicago,2,601.00 ,17121.00 ,35.00 
+United States,Slipper,Chicago,13,329235.00 ,1049530.00 ,10654.00 
+United States,Sport Shoe,Chicago,17,17347.00 ,74605.00 ,684.00 
+United States,Women's Casual,Chicago,11,172021.00 ,474524.00 ,5399.00 
+United States,Women's Dress,Chicago,37,293313.00 ,754157.00 ,10194.00 
+United States,Boot,Los Angeles,14,85932.00 ,347252.00 ,3283.00 
+United States,Men's Casual,Los Angeles,9,177010.00 ,401199.00 ,6336.00 
+United States,Men's Dress,Los Angeles,15,147670.00 ,348869.00 ,4962.00 
+United States,Sandal,Los Angeles,2,737.00 ,20838.00 ,38.00 
+United States,Slipper,Los Angeles,11,98866.00 ,330743.00 ,3457.00 
+United States,Sport Shoe,Los Angeles,19,16307.00 ,98221.00 ,601.00 
+United States,Women's Casual,Los Angeles,6,62661.00 ,231285.00 ,2346.00 
+United States,Women's Dress,Los Angeles,16,148129.00 ,452383.00 ,4289.00 
+United States,Boot,Minneapolis,16,111940.00 ,615489.00 ,4475.00 
+United States,Men's Casual,Minneapolis,16,263712.00 ,564741.00 ,9991.00 
+United States,Men's Dress,Minneapolis,22,235842.00 ,623645.00 ,7344.00 
+United States,Sandal,Minneapolis,8,3551.00 ,32907.00 ,161.00 
+United States,Slipper,Minneapolis,16,131813.00 ,487233.00 ,4833.00 
+United States,Sport Shoe,Minneapolis,29,18151.00 ,116192.00 ,1009.00 
+United States,Women's Casual,Minneapolis,7,110760.00 ,287412.00 ,3440.00 
+United States,Women's Dress,Minneapolis,27,224168.00 ,760977.00 ,5820.00 
+United States,Boot,New York,18,97151.00 ,495479.00 ,3983.00 
+United States,Men's Casual,New York,20,456985.00 ,890096.00 ,13453.00 
+United States,Men's Dress,New York,18,191755.00 ,658134.00 ,5399.00 
+United States,Sandal,New York,1,554.00 ,5060.00 ,23.00 
+United States,Slipper,New York,24,252758.00 ,1059333.00 ,8503.00 
+United States,Sport Shoe,New York,23,22190.00 ,141140.00 ,847.00 
+United States,Women's Casual,New York,10,178842.00 ,438035.00 ,4236.00 
+United States,Women's Dress,New York,17,288972.00 ,1129697.00 ,10257.00 
+United States,Boot,Seattle,15,70790.00 ,226678.00 ,3039.00 
+United States,Men's Casual,Seattle,6,65842.00 ,112538.00 ,3395.00 
+United States,Men's Dress,Seattle,10,132397.00 ,274310.00 ,3153.00 
+United States,Sandal,Seattle,10,6596.00 ,18768.00 ,181.00 
+United States,Slipper,Seattle,10,155255.00 ,553502.00 ,5277.00 
+United States,Sport Shoe,Seattle,29,30408.00 ,108266.00 ,1021.00 
+United States,Women's Casual,Seattle,2,17252.00 ,28513.00 ,790.00 
+United States,Women's Dress,Seattle,21,133405.00 ,392307.00 ,4037.00 
+Western Europe,Boot,Copenhagen,2,1663.00 ,4657.00 ,129.00 
+Western Europe,Men's Casual,Copenhagen,1,38492.00 ,90672.00 ,767.00 
+Western Europe,Men's Dress,Copenhagen,2,12415.00 ,36074.00 ,686.00 
+Western Europe,Slipper,Copenhagen,4,15908.00 ,69133.00 ,594.00 
+Western Europe,Sport Shoe,Copenhagen,1,1927.00 ,17683.00 ,31.00 
+Western Europe,Sport Shoe,Copenhagen,13,101922.00 ,327742.00 ,4204.00 
+Western Europe,Women's Casual,Copenhagen,26,502636.00 ,1110412.00 ,17448.00 
+Western Europe,Women's Dress,Copenhagen,3,18153.00 ,62048.00 ,664.00 
+Western Europe,Boot,Geneva,22,41341.00 ,171030.00 ,1560.00 
+Western Europe,Men's Casual,Geneva,4,71618.00 ,138897.00 ,2484.00 
+Western Europe,Men's Dress,Geneva,3,26888.00 ,60544.00 ,1140.00 
+Western Europe,Sandal,Geneva,3,736.00 ,3529.00 ,51.00 
+Western Europe,Slipper,Geneva,27,109808.00 ,440623.00 ,3311.00 
+Western Europe,Sport Shoe,Geneva,17,15951.00 ,119953.00 ,592.00 
+Western Europe,Women's Casual,Geneva,5,69470.00 ,226247.00 ,2114.00 
+Western Europe,Women's Dress,Geneva,14,111396.00 ,339166.00 ,3036.00 
+Western Europe,Boot,Heidelberg,14,65610.00 ,301779.00 ,2829.00 
+Western Europe,Men's Casual,Heidelberg,12,175694.00 ,595118.00 ,9845.00 
+Western Europe,Men's Dress,Heidelberg,16,161679.00 ,468267.00 ,5373.00 
+Western Europe,Sandal,Heidelberg,3,977.00 ,4618.00 ,62.00 
+Western Europe,Slipper,Heidelberg,17,243342.00 ,928112.00 ,7940.00 
+Western Europe,Sport Shoe,Heidelberg,11,38961.00 ,230819.00 ,1316.00 
+Western Europe,Women's Casual,Heidelberg,9,141287.00 ,424473.00 ,3861.00 
+Western Europe,Women's Dress,Heidelberg,23,140189.00 ,403156.00 ,4812.00 
+Western Europe,Boot,Lisbon,18,76349.00 ,341911.00 ,3290.00 
+Western Europe,Men's Casual,Lisbon,18,311341.00 ,502959.00 ,12247.00 
+Western Europe,Men's Dress,Lisbon,8,108906.00 ,328209.00 ,2665.00 
+Western Europe,Sandal,Lisbon,4,1650.00 ,24253.00 ,64.00 
+Western Europe,Slipper,Lisbon,12,170694.00 ,865325.00 ,5925.00 
+Western Europe,Sport Shoe,Lisbon,19,19686.00 ,118262.00 ,824.00 
+Western Europe,Women's Casual,Lisbon,3,41939.00 ,112366.00 ,1266.00 
+Western Europe,Women's Dress,Lisbon,17,167780.00 ,538624.00 ,4150.00 
+Western Europe,Boot,London,31,54449.00 ,289527.00 ,2321.00 
+Western Europe,Men's Casual,London,13,151402.00 ,401374.00 ,7159.00 
+Western Europe,Men's Dress,London,13,151458.00 ,446963.00 ,4870.00 
+Western Europe,Sandal,London,2,5217.00 ,11111.00 ,24.00 
+Western Europe,Slipper,London,14,172002.00 ,625925.00 ,5620.00 
+Western Europe,Sport Shoe,London,10,9165.00 ,42239.00 ,354.00 
+Western Europe,Women's Casual,London,5,68962.00 ,162447.00 ,1978.00 
+Western Europe,Women's Dress,London,25,149354.00 ,527226.00 ,5084.00 
+Western Europe,Boot,Madrid,1,1179.00 ,1027.00 ,93.00 
+Western Europe,Men's Casual,Madrid,4,71014.00 ,59011.00 ,3784.00 
+Western Europe,Men's Dress,Madrid,4,54791.00 ,181739.00 ,1468.00 
+Western Europe,Slipper,Madrid,4,12127.00 ,10234.00 ,500.00 
+Western Europe,Women's Casual,Madrid,3,50146.00 ,113870.00 ,1216.00 
+Western Europe,Women's Dress,Madrid,1,11385.00 ,59192.00 ,273.00 
+Western Europe,Boot,Paris,15,19196.00 ,41506.00 ,1006.00 
+Western Europe,Men's Casual,Paris,5,89416.00 ,156288.00 ,3863.00 
+Western Europe,Men's Dress,Paris,16,203532.00 ,421109.00 ,5722.00 
+Western Europe,Sandal,Paris,3,1520.00 ,23816.00 ,60.00 
+Western Europe,Slipper,Paris,19,90975.00 ,251927.00 ,2372.00 
+Western Europe,Sport Shoe,Paris,4,3449.00 ,28588.00 ,186.00 
+Western Europe,Women's Casual,Paris,5,91243.00 ,184365.00 ,2388.00 
+Western Europe,Women's Dress,Paris,19,122546.00 ,362247.00 ,3727.00 
+Western Europe,Boot,Rome,23,36244.00 ,209271.00 ,1455.00 
+Western Europe,Men's Casual,Rome,2,37271.00 ,91670.00 ,1761.00 
+Western Europe,Men's Dress,Rome,2,28249.00 ,69058.00 ,651.00 
+Western Europe,Sandal,Rome,3,1249.00 ,4611.00 ,48.00 
+Western Europe,Slipper,Rome,13,42442.00 ,132283.00 ,1829.00 
+Western Europe,Sport Shoe,Rome,14,9969.00 ,74848.00 ,549.00 
+Western Europe,Women's Casual,Rome,2,19964.00 ,62256.00 ,954.00 
+Western Europe,Women's Dress,Rome,16,106676.00 ,389861.00 ,3160.00 

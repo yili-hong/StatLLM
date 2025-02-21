@@ -1,0 +1,13 @@
+ods trace on;
+proc univariate data = sashelp.shoes;
+var sales;
+run;
+ods trace off;
+
+
+	
+		
+	
+
+	
+	

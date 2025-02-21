@@ -1,0 +1,16 @@
+
+proc contents data=sample2014;
+run;
+
+proc sql;
+    select count(*) as Number_of_Observations from sample2014;
+    select count(*) as Number_of_Variables from dictionary.columns where libname='WORK' and memname='SAMPLE2014';
+quit;
+
+data _null_;
+    dsid = open('sample2014');
+    cretime = attrn(dsid, 'CREATE_TIME');
+    put "Creation Time: " cretime datetime.;
+    rc = close(dsid);
+run;
+

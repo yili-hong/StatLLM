@@ -1,0 +1,5 @@
+PROC TTEST DATA=Sample2014 ALPHA=.05;
+   VAR Writing;
+   CLASS Gender;
+RUN;
+

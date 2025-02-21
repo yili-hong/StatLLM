@@ -1,0 +1,1 @@
+Using the dataset baseball, address this lack of fit by using polynomials of degree 2 for yrmajor and crhits

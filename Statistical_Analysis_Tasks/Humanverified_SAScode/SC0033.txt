@@ -1,0 +1,5 @@
+proc freq data=athelete;
+	title "McNemar's test for Paired Samples";
+	tables X*Y /agree expected norow nocol nopercent; 
+	run;
+	

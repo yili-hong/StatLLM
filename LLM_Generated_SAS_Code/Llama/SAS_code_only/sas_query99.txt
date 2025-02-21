@@ -1,0 +1,46 @@
+/* Perform linear regression */
+proc reg data=imports;
+  model curbweight = enginesize;
+  output out=residuals p=predicted r=residual;
+run;
+
+/* Check for linearity */
+proc sgplot data=residuals;
+  reg x=enginesize y=residual;
+  xaxis label="Engine Size";
+  yaxis label="Residual";
+run;
+
+/* Check for constant variance */
+proc sgplot data=residuals;
+  reg x=predicted y=residual;
+  xaxis label="Predicted Curb Weight";
+  yaxis label="Residual";
+run;
+
+/* Check for normality of residuals */
+proc univariate data=residuals normal;
+  var residual;
+  histogram residual / normal;
+run;
+
+/* Check for outliers and influential observations */
+proc reg data=imports;
+  model curbweight = enginesize;
+  output out=influence p=predicted r=residual student=student;
+run;
+
+proc print data=influence;
+  var enginesize curbweight predicted residual student;
+run;
+
+/* Calculate VIF to check for multicollinearity */
+proc reg data=imports;
+  model curbweight = enginesize;
+  output out=vif vif=vif;
+run;
+
+proc print data=vif;
+  var enginesize vif;
+run;
+

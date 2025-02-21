@@ -1,0 +1,6 @@
+PROC IMPORT OUT=highlow 
+     DATAFILE='/StatLLM/Statistical_Analysis_Tasks/TaskDatasets/DS0064/highlow.csv' 
+     DBMS=CSV 
+     REPLACE; 
+     GETNAMES=YES; 
+RUN; 

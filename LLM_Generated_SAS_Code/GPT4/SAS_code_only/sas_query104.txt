@@ -1,0 +1,15 @@
+
+/* Run the regression */
+PROC REG DATA=Work.imports;
+   MODEL enginesize = symboling normalized_losses wheelbase length width height curbweight bore stroke compression_ratio hp peakrpm citympg highwaympg;
+   OUTPUT OUT=CooksD P=RStudent COOKD=CookDist; /*Output predicted residuals and Cook's distance */
+RUN;
+
+/* Identify observations with Cook's D > 1 (for example) as unduly influential */
+DATA Work.imports_without_influential;
+   SET CooksD;
+   WHERE CookDist <= 1;
+RUN;
+
+/* Now the new dataset "imports_without_influential" has excluded the influential observations based on Cook's distance criterion */
+

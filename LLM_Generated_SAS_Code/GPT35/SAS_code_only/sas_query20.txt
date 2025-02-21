@@ -1,0 +1,4 @@
+proc ttest data=response;
+   paired Control*Treatment;
+run;
+

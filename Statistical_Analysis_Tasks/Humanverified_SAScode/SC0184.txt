@@ -1,0 +1,4 @@
+proc tabulate data=year_sales format=comma10.;
+class SalesRep;
+table SalesRep;
+run;

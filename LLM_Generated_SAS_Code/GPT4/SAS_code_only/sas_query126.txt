@@ -1,0 +1,30 @@
+/* Calculate the Median for each group */
+proc means data=pulse_data noprint;
+  by group;
+  var pulse;
+  output out=group_medians median(median)=group_median;
+run;
+
+/* Merge the median values back to the original dataset */
+data pulse_data;
+  merge pulse_data group_medians;
+  by group;
+run;
+
+/* Calculate the Residuals using Median */
+data pulse_data;
+  set pulse_data;
+  residual = pulse - group_median;
+run;
+
+/* Calculate the Variance of the Residuals for each group */
+proc means data=pulse_data noprint;
+  by group;
+  var residual;
+  output out=group_residual_variance var(residual)=group_residual_variance;
+run;
+
+/* Output the results */
+proc print data=group_residual_variance;
+  title 'Variance of Median Based Residuals of pulse among different groups';
+run;

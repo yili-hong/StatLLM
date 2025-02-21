@@ -1,0 +1,45 @@
+1, Name: elemapi
+
+2. Data Set Information: 
+This dataset  that was created by randomly sampling 400 elementary schools from the California Department of Education’s API 2000 dataset.  This data file contains a measure of school academic performance as well as other attributes of the elementary schools, such as, class size, enrollment, poverty, etc.
+
+3. Attribute Information:
+
+Number of observations: 400
+Number of variables: 21 
+
+Attribute: Attribute Range
+
+snum            int    %9.0g                  school number
+dnum            int    %7.0g       dname      district number
+api00           int    %6.0g                  api 2000
+api99           int    %6.0g                  api 1999
+growth          int    %6.0g                  growth 1999 to 2000
+meals           byte   %4.0f                  pct free meals
+ell             byte   %4.0f                  english language learners
+yr_rnd          byte   %4.0f       yr_rnd     year round school
+mobility        byte   %4.0f                  pct 1st year in school
+acs_k3          byte   %4.0f                  avg class size k-3
+acs_46          byte   %4.0f                  avg class size 4-6
+not_hsg         byte   %4.0f                  parent not hsg
+hsg             byte   %4.0f                  parent hsg
+some_col        byte   %4.0f                  parent some college
+col_grad        byte   %4.0f                  parent college grad
+grad_sch        byte   %4.0f                  parent grad school
+avg_ed          float  %9.0g                  avg parent ed
+full            float  %4.0f                  pct full credential
+emer            byte   %4.0f                  pct emer credential
+enroll          int    %9.0g                  number of students
+mealcat         byte   %18.0g      mealcat    Percentage free meals in 3
+                                                categories
+
+
+Reference:
+
+https://stats.oarc.ucla.edu/stata/webbooks/reg/chapter1/regressionwith-statachapter-1-simple-and-multiple-regression/
+Citation: required 
+
+
+
+
+

@@ -1,0 +1,5 @@
+
+/* Perform linear regression analysis */
+proc glm data=crack;
+  model load = age / solution;
+run;

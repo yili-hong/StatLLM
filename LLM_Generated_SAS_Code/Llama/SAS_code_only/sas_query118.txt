@@ -1,0 +1,16 @@
+/* Perform linear regression */
+proc reg data=ART;
+  model TASK = CREATE;
+  output out=reg_output predicted=pred_task residual=residual;
+run;
+
+/* Print the regression output */
+proc print data=reg_output;
+  var SUBJECT CREATE TASK pred_task residual;
+run;
+
+/* Print the regression statistics */
+proc reg data=ART;
+  model TASK = CREATE;
+run;
+

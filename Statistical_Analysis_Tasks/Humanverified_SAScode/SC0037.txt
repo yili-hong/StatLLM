@@ -1,0 +1,8 @@
+proc logistic data=marketing_data;
+    class Group(ref='Control') / param=ref;
+    model Purchased(event='1') = Group Opened_Email Clicked_Link 
+                                 Group*Opened_Email Group*Clicked_Link
+                                 / expb;
+    ods output ParameterEstimates=param_estimates;
+run;
+

@@ -1,0 +1,11 @@
+The BMT (bone marrow transplant) data set is used to illustrate survival analysis methods (Klein and Moeschberger 1997).
+At the time of transplant, each patient is classified into one of three risk categories: ALL (acute lymphoblastic leukemia), 
+AML-Low Risk (acute myelocytic leukemia, low risk), and AML-High Risk. The endpoint of interest is the disease-free survival time, 
+which is the time in days to death, relapse, or the end of the study. 
+
+
+The variable Group represents the patient’s risk category, 
+the variable T represents the disease-free survival time, and the variable Status is the censoring indicator such that the value 1 indicates an event time 
+and the value 0 indicates a censored time.
+
+Source: https://documentation.sas.com/doc/en/pgmsascdc/9.4_3.4/statug/statug_sashelp_sect007.htm

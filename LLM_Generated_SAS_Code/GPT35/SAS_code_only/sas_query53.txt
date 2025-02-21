@@ -1,0 +1,4 @@
+proc ttest data=sashelp.shoes;
+   var Sales;
+   nullmean=0;
+run;

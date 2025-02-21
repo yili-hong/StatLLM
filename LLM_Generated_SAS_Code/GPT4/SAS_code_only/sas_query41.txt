@@ -1,0 +1,4 @@
+PROC MEANS DATA=sashelp.shoes;
+  VAR Sales;
+  OUTPUT OUT=SalesSummary MEAN= MEAN_Sales MIN= MIN_Sales MAX= MAX_Sales STDEV= STDEV_Sales N= COUNT;
+RUN;

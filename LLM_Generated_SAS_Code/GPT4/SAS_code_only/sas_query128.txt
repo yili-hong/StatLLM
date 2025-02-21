@@ -1,0 +1,5 @@
+
+PROC LOGISTIC data=Neuralgia;
+  CLASS Treatment Sex / param=ref;
+  MODEL Pain(event='Yes') = Duration Treatment Sex Duration*Treatment Duration*Sex / link=logit;
+RUN;

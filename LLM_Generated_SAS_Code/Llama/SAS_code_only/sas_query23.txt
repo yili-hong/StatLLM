@@ -1,0 +1,7 @@
+/* Run ANOVA procedure */
+proc anova data=words;
+  class method;
+  model words = method;
+  means method / tukey;
+run;
+

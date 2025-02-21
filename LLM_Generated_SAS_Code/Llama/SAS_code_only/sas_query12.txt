@@ -1,0 +1,30 @@
+
+/* Perform PROC REG analysis */
+proc reg data=crack;
+  model load = age;
+  output out=reg_output r=residual p=predicted;
+run;
+
+/* Plot the residuals vs predicted values */
+proc sgplot data=reg_output;
+  reg x=predicted y=residual / clb;
+  xaxis label="Predicted Load";
+  yaxis label="Residual";
+  title "Residuals vs Predicted Values";
+run;
+
+/* Plot the residuals vs age */
+proc sgplot data=reg_output;
+  reg x=age y=residual / clb;
+  xaxis label="Age";
+  yaxis label="Residual";
+  title "Residuals vs Age";
+run;
+
+/* Plot the load vs age with a regression line */
+proc sgplot data=crack;
+  reg x=age y=load / clb;
+  xaxis label="Age";
+  yaxis label="Load";
+  title "Load vs Age with Regression Line";
+run;

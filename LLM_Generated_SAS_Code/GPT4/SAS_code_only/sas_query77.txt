@@ -1,0 +1,10 @@
+PROC SORT DATA=abalone;
+    BY weightgroup sex;
+RUN;
+
+PROC FREQ DATA=abalone;
+    TABLES weightgroup*sex / NOPRINT OUT=contingencyTable;
+RUN;
+
+PROC PRINT DATA=contingencyTable;
+RUN;

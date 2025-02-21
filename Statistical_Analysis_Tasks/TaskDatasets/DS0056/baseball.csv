@@ -1,0 +1,104 @@
+obs,Name ,Team,nAtBat,nHits,nHome,nRuns ,nRBI ,nBB ,YrMajor,CrAtBat ,CrHits,CrHome ,CrRuns ,CrRbi ,CrBB ,League,Division ,Position ,nOuts ,nAssts ,nError ,Salary,Div,logSalary
+1,"Allanson, Andy",Cleveland,293,66,1,30,29,14,1,293,66,1,30,29,14,American,East,C,446,33,20,.,AE,
+2,"Ashby, Alan",Houston,315,81,7,24,38,39,14,3449,835,69,321,414,375,National,West,C,632,43,10,475,NW,6.163314804
+3,"Davis, Alan",Seattle,479,130,18,66,72,76,3,1624,457,63,224,266,263,American,West,1B,880,82,14,480,AW,6.173786104
+4,"Dawson, Andre",Montreal,496,141,20,65,78,37,11,5628,1575,225,828,838,354,National,East,RF,200,11,3,500,NE,6.214608098
+5,"Galarraga, Andres",Montreal,321,87,10,39,42,30,2,396,101,12,48,46,33,National,East,1B,805,40,4,91.5,NE,4.516338972
+6,"Griffin, Alfredo",Oakland,594,169,4,74,51,35,11,4408,1133,19,501,336,194,American,West,SS,282,421,25,750,AW,6.620073207
+7,"Newman, Al",Montreal,185,37,1,23,8,21,2,214,42,1,30,9,24,National,East,2B,76,127,7,70,NE,4.248495242
+8,"Salazar, Argenis",Kansas City,298,73,0,24,24,7,3,509,108,0,41,37,12,American,West,SS,121,283,9,100,AW,4.605170186
+9,"Thomas, Andres",Atlanta,323,81,6,26,32,8,2,341,86,6,32,34,8,National,West,SS,143,290,19,75,NW,4.317488114
+10,"Thornton, Andre",Cleveland,401,92,17,49,66,65,13,5206,1332,253,784,890,866,American,East,DH,0,0,0,1100,AE,7.003065459
+11,"Trammell, Alan",Detroit,574,159,21,107,75,59,10,4631,1300,90,702,504,488,American,East,SS,238,445,22,517.143,AE,6.248319432
+12,"Trevino, Alex",Los Angeles,202,53,4,31,26,27,9,1876,467,15,192,186,161,National,West,C,304,45,11,512.5,NW,6.239300711
+13,"Van Slyke, Andy",St Louis,418,113,13,48,61,47,4,1512,392,41,205,204,203,National,East,RF,211,11,7,550,NE,6.309918278
+14,"Wiggins, Alan",Baltimore,239,60,0,30,11,22,6,1941,510,4,309,103,207,American,East,2B,121,151,6,700,AE,6.551080335
+15,"Almon, Bill",Pittsburgh,196,43,7,29,27,30,13,3231,825,36,376,290,238,National,East,UT,80,45,8,240,NE,5.480638923
+16,"Beane, Billy",Minneapolis,183,39,3,20,15,11,3,201,42,3,20,16,11,American,West,OF,118,0,0,.,AW,.
+17,"Bell, Buddy",Cincinnati,568,158,20,89,75,73,15,8068,2273,177,1045,993,732,National,West,3B,105,290,10,775,NW,6.652863029
+18,"Biancalana, Buddy",Kansas City,190,46,2,24,8,15,5,479,102,5,65,23,39,American,West,SS,102,177,16,175,AW,5.164785974
+19,"Bochte, Bruce",Oakland,407,104,6,57,43,65,12,5233,1478,100,643,658,653,American,West,1B,912,88,9,.,AW,.
+20,"Bochy, Bruce",San Diego,127,32,8,16,22,14,8,727,180,24,67,82,56,National,West,C,202,22,2,135,NW,4.905274778
+21,"Bonds, Barry",Pittsburgh,413,92,16,72,48,65,1,413,92,16,72,48,65,National,East,CF,280,9,5,100,NE,4.605170186
+22,"Bonilla, Bobby",Chicago,426,109,3,55,43,62,1,426,109,3,55,43,62,American,West,O1,361,22,2,115,AW,4.744932128
+23,"Boone, Bob",California,442,98,7,48,49,43,15,5982,1501,96,555,702,533,American,West,C,812,84,11,.,AW,.
+24,"Brenly, Bob",San Francisco,472,116,16,60,62,74,6,1924,489,67,242,251,240,National,West,C,518,55,3,600,NW,6.396929655
+25,"Buckner, Bill",Boston,629,168,18,73,102,40,18,8424,2464,164,1008,1072,402,American,East,1B,1067,157,14,776.667,AE,6.655011687
+26,"Butler, Brett",Cleveland,587,163,4,92,51,70,6,2695,747,17,442,198,317,American,East,CF,434,9,3,765,AE,6.639875834
+27,"Dernier, Bob",Chicago,324,73,4,32,18,22,7,1931,491,13,291,108,180,National,East,CF,222,3,3,708.333,NE,6.562914322
+28,"Diaz, Bo",Cincinnati,474,129,10,50,56,40,10,2331,604,61,246,327,166,National,West,C,732,83,13,750,NW,6.620073207
+29,"Doran, Bill",Houston,550,152,6,92,37,81,5,2308,633,32,349,182,308,National,West,2B,262,329,16,625,NW,6.43775165
+30,"Downing, Brian",California,513,137,20,90,95,90,14,5201,1382,166,763,734,784,American,West,LF,267,5,3,900,AW,6.802394763
+31,"Grich, Bobby",California,313,84,9,42,30,39,17,6890,1833,224,1033,864,1087,American,West,2B,127,221,7,.,AW,.
+32,"Hatcher, Billy",Houston,419,108,6,55,36,22,3,591,149,8,80,46,31,National,West,CF,226,7,4,110,NW,4.700480366
+33,"Horner, Bob",Atlanta,517,141,27,70,87,52,9,3571,994,215,545,652,337,National,West,1B,1378,102,8,.,NW,.
+34,"Jacoby, Brook",Cleveland,583,168,17,83,80,56,5,1646,452,44,219,208,136,American,East,3B,109,292,25,612.5,AE,6.417548942
+35,"Kearney, Bob",Seattle,204,49,6,23,25,12,7,1309,308,27,126,132,66,American,West,C,419,46,5,300,AW,5.703782475
+36,"Madlock, Bill",Los Angeles,379,106,10,38,60,30,14,6207,1906,146,859,803,571,National,West,3B,72,170,24,850,NW,6.74523635
+37,"Meacham, Bobby",New York,161,36,0,19,10,17,4,1053,244,3,156,86,107,American,East,SS,70,149,12,.,AE,.
+38,"Melvin, Bob",San Francisco,268,60,5,24,25,15,2,350,78,5,34,29,18,National,West,C,442,59,6,90,NW,4.49980967
+39,"Oglivie, Ben",Milwaukee,346,98,5,31,53,30,16,5913,1615,235,784,901,560,American,East,DH,0,0,0,.,AE,.
+40,"Roberts, Bip",San Diego,241,61,1,34,12,14,1,241,61,1,34,12,14,National,West,2B,166,172,10,.,NW,.
+41,"Robidoux, Billy Jo",Milwaukee,181,41,1,15,21,33,2,232,50,4,20,29,45,American,East,1B,326,29,5,67.5,AE,4.212127598
+42,"Russell, Bill",Los Angeles,216,54,0,21,18,15,18,7318,1926,46,796,627,483,National,West,UT,103,84,5,.,NW,.
+43,"Sample, Billy",Atlanta,200,57,6,23,14,14,9,2516,684,46,371,230,195,National,West,OF,69,1,1,.,NW,.
+44,"Schroeder, Bill",Milwaukee,217,46,7,32,19,9,4,694,160,32,86,76,32,American,East,UT,307,25,1,180,AE,5.192956851
+45,"Wynegar, Butch",New York,194,40,7,19,29,30,11,4183,1069,64,486,493,608,American,East,C,325,22,2,.,AE,.
+46,"Bando, Chris",Cleveland,254,68,2,28,26,22,6,999,236,21,108,117,118,American,East,C,359,30,4,305,AE,5.720311777
+47,"Brown, Chris",San Francisco,416,132,7,57,49,33,3,932,273,24,113,121,80,National,West,3B,73,177,18,215,NW,5.370638028
+48,"Castillo, Carmen",Cleveland,205,57,8,34,32,9,5,756,192,32,117,107,51,American,East,OD,58,4,4,247.5,AE,5.511410582
+49,"Cooper, Cecil",Milwaukee,542,140,12,46,75,41,16,7099,2130,235,987,1089,431,American,East,1B,697,61,9,.,AE,.
+50,"Davis, Chili",San Francisco,526,146,13,71,70,84,6,2648,715,77,352,342,289,National,West,RF,303,9,9,815,NW,6.703188113
+51,"Fisk, Carlton",Chicago,457,101,14,42,63,22,17,6521,1767,281,1003,977,619,American,West,C,389,39,4,875,AW,6.774223886
+52,"Ford, Curt",St Louis,214,53,2,30,29,23,2,226,59,2,32,32,27,National,East,OF,109,7,3,70,NE,4.248495242
+53,"Johnson, Cliff",Toronto,336,84,15,48,55,52,15,3945,1016,196,539,699,568,American,East,DH,8,1,0,.,AE,.
+54,"Lansford, Carney",Oakland,591,168,19,80,72,39,9,4478,1307,113,634,563,319,American,West,3B,67,147,4,1200,AW,7.090076836
+55,"Lemon, Chet",Detroit,403,101,12,45,53,39,12,5150,1429,166,747,666,526,American,East,CF,316,6,5,675,AE,6.514712691
+56,"Maldonado, Candy",San Francisco,405,102,18,49,85,20,6,950,231,29,99,138,64,National,West,OF,161,10,3,415,NW,6.02827852
+57,"Martinez, Carmelo",San Diego,244,58,9,28,25,35,4,1335,333,49,164,179,194,National,West,O1,142,14,2,340,NW,5.828945618
+58,"Moore, Charlie",Milwaukee,235,61,3,24,39,21,14,3926,1029,35,441,401,333,American,East,C,425,43,4,.,AE,.
+59,"Reynolds, Craig",Houston,313,78,6,32,41,12,12,3742,968,35,409,321,170,National,West,SS,106,206,7,416.667,NW,6.032287342
+60,"Ripken, Cal",Baltimore,627,177,25,98,81,70,6,3210,927,133,529,472,313,American,East,SS,240,482,13,1350,AE,7.207859871
+61,"Snyder, Cory",Cleveland,416,113,24,58,69,16,1,416,113,24,58,69,16,American,East,OS,203,70,10,90,AE,4.49980967
+62,"Speier, Chris",Chicago,155,44,6,21,23,15,16,6631,1634,98,698,661,777,National,East,3S,53,88,3,275,NE,5.616771098
+63,"Wilkerson, Curt",Texas,236,56,0,27,15,11,4,1115,270,1,116,64,57,American,West,2S,125,199,13,230,AW,5.438079309
+64,"Anderson, Dave",Los Angeles,216,53,1,31,15,22,4,926,210,9,118,69,114,National,West,3S,73,152,11,225,NW,5.416100402
+65,"Baker, Dusty",Oakland,242,58,4,25,19,27,19,7117,1981,242,964,1013,762,American,West,OF,90,4,0,.,AW,.
+66,"Baylor, Don",Boston,585,139,31,93,94,62,17,7546,1982,315,1141,1179,727,American,East,DH,0,0,0,950,AE,6.856461985
+67,"Bilardello, Dann",Montreal,191,37,4,12,17,14,4,773,163,16,61,74,52,National,East,C,391,38,8,.,NE,.
+68,"Boston, Daryl",Chicago,199,53,5,29,22,21,3,514,120,8,57,40,39,American,West,CF,152,3,5,75,AW,4.317488114
+69,"Coles, Darnell",Detroit,521,142,20,67,86,45,4,815,205,22,99,103,78,American,East,3B,107,242,23,105,AE,4.65396035
+70,"Collins, Dave",Detroit,419,113,1,44,27,44,12,4484,1231,32,612,344,422,American,East,LF,211,2,1,.,AE,.
+71,"Concepcion, Dave",Cincinnati,311,81,3,42,30,26,17,8247,2198,100,950,909,690,National,West,UT,153,223,10,320,NW,5.768320996
+72,"Daulton, Darren",Philadelphia,138,31,8,18,21,38,3,244,53,12,33,32,55,National,East,C,244,21,4,.,NE,.
+73,"DeCinces, Doug",California,512,131,26,69,96,52,14,5347,1397,221,712,815,548,American,West,3B,119,216,12,850,AW,6.74523635
+74,"Evans, Darrell",Detroit,507,122,29,78,85,91,18,7761,1947,347,1175,1152,1380,American,East,1B,808,108,2,535,AE,6.282266747
+75,"Evans, Dwight",Boston,529,137,26,86,97,97,15,6661,1785,291,1082,949,989,American,East,RF,280,10,5,933.333,AE,6.83876205
+76,"Garcia, Damaso",Toronto,424,119,6,57,46,13,9,3651,1046,32,461,301,112,American,East,2B,224,286,8,850,AE,6.74523635
+77,"Gladden, Dan",San Francisco,351,97,4,55,29,39,4,1258,353,16,196,110,117,National,West,CF,226,7,3,210,NW,5.347107531
+78,"Heep, Danny",New York,195,55,5,24,33,30,8,1313,338,25,144,149,153,National,East,OF,83,2,1,.,NE,.
+79,"Henderson, Dave",Seattle,388,103,15,59,47,39,6,2174,555,80,285,274,186,American,West,OF,182,9,4,325,AW,5.783825182
+80,"Hill, Donnie",Oakland,339,96,4,37,29,23,4,1064,290,11,123,108,55,American,West,23,104,213,9,275,AW,5.616771098
+81,"Kingman, Dave",Oakland,561,118,35,70,94,33,16,6677,1575,442,901,1210,608,American,West,DH,463,32,8,.,AW,.
+82,"Lopes, Davey",Chicago,255,70,7,49,35,43,15,6311,1661,154,1019,608,820,National,East,3O,51,54,8,450,NE,6.109247583
+83,"Mattingly, Don",New York,677,238,31,117,113,53,5,2223,737,93,349,401,171,American,East,1B,1377,100,6,1975,AE,7.588323677
+84,"Motley, Darryl",Kansas City,227,46,7,23,20,12,5,1325,324,44,156,158,67,American,West,RF,92,2,2,.,AW,.
+85,"Murphy, Dale",Atlanta,614,163,29,89,83,75,11,5017,1388,266,813,822,617,National,West,CF,303,6,6,1900,NW,7.549609165
+86,"Murphy, Dwayne",Oakland,329,83,9,50,39,56,9,3828,948,145,575,528,635,American,West,CF,276,6,2,600,AW,6.396929655
+87,"Parker, Dave",Cincinnati,637,174,31,89,116,56,14,6727,2024,247,978,1093,495,National,West,RF,278,9,9,1041.667,NW,6.948577594
+88,"Pasqua, Dan",New York,280,82,16,44,45,47,2,428,113,25,61,70,63,American,East,LF,148,4,2,110,AE,4.700480366
+89,"Porter, Darrell",Texas,155,41,12,21,29,22,16,5409,1338,181,746,805,875,American,West,CD,165,9,1,260,AW,5.560681631
+90,"Schofield, Dick",California,458,114,13,67,57,48,4,1350,298,28,160,123,122,American,West,SS,246,389,18,475,AW,6.163314804
+91,"Slaught, Don",Texas,314,83,13,39,46,16,5,1457,405,28,156,159,76,American,West,C,533,40,4,431.5,AW,6.067267511
+92,"Strawberry, Darryl",New York,475,123,27,76,93,72,4,1810,471,108,292,343,267,National,East,RF,226,10,6,1220,NE,7.106606138
+93,"Sveum, Dale",Milwaukee,317,78,7,35,35,32,1,317,78,7,35,35,32,American,East,3B,45,122,26,70,AE,4.248495242
+94,"Tartabull, Danny",Seattle,511,138,25,76,96,61,3,592,164,28,87,110,71,American,West,RF,157,7,8,145,AW,4.976733742
+95,"Thon, Dickie",Houston,278,69,3,24,21,29,8,2079,565,32,258,192,162,National,West,SS,142,210,10,.,NW,.
+96,"Walling, Denny",Houston,382,119,13,54,58,36,12,2133,594,41,287,294,227,National,West,3B,59,156,9,595,NW,6.388561406
+97,"Winfield, Dave",New York,565,148,24,90,104,77,14,7287,2083,305,1135,1234,791,American,East,RF,292,9,5,1861.46,AE,7.529116405
+98,"Cabell, Enos",Los Angeles,277,71,2,27,29,14,15,5952,1647,60,753,596,259,National,West,1B,360,32,5,.,NW,.
+99,"Davis, Eric",Cincinnati,415,115,27,97,71,68,3,711,184,45,156,119,99,National,West,LF,274,2,7,300,NW,5.703782475
+100,"Milner, Eddie",Cincinnati,424,110,15,70,47,36,7,2130,544,38,335,174,258,National,West,CF,292,6,3,490,NW,6.194405391
+,,,,,,,,,,,,,,,,,,,,,,,,
+User: u50394244,,,,,,,,,,,,,,,,,,,,,,,,
+Messages: 4,,,,,,,,,,,,,,,,,,,,,,,,

@@ -1,0 +1,1 @@
+For the measurement dataset, find the linear association between every two variables, for example, Height and Weight, Height and Age and Weight and Age. 

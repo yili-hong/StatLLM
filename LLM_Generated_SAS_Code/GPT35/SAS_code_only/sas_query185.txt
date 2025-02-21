@@ -1,0 +1,12 @@
+proc sql;
+   create table sales_summary as
+   select SalesRep,
+          sum(AmountSold) as TotalAmountSold
+   from year_sales
+   group by SalesRep;
+quit;
+
+proc print data=sales_summary;
+   title 'Amount Sold by Sales Representative';
+run;
+

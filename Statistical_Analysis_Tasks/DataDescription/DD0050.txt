@@ -1,0 +1,3 @@
+The dataset named crime appears in Statistical Methods for Social Sciences, Third Edition by Alan Agresti and Barbara Finlay (Prentice Hall, 1997).  The variables are state id (sid), state name (state), violent crimes per 100,000 people (crime), murders per 1,000,000 (murder),  the percent of the population living in metropolitan areas (pctmetro), 
+the percent of the population that is white (pctwhite), percent of population with a high school education or above (pcths), percent of population living under poverty line (poverty), 
+and percent of population that are single parents (single).  It has 51 observations. We are going to use poverty and single to predict crime.

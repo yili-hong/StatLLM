@@ -1,0 +1,5 @@
+PROC MEANS DATA=sample2014;
+   VAR Writing;
+   CLASS Gender;
+RUN;
+

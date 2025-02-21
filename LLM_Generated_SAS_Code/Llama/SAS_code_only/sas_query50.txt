@@ -1,0 +1,10 @@
+
+proc univariate data=sashelp.shoes;
+  var sales;
+  output out=percentiles p97_5=p975 p99_5=p995;
+run;
+
+proc print data=percentiles;
+  var p975 p995;
+run;
+

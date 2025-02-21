@@ -1,0 +1,7 @@
+PROC GLM DATA=copper;
+    CLASS pct;
+    MODEL warp = pct;
+    MEANS pct / HOVTEST=LEVENE;
+RUN;
+QUIT;
+

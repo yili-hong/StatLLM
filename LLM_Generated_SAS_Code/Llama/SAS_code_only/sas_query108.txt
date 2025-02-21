@@ -1,0 +1,28 @@
+
+
+/* Perform regression analysis with price versus mpg and weight */
+proc reg data=auto;
+  model price = mpg weight;
+  output out=reg_output p=predicted r=residual;
+run;
+
+/* Print the regression output */
+proc print data=reg_output;
+  var make price mpg weight predicted residual;
+run;
+
+/* Print the regression statistics */
+proc reg data=auto;
+  model price = mpg weight;
+  output out=reg_output p=predicted r=residual;
+  ods output FitStatistics=fit_stats;
+  ods output ParameterEstimates=param_est;
+run;
+
+proc print data=fit_stats;
+  var _type_ _value_;
+run;
+
+proc print data=param_est;
+  var parameter estimate;
+run;

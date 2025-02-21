@@ -1,0 +1,4 @@
+proc univariate data=sleeptime loccount mu0 = 7;
+	var time;
+run;
+

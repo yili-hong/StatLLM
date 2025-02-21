@@ -1,0 +1,5 @@
+
+proc means data=grades mean std;
+var Examgrade1;
+run;
+

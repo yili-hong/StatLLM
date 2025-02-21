@@ -1,0 +1,6 @@
+proc lifetest data=BMT
+ plots=survival(nocensor test
+ atrisk(atrisktickonly maxlen=13)=0 to 2500 by 500);
+ time T*Status(0);
+ strata Group / order=internal;
+run; 

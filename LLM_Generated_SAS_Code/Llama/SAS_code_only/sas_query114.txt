@@ -1,0 +1,25 @@
+
+proc freq data=hsb2;
+  tables race / chisq testp=(10 10 10 70);
+  weight count;
+run;
+
+
+proc freq data=hsb2;
+  tables race / chisq expected testp=(10 10 10 70);
+run;
+
+
+data hsb2;
+  set hsb2;
+  if race=1 then race_group="Hispanic";
+  else if race=2 then race_group="Asian";
+  else if race=3 then race_group="African American";
+  else if race=4 then race_group="White";
+  else race_group="Other";
+run;
+
+proc freq data=hsb2;
+  tables race_group / chisq expected testp=(10 10 10 70);
+run;
+

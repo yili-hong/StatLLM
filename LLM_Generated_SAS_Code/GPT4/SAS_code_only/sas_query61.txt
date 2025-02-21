@@ -1,0 +1,7 @@
+PROC GLM DATA=work.imports;
+    CLASS fueltype aspiration drivewheels;
+    MODEL hp = fueltype aspiration drivewheels;
+    MEANS fueltype aspiration drivewheels / HOVTEST=BARTLETT TUKEY;
+RUN;
+QUIT;
+

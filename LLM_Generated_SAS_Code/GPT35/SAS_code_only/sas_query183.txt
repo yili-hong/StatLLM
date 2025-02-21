@@ -1,0 +1,4 @@
+PROC CORR DATA=fitness;
+   VAR Oxygen RunTime Age Weight RestPulse RunPulse MaxPulse;
+RUN;
+

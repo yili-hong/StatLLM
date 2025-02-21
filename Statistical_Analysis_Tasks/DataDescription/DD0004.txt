@@ -1,0 +1,5 @@
+The dataset name is toxic. 
+The variable life is the response, which gives the life. 
+The varialbe poison is a factor, which gives the poison type. 
+The varialbe treatment is a factor, which gives the treatment type. 
+

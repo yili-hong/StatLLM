@@ -1,0 +1,9 @@
+/* Assuming the variable name for the dataset is "grades_dataset" */
+
+proc sgplot data=grades_dataset;
+  hbar ExamGrade1 / datalabel;
+  xaxis grid;
+  yaxis grid;
+  title "Frequency of ExamGrade1";
+run;
+

@@ -1,0 +1,4 @@
+proc freq data=racecounts;
+  tables race / chisq testp=(0.1 0.1 0.1 0.7);
+  weight count;
+run;

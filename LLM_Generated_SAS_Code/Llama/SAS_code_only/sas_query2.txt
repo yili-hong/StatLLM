@@ -1,0 +1,21 @@
+
+proc sgplot data=chisq;
+  histogram df;
+  xaxis label='Degree of Freedom';
+  yaxis label='Frequency';
+run;
+
+
+proc sgplot data=chisq;
+  density df;
+  xaxis label='Degree of Freedom';
+  yaxis label='Density';
+run;
+
+
+proc sgplot data=chisq;
+  vbar df;
+  xaxis label='Degree of Freedom';
+  yaxis label='Frequency';
+run;
+

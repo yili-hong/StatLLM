@@ -1,0 +1,33 @@
+data baseball;
+   set sashelp.baseball(where=(name^="Rose, Pete"));
+   YrMajor2 = yrmajor*yrmajor;
+   CrHits2  = crhits*crhits;
+run;
+
+proc reg data=baseball
+      plots=(diagnostics(stats=none) RStudentByLeverage(label)
+             CooksD(label) Residuals(smooth)
+             DFFITS(label) DFBETAS ObservedByPredicted(label));
+   id name team league;
+   model logSalary = nhits nruns nrbi nbb yrmajor crhits
+                     yrmajor2 crhits2;
+run;
+
+
+
+
+
+ 
+
+
+
+
+	
+
+
+	
+		
+	
+
+	
+	

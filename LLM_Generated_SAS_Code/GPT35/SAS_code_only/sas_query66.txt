@@ -1,0 +1,8 @@
+/* Create a scatter plot */
+proc sgplot data=iron2;
+title 'Corrosion Resistance (Loss) vs. Iron Content (Fe)';
+scatter x=fe y=loss / datalabel;
+xaxis label='Iron Content (fe)';
+yaxis label='Corrosion Resistance (Loss)';
+run;
+

@@ -1,0 +1,18 @@
+
+/* Perform OLS regression and output diagnostics */
+ods output Residuals=res
+             Influence=inf;
+proc reg data=crime;
+  model crime = poverty single / influence r;
+  output out=t
+    p=predicted
+    r=residual
+    h=leverage
+    cookd=cook;
+quit;
+
+/* Print the output dataset */
+proc print data=t;
+  var sid state crime poverty single predicted residual leverage cook;
+run;
+

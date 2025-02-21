@@ -1,0 +1,20 @@
+/* Fit the regression model of height on weight */
+proc reg data=measurement;
+model Height = Weight;
+run;
+
+/* Check linear relationship between variables */
+proc reg data=measurement;
+scatter Height*Weight;
+run;
+
+/* Check if residuals are normally distributed */
+proc reg data=measurement;
+model Height = Weight / influence;
+output out=residuals p=Residual;
+run;
+
+proc univariate data=residuals normal;
+var Residual;
+run;
+

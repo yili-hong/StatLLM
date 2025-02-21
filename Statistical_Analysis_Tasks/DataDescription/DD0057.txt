@@ -1,0 +1,1 @@
+The data set BPressure contains the systolic (Systolic) and diastolic (Diastolic) blood pressure readings for 22 patients

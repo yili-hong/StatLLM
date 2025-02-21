@@ -1,0 +1,24 @@
+/* Load the ACHE dataset */
+
+/* Sort data by brand */
+proc sort data=ache;
+  by Brand;
+
+/* Perform ANOVA to compare means of Time_to_Relief across brands */
+proc anova data=ache;
+  class Brand;
+  model Time_to_Relief = Brand;
+  means Brand / tukey; /* Tukey's HSD for pairwise comparisons */
+
+/* Output ANOVA table and means with standard errors */
+ods output Anova=anova_table Means=means_table;
+run;
+
+/* Optional: Visualize results using box plots or histograms */
+proc sgplot data=ache;
+  vbox Time_to_Relief / category=Brand grouporder=data; /* box plot by brand */
+run;
+
+proc sgplot data=ache;
+ histogram Time_to_Relief / groupby=Brand; /* histogram by brand */
+run;

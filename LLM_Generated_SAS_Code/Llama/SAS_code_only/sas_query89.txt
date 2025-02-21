@@ -1,0 +1,32 @@
+/* One-way ANOVA for whole_weight with sex as the categorical predictor */
+proc anova data=abalone;
+  class sex;
+  model whole_weight = sex;
+  means sex / tukey;
+run;
+
+/* Homogeneity of Variance test (Bartlett's test) */
+proc glm data=abalone;
+  class sex;
+  model whole_weight = sex;
+  means sex / hovtest=bartlett;
+run;
+
+/* Welch's t-test (for pairwise comparisons) */
+proc ttest data=abalone;
+  class sex;
+  var whole_weight;
+  by sex;
+run;
+
+/* Pairwise comparison test for whole_weight across sex */
+ods graphics / width=10in height=6in;
+proc glm data=abalone;
+  class sex;
+  model whole_weight = sex;
+  lsmeans sex / pdiff=control('F') adjust=tukey;
+  lsmeans sex / pdiff=control('M') adjust=tukey;
+  lsmeans sex / pdiff=control('I') adjust=tukey;
+run;
+ods graphics / reset;
+

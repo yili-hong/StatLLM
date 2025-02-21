@@ -1,0 +1,10 @@
+Assume that each of several test subjects is afflickted with tinea pedis (athlete's foot) on each foot, and each subject is given a treatment X on one foot and Y on the other foot. Frequency count from matched pairs of foot is measured for both cured and not cured. 
+ 
+The subject column gives the id of individuals.
+The X column gives the outcome of one foot, which is categorical and has two levels.
+The Y column gives the outcome of the other foot, which is categorical and has two levels.
+
+The dataset is named as athelete.
+
+
+

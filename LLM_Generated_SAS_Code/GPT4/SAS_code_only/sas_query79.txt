@@ -1,0 +1,11 @@
+
+PROC FREQ DATA = abalone_data;
+    TABLES Sex*Weightgroup / CHISQ;
+RUN;
+
+
+PROC LOGISTIC DATA = abalone_data;
+    CLASS Sex Weightgroup / PARAM=REF;
+    MODEL Sex = Weightgroup / LINK=LOGIT;
+RUN;
+

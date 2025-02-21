@@ -1,0 +1,6 @@
+PROC IMPORT OUT=crack 
+     DATAFILE='/StatLLM/Statistical_Analysis_Tasks/TaskDatasets/DS0003/crack.csv' 
+     DBMS=CSV 
+     REPLACE; 
+     GETNAMES=YES; 
+RUN; 

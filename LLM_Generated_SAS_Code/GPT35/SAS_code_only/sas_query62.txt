@@ -1,0 +1,12 @@
+/* Sort the data by glass type */
+proc sort data=glassid;
+   by type_of_glass;
+run;
+
+/* Perform Shapiro-Wilk test for normality of Sodium (Na) for each glass type */
+proc univariate data=glassid normal plots;
+   by type_of_glass;
+   var Na;
+   Shapiro-Wilk Na / noprint;
+run;
+

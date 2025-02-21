@@ -1,0 +1,6 @@
+The dataset name is crack. 
+The variable id gives the id of the observation. 
+The variable load is the response, which gives the load amount. 
+The varialbe age is a covariate, which gives the age. 
+The variable agef is a factor, which treats age as a factor.
+

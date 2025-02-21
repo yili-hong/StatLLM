@@ -1,0 +1,30 @@
+/* Perform logistic regression */
+PROC LOGISTIC DATA=binary DESCENDING;
+  MODEL admit(EVENT='1') = gre gpa rank / EXPB;
+  OUTPUT OUT=predicted PRED=prob_admit;
+RUN;
+
+/* Print the odds ratio and 95% confidence interval */
+PROC PRINT DATA=predicted;
+  VAR admit gre gpa rank prob_admit;
+RUN;
+
+
+/* Import the dataset */
+DATA binary;
+  INFILE 'path_to_your_data_file.csv' DSD FIRSTOBS=2;
+  INPUT admit gre gpa rank;
+RUN;
+
+/* Perform logistic regression */
+PROC LOGISTIC DATA=binary DESCENDING;
+  CLASS rank (PARAM=REF);
+  MODEL admit(EVENT='1') = gre gpa rank / EXPB;
+  OUTPUT OUT=predicted PRED=prob_admit;
+RUN;
+
+/* Print the odds ratio and 95% confidence interval */
+PROC PRINT DATA=predicted;
+  VAR admit gre gpa rank prob_admit;
+RUN;
+

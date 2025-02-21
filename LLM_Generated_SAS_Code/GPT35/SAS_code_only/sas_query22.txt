@@ -1,0 +1,5 @@
+proc npar1way data=horse wilcoxon;
+class horse;
+var site1 site2;
+run;
+

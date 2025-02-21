@@ -1,0 +1,22 @@
+/* Importing the dataset - assuming data is externally sourced */
+/* This step might differ based on how your data is stored (CSV, database, etc.) */
+/* Uncomment and modify as necessary.
+
+data turbine_data;
+   set turbine;
+run;
+*/
+
+/* Sort data by 'Day' to ensure proper grouping in the plot */
+proc sort data=turbine_data;
+    by Day;
+run;
+
+/* Creating the box plot */
+proc sgplot data=turbine_data;
+    vbox KWatts / category=Day; /* Creating the box plot for KWatts by Day */
+    title 'Box Plot for Power Output';
+    xaxis label='Day'; /* Label for the X-axis */
+    yaxis label='Power Output (KWatts)'; /* Label for the Y-axis */
+run;
+

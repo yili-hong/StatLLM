@@ -1,0 +1,1 @@
+For the dataset of imports, consumers wonder whether heavier cars have bigger engines: obtain a linear regression model for engine size as a function of curb weight.

@@ -1,0 +1,6 @@
+PROC IMPORT OUT=abalone 
+     DATAFILE='/StatLLM/Statistical_Analysis_Tasks/TaskDatasets/DS0027/abalone.csv' 
+     DBMS=CSV 
+     REPLACE; 
+     GETNAMES=YES; 
+RUN; 

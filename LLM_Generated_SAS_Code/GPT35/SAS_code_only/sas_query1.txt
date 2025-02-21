@@ -1,0 +1,8 @@
+data chisq;
+set chisq;
+run;
+
+proc print data=chisq;
+var df;
+run;
+

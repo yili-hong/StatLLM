@@ -1,0 +1,14 @@
+/* Create a new dataset t2 with absolute value of residuals */
+data t2;
+    set t;
+    rabs = abs(Residuals); /* Calculate absolute value of residuals */
+run;
+
+/* Check the dataset structure and new variable */
+proc contents data=t2;
+run;
+
+/* Optionally, print the new dataset */
+proc print data=t2(obs=5); /* Print the first 5 observations */
+run;
+

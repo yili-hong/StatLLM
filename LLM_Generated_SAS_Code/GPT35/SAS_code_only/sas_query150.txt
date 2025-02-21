@@ -1,0 +1,3 @@
+proc robustreg data=t2 out=t4;
+    model crime = poverty single / method=MMM;
+run;

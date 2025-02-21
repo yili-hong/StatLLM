@@ -1,0 +1,30 @@
+1, Name: ART
+
+2. Data Set Information: 
+A random sample of fourteen elementary school students is selected from a school, and each student is measured on a creativity score ( X ) using a new testing instrument and on a task score ( Y ) using a standard instrument. The task score is the mean time taken to perform several hand – eye coordination tasks. Because administering the creativity test is much cheaper, the researcher wants to know if the CREATE score is a good substitute for the more expensive TASK score. The data are shown below in the following SAS code that creates a SAS data set named ART with variables SUBJECT, CREATE and TASK. Note that the SUBJECT variable is of character type so the name is followed by a dollar sign ($).
+
+3. Attribute Information:
+
+Number of Obs: 14
+Number of Variables: 3
+
+Attribute: Attribute Range
+
+(1). Subject:  
+(2). Create: creativity score
+(3). Task: task score
+
+ 
+
+
+
+Reference:
+
+https://www.stattutorials.com/SAS/TUTORIAL-PROC-REG-SIMPLE-REGRESSION.htm
+
+Citation: required 
+
+
+
+
+

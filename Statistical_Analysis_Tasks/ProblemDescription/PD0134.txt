@@ -1,0 +1,1 @@
+Using the dataset hernio_uv, fit a logistic model using 'response' as response variable and 'age' and 'OKstatus' as predictors if distribution is "Binary".

@@ -1,0 +1,6 @@
+
+proc freq data=work.sample2014;
+    tables Rank*LiveOnCampus / chisq norow nocol nopercent;
+    title 'Crosstabulation of Class Rank and Living On Campus';
+run;
+

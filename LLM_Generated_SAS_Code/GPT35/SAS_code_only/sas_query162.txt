@@ -1,0 +1,4 @@
+proc glm data=baseball;
+   model logSalary = YrMajor CrHits YrMajor*YrMajor CrHits*CrHits / solution;
+run;
+

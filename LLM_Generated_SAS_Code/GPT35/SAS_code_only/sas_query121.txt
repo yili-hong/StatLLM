@@ -1,0 +1,5 @@
+proc ttest data=ACHE;
+class Medicine;
+var TimeToRelief;
+pairwise Medicine / adjust=BON;
+run;

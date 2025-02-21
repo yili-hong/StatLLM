@@ -1,0 +1,19 @@
+ods select winsorizedmeans;
+ods output winsorizedmeans=means;
+proc univariate winsorized = 0.2 data=sashelp.shoes;
+var sales;
+run;
+ 
+
+
+
+
+	
+
+
+	
+		
+	
+
+	
+	

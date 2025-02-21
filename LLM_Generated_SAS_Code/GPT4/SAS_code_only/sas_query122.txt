@@ -1,0 +1,15 @@
+
+proc format;
+	value Smkmrk 0='No'
+	            1='Yes';
+run;
+
+data Smoke;
+	set Smoke;
+	format ParentSmoke StudentSmoke Smkmrk.;
+run;
+
+proc logistic data = Smoke descending;
+	class ParentSmoke (ref='No') / param=ref;
+	model StudentSmoke(event='Yes') = ParentSmoke;
+run;

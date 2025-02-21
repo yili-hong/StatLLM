@@ -1,0 +1,77 @@
+
+/* Import the glass dataset */
+data glass;
+  set glassid;
+  input id ri na al si ca type;
+  if type = 3 then vehicle_window = 'Float Processed';
+  else if type = 4 then vehicle_window = 'Non-Float Processed';
+  else vehicle_window = 'Not Vehicle Window';
+  if vehicle_window in ('Float Processed', 'Non-Float Processed') then vehicle_window_type = vehicle_window;
+  else delete;
+run;
+
+/* Perform descriptive analysis for Na in vehicle windows */
+proc means data=glass mean std min max;
+  class vehicle_window_type;
+  var na;
+  title 'Descriptive Analysis for Na in Vehicle Windows';
+run;
+
+/* Perform additional descriptive statistics */
+proc univariate data=glass;
+  class vehicle_window_type;
+  var na;
+  title 'Additional Descriptive Statistics for Na in Vehicle Windows';
+run;
+
+
+/* Import the glass dataset */
+data glass;
+  infile 'glass.data';
+  input id ri na al si ca type;
+  if type = 3 then vehicle_window = 'Float Processed';
+  else if type = 4 then vehicle_window = 'Non-Float Processed';
+  else vehicle_window = 'Not Vehicle Window';
+  if vehicle_window in ('Float Processed', 'Non-Float Processed') then vehicle_window_type = vehicle_window;
+  else delete;
+run;
+
+/* Perform descriptive analysis for Na in vehicle windows */
+proc means data=glass mean std min max;
+  class vehicle_window_type;
+  var na;
+  title 'Descriptive Analysis for Na in Vehicle Windows';
+run;
+
+/* Perform additional descriptive statistics */
+proc univariate data=glass;
+  class vehicle_window_type;
+  var na;
+  title 'Additional Descriptive Statistics for Na in Vehicle Windows';
+run;
+
+
+/* Import the glass dataset */
+data glass;
+  infile 'glass.data';
+  input id ri na al si ca type;
+  if type = 3 or type = 4 then vehicle_window = 'Vehicle Window';
+  else vehicle_window = 'Not Vehicle Window';
+  if vehicle_window = 'Vehicle Window' then vehicle_window_type = 'Vehicle Window';
+  else delete;
+run;
+
+/* Perform descriptive analysis for Na in vehicle windows */
+proc means data=glass mean std min max;
+  class vehicle_window_type;
+  var na;
+  title 'Descriptive Analysis for Na in Vehicle Windows';
+run;
+
+/* Perform additional descriptive statistics */
+proc univariate data=glass;
+  class vehicle_window_type;
+  var na;
+  title 'Additional Descriptive Statistics for Na in Vehicle Windows';
+run;
+

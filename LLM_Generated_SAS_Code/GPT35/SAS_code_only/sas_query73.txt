@@ -1,0 +1,8 @@
+
+
+PROC UNIVARIATE DATA=glassid;
+   VAR Na;
+   WHERE type_of_glass = 3; /* Filter for vehicle_windows_float_processed */
+   HISTOGRAM / NORMAL;
+RUN;
+

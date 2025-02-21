@@ -1,0 +1,23 @@
+/* Assuming the dataset is already loaded and the variable NumSiblings exists */
+
+/* Step to create a new dataset with the indicator variable */
+data updated_sample2014;
+    set sample2014; /* Replace with the correct libref if your dataset is not in the WORK library */
+    
+    /* Create the HasSiblings variable based on NumSiblings count */
+    if NumSiblings > 0 then
+        HasSiblings = 1;
+    else
+        HasSiblings = 0;
+    
+    /* Keep all original variables and add the new HasSiblings variable */
+    keep ids bday enrolldate expgradate Rank Major Gender Athlete Height Weight Smoking Sprint
+         MileMinDur English Reading Math Writing State LiveOnCampus HowCommute CommuteTime SleepTime StudyTime
+         HasSiblings;
+run;
+
+/* Prints the dataset to view and verify the new variable */
+proc print data=updated_sample2014;
+    title "Updated Sample Data with Sibling Indicator";
+run;
+

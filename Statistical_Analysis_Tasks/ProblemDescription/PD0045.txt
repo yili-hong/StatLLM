@@ -1,0 +1,1 @@
+For the sashelp.shoes dataset, which is avaialle through SAS help files. We want to calculate basic statistics of sales by region. In this case, region is a grouping (or categorical) variable. The ODS OUTPUT statement is used to write output in results window to a SAS dataset. temp would be the name of the dataset in which all the percentile information exists.

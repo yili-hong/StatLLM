@@ -1,0 +1,12 @@
+data hernio_uv;
+length dist $7;
+set hernio;
+response = (leave=1);
+dist = "Binary";
+output;
+response = los;
+dist = "Poisson";
+output;
+keep patient age OKstatus response dist;
+run;
+

@@ -1,0 +1,14 @@
+
+/* Create a new variable logSalary */
+data work.baseball;
+    set work.baseball;
+    logSalary = log(Salary);
+run;
+
+/* Perform Regression Analysis */
+proc reg data=work.baseball plots(only)=cooksd;
+    model logSalary=nhits nruns nrbi nbb yrmajor crhits;
+    id name team league;
+run;
+quit;
+

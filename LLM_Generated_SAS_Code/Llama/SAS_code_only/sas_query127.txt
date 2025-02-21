@@ -1,0 +1,16 @@
+/* Performing Complete Randomized Design with Two-way Treatment Structure - Unequal Cell Sizes */
+proc glm data=phospholipid;
+  class hormone time;
+  model y = hormone time hormone*time;
+  lsmeans hormone time;
+  lsmeans hormone*time;
+  ods output lsmestimates=lsmeans;
+run;
+
+/* Generating output and checking ANOVA table */
+ods output anova=anova;
+proc print data=anova;
+run;
+proc print data=lsmeans;
+run;
+

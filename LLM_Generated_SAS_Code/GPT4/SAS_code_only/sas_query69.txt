@@ -1,0 +1,16 @@
+
+
+/* Descriptive analysis for Building Window Glass */
+PROC MEANS DATA=glassid NOPRINT;
+    WHERE Type_of_glass IN (1, 2);
+    VAR RI;
+    OUTPUT OUT=Building_Window_Glass MEAN= MEAN_RI STD= Std_Dev_RI MIN= Min_RI MAX= Max_RI;
+RUN;
+
+/* Descriptive analysis for Vehicle Window Glass */
+PROC MEANS DATA=glassid NOPRINT;
+    WHERE Type_of_glass = 3;
+    VAR RI;
+    OUTPUT OUT=Vehicle_Window_Glass MEAN= MEAN_RI STD= Std_Dev_RI MIN= Min_RI MAX= Max_RI;
+RUN;
+

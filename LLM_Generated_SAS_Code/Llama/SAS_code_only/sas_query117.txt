@@ -1,0 +1,8 @@
+
+/* Test for difference in mean write scores between program types */
+proc anova data=hsb2;
+  class prog;
+  model write = prog;
+  means prog / tukey;
+run;
+

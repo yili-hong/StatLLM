@@ -1,0 +1,43 @@
+
+/* Load the data */
+data glassid;
+  set glassid;
+  input id ri na al si ca type;
+  if type = 1 then type_group = "building_windows_float_processed";
+  else if type = 2 then type_group = "building_windows_non_float_processed";
+  else if type = 3 then type_group = "vehicle_windows_float_processed";
+  else if type = 4 then type_group = "vehicle_windows_non_float_processed";
+  else if type = 5 then type_group = "containers";
+  else if type = 6 then type_group = "tableware";
+  else if type = 7 then type_group = "headlamps";
+run;
+
+/* Test normality of RI for vehicle window and building window */
+proc univariate data=glassid;
+  by type_group;
+  var ri;
+  histogram ri;
+  normal;
+  where type_group in ("vehicle_windows_float_processed", "building_windows_float_processed", 
+                        "building_windows_non_float_processed");
+run;
+
+
+/* Load the data */
+data glassid;
+  infile 'glassid.csv' delimiter=',' firstobs=2;
+  input id ri na al si ca type;
+  if type = 1 or type = 2 then window_type = "building";
+  else if type = 3 then window_type = "vehicle";
+  else window_type = "other";
+run;
+
+/* Test normality of RI for vehicle window and building window */
+proc univariate data=glassid;
+  by window_type;
+  var ri;
+  histogram ri;
+  normal;
+  where window_type in ("vehicle", "building");
+run;
+

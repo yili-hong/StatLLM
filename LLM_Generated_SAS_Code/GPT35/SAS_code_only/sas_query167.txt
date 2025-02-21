@@ -1,0 +1,16 @@
+proc means data=BPpressure min p25 median p75 max mean std;
+  var Systolic Diastolic;
+  output out=Statistics
+    min=Systolic_min Diastolic_min
+    p25=Systolic_p25 Diastolic_p25
+    median=Systolic_median Diastolic_median
+    p75=Systolic_p75 Diastolic_p75
+    max=Systolic_max Diastolic_max
+    mean=Systolic_mean Diastolic_mean
+    std=Systolic_std Diastolic_std;
+run;
+
+proc print data=Statistics noobs;
+  format _numeric_ 8.3;
+run;
+

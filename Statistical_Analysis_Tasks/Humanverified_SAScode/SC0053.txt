@@ -1,0 +1,20 @@
+ods select TestsForLocation;
+proc univariate data=sashelp.shoes;
+var sales;
+run;
+
+
+ 
+
+
+
+
+	
+
+
+	
+		
+	
+
+	
+	

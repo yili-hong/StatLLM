@@ -1,0 +1,4 @@
+proc reg data=imports;
+	model enginesize=curbweight;
+	ods select ParameterEstimates FitStatistics ANOVA DiagnosticsPanel;
+run;

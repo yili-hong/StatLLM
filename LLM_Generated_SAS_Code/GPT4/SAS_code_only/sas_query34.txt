@@ -1,0 +1,7 @@
+
+
+PROC REG DATA=measurement;
+   MODEL Weight = Height;
+RUN;
+QUIT;
+

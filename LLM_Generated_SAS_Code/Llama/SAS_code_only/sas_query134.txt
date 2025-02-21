@@ -1,0 +1,12 @@
+/* Filter the dataset for binary distribution */
+data binary_hernio_uv;
+  set hernio_uv;
+  where dist = "Binary";
+run;
+
+/* Fit the logistic model */
+proc logistic data=binary_hernio_uv;
+  model response(event='1') = age OKstatus / link=logit;
+  /* If your response variable is coded differently (e.g., 0/1 instead of 1/2), adjust the 'event' parameter accordingly */
+run;
+

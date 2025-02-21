@@ -1,0 +1,2 @@
+For the dataset of baseball, refit the regression model (response is logSalary, and predictors are nhits, nruns, nrbi, nbb, yrmajor, crhits), 
+and create a data set that contains predicted values.

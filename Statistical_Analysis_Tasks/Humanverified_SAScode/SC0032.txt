@@ -1,0 +1,5 @@
+proc freq data=ecmo;
+	title "Fish's exact test for small 2 by 2 tables";
+	tables treatment*result / chisq expected norow nocol nopercent;
+run; 
+	

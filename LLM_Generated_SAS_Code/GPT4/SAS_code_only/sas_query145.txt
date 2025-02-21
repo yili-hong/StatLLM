@@ -1,0 +1,15 @@
+/* Step 1: Calculate the number of observations in the dataset */
+proc sql noprint;
+    select count(*) into :n from t;
+quit;
+
+/* Calculate the cutoff value for Cook's D which is 4 divided by the number of observations */
+%let cutoff = %sysevalf(4/&n);
+
+/* Step 2: Filter observations where Cook's D is greater than the cutoff value */
+proc print data=t;
+    where cooksd > &cutoff;
+    title "Observations with Cook's D greater than &cutoff";
+    var cooksd; /* List other variables you might be interested include, like 'poverty', 'single', 'crime' */
+run;
+

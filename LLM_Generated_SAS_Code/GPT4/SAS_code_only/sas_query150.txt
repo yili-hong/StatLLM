@@ -1,0 +1,12 @@
+/* Step 1: Create a new dataset t2 from t, adding rabs which is the absolute value of Residuals */
+data t2;
+    set t;
+    rabs = abs(Residuals); /* Calculate the absolute value of Residuals */
+run;
+
+/* Step 2: Perform robust regression using the created dataset t2 */
+proc robustreg data=t2;
+    model crime = poverty single / diagnostics; /* Replace 'crime', 'poverty', and 'single' with actual variable names from your data */
+    output out=t4 r=residuals l=leverage cd=cooksD;
+run;
+

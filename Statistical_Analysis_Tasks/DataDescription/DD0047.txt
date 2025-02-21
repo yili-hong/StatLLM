@@ -1,0 +1,34 @@
+We will use the elemapi2 data file. 400 elementary schools from the California Department of
+Education’s API 2000 dataset. This data file contains a measure of
+school academic performance as well as other attributes of the
+elementary schools, such as, class size, enrollment, poverty.
+
+
+Description of variables
+snum: School number
+dnum: District number
+api00: API score for the year 2000
+api99: API score for the year 1999
+growth: Change in API score from 1999 to 2000
+meals: Percent of students receiving free meals
+ell :Number of students who are English language learners
+yr_rnd :Year round school (0=No, 1=Yes)
+mobility: Percent first year in school
+acs_k3: Average class size for grades K-3
+acs_46: Average class size for grades 4-6
+not_hsg: Percent of parents who did not complete high school
+hsg: Percent of parents whose highest education level is high school graduate
+some_coll: Percent of parents whose highest education level is some college
+coll_grad: Percent of parents whose highest education level is college graduate
+grad_sch: Percent of parents whose highest education level is graduate school study
+avg_ed: Average parent education (on a 1-5 scale, corresponding to levels in hsg to grad_sch variables)
+full: Percent of teachers with a full teaching credential
+emer: Percent of teachers with an emergency teaching credential
+enroll: Number of students enrolled in the school
+mealcat: Percent of students receiving free meals, grouped in 3 categories (1=0-46% free meals, 2=47-80% free meals, 3=81-100% free meals)
+collcat: unknown
+
+We will focus on the variables mealcat, and collcat as they relate to the outcome variable api00 (performance on the api in the year 2000. The variable mealcat is the variable meals 
+broken up into three categories, and the variable collcat is the variable some_col broken into 3 categories. We could think of mealcat as 
+being the number of students receiving free meals and broken up into low, middle and high. The variable collcat can be thought of as the number of parents with some college education, 
+and we could think of it as being broken up into low, medium and high. 

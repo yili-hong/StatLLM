@@ -1,0 +1,5 @@
+proc glm data=crack;
+  class agef;
+  model load = age agef / p;
+  output out=crackreg p=pred r=resid;
+run;

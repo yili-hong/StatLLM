@@ -1,0 +1,15 @@
+proc univariate data=sashelp.shoes NOPRINT;
+var sales;
+HISTOGRAM / NORMAL (COLOR=RED);
+run;
+
+
+	
+
+
+	
+		
+	
+
+	
+	

@@ -1,0 +1,6 @@
+PROC IMPORT OUT=fitness 
+     DATAFILE='/StatLLM/Statistical_Analysis_Tasks/TaskDatasets/DS0060/fitness.csv' 
+     DBMS=CSV 
+     REPLACE; 
+     GETNAMES=YES; 
+RUN; 

@@ -1,0 +1,7 @@
+proc ttest data=read sides=2 alpha=0.05 h0=0;
+ 	title "Two sample t-test example";
+ 	class method; 
+	var grade;
+   run;
+   
+

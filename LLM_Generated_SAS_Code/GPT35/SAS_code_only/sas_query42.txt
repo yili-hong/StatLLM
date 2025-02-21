@@ -1,0 +1,6 @@
+proc means data=sashelp.shoes;
+  class Region;
+  var Sales;
+  output out=summary_stats mean=avg_sales sum=total_sales min=min_sales max=max_sales n=n_sales;
+run;
+

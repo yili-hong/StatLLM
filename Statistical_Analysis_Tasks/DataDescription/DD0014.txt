@@ -1,0 +1,8 @@
+The dataset gives the counts of four race groups. 
+
+The race column gives the race group.
+the count column gives the counts for each group. 
+The dataset is named as racecounts.
+
+
+

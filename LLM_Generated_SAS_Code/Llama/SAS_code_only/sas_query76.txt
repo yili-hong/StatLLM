@@ -1,0 +1,5 @@
+/* Create a Pearson correlation matrix of all numerical variables */
+proc corr data=glassid;
+  var /* list all the numerical variable names */;
+  run;
+

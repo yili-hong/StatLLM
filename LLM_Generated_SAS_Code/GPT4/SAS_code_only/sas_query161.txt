@@ -1,0 +1,26 @@
+/* Create a new dataset without Pete Rose */
+data baseball_no_rose;
+    set baseball;
+    if Name ne "Pete Rose";
+run;
+
+/* Building the regression model */
+proc glm data=baseball_no_rose;
+    model Salary = nAtBat nHits nHome nRuns nRBI nBB YrMajor;
+    run;
+quit;
+
+/* Leverage Plot */
+proc reg data=baseball_no_rose;
+    model Salary = nAtBat nHits nHome nRuns nRBI nBB YrMajor;
+    plot leverage.*name / hvlabel=name;
+run;
+quit;
+
+/* Residual Plot */
+proc reg data=baseball_no_rose;
+    model Salary = nAtBat nHits nHome nRuns nRBI nBB YrMajor;
+    plot r.*name / hvlabel=name;
+run;
+quit;
+

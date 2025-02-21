@@ -1,0 +1,18 @@
+/* Calculate AIC for all possible subsets */
+proc reg data=est2;
+  model y = x1 x2 x3 x4 x5 x6 x7 x8 x9 x10 / selection=backward;
+  run;
+quit;
+
+proc sql;
+create table aic_results as
+select model x1-x10, aic from _regout where selection_method="backward";
+quit;
+
+/* Find the model with the lowest AIC */
+proc sql;
+select *
+from aic_results
+order by aic;
+quit;
+

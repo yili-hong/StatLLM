@@ -1,0 +1,4 @@
+/* Print the first 5 observations */
+proc print data=bmt(obs=5);
+run;
+

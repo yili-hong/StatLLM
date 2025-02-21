@@ -1,0 +1,6 @@
+PROC IMPORT OUT=grades 
+     DATAFILE='/StatLLM/Statistical_Analysis_Tasks/TaskDatasets/DS0065/grades.csv' 
+     DBMS=CSV 
+     REPLACE; 
+     GETNAMES=YES; 
+RUN; 

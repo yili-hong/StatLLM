@@ -1,0 +1,6 @@
+proc sgplot data=t;
+  scatter x=Leverage y=Residuals / datalabel=STATEAB;
+  xaxis label="Leverage";
+  yaxis label="Squared Residuals";
+run;
+

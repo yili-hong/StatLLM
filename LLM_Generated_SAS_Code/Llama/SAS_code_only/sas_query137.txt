@@ -1,0 +1,29 @@
+/* Proc Freq to get distribution of mealcat and collcat */
+proc freq data=elemapi2;
+    tables mealcat collcat;
+run;
+
+/* Proc Means to get means of api00 by mealcat and collcat */
+proc means data=elemapi2 mean;
+    class mealcat collcat;
+    var api00;
+run;
+
+/* Proc TTest to compare means of api00 across different levels of mealcat and collcat */
+proc ttest data=elemapi2;
+    class mealcat collcat;
+    var api00;
+run;
+
+/* Proc GLM to assess the relationship between api00 and the categorical variables mealcat and collcat */
+proc glm data=elemapi2;
+    class mealcat collcat;
+    model api00 = mealcat collcat / solution;
+run;
+
+/* To see interactions between mealcat and collcat on api00 */
+proc glm data=elemapi2;
+    class mealcat collcat;
+    model api00 = mealcat|collcat / solution;
+run;
+

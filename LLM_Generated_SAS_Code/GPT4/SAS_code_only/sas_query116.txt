@@ -1,0 +1,7 @@
+
+
+
+PROC FREQ DATA= hsb2;
+   TABLES schtyp*Female / CHISQ;
+run;
+

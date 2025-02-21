@@ -1,0 +1,10 @@
+
+
+/* Fit a Poisson regression model to predict 'response' using 'age' and 'OKstatus' */
+proc genmod data=hernio_uv;
+    class OKstatus;  /* Treat 'OKstatus' as a categorical variable */
+    model response = age OKstatus / dist=Poisson link=log;
+    where dist="Poisson";  /* Selects only rows where the distribution type is 'Poisson' */
+    title "Poisson Regression Model for Length of Stay";
+run;
+

@@ -1,0 +1,13 @@
+
+/* Calculate basic statistics of sales by region */
+ods output summary = temp;
+proc means data=sashelp.shoes mean median min max std q1 q3;
+  class region;
+  var sales;
+run;
+ods output close;
+
+/* Print the output dataset */
+proc print data=temp;
+run;
+

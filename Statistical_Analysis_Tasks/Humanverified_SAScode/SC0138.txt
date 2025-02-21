@@ -1,0 +1,12 @@
+proc sort data = pred;
+  by mealcat;
+run;
+
+symbol1 v=circle i=join ci=blue  h= 2;
+symbol2 v=triangle i=join ci=red h =2;
+symbol3 v=square i=join ci=black h =2;
+
+proc gplot data = pred;
+  plot pred*mealcat=collcat ;
+run;
+quit;

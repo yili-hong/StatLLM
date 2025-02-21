@@ -1,0 +1,5 @@
+
+/* Compute the Pearson correlation matrix for numerical variables */
+proc corr data=glassid pearson;
+    var RI Na Al Si Ca; /* List all numerical variables */
+run;

@@ -1,0 +1,5 @@
+/* Calculate the mean and standard deviation for selected variables in the mvreg dataset */
+proc means data=mvreg mean std;
+    var locus_of_control self_concept motivation read write science;
+run;
+

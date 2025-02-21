@@ -1,0 +1,20 @@
+/* Fit the quadratic regression model */
+proc reg data=iron;
+  model loss = fe fe*fe;
+  output out=reg_output predicted=pred residual=res;
+run;
+
+/* Print the regression output */
+proc print data=reg_output;
+  var fe loss pred res;
+run;
+
+/* Plot the data and the regression curve */
+ods graphics / width=8in height=6in;
+proc sgplot data=reg_output;
+  scatter x=fe y=loss;
+  series x=fe y=pred;
+  xaxis label="Iron Content (fe)";
+  yaxis label="Weight Loss (loss)";
+run;
+

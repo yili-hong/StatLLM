@@ -1,0 +1,19 @@
+/* Round the height and weight to the nearest whole number */
+data sample2014_rounded;
+  set sample2014;
+  Height_rounded = round(Height);
+  Weight_rounded = round(Weight);
+run;
+
+/* Group by gender and use the students' IDs in place of the observation numbers */
+proc sort data=sample2014_rounded;
+  by Gender;
+run;
+
+proc print data=sample2014_rounded noobs;
+  id ids;
+  var Gender Height_rounded Weight_rounded;
+  by Gender;
+  page by Gender;
+run;
+

@@ -1,0 +1,4 @@
+proc sgplot data=grades;
+  vbar ExamGrade1 / group=ExamGrade1;
+run;
+

@@ -1,0 +1,24 @@
+proc corr data=mvreg;
+    var read write science locus_of_control self_concept motivation;
+run;
+
+proc anova data=mvreg;
+    class prog;
+    model locus_of_control self_concept motivation = prog;
+run;
+
+/* First, create dummy variables for prog */
+data mvreg_dummy;
+    set mvreg;
+    if prog = 'general' then prog_general = 1; else prog_general = 0;
+    if prog = 'academic' then prog_academic = 1; else prog_academic = 0;
+    /* Assuming you only have three categories, you don't need a dummy for 'vocational' */
+run;
+
+/* Then, perform the regression */
+proc reg data=mvreg_dummy;
+    model locus_of_control = read write science prog_general prog_academic;
+    model self_concept = read write science prog_general prog_academic;
+    model motivation = read write science prog_general prog_academic;
+run;
+

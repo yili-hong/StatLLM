@@ -1,0 +1,13 @@
+
+
+/* Perform simple linear regression analysis */
+proc reg data=measurement outest=outreg plots(label)=(QQ plot residuals);
+ model Weight = Height / clb;
+run;
+
+/* Display the summary statistics of Height and Weight variables */
+proc means data=measurement n mean median min max std skewness kurtosis; 
+var height weight; 
+output out=sumstats mean(std)= std height_weight_stats median[min,max]=min_max_height_weight_stats skew=kurtosis_skew_kurtosis_height_weight_stats;  
+title "Summary Statistics of Height and Weight";
+run;

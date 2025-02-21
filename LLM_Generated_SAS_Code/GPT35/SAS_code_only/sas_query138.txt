@@ -1,0 +1,6 @@
+proc sgplot data=pred;
+  scatter x=mealcat y=api00 / group=collcat markerattrs=(symbol=circlefilled);
+  xaxis label='Meal Category';
+  yaxis label='API Performance in 2000';
+  run;
+

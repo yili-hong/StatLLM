@@ -1,0 +1,6 @@
+PROC IMPORT OUT=binary 
+     DATAFILE='/StatLLM/Statistical_Analysis_Tasks/TaskDatasets/DS0032/binary.csv' 
+     DBMS=CSV 
+     REPLACE; 
+     GETNAMES=YES; 
+RUN; 

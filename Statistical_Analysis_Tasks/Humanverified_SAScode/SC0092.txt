@@ -1,0 +1,3 @@
+PROC FREQ DATA=auto;
+  TABLES rep78*foreign / CHISQ ;
+RUN;

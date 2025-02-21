@@ -1,0 +1,7 @@
+proc phreg data=bmt;
+  class group (ref=2);
+  model T*Status(0) = group;
+  hazardratio 'Group 1 vs Group 2' group 1 / at(group=2);
+  hazardratio 'Group 3 vs Group 2' group 3 / at(group=2);
+run;
+

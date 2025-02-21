@@ -1,0 +1,16 @@
+/* Aggregating data to get the average amounts per sale by each sales representative for each type of coffee maker */
+
+proc sql;
+    create table average_sales_by_rep as
+    select SalesRep, 
+           Type,
+           avg(AmountSold) as AvgAmountPerSale
+    from year_sales
+    group by SalesRep, Type;
+quit;
+
+/* Optional: Display the resulting table */
+proc print data=average_sales_by_rep;
+    title "Average Amount Per Sale by Sales Representative and Coffee Maker Type";
+run;
+

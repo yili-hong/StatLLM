@@ -1,0 +1,10 @@
+
+/* Check for missing values in the dataset */
+proc means data=fitness nmiss;
+run;
+
+/* Build the regression model */
+proc reg data=fitness;
+  model Oxygen = RunTime Age Weight RunPulse MaxPulse RestPulse / VIF collin tol;
+run;
+

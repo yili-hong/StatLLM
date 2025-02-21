@@ -1,0 +1,6 @@
+proc glm data=toxic;
+    class poison treatment;
+    model life = poison treatment /nouni;
+    means poison treatment / hovtest;
+run;
+

@@ -1,0 +1,19 @@
+ The measurements in the dataset fitness were made on men involved in a physical   
+ fitness course at N.C.State Univ. The variables are Age      
+ (years), Weight (kg), Oxygen intake rate (ml per kg body     
+ weight per minute), time to run 1.5 miles (minutes), heart   
+ rate while resting, heart rate while running (same time      
+ Oxygen rate measured), and maximum heart rate recorded while 
+ running.                                                     
+
+
+Age(years)
+Weight (kg)
+Oxygen: Oxygen intake rate (ml per kg body weight per minute), 
+RunTime: time to run 1.5 miles (minutes), 
+RestPulse: heart rate while resting, 
+RunPulse: heart rate while running (same time Oxygen rate measured), 
+MaxPulse: maximum heart rate recorded while running.
+
+
+Source: https://documentation.sas.com/doc/en/pgmsascdc/9.4_3.4/statug/statug_reg_examples02.htm

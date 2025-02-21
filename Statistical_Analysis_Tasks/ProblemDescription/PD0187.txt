@@ -1,0 +1,2 @@
+Creates a two-dimensional summary table that crosses two variables and that answers the question, “What was the amount sold
+of each type of coffee maker by each sales representative?

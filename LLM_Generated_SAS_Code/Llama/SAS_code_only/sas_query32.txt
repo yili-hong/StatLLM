@@ -1,0 +1,5 @@
+/* Perform Fisher's Exact Test */
+proc freq data=ecmo;
+  tables treatment*result / exact;
+run;
+

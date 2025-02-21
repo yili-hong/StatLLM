@@ -1,0 +1,12 @@
+proc datasets library=work;
+copy in=t out=t2;
+modify t2;
+rename residuals = rabs;
+run;
+
+proc robustreg data= t2
+             method=huber
+             outweights=t3;
+model rabs = _response_;
+run;
+

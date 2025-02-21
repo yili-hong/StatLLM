@@ -1,0 +1,1 @@
+For the dataset of BPpressure, Compute robust estimates of location and scale for the variable Systolic in the data set BPressure. Restricts the output to the "TrimmedMeans," "WinsorizedMeans," and "RobustScale" tables

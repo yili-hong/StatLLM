@@ -1,0 +1,9 @@
+proc freq data=sashelp.bmt;
+  tables Group*Status;
+run;
+
+proc tabulate data=sashelp.bmt;
+  class Group Status;
+  table Group, Status*(n colpct);
+run;
+

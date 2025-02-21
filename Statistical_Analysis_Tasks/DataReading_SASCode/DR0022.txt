@@ -1,0 +1,6 @@
+PROC IMPORT OUT=Oxygen 
+     DATAFILE='/StatLLM/Statistical_Analysis_Tasks/TaskDatasets/DS0022/Oxygen.csv' 
+     DBMS=CSV 
+     REPLACE; 
+     GETNAMES=YES; 
+RUN; 

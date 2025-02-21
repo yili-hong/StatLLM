@@ -1,0 +1,7 @@
+college-aged adults need at least 7 hours of sleep each night to stay healthy. Sleep deprivation can lead to decreased immune system function, lack of concentration, and poor memory. In the data set, a simple random sample of college students reports the number of hours of sleep they had last night. 
+
+The variable time is the response, which gives the number of hours of sleep. 
+The dataset is named as sleeptime.
+
+
+

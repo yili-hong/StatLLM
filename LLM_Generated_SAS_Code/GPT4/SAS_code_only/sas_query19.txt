@@ -1,0 +1,9 @@
+PROC SORT data=read;
+   BY Method;
+RUN;
+
+PROC TTEST DATA=read;
+   CLASS Method;
+   VAR Grade;
+   TITLE 'T-test of grade by method';
+RUN;

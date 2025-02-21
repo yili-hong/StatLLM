@@ -1,0 +1,6 @@
+proc tabulate data=year_sales;
+  class Quarter SalesRep;
+  var AmountSold;
+  table Quarter * SalesRep * sum=' ' * AmountSold;
+run;
+

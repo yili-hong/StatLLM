@@ -1,0 +1,4 @@
+proc reg data=iron;
+model loss = fe / clb;
+output out=predicted_loss predicted=estimated_loss;
+run;

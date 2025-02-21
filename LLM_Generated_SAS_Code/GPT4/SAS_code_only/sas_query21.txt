@@ -1,0 +1,11 @@
+/*Check the data by printing first 5 rows*/
+PROC PRINT DATA=work.soil (OBS=5); 
+RUN;
+
+/*Conduct Mann-Whitney U test*/
+PROC NPAR1WAY data=work.soil WILCOXON;
+    CLASS condition; /*Categorical variable*/
+    VAR respiration; /*Response variable*/
+    EXACT PERM; /*Request exact p-values rather than large-sample approximations*/
+    TIES=HIGH; /*Instance of how tied data to be handled*/
+RUN;

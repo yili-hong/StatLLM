@@ -1,0 +1,6 @@
+
+proc lifetest data=BMT plots=survival;
+  time T*Status(1);
+  strata Group;
+run;
+

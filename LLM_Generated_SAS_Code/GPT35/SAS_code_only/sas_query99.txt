@@ -1,0 +1,18 @@
+/* Run linear regression with engine size versus curb weight */
+proc reg data=imports2;
+   model curbweight = enginesize;
+run;
+
+/* Output diagnostics for the regression */
+ods select parameterestimates;
+run;
+
+ods select diagnostics;
+run;
+
+ods select fitstatistics;
+run;
+
+ods select lackfit;
+run;
+

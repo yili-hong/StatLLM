@@ -1,0 +1,6 @@
+
+proc ttest data=auto;
+  class foreign;
+  var mpg;
+  paired;
+run;

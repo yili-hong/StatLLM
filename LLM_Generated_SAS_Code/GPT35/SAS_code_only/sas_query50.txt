@@ -1,0 +1,15 @@
+/* Access the Sashelp.shoes dataset */
+proc datasets lib=sashelp;
+run;
+
+/* Calculate the 97.5 and 99.5 percentiles for the 'Sales' variable */
+proc univariate data=sashelp.shoes pctlpre=P_;
+  var Sales;
+  output out=percentiles pctlpts=97.5 99.5 pctlname=Pct_;
+run;
+
+/* Display the calculated percentiles */
+proc print data=percentiles;
+  var Pct_ P_97.5 P_99.5;
+run;
+

@@ -1,0 +1,6 @@
+PROC IMPORT OUT=soil 
+     DATAFILE='/StatLLM/Statistical_Analysis_Tasks/TaskDatasets/DS0008/soil.csv' 
+     DBMS=CSV 
+     REPLACE; 
+     GETNAMES=YES; 
+RUN; 

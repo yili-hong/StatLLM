@@ -1,0 +1,17 @@
+
+/* Plot load vs age for the crack dataset */
+proc sgplot data=crack;
+  scatter x=age y=load;
+  title "Load vs Age";
+run;
+
+
+ods graphics / width=6in height=4in;
+proc sgplot data=crack;
+  scatter x=age y=load;
+  xaxis label="Age";
+  yaxis label="Load";
+  title "Load vs Age";
+run;
+ods graphics / reset;
+

@@ -1,0 +1,12 @@
+proc univariate data = sashelp.shoes;
+var sales;
+class region;
+run;
+
+
+	
+		
+	
+
+	
+	

@@ -1,0 +1,37 @@
+/* Import the dataset */
+data neuralgia;
+  set neuralgia;
+  input Treatment $ Sex $ Age Duration Pain $;
+  if Pain = 'Yes' then Pain_Response = 1;
+  else Pain_Response = 0;
+run;
+
+/* Logistic Regression Model */
+proc logistic data=neuralgia;
+  class Treatment (ref='P') Sex (ref='F');
+  model Pain_Response(event='1') = Treatment Sex Age Duration / expb;
+  effectplot / at(Age=mean);
+  ods output ParameterEstimates=PE;
+run;
+
+/* Odds Ratio Estimates */
+proc print data=PE;
+  var Parameter Estimate StdErr WaldChiSq ProbChiSq;
+  where Parameter in ('Treatment A', 'Treatment B', 'Sex M', 'Age', 'Duration');
+run;
+
+/* Model Fit Statistics */
+proc logistic data=neuralgia;
+  class Treatment (ref='P') Sex (ref='F');
+  model Pain_Response(event='1') = Treatment Sex Age Duration / expb;
+  ods output ModelInfo=MI;
+  ods output FitStatistics=FS;
+run;
+
+proc print data=MI;
+  var Criterion InterceptOnly InterceptAndCovariates;
+run;
+
+proc print data=FS;
+  var _AIC_ _BIC_ _AICC_;
+run;

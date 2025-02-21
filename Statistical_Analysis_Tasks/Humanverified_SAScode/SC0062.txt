@@ -1,0 +1,5 @@
+proc univariate data=glassid;
+	var Na;
+	by groupedtype;
+	where groupedtype in("headlamps");
+run;

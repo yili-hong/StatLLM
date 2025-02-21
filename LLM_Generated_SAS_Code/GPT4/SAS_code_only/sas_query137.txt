@@ -1,0 +1,29 @@
+proc means data=elemapi2;
+    class mealcat collcat;
+    var api00;
+    ways 1;
+    mean;
+run;
+
+proc freq data=elemapi2;
+    tables mealcat collcat / nocum nopercent;
+run;
+
+proc anova data=elemapi2;
+    class mealcat collcat;
+    model api00 = mealcat collcat mealcat*collcat;
+    means mealcat collcat / tukey;
+run;
+
+proc sgplot data=elemapi2;
+    vbar mealcat / response=api00 stat=mean;
+    xaxis label="Meal Category";
+    yaxis label="Average API Score (api00)";
+run;
+
+proc sgplot data=elemapi2;
+    vbar collcat / response=api00 stat=mean;
+    xaxis label="College Category";
+    yaxis label="Average API Score (api00)";
+run;
+

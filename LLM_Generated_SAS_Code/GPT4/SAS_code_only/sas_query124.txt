@@ -1,0 +1,13 @@
+
+PROC SORT DATA=lettuce_fertilizer;
+  BY Fertilizer;
+RUN;
+
+PROC GLM DATA=lettuce_fertilizer;
+  CLASS Fertilizer;
+  MODEL Heads = Fertilizer;
+  MEANS Fertilizer / LSD;
+RUN;
+
+QUIT;
+

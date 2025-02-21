@@ -1,0 +1,1 @@
+Let's create an indicator variable that is equal to 1 if the student has any siblings and 0 if the student has none.

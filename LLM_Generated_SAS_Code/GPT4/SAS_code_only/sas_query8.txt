@@ -1,0 +1,14 @@
+
+/* Read the dataset */
+data crack;
+   set crack;
+run;
+
+/* Create the plot */
+proc sgplot data = crack;
+   scatter x = age y = load;
+   title 'Plot of Load vs Age';
+   xaxis label = 'Age';
+   yaxis label = 'Load';
+run;
+

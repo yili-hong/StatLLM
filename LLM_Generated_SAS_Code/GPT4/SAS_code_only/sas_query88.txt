@@ -1,0 +1,15 @@
+
+/* Check the data */
+PROC PRINT DATA = work.abalone (obs=10);
+RUN;
+
+/* Perform one-way ANOVA */
+PROC GLM DATA=work.abalone;
+    CLASS sex;
+    MODEL whole_weight = sex;
+    MEANS sex / TUKEY CLDIFF;
+RUN;
+
+/* View Results */
+PROC PRINT data=TESTANOVA;
+RUN;

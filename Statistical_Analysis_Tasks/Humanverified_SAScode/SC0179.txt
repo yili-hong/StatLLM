@@ -1,0 +1,3 @@
+proc corr data = mvreg nosimple;
+  var locus_of_control self_concept motivation;
+run;

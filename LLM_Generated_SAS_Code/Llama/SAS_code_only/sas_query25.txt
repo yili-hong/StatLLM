@@ -1,0 +1,21 @@
+
+proc anova data=retention;
+  class Fe Zn;
+  model FeRetention = Fe Zn Fe*Zn;
+  means Fe / hovtest welch;
+  means Zn / hovtest welch;
+  means Fe*Zn / hovtest welch;
+run;
+
+
+proc anova data=retention;
+  class Fe Zn;
+  model FeRetention = Fe Zn Fe*Zn;
+  means Fe / hovtest welch;
+  means Zn / hovtest welch;
+  means Fe*Zn / hovtest welch;
+  lsmeans Fe / pdiff=control('low') adjust=tukey; /* calculate pairwise differences within Fe levels */
+  lsmeans Zn / pdiff=control('low') adjust=tukey; /* calculate pairwise differences within Zn levels */
+  lsmeans Fe*Zn / pdiff=control('low high') adjust=tukey; /* calculate pairwise differences within Fe*Zn interaction */
+run;
+

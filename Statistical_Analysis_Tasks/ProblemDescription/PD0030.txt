@@ -1,0 +1,1 @@
+For the opinioncounts dataset, we want to use the count data to test the relationship between opnion and gender.

@@ -1,0 +1,11 @@
+/* Filter the data for headlamp type of glass (Type 7) */
+data glassid_headlamp;
+   set glassid;
+   where Type=7; /* Type 7 represents headlamps */
+run;
+
+/* Descriptive analysis for the Na in headlamp type of glass */
+proc means data=glassid_headlamp n mean std min max;
+   var Na;
+run;
+

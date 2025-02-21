@@ -1,0 +1,8 @@
+A sample of race is drawn from an area where 4 races are identified, 1 for 'Hispanic'; 2 for 'Asian'; 3 for 'African American' and 4 for 'White'. 
+
+The response variable is race and it displays races for each subject,
+
+The dataset is named as race.
+
+
+

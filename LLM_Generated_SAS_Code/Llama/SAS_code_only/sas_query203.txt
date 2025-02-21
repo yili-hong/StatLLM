@@ -1,0 +1,6 @@
+proc sgplot data=highlow;
+  xaxis label="Year";
+  yaxis label="Log(DowLow)";
+  series x=Year y=log(DowLow);
+run;
+

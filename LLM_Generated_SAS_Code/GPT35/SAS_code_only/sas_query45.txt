@@ -1,0 +1,18 @@
+/* Load the Sashelp.shoes dataset */
+proc sql;
+create table work.shoes as
+select * from sashelp.shoes;
+quit;
+
+/* Calculate basic statistics of sales by region */
+proc means data=work.shoes noprint;
+class Region;
+var Sales;
+output out=stats mean=Avg_Sales median=Median_Sales q1=Q1_Sales q3=Q3_Sales;
+run;
+
+/* Create dataset temp to store the calculated percentiles */
+data temp;
+set stats;
+run;
+

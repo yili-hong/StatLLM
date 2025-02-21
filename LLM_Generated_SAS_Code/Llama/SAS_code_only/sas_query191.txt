@@ -1,0 +1,6 @@
+proc tabulate data=your_data;
+  class Age;
+  var Q1-Q5;
+  tables Age, (Q1-Q5)*(n nmiss);
+run;
+

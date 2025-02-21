@@ -1,0 +1,12 @@
+/* Enable ODS TRACE to display table names and labels in the log */
+ods trace on;
+
+/* Use sashelp.shoes dataset */
+proc means data=sashelp.shoes;
+  class Region;
+  var Sales;
+run;
+
+/* Disable ODS TRACE after use */
+ods trace off;
+

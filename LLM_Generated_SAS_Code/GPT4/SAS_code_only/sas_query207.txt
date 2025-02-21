@@ -1,0 +1,5 @@
+/* Compute descriptive statistics for Examgrade1 */
+proc means data=grades mean std;
+    var Examgrade1;
+run;
+

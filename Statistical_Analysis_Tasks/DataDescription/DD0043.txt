@@ -1,0 +1,20 @@
+1, Name: manova
+
+2. Data Set Information: 
+This data includes 33 observations on three response variables. The response variables are ratings of useful, difficulty and importance. Level 1 of the group variable is the treatment group, level 2 is control group 1 and level 3 is control group 2.
+
+3. Attribute Information:
+
+Number of observations: 33
+Number of variables: 3
+
+
+
+Reference:
+https://stats.oarc.ucla.edu/sas/dae/one-way-manova/
+Citation: required 
+
+
+
+
+

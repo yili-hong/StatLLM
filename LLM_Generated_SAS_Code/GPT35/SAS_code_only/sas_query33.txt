@@ -1,0 +1,5 @@
+proc freq data=athlete;
+  tables X*Y / chisq;
+  weight Cured NotCured;
+run;
+

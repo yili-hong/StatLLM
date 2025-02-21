@@ -1,0 +1,1 @@
+print the first ten observations in dataset t2.

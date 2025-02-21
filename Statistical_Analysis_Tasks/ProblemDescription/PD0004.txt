@@ -1,0 +1,2 @@
+For the copper dataset, conduct an two-way ANOVA analysis for the respone variable warp with respect to factors temperature and pecentage with interaction. 
+ 

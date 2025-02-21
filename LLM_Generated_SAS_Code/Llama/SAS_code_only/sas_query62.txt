@@ -1,0 +1,47 @@
+
+/* Import the glass data */
+data glass;
+  set glassid;
+  input id ri na al si ca type;
+  if type = 7 then headlamp = 1;
+  else headlamp = 0;
+run;
+
+/* Test normality of Na for headlamps */
+proc univariate data=glass normal plot;
+  var na;
+  where type = 7;
+  histogram na / normal kernel;
+run;
+
+
+/* Import the glass data */
+data glass;
+  set glassid;
+  input id ri na al si ca type;
+  if type = 7 then headlamp = 1;
+  else headlamp = 0;
+  if type = 7 then headlamp_type = type;
+  else headlamp_type =.;
+run;
+
+/* Test normality of Na for each type of headlamp */
+proc univariate data=glass normal plot;
+  by headlamp_type;
+  var na;
+  where type = 7;
+  histogram na / normal kernel;
+run;
+
+
+/* Import the glass data */
+data glass;
+  set glassid;
+  input id ri na al si ca type;
+run;
+
+/* Compare Na distribution for each type of glass */
+proc sgplot data=glass;
+  vbox na / category=type;
+run;
+

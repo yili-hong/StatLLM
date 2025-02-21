@@ -1,0 +1,5 @@
+PROC GENMOD DATA=hernio_uv;
+    CLASS OKstatus;
+    MODEL response = age OKstatus / DIST=Poisson LINK=log;
+RUN;
+

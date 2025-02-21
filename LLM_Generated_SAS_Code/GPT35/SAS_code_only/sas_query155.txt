@@ -1,0 +1,6 @@
+
+/* Perform bivariate Pearson Correlation analysis */
+proc corr data=sample2014 pearson;
+    var Height Weight;
+run;
+

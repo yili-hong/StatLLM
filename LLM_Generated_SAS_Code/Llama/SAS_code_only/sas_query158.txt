@@ -1,0 +1,5 @@
+/* Perform the paired t-test */
+proc ttest data=sample2014;
+    paired English*Math;
+run;
+

@@ -1,0 +1,3 @@
+proc corr data = manova nosimple;
+  var useful difficulty importance;
+run;

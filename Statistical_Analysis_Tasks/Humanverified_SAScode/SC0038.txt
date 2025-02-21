@@ -1,0 +1,10 @@
+proc reg data=measurement;	
+		title "Regression and residual plots with quatratic term";
+		model weight=height height2;
+		plot residual. * height;
+		run;
+		
+	
+
+	
+	

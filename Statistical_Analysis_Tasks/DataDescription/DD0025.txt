@@ -1,0 +1,16 @@
+1, Name: iron
+2. Data Set Information: 
+Thirteen specimens of 90/10 Cu-Ni alloys are tested in a corrosion-wheel setup in order to examine corrosion. Each specimen has a certain iron content. The wheel is rotated in salt seawater at 30 ft/sec for 60 days. Weight loss is used to quantify the corrosion. The fe variable represents the iron content, and the loss variable denotes the weight loss in milligrams/square decimeter/day.
+3. Attribute Information:
+Number of Obs: 13
+Number of Variables: 2
+Attribute: Attribute Range
+(1). fe: continuous from 0.01 to 1.96.
+(2). Loss: continuous from 83.7 to 130.1.
+Reference:
+The iron data is from
+Draper, N. and Smith, H. 1998. Applied Regression Analysis, Second Edition. New York, New York: John Wiley & Sons: 98.
+Citation: required
+
+
+

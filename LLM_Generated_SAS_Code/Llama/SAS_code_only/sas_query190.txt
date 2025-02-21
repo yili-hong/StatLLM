@@ -1,0 +1,4 @@
+proc means data=your_data_set n nmiss;
+  var BU Age Q1 Q2 Q3 Q4 Q5;
+run;
+

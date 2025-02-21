@@ -1,0 +1,13 @@
+proc sgplot data=grades;
+    hbar ExamGrade1 / datalabel;
+    xaxis label="Frequency";
+    yaxis label="Exam Grade 1";
+run;
+
+proc gchart data=grades;
+    hbar ExamGrade1 / sumvar=ExamGrade1 type=sum discrete raxis=axis1 maxis=axis2;
+    axis1 label=(angle=90 'Frequency');
+    axis2 label=(angle=0 'Exam Grade 1');
+run;
+quit;
+

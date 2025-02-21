@@ -1,0 +1,1 @@
+Using the dataset t, create new variable rabs, which is the absolute value of the residuals. save the new dataset to t2.

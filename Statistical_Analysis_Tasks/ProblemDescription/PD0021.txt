@@ -1,0 +1,1 @@
+For the soil dataset, the question is to test whether the gap and growth areas do not differ with respect to soil respiration. According to the Normality check of the data, the distributions does not appear normal.

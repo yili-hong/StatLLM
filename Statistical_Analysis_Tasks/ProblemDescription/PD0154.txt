@@ -1,0 +1,4 @@
+For the dataset sample2014, generate summary information about the contents of a dataset, including: The variables' names, types, and attributes (including formats, informats, and labels)
+- How many observations are in the dataset
+- How many variables are in the dataset
+- When the dataset was created

@@ -1,0 +1,2 @@
+For the crack dataset, do a simple linear regression and plot the result from PROC REG. The response is load and the covariate is age. 
+ 

@@ -1,0 +1,21 @@
+/* Print the measurement dataset */
+proc print data=measurement;
+  var Gender Height Weight Age;
+run;
+
+/* Perform a multiple linear regression analysis */
+proc reg data=measurement;
+  model Weight = Height Age Gender;
+  run;
+
+/* Perform a multiple linear regression analysis with interaction terms */
+proc reg data=measurement;
+  model Weight = Height Age Gender Height*Age Height*Gender Age*Gender;
+  run;
+
+/* Perform a multiple linear regression analysis with categorical variable (Gender) */
+proc glm data=measurement;
+  class Gender;
+  model Weight = Height Age Gender;
+  run;
+

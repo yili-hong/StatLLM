@@ -1,0 +1,1 @@
+For the dataset of marketing_data, predict the likelihood of purchase and identify key factors affecting the purchase decision.

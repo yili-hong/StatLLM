@@ -1,0 +1,18 @@
+/* Print the contents of the dataset */
+proc contents data=sample2014;
+run;
+
+/* Print the number of observations and variables in the dataset */
+proc sql;
+  select count(*) as num_obs, count(distinct name) as num_vars
+  from dictionary.columns
+  where libname='WORK' and memname='SAMPLE2014';
+quit;
+
+/* Print the creation date of the dataset */
+data _null_;
+  attrib created length=8 format=datetime.;
+  created=datetime();
+  put 'Dataset created on ' created;
+run;
+

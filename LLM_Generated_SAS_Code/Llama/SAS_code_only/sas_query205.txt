@@ -1,0 +1,20 @@
+proc sgplot data=GRADE;
+  hbar ExamGrade1;
+  xaxis label="Frequency";
+  yaxis label="Exam Grade 1";
+run;
+
+proc sgplot data=GRADE;
+  hbar ExamGrade1;
+  xaxis label="Frequency";
+  yaxis label="Exam Grade 1";
+  title "Frequency of Exam Grade 1";
+run;
+
+proc sgplot data=GRADE;
+  hbar ExamGrade1 / dataskin=crisp;
+  xaxis label="Frequency";
+  yaxis label="Exam Grade 1";
+  title "Frequency of Exam Grade 1";
+run;
+

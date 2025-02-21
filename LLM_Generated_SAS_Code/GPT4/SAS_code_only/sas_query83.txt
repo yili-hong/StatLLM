@@ -1,0 +1,5 @@
+
+PROC FREQ DATA = abalone;
+    TABLES weightgroup * agegroup / chisq;
+RUN;
+

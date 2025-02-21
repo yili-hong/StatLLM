@@ -1,0 +1,20 @@
+
+
+/* One-sample Wilcoxon Sign Rank Test */
+PROC UNIVARIATE DATA = hsb2;
+   VAR Write;
+   ID Id;
+   HISTOGRAM / NORMAL (mu=est sigma=est color=red W=2) CIN(color=blue); 
+   OUTPUT OUT = test median = median;
+RUN;
+
+DATA test; SET test;
+   median_diff = median - 50;
+RUN;
+
+PROC UNIVARIATE DATA = test;
+   VAR median_diff;
+   ID Id;
+   CDFPLOT / NORMAL(mu=0 sigma=est);
+RUN;
+

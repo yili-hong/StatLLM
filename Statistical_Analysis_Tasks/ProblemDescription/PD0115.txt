@@ -1,0 +1,2 @@
+For the dataset of hsb2, test whether the mean for write is the same for males and females.  
+

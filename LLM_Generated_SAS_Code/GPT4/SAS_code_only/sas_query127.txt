@@ -1,0 +1,15 @@
+
+
+* Print the dataset to check if it is imported properly;
+PROC PRINT DATA=Phospholipid;
+RUN;
+
+* Compute two-way ANOVA with unequal cell sizes;
+PROC GLM DATA=Phospholipid;
+   CLASS Hormone Time;
+   MODEL y = Hormone Time Hormone*Time;
+   MEANS Hormone Time Hormone*Time / HOVTEST=BARTLETT;
+   LSMEANS Hormone Time Hormone*Time / PDIFF ADJUST=TUKEY;
+RUN; 
+QUIT;
+

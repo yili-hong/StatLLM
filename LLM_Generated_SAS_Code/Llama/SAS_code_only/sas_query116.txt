@@ -1,0 +1,5 @@
+/* Perform Chi-Square test of independence */
+proc freq data=hsb2;
+  tables schtyp*female / chisq;
+  run;
+

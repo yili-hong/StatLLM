@@ -1,0 +1,13 @@
+
+
+/* Performing t-test */
+PROC TTEST DATA=AUTO;
+  CLASS foreign; /* grouping variable */
+  VAR mpg; /* response variable */
+RUN;
+
+/* Citation:
+   UCLA: Academic Technology Services, Statistical Consulting Group. 
+   An overview of statistical tests in SAS.  
+   Available at: https://stats.oarc.ucla.edu/sas/modules/an-overview-of-statistical-tests-in-sas/
+*/

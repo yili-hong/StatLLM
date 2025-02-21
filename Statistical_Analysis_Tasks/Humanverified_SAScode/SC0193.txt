@@ -1,0 +1,4 @@
+Proc Means data = BMT;
+Class Group;
+Var T;
+Run;

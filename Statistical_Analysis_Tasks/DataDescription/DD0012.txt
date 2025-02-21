@@ -1,0 +1,10 @@
+Suppose weights of poplar trees are different based on treatments (none treatment, fertilizer, irrigation, or fertilizer and irrigation). Each weight samples that determined by the treatments is independent and random, and each sample size is 5.
+
+The response variable is weight.
+
+The independent variable is treatment, which is categorical and has four levels. 
+
+The dataset is named as poplar.
+
+
+

@@ -1,0 +1,2 @@
+We are going to use poverty and single to predict crime. Run the robust regression using the default weighting function.
+Use the dataset t2 and save the output to t4.

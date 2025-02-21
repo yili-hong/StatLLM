@@ -1,0 +1,1 @@
+For the dataset of abalone, focus on abalone in the middle and oldest age groups and the middle and heaviest weight groups. Construct the relevant 2x2 contingency table between agegroup and weightgroup for this subset. 

@@ -1,0 +1,23 @@
+/* Fit a multiple regression model of engine size vs all continuous variables */
+proc reg data=imports;
+   model enginesize = symboling normalized_losses wheelbase length width height curbweight enginesize bore stroke compression_ratio hp peakrpm citympg highwaympg price;
+run;
+
+/* Use the OUTPUT statement to create an output dataset to store Cook's distance */
+output out=reg_out p=cookd rcook=influence;
+
+/* Find and print influential observations based on Cook's distance */
+data influential_obs;
+   set reg_out;
+   if influence=1;
+run;
+
+proc print data=influential_obs;
+run;
+
+/* Remove influential observations from the original dataset */
+data imports_cleaned;
+   set imports;
+   if _n_ not in (select _n_ from influential_obs);
+run;
+

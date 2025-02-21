@@ -1,0 +1,26 @@
+
+/* Import the abalone dataset */
+data abalone;
+  set abalone;
+  input id sex whole_weight rings;
+  /* Create agegroup and weightgroup variables */
+  if rings < 8 then agegroup = 'youngest';
+  else if 8 <= rings < 11 then agegroup = 'middle';
+  else agegroup = 'oldest';
+  
+  if whole_weight > 1.15 then weightgroup = 'heaviest';
+  else if 0.45 <= whole_weight <= 1.15 then weightgroup = 'middle';
+  else weightgroup = 'lightest';
+run;
+
+/* Subset the data to middle and oldest age groups and middle and heaviest weight groups */
+data subset;
+  set abalone;
+  if agegroup in ('middle', 'oldest') and weightgroup in ('middle', 'heaviest');
+run;
+
+/* Create a 2x2 contingency table between agegroup and weightgroup */
+proc freq data=subset;
+  tables agegroup*weightgroup / norow nocol nocum;
+run;
+

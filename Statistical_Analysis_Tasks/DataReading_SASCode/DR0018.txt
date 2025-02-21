@@ -1,0 +1,6 @@
+PROC IMPORT OUT=athelete 
+     DATAFILE='/StatLLM/Statistical_Analysis_Tasks/TaskDatasets/DS0018/athelete.csv' 
+     DBMS=CSV 
+     REPLACE; 
+     GETNAMES=YES; 
+RUN; 

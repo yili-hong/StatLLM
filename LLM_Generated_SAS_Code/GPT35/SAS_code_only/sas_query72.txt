@@ -1,0 +1,11 @@
+/* Filter data for vehicle windows float processed */
+data vehicle_windows;
+    set glassid;
+    where Type = 3; /* Filter for vehicle windows float processed */
+run;
+
+/* Descriptive analysis for Na in vehicle windows float processed */
+proc means data=vehicle_windows mean std min max;
+    var Na;
+run;
+

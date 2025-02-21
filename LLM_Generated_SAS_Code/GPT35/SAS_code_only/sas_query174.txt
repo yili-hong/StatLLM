@@ -1,0 +1,11 @@
+/* Calculate BMI */
+data sample_data;
+    set sample2014;
+    BMI = (Weight / (Height * Height)) * 703; /* Formula for BMI with weight in pounds and height in inches */
+    Height_meters = Height * 0.0254; /* Convert height from inches to meters */
+run;
+
+/* Print the updated dataset */
+proc print data=sample_data;
+run;
+

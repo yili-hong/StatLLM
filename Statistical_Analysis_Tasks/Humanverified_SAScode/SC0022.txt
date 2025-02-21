@@ -1,0 +1,9 @@
+data horse2;
+	set  horse;
+	diff= site1-site2;
+run;
+
+ proc univariate data=horse2;
+	  var diff;
+run;
+   

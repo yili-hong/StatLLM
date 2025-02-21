@@ -1,0 +1,3 @@
+proc freq data=BMT;
+tables group;
+run;

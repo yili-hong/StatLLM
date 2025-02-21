@@ -1,0 +1,4 @@
+PROC REG DATA=ART;
+MODEL TASK=CREATE;
+TITLE “Example simple linear regression using PROC REG”;
+RUN ;

@@ -1,0 +1,4 @@
+PROC FREQ DATA=year_sales;
+  TABLES SalesRep / MISSING OUT=Sales_Rep_Summary;
+RUN;
+

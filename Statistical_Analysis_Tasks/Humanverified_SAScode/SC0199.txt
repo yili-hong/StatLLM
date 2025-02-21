@@ -1,0 +1,7 @@
+Proc Means Data = highlow;
+Var DowJonesHigh DowJonesLow;
+Run;
+
+
+ 
+

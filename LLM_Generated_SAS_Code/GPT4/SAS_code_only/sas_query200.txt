@@ -1,0 +1,15 @@
+
+* Create a new dataset with logarithmic transformations;
+data highlow_log;
+    set highlow;
+    
+    * Assume the columns for yearly high and low values are named HighValue and LowValue respectively;
+    LogDowHigh = log(HighValue);
+    LogDowLow = log(LowValue);
+run;
+
+* Compute descriptive statistics;
+proc means data=highlow_log mean std;
+    var LogDowHigh LogDowLow;
+run;
+

@@ -1,0 +1,4 @@
+proc means data=highlow mean stddev;
+  var High Low;
+run;
+

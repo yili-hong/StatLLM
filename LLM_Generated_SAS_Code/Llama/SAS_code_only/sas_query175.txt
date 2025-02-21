@@ -1,0 +1,7 @@
+data sample2014;
+    set sample2014;
+
+    /* create an indicator variable for having any siblings */
+    has_siblings = (siblings > 0);
+run;
+

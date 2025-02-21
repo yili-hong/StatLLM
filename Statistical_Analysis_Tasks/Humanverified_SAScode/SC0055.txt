@@ -1,0 +1,22 @@
+ods graphics on;
+proc reg data=sashelp.baseball;
+   id name team league;
+   model logSalary = nhits nruns nrbi nbb yrmajor crhits;
+run;
+
+
+
+ 
+
+
+
+
+	
+
+
+	
+		
+	
+
+	
+	

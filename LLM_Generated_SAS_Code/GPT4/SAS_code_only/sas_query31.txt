@@ -1,0 +1,9 @@
+
+PROC SORT DATA=opinion;
+BY gender;
+RUN;
+
+PROC FREQ DATA=opinion;
+TABLES opinion*gender / CHISQ;
+RUN;
+

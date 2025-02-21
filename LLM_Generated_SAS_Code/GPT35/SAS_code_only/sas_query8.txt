@@ -1,0 +1,7 @@
+/* Plotting load vs. age */
+proc sgplot data=crack;
+  scatter x=age y=load;
+  xaxis label='Age';
+  yaxis label='Load';
+run;
+

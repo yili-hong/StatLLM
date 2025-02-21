@@ -1,0 +1,28 @@
+1, Name: shopping
+
+2. Data Set Information: 
+We have two groups of people (Group A and Group B) subjected to test their shopping preference. The reaction time of each person is recorded for each of the three shopping preferences tested. Five trials are done for each group of people to see the strength of correlation between the effect of the three shopping preferences.
+
+
+3. Attribute Information:
+
+Number of Obs: 10
+Number of Variables: 5
+
+Attribute: Attribute Range
+
+(1). group:A and B
+(2). employee: employee number: 1-10, 5 for each group 
+(3). a1: reaction time of each person for shopping preferences a1 
+(4). a2: reaction time of each person for shopping preferences a2 
+(5). a3: reaction time of each person for shopping preferences a3
+
+
+Reference:
+
+The raw data comes from https://data-flair.training/blogs/sas-repeated-measure-analysis/
+
+
+
+
+

@@ -1,0 +1,1 @@
+For the dataset of abalone, assuming normality, perform a one-way ANOVA for whole_weight with sex as the categorical predictor.

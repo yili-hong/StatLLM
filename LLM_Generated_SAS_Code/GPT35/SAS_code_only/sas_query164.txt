@@ -1,0 +1,7 @@
+
+/* Calculate descriptive statistics and quantiles */
+proc univariate data=BPressure noprint;
+var Systolic Diastolic;
+ods select BasicMeasures Quantiles;
+run;
+

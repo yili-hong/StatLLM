@@ -1,0 +1,4 @@
+proc means data=BPpressure maxdec=3;
+  var Systolic Diastolic;
+run;
+

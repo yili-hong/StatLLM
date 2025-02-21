@@ -1,0 +1,11 @@
+proc means data=year_sales noprint;
+  class SalesRep Type;
+  var AmountSold;
+  output out=summary_table mean=AverageAmountPerSale;
+run;
+
+proc print data=summary_table noobs;
+  title 'Average Amount per Sale of Each Type of Coffee Maker by Sales Representative';
+  var SalesRep Type AverageAmountPerSale;
+run;
+

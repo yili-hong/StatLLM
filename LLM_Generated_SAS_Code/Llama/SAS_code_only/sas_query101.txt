@@ -1,0 +1,26 @@
+/* Import the dataset */
+data manova;
+  /* You need to import your data here, since I don't have access to it.
+     Here is an example of how you might do it using a csv file: */
+  set manova;
+  input group useful difficulty importance;
+run;
+
+/* Calculate the correlation matrix */
+proc corr data=manova nosimple;
+  var useful difficulty importance;
+run;
+
+/* Optionally, you can use proc corr with pearson option
+   for Pearson's product-moment correlations. By default,
+   SAS uses Pearson's if not otherwise specified. */
+
+proc corr data=manova nosimple pearson ;
+  var useful difficulty importance;
+run;
+
+/*
+The output will include:
+- a table of statistics including N (number of observations), Mean and Std Dev.
+- tables showing Pearson Correlation Coefficients
+*/

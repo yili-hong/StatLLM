@@ -1,0 +1,13 @@
+/* Summary of the dataset */
+proc contents data=binary2;
+run;
+
+/* Checking the first few observations of the dataset */
+proc print data=binary2(obs=5);
+run;
+
+/* Logistic regression model */
+proc logistic data=binary2;
+   model admit(event='1') = gre gpa rank / link=logit;
+run;
+

@@ -1,0 +1,24 @@
+
+/* Non-parametric test */
+proc npar1way data=soil;
+  class condition;
+  var respiration;
+  exact;
+run;
+
+
+/* Kruskal-Wallis test */
+proc npar1way data=soil;
+  class condition;
+  var respiration;
+  wilcoxon;
+run;
+
+
+/* Wilcoxon signed-rank test */
+proc univariate data=soil;
+  var respiration;
+  class condition;
+  wilcoxon;
+run;
+

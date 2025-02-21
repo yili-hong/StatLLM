@@ -1,0 +1,13 @@
+
+proc freq data=athelete;
+  tables subject*X*Y / agree;
+  exact mcnemar;
+run;
+
+
+proc glimmix data=athelete;
+  class subject X Y;
+  model Y(event='1') = X / solution;
+  random subject;
+run;
+

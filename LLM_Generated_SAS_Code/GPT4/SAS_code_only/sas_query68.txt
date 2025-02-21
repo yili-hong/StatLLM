@@ -1,0 +1,10 @@
+
+PROC SORT DATA=iron;
+    BY fe;
+RUN;
+
+PROC REG DATA=iron;
+    MODEL loss = fe fe*fe;
+RUN;
+QUIT;
+

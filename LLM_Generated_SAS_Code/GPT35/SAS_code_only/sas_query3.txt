@@ -1,0 +1,6 @@
+proc glm data=copper;
+  class temp pct;
+  model warp = temp|pct;
+  title 'ANOVA Analysis for Warp with Respect to Temperature and Percentage with Interaction';
+run;
+

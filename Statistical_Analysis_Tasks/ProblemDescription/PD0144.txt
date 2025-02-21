@@ -1,0 +1,1 @@
+Create a graph showing the leverage versus the squared residuals using the dataset t, labeling the points with the state abbreviations.

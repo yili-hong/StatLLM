@@ -1,0 +1,6 @@
+proc glm data=imports2;
+  class fueltype aspiration drivewheels;
+  model wheelbase = fueltype aspiration drivewheels;
+  means fueltype aspiration drivewheels / hovtest = levene;
+run;
+

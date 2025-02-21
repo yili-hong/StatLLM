@@ -1,0 +1,3 @@
+Proc Means Data = highlow;
+Var LogDowHigh LogDowLow;
+Run;

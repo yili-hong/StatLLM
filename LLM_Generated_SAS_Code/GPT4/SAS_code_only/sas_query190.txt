@@ -1,0 +1,10 @@
+/* PROC MEANS to find the non-missing and missing values count */
+proc means data=survey N NMISS;
+    var BU Age Q1-Q5; /* Specify variables to analyze */
+    output out=summary(drop=_TYPE_ _FREQ_);
+run;
+
+/* Display the results */
+proc print data=summary noobs;
+run;
+

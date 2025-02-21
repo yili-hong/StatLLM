@@ -1,0 +1,38 @@
+
+proc corr data=measurement;
+    var Height Weight Age;
+    run;
+
+
+proc corr data=measurement p;
+    var Height Weight Age;
+    run;
+
+
+proc sgplot data=measurement;
+    matrix Height Weight Age;
+    run;
+
+
+proc corr data=measurement;
+    by Gender;
+    var Height Weight Age;
+    run;
+
+
+/* Calculate correlations between Height, Weight, and Age */
+proc corr data=measurement p;
+    var Height Weight Age;
+    run;
+
+/* Create a scatter plot matrix */
+proc sgplot data=measurement;
+    matrix Height Weight Age;
+    run;
+
+/* Calculate correlations separately for each gender */
+proc corr data=measurement;
+    by Gender;
+    var Height Weight Age;
+    run;
+

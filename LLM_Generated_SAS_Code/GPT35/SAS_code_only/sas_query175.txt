@@ -1,0 +1,11 @@
+/* Create the indicator variable */
+data work.sample2014;
+    set work.sample2014;
+
+    /* Assuming a variable named 'NumSiblings' that represents the number of siblings */
+    if NumSiblings > 0 then Siblings = 1;
+    else Siblings = 0;
+
+    drop NumSiblings; /* Dropping if not needed anymore */
+run;
+

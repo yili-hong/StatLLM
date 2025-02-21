@@ -1,0 +1,7 @@
+
+
+PROC ANOVA data=Auto;
+  CLASS rep78;
+  MODEL mpg = rep78;
+  WHERE rep78 in (3, 4, 5);
+RUN;

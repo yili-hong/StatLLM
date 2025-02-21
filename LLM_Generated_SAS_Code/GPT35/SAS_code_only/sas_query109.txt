@@ -1,0 +1,5 @@
+/* Fit linear regression with all predictors */
+proc reg data=est2;
+    model Y = X1-X10;
+run;
+

@@ -1,0 +1,2 @@
+For the dataset of abalone, consider the relationship between age groups and weight groups. For the 2x2 table, test whether the oldest abalone are at higher risk than the middle age abalone to be in the heaviest weight group.
+

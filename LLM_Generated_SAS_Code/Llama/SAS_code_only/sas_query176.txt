@@ -1,0 +1,22 @@
+/* Perform linear regression analysis */
+proc reg data=art;
+  model TASK = CREATE;
+  output out=new p=pred r=residual;
+run;
+
+/* Print the regression equation */
+proc print data=new;
+  var CREATE TASK pred;
+run;
+
+/* Perform linear regression analysis */
+proc reg data=art;
+  model TASK = CREATE;
+  output out=new p=pred r=residual;
+run;
+
+/* Print the regression equation */
+proc print data=new;
+  var CREATE TASK pred;
+run;
+

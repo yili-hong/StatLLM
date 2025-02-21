@@ -1,0 +1,1 @@
+For the sashelp.shoes dataset, which is avaialle through SAS help files. We want to calculate basic statistics of sales by region. In this case, region is a grouping (or categorical) variable. We want only percentiles to be appeared in output window.

@@ -1,0 +1,6 @@
+proc glm data=hsb2;
+   class prog;
+   model write = prog;
+   means prog / hovtest=levene;
+run;
+

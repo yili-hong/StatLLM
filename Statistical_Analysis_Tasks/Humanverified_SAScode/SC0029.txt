@@ -1,0 +1,4 @@
+proc freq data=racecounts;
+		tables race / chisq;
+		weight count;
+	run;

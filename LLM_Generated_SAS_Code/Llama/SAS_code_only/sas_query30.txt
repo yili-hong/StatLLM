@@ -1,0 +1,20 @@
+
+/* Print the dataset to verify the data */
+proc print data=opinioncounts;
+  title "Opinion Counts Dataset";
+run;
+
+/* Perform chi-square test to determine the relationship between opinion and gender */
+proc freq data=opinioncounts;
+  tables opinion*gender / chisq;
+  weight count;
+  title "Chi-Square Test for Relationship between Opinion and Gender";
+run;
+
+/* Perform logistic regression to further analyze the relationship */
+proc logistic data=opinioncounts;
+  model opinion(event='yes') = gender;
+  freq count;
+  title "Logistic Regression Model for Opinion and Gender";
+run;
+

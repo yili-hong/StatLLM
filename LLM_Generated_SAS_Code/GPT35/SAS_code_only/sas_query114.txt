@@ -1,0 +1,16 @@
+/* Calculate the observed proportions from the dataset */
+proc freq data=hsb2;
+   tables Race / noprint out=observed;
+run;
+
+/* Merge the observed and hypothesized proportions */
+data proportions;
+   merge hypothesized observed;
+   by Race;
+run;
+
+/* Calculate the chi-square statistic and p-value */
+proc freq data=proportions;
+   weight Count;
+   tables Race / chisq expected;
+run;

@@ -1,0 +1,1 @@
+Create frequency tables for the variables State and Rank.

@@ -1,0 +1,5 @@
+proc reg data=baseball
+plots(only label)=(RStudentByLeverage CooksD);
+id name team league;
+model logSalary = nhits nruns nrbi nbb yrmajor crhits;
+run;

@@ -1,0 +1,6 @@
+PROC IMPORT OUT=copper 
+     DATAFILE='/StatLLM/Statistical_Analysis_Tasks/TaskDatasets/DS0002/copper.csv' 
+     DBMS=CSV 
+     REPLACE; 
+     GETNAMES=YES; 
+RUN; 

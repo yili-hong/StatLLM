@@ -1,0 +1,10 @@
+/* Load the dataset if it is not a part of default SAS datasets */
+/* Assuming BMT dataset is already in the work library */
+/* You may need to adjust the dataset path or import procedures if it's in a different location */
+
+/* Using PROC FREQ to create a frequency table for the Group variable */
+proc freq data=work.bmt;
+    tables Group / nocum nopercent;
+    title 'Frequency Table for Patient Risk Category';
+run;
+

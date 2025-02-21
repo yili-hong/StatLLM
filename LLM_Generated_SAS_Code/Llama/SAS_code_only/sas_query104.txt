@@ -1,0 +1,35 @@
+/* Convert engine-size to numeric variable */
+data imports;
+  set imports;
+  enginesize = input(enginesize, best12.);
+run;
+
+/* Calculate Cook's Distance for each observation */
+ods graphics / width=8in height=6in;
+proc reg data=imports;
+  model enginesize = wheelbase length width height curbweight bore stroke compression_ratio hp peakrpm citympg highwaympg price;
+  output out=cook_d p=pred r=r resid=res / cookd=cook_d;
+run;
+
+/* Identify observations with Cook's Distance greater than 4/n */
+proc sql;
+  select count(*) into :n from imports;
+  %let n = &n;
+  %let threshold = 4 / &n;
+
+  create table influential_obs as
+  select *
+  from cook_d
+  where cook_d > &threshold;
+quit;
+
+/* Remove influential observations from the dataset */
+proc sql;
+  create table cleaned_imports as
+  select i.*
+  from imports i
+  left join influential_obs o
+  on i._n_ = o._n_
+  where o._n_ is null;
+quit;
+

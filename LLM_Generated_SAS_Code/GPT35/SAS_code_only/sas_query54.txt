@@ -1,0 +1,15 @@
+/* Generate Histogram for Sales variable */
+proc univariate data=mydata.shoes noprint;
+   histogram Sales / normal;
+run;
+
+/* Generate Box Plot for Sales variable */
+proc sgplot data=mydata.shoes;
+   vbox Sales / group=Region;
+run;
+
+/* Generate Normal Probability Plot for Sales variable */
+proc capability data=mydata.shoes noprint;
+   pp Sales;
+run;
+

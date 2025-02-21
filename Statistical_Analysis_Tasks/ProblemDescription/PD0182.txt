@@ -1,0 +1,2 @@
+For the dataset of fitness, build a regression model with response variable Oxygen and predictors RunTime, Age, Weight, RunPulse, MaxPulse,and RestPulse.
+Include VIF and collinearity analysis in your results using options.

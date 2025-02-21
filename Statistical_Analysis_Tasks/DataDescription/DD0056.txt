@@ -1,0 +1,32 @@
+The Baseball data set contains salary and performance information for Major League Baseball
+players who played at least one game in both the 1986 and 1987 seasons, excluding pitchers. The salaries
+(Sports Illustrated, April 20, 1987) are for the 1987 season and the performance measures are from 1986
+(Collier Books, The 1987 Baseball Encyclopedia Update). 
+
+
+Variables Description
+#  Variable Type Len Label
+1  Name      Char 18 Player's Name
+2  Team      Char 14 Team at the End of 1986
+3  nAtBat    Num  8  Times at Bat in 1986
+4  nHits     Num  8  Hits in 1986
+5  nHome     Num  8  Home Runs in 1986
+6  nRuns     Num  8  Runs in 1986
+7  nRBI      Num  8  RBIs in 1986
+8  nBB       Num  8  Walks in 1986
+9  YrMajor   Num  8  Years in the Major Leagues
+10 CrAtBat   Num  8  Career Times at Bat
+11 CrHits    Num  8  Career Hits
+12 CrHome    Num  8  Career Home Runs
+13 CrRuns    Num  8  Career Runs
+14 CrRbi     Num  8  Career RBIs
+15 CrBB      Num  8  Career Walks
+16 League    Char 8  League at the End of 1986
+17 Division  Char 8  Division at the End of 1986
+18 Position  Char 8  Position(s) in 1986
+19 nOuts     Num  8  Put Outs in 1986
+20 nAssts    Num  8  Assists in 1986
+21 nError    Num  8  Errors in 1986
+22 Salary    Num  8  1987 Salary in $ Thousands
+23 Div       Char 16 League and Division
+24 logSalary Num  8  Log Salary

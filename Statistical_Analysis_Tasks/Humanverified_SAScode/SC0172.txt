@@ -1,0 +1,3 @@
+PROC FREQ DATA=sample2014 ORDER=freq;
+    TABLE State Rank;
+RUN;

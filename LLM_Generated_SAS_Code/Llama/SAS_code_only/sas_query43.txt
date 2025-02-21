@@ -1,0 +1,6 @@
+
+proc means data=sashelp.shoes p25 p50 p75;
+  class region;
+  var sales;
+run;
+

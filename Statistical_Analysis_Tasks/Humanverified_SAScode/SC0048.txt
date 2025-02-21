@@ -1,0 +1,16 @@
+ods select TestsforNormality;
+proc univariate data = sashelp.shoes normal;
+var sales;
+run;
+
+
+
+	
+
+
+	
+		
+	
+
+	
+	

@@ -1,0 +1,28 @@
+/* Perform chi-square test for association between sex and weightgroup */
+proc format;
+  value weightfmt low-0.45 = 'lightest'
+               0.45-1.15 = 'middle'
+               1.15-high = 'heaviest';
+run;
+
+data abalone;
+  set abalone;
+  weightgroup = put(whole_weight, weightfmt.);
+run;
+
+proc freq data=abalone;
+  tables sex*weightgroup / chisq;
+run;
+
+/* Perform ANOVA to compare whole_weight means across sex groups */
+proc anova data=abalone;
+  class sex;
+  model whole_weight = sex;
+run;
+
+/* Perform non-parametric test (Kruskal-Wallis test) to compare whole_weight distributions across sex groups */
+proc npar1way data=abalone;
+  class sex;
+  var whole_weight;
+run;
+

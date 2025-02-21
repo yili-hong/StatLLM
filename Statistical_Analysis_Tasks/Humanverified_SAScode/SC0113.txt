@@ -1,0 +1,4 @@
+proc freq data = hsb2;
+  tables female / binomial(p=.5);
+  exact binomial;
+run;

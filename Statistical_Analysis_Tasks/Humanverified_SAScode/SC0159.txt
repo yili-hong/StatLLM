@@ -1,0 +1,4 @@
+proc reg data=baseball;
+id name team league;
+model logSalary = nhits nruns nrbi nbb yrmajor crhits;
+run;

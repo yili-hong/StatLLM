@@ -1,0 +1,36 @@
+/* Calculate the cut-off point (4/n) */
+data _null_;
+  n = nobs(t);
+  cutoff = 4 / n;
+  put "Cut-off point: " cutoff;
+run;
+
+/* Display observations with Cook's D larger than the cut-off point */
+proc print data=t;
+  where CooksD > 4 / nobs(t);
+  var _all_;
+run;
+
+/* Calculate the cut-off point (4/n) and store nobs(t) in a macro variable */
+data _null_;
+  n = nobs(t);
+  call symput('n', n);
+  cutoff = 4 / n;
+  put "Cut-off point: " cutoff;
+run;
+
+/* Display observations with Cook's D larger than the cut-off point */
+proc print data=t;
+  where CooksD > 4 / &n;
+  var _all_;
+run;
+
+proc reg data=crime outest=t;
+  model crime = poverty single / influence;
+run;
+
+proc print data=t;
+  where CooksD > 4 / &n;
+  var _all_;
+run;
+

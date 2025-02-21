@@ -1,0 +1,5 @@
+proc freq data=opinioncounts;
+  tables opinion * gender / chisq;
+  weight count;
+run;
+

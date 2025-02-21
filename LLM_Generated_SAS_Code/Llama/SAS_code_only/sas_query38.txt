@@ -1,0 +1,14 @@
+/* Fit a quadratic relationship of height on weight */
+ods graphics / width=8in height=6in;
+proc reg data=measurement;
+  model Height = Weight Weight*Weight / clb;
+  output out=residuals p=pred r=residual;
+run;
+
+/* Check residuals */
+ods graphics / width=8in height=6in;
+proc reg data=residuals;
+  model residual = Weight;
+  plot residual*Weight;
+run;
+

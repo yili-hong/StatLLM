@@ -1,0 +1,1 @@
+For the dataset of hsb2, Test whether the proportion of females (female) differs significantly from 50%.

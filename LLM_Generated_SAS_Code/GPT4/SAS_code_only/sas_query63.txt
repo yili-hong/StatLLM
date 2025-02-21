@@ -1,0 +1,7 @@
+
+
+PROC GLM DATA=work.imports;
+    CLASS fueltype aspiration drivewheels;
+    MODEL wheelbase = fueltype aspiration drivewheels;
+RUN;
+QUIT;

@@ -1,0 +1,16 @@
+/* Perform ANOVA with main effects and interaction */
+proc glm data=imports;
+  class fueltype drivewheels;
+  model wheelbase = fueltype drivewheels fueltype*drivewheels;
+  means fueltype drivewheels fueltype*drivewheels / hovtest=levene;
+run;
+
+/* Perform pairwise comparisons with Tukey's test */
+ods graphics / width=8in height=6in;
+proc glm data=imports;
+  class fueltype drivewheels;
+  model wheelbase = fueltype drivewheels fueltype*drivewheels;
+  means fueltype*drivewheels / hovtest=levene tukey alpha=0.05;
+  lsmeans fueltype*drivewheels / diff alpha=0.05;
+run;
+

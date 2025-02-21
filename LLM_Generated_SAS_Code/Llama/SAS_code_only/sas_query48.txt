@@ -1,0 +1,5 @@
+
+proc univariate data=sashelp.shoes normal;
+  var Sales;
+run;
+

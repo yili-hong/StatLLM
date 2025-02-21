@@ -1,0 +1,20 @@
+/* Assuming the data is already loaded into a dataset called year_sales */
+/* Calculate the AmountSold as Units * Price if not already present */
+data year_sales;
+    set year_sales;
+    AmountSold = Units * Price;
+run;
+
+/* Create a summary table crossing Type of coffee maker with SalesRep showing total AmountSold */
+proc tabulate data=year_sales;
+    class SalesRep Type;  /* Define the categorical variables */
+    var AmountSold;      /* Define the numeric variable to summarize */
+    
+    /* Define the table layout: Sales representative as a row and coffee maker type as a column */
+    table SalesRep,
+          Type * AmountSold * sum = 'Total Amount Sold' * f=dollar12.2; /* Formatting the output as dollar amount */
+    
+    /* Optional: Include grand totals for SalesRep and Type */
+    keylabel sum='Total';
+run;
+

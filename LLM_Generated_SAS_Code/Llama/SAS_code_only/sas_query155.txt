@@ -1,0 +1,13 @@
+/* Import the Excel file into SAS */
+proc import datafile="sample2014.xlsx"
+            out=sample2014
+            dbms=xlsx
+            replace;
+            sheet="Sheet1"; /* Replace "Sheet1" with the name of your sheet */
+run;
+
+/* Perform the Pearson Correlation */
+proc corr data=sample2014;
+    var Height Weight;
+run;
+

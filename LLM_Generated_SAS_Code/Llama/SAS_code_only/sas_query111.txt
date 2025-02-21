@@ -1,0 +1,5 @@
+/* Perform one-sample t-test to compare the mean writing score to 50 */
+proc ttest data=hsb2 sides=2 h0=50;
+  var write;
+run;
+

@@ -1,0 +1,8 @@
+proc sort data=sample2014;
+  by Gender descending bday;
+run;
+
+proc sort data=sample2014 out=sorted_sample2014;
+  by Gender descending bday;
+run;
+

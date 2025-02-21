@@ -1,0 +1,6 @@
+proc glm data=Phospholipid;
+class Hormone Time;
+model Y = Hormone Time Hormone*Time / nouni;
+random _residual_;
+run;
+

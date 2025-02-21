@@ -1,0 +1,31 @@
+/* Create frequency tables for weight group and sex */
+proc freq data = abalone;
+  tables weightgroup sex;
+run;
+
+/* Perform a chi-square test to check for association between weight group and sex */
+proc freq data = abalone;
+  tables weightgroup * sex / chisq;
+run;
+
+/* Create a contingency table to visualize the association */
+proc freq data = abalone;
+  tables weightgroup * sex / nocol nopercent;
+run;
+
+/* Perform a logistic regression to model the relationship between weight group and sex */
+proc logistic data = abalone;
+  model weightgroup (order = internal) = sex;
+  contrast 'Compare heaviest vs middle and lightest' weightgroup 1 0 -1;
+  contrast 'Compare middle vs lightest' weightgroup 0 1 -1;
+run;
+
+/* Create a bar chart to visualize the distribution of weight group by sex */
+ods graphics / width = 800 height = 600;
+proc sgplot data = abalone;
+  vbar sex / categoryorder = respdesc group = weightgroup;
+  yaxis label = 'Frequency';
+  xaxis label = 'Sex';
+  title 'Distribution of Weight Group by Sex';
+run;
+

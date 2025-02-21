@@ -1,0 +1,6 @@
+proc glm data=abalone2;
+  class sex;
+  model whole_weight = sex;
+  lsmeans sex / pdiff;
+run;
+

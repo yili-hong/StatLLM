@@ -1,0 +1,13 @@
+
+/* Print the data structure */
+PROC CONTENTS DATA=words; 
+RUN;
+
+/* Perform the one-way ANOVA */
+PROC ANOVA DATA=words;
+  CLASS method;
+  MODEL words=method;
+  MEANS method / TUKEY ALPHA=0.05;
+  TITLE 'One-way ANOVA on words against method';
+RUN;
+

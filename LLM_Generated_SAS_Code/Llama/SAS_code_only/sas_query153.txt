@@ -1,0 +1,11 @@
+proc sgplot data=turbine;
+  vbox KWatts / category=Day;
+  title 'Box Plot for Power Output';
+run;
+
+proc sgplot data=turbine;
+  format Day date9.;
+  vbox KWatts / category=Day;
+  title 'Box Plot for Power Output';
+run;
+

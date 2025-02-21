@@ -1,0 +1,7 @@
+
+proc anova data=copper;
+    class pct;
+    model warp = pct;
+    means pct / tukey;
+run;
+

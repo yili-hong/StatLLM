@@ -1,0 +1,28 @@
+/* Subset the data for vehicle windows float processed and building windows float processed */
+data glass_vehicle_float;
+    set glassid;
+    where Type_of_glass = 3; /* Select type for vehicle windows float processed */
+run;
+
+data glass_building_float;
+    set glassid;
+    where Type_of_glass = 1; /* Select type for building windows float processed */
+run;
+
+/* Test normality using PROC UNIVARIATE */
+proc sort data=glass_vehicle_float;
+    by RI;
+run;
+
+proc univariate data=glass_vehicle_float normal;
+    var RI;
+run;
+
+proc sort data=glass_building_float;
+    by RI;
+run;
+
+proc univariate data=glass_building_float normal;
+    var RI;
+run;
+

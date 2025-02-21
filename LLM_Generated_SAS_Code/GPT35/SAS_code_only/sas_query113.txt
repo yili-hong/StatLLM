@@ -1,0 +1,12 @@
+/* Calculate the total number of females in the dataset;*/
+proc sql;
+   select sum(Female) as Total_Females,
+          count(*) as Total_Students
+   from hsb2;
+quit;
+
+* Perform chi-square test of proportions;
+proc freq data=hsb2;
+   tables Female / chisq;
+run;
+

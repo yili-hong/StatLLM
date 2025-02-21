@@ -1,0 +1,1 @@
+For the dataset of mvreg, calculate the pairwise correlation among locus_of_control, self_concept, and motivation.

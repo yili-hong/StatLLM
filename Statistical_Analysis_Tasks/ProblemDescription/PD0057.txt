@@ -1,0 +1,9 @@
+For the sashelp.baseball dataset, which is avaialle through SAS help files, Suppose you want to investigate whether you can model the players’ salaries for the 1987 season based on batting statistics for the previous season and lifetime batting performance. Since the variation in salaries is much greater for higher salaries, it is appropriate to apply a log transformation for this analysis. 
+
+We also want to use the plot of Cook's D by observation to indicate if there are any highly influential observations. 
+
+We also want to omit Pete Rose's statistics when building the model.  
+
+The dependent variable is logSalary.
+The independent variables are nhits, nruns, nrbi, nbb, yrmajor, and crhits.
+The id variables are name, team, and league.

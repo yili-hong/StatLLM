@@ -1,0 +1,26 @@
+
+/* Exclude observation where name=Pete Rose */
+data baseball_updated;
+    set baseball;
+    where Name ne "Pete Rose";
+run;
+
+/* Build the model again */
+proc reg data=baseball_updated;
+    model logSalary = nAtBat nHits nHome nRuns nRBI nBB YrMajor CrAtBat CrHits CrHome CrRuns CrRBI CrBB nOuts nAssts nError / VIF;
+run;
+
+/* Leverage plot with labels */
+ods graphics on;
+proc reg data=baseball_updated;
+    model logSalary = nAtBat nHits nHome nRuns nRBI nBB YrMajor CrAtBat CrHits CrHome CrRuns CrRBI CrBB nOuts nAssts nError / VIF;
+    plot leverage (label) student.;
+run;
+
+/* Residual plot */
+ods graphics on;
+proc reg data=baseball_updated;
+    model logSalary = nAtBat nHits nHome nRuns nRBI nBB YrMajor CrAtBat CrHits CrHome CrRuns CrRBI CrBB nOuts nAssts nError / VIF;
+    plot student.*_RESIDUAL_;
+run;
+

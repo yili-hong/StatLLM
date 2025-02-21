@@ -1,0 +1,7 @@
+
+proc corr data=glassid noprint out=corr_matrix;
+    var RI Na Al Si Ca Groupedtype;
+run;
+
+proc print data=corr_matrix;
+run;

@@ -1,0 +1,1 @@
+For the dataset of shopping, do repeated measure analysis for each group of people to see the strength of correlation between the effect of the three shopping preferences.

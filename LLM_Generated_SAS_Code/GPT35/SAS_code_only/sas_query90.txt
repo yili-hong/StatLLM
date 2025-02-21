@@ -1,0 +1,5 @@
+PROC GLM DATA = abalone;
+  CLASS sex;
+  MODEL whole_weight = sex;
+  MEANS sex / HOVTest FitStatistics CLDiffs Welch;
+RUN;

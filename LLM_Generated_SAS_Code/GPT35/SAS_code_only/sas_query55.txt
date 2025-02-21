@@ -1,0 +1,11 @@
+/* Create a log-transformed variable for salary */
+data work.baseball;
+   set work.baseball;
+   logSalary = log(salary);
+run;
+
+/* Specify the model with independent variables */
+proc reg data=work.baseball;
+   model logSalary = nhits nruns nrbi nbb yrmajor crhits;
+run;
+

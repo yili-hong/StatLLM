@@ -1,0 +1,18 @@
+/* Fit the linear regression model */
+proc reg data=est2;
+	model Y = X1 X2 X3 X4 X5 X6 X7 X8 X9 X10;
+run;
+
+
+/* Fit the linear regression model with residual plots and diagnostics */
+proc reg data=est2 plots(only)=(CookSD RESIDUALS RESIDUALBYPREDICTED);
+	model Y = X1 X2 X3 X4 X5 X6 X7 X8 X9 X10;
+	output out=residuals residual=residual student=student CookD=CookD;
+run;
+
+
+/* Perform stepwise selection */
+proc reg data=est2;
+	model Y = X1 X2 X3 X4 X5 X6 X7 X8 X9 X10 / selection=stepwise;
+run;
+

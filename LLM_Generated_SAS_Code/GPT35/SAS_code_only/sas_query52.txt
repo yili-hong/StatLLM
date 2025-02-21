@@ -1,0 +1,6 @@
+/* Calculate the 20% trimmed mean for the 'Sales' variable */
+proc univariate data=sashelp.shoes trim=0.1;
+   var Sales;
+   output out=trimmed_mean mean=Trimmed_Mean;
+run;
+

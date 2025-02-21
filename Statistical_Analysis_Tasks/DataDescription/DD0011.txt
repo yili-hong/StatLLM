@@ -1,0 +1,8 @@
+Iorn and Zinc fortification of milk-based fruit drinks are common practice. To better understand the effects of drink fortification on the cellular retentionof iron, researchers conducted an experiment by fortifying milk-based fruit drinks with low and high levels of iron (Fe) and zinc (Zn). The drinks were digested in a simulated gastroinatestinal tract and cellular iron retention was measured (mg Fe/mg cell protein). 
+
+For the study, there is one continuous dependent varialble (named FeRetention), and two categorical independent variables, Fe (low/high) and Zn (low/high).   
+
+The dataset is named as retention.
+
+
+

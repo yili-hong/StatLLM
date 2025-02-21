@@ -1,0 +1,6 @@
+proc npar1way data=poplar wilcoxon;
+class treatment;
+var weight;
+title 'Kruskal-Wallis Test for Poplar Tree Weights by Treatment';
+run;
+

@@ -1,0 +1,8 @@
+data first15;
+    set t3 (keep=state crime poverty single res cookd lev wgt);
+    if _N_ <= 15;
+run;
+
+proc print data=first15;
+run;
+

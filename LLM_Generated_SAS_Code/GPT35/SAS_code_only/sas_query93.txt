@@ -1,0 +1,8 @@
+
+
+/* Perform t-test to compare mpg for domestic and foreign cars */
+proc ttest data=auto;
+  class foreign;
+  var mpg;
+  ods select ttests;
+run;

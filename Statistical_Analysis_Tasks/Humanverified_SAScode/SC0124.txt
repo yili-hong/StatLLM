@@ -1,0 +1,5 @@
+proc glm data = lettuce_brand;
+ class Fertilizer;
+ model Heads = Fertilizer;
+ means Fertilizer / LSD;
+run;

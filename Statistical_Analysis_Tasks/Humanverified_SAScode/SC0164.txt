@@ -1,0 +1,5 @@
+title 'Systolic and Diastolic Blood Pressure';
+ods select BasicMeasures Quantiles;
+proc univariate data=BPressure;
+   var Systolic Diastolic;
+run;

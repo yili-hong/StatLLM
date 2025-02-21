@@ -1,0 +1,2 @@
+Create a two-dimensional summary table that crosses elements with a statistic and that answers the question, “What was the
+average amount per sale of each type of coffee maker by each sales representative?

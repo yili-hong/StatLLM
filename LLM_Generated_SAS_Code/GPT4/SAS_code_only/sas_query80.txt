@@ -1,0 +1,11 @@
+
+
+DATA abalone_male_female;
+    SET abalone;
+    WHERE sex IN ('M', 'F');
+RUN;
+
+PROC FREQ DATA=abalone_male_female;
+    TABLES sex*agegroup / CHISQ;
+RUN;
+

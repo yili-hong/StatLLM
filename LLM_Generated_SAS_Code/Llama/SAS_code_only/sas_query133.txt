@@ -1,0 +1,27 @@
+/* Transposing the data */
+proc transpose data=hernio_multivariate out=hernio_univariate prefix=response;
+  by patient_id OKstatus;
+  var leave los;
+run;
+
+/* Renaming the variables for clarity (optional) */
+data hernio_univariate;
+  set hernio_univariate;
+  rename response1 = value;
+  if _NAME_ = 'leave' then response_type = 'Condition upon leaving';
+  else if _NAME_ = 'los' then response_type = 'Length of hospital stay';
+  drop _NAME_;
+run;
+
+data hernio_univariate;
+  set hernio_multivariate;
+  array vars leave los;
+  do i = 1 to dim(vars);
+    value = vars[i];
+    if i = 1 then response_type = 'Condition upon leaving';
+    else if i = 2 then response_type = 'Length of hospital stay';
+    output;
+  end;
+  drop leave los i;
+run;
+

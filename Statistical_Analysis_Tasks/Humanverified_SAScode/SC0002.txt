@@ -1,0 +1,3 @@
+proc plot data=chisq;
+plot df;
+run;

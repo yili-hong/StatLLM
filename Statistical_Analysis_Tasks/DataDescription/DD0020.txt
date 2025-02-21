@@ -1,0 +1,10 @@
+The Sashelp.shoes data set provides fictitious shoe company data. The data set contains 395 observations. 
+
+The dataset is availalbe in SASA help files. 
+
+The column names are Region, Product, Subsidiary, Stores, Sales, Inventory, and Returns.
+
+The dataset is named as Sashelp.shoes.
+
+
+

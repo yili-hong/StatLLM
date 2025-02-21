@@ -1,0 +1,93 @@
+/* Restrict to only male and female groups */
+data abalone_male_female;
+  set abalone;
+  if sex in ('M', 'F');
+run;
+
+/* Test for association between whole weight and rings */
+proc corr data=abalone_male_female;
+  var whole_weight rings;
+  by sex;
+run;
+
+/* Test for association between diameter height and rings */
+proc corr data=abalone_male_female;
+  var diameter_height rings;
+  by sex;
+run;
+
+/* Test for association between shell weight and rings */
+proc corr data=abalone_male_female;
+  var shell_weight rings;
+  by sex;
+run;
+
+/* Test for association between shucked weight and rings */
+proc corr data=abalone_male_female;
+  var shucked_weight rings;
+  by sex;
+run;
+
+/* Test for association between visceral weight and rings */
+proc corr data=abalone_male_female;
+  var visceral_weight rings;
+  by sex;
+run;
+
+/* Test for association between ring weight and rings */
+proc corr data=abalone_male_female;
+  var ring_weight rings;
+  by sex;
+run;
+
+/* Test for association between whole weight and diameter height */
+proc corr data=abalone_male_female;
+  var whole_weight diameter_height;
+  by sex;
+run;
+
+/* Test for association between whole weight and shell weight */
+proc corr data=abalone_male_female;
+  var whole_weight shell_weight;
+  by sex;
+run;
+
+/* Test for association between whole weight and shucked weight */
+proc corr data=abalone_male_female;
+  var whole_weight shucked_weight;
+  by sex;
+run;
+
+/* Test for association between whole weight and visceral weight */
+proc corr data=abalone_male_female;
+  var whole_weight visceral_weight;
+  by sex;
+run;
+
+/* Test for association between whole weight and ring weight */
+proc corr data=abalone_male_female;
+  var whole_weight ring_weight;
+  by sex;
+run;
+
+
+/* Import the abalone dataset */
+data abalone;
+  infile 'abalone.csv' delimiter=',' missover;
+  input id sex $ whole_weight diameter_height shell_weight shucked_weight 
+        visceral_weight ring_weight rings;
+run;
+
+/* Restrict to only male and female groups */
+data abalone_male_female;
+  set abalone;
+  if sex in ('M', 'F');
+run;
+
+/* Test for association between all pairs of variables */
+proc corr data=abalone_male_female;
+  var whole_weight diameter_height shell_weight shucked_weight 
+       visceral_weight ring_weight rings;
+  by sex;
+run;
+

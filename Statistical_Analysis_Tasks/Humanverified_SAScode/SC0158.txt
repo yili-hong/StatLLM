@@ -1,0 +1,3 @@
+PROC TTEST DATA=sample2014 ALPHA=.05;
+    PAIRED English*Math;
+RUN;

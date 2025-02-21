@@ -1,0 +1,6 @@
+PROC IMPORT OUT=pulse_data 
+     DATAFILE='/StatLLM/Statistical_Analysis_Tasks/TaskDatasets/DS0038/pulse_data.csv' 
+     DBMS=CSV 
+     REPLACE; 
+     GETNAMES=YES; 
+RUN; 

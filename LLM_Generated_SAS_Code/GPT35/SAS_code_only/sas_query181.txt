@@ -1,0 +1,5 @@
+proc corr data=mvreg;
+   var read write science prog;
+   with locus_of_control self_concept motivation;
+run;
+

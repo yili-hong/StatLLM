@@ -1,0 +1,6 @@
+
+
+proc freq data=racecounts;
+tables race / nocum expected nopercent chisq;
+weight count / e = [10 10 10 70];
+run;

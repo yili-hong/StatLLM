@@ -1,0 +1,7 @@
+
+proc glm data=work.imports;
+class fueltype drivewheels;
+model wheelbase = fueltype drivewheels / solution;
+run;
+quit;
+

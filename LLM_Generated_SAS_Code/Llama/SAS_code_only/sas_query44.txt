@@ -1,0 +1,8 @@
+
+ods trace on;
+proc means data=sashelp.shoes mean std min max;
+  class region;
+  var sales;
+run;
+ods trace off;
+

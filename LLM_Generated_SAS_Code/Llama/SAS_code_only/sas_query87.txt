@@ -1,0 +1,24 @@
+/* Create a 2x2 contingency table */
+proc freq data=abalone;
+  tables agegroup*weightgroup / chisq fisher;
+  where agegroup in ('middle', 'oldest') and weightgroup in ('heaviest', 'middle', 'lightest');
+  format agegroup agegroupfmt. weightgroup weightgroupfmt.;
+run;
+
+/* Define formats for agegroup and weightgroup */
+proc format;
+  value agegroupfmt 'middle' = 'Middle'
+                  'oldest' = 'Oldest';
+  value weightgroupfmt 'heaviest' = 'Heaviest'
+                       'middle' = 'Middle'
+                       'lightest' = 'Lightest';
+run;
+
+/* Perform a logistic regression to estimate the odds ratio */
+proc logistic data=abalone;
+  model weightgroup (order=internal) = agegroup / expb;
+  where agegroup in ('middle', 'oldest') and weightgroup in ('heaviest', 'middle', 'lightest');
+  format agegroup agegroupfmt. weightgroup weightgroupfmt.;
+  class agegroup (ref='middle') weightgroup (ref='middle');
+run;
+

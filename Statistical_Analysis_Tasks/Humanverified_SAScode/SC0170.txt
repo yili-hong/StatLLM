@@ -1,0 +1,6 @@
+PROC PRINT DATA=sample2014 LABEL;
+    BY Gender;
+    ID ids;
+    VAR Gender Height Weight;
+    FORMAT Height Weight 3.0;
+RUN;

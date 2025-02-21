@@ -1,0 +1,13 @@
+proc sgplot data=GRADE;
+  vbar ExamGrade1;
+  title 'Frequency Distribution of ExamGrade1';
+run;
+
+proc sgplot data=GRADE;
+  vbar ExamGrade1;
+  xaxis label='Exam Grade 1';
+  yaxis label='Frequency';
+  datalabel;
+  title 'Frequency Distribution of ExamGrade1';
+run;
+

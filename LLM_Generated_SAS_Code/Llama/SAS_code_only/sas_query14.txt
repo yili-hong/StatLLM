@@ -1,0 +1,14 @@
+
+proc glm data = toxic;
+    class poison treatment;
+    model life = poison treatment;
+    run;
+    quit;
+
+
+proc glm data = toxic;
+    class poison treatment;
+    model life = poison treatment / noint;
+    run;
+    quit;
+

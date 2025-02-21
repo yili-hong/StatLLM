@@ -1,0 +1,8 @@
+
+
+PROC REG DATA=iron2;
+   MODEL Loss = fe;
+   TITLE 'Linear Regression Model for Iron Content versus Corrosion Resistance';
+RUN;
+
+QUIT;

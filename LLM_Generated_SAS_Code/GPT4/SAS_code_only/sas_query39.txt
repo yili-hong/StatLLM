@@ -1,0 +1,3 @@
+PROC CORR DATA=measurement;
+   VAR Height Weight Age;
+RUN;

@@ -1,0 +1,18 @@
+proc sort data=sashelp.shoes;
+  by Sales;
+run; 
+
+proc univariate data = sashelp.shoes winsor=0.20;
+var Sales;
+output out = Results
+  winsor= Winsorized_Sales;
+run;
+
+data mean;
+set Results;
+Winsorized_Mean = mean(of Winsorized_Sales);
+run;
+
+proc print data = mean;
+run;
+

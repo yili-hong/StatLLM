@@ -1,0 +1,14 @@
+/* Perform logistic regression to predict purchase likelihood */
+proc logistic data=marketing_data;
+    model Purchased = Group Opened_Email Clicked_Link / link=logit;
+    output out=prediction_data predprobs=purchase_prob;
+run;
+
+/* Display the logistic regression results */
+proc logistic data=prediction_data;
+    model Purchased = Group Opened_Email Clicked_Link / link=logit;
+run;
+
+/* Output the predicted purchase probabilities */
+proc print data=purchase_prob;
+run;

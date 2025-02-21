@@ -1,0 +1,3 @@
+data t2; set t;
+  rabs = abs(res);
+run;

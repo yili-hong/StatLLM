@@ -1,0 +1,21 @@
+* Assume highlow dataset is already loaded into the SAS environment;
+
+* 1. Calculate log transformation of DowHigh;
+data transformed;
+    set highlow;  * Load the highlow dataset;
+    DowHigh_log = log(DowHigh);  * Compute the log transformation;
+run;
+
+* 2. Sort the data by year to ensure the plot orders data points correctly;
+proc sort data=transformed;
+    by year;
+run;
+
+* 3. Plot the Log transformation of DowHigh for each Year;
+proc sgplot data=transformed;
+    series x=year y=DowHigh_log / markers;
+    xaxis label='Year';
+    yaxis label='Log of Dow High';
+    title 'Log Transformation of Dow High by Year';
+run;
+

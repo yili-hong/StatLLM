@@ -1,0 +1,24 @@
+
+/* Import the glassid dataset */
+data glassid;
+  set glassid;
+  input id ri na al si ca type;
+  if type = 1 then building_window_float = ri;
+  else if type = 2 then building_window_non_float = ri;
+  else delete;
+run;
+
+/* Perform a t-test for building_window_float */
+proc ttest data=glassid alpha=0.05;
+  where type = 1;
+  var ri;
+  h0: ri = 1.52;
+run;
+
+/* Perform a t-test for building_window_non_float */
+proc ttest data=glassid alpha=0.05;
+  where type = 2;
+  var ri;
+  h0: ri = 1.52;
+run;
+

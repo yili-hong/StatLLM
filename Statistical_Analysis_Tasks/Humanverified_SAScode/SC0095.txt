@@ -1,0 +1,5 @@
+proc glm data=imports;
+	class fueltype drivewheels;
+	model wheelbase = fueltype drivewheels;
+	ods select ModelANOVA OverallANOVA FitStatistics;
+run;

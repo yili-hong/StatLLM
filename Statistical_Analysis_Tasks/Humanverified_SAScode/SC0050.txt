@@ -1,0 +1,18 @@
+proc univariate data = sashelp.shoes noprint;
+var sales;
+output out = temp
+pctlpts = 97.5,99.5 pctlpre = p_;
+run; 
+
+
+
+
+	
+
+
+	
+		
+	
+
+	
+	

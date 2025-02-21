@@ -1,0 +1,12 @@
+/* Load the Sashelp.shoes dataset */
+proc datasets library=sashelp;
+   modify shoes;
+run;
+
+/* Calculate basic statistics of the sales by region */
+proc means data=sashelp.shoes n mean std min max sum;
+   class region;
+   var sales;
+   output out=region_stats mean=sales_mean std=sales_std min=sales_min max=sales_max sum=sales_sum;
+run;
+

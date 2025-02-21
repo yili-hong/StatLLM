@@ -1,0 +1,10 @@
+
+proc reg data=imports2;
+   model enginesize = normalized_losses wheelbase length width height curbweight bore stroke compression_ratio hp peakrpm citympg highwaympg price;
+run;
+
+ods select parameterestimates;
+proc reg data=imports2;
+   model enginesize = normalized_losses wheelbase length width height curbweight bore stroke compression_ratio hp peakrpm citympg highwaympg price / influence;
+run;
+

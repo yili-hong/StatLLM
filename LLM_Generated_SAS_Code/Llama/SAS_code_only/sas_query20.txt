@@ -1,0 +1,27 @@
+/* Calculate the difference between treatment and control */
+data response_diff;
+  set response;
+  Diff = Treatment - Control;
+run;
+
+/* Perform a paired t-test to compare the treatment and control conditions */
+proc ttest data=response_diff;
+  paired Control Treatment;
+run;
+
+/* Alternatively, you can use a Wilcoxon signed-rank test if the data is not normally distributed */
+proc univariate data=response_diff;
+  var Diff;
+  run;
+proc npar1way data=response_diff wilcoxon;
+  class Diff;
+run;
+
+
+/* Perform a mixed model analysis to compare the treatment and control conditions */
+proc mixed data=response;
+  class subject;
+  model Treatment-Control = / solution;
+  repeated / subject=subject;
+run;
+

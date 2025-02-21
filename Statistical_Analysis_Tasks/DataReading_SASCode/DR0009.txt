@@ -1,0 +1,6 @@
+PROC IMPORT OUT=horse 
+     DATAFILE='/StatLLM/Statistical_Analysis_Tasks/TaskDatasets/DS0009/horse.csv' 
+     DBMS=CSV 
+     REPLACE; 
+     GETNAMES=YES; 
+RUN; 

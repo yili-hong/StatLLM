@@ -1,0 +1,26 @@
+/* Import data from Excel file */
+data  sample_data;
+    set sample2014;
+run;
+
+/* Select rows 20 through 30 */
+proc sql;
+    select *
+    from sample_data
+    where _N_ between 20 and 30;
+quit;
+
+data  sample_data;
+    set sample2014;
+run;
+
+/* Create a new dataset with rows 20 through 30 */
+data selected_rows;
+    set sample_data;
+    if _N_ >= 20 and _N_ <= 30;
+run;
+
+/* Print the dataset */
+proc print data=selected_rows;
+run;
+

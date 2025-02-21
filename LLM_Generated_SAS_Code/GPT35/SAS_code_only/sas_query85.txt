@@ -1,0 +1,5 @@
+/* Generate frequency table for agegroup */
+proc freq data=abalone;
+    tables agegroup / nocum nopercent missing;
+run;
+

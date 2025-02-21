@@ -1,0 +1,11 @@
+/* Filter the dataset to only include Poisson distribution */
+data hernio_uv_poisson;
+  set hernio_uv;
+  if dist = "Poisson";
+run;
+
+/* Fit the Poisson model */
+proc genmod data=hernio_uv_poisson;
+  model response = age OKstatus / dist=Poisson link=Log;
+  run;
+

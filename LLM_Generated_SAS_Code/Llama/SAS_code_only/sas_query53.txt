@@ -1,0 +1,11 @@
+
+proc ttest data=sashelp.shoes;
+  var sales;
+  h0: sales = 0;
+run;
+
+
+proc ttest data=sashelp.shoes mu0=0;
+  var sales;
+run;
+

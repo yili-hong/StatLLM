@@ -1,0 +1,38 @@
+/* Import data from Excel spreadsheet */
+data work.students;
+   set sample2014;
+run;
+
+/* Check the imported data */
+proc contents data=work.students;
+run;
+
+/* Frequency table for State variable */
+proc freq data=work.students;
+    tables State;
+    title "Frequency Table for State";
+run;
+
+/* Frequency table for Rank variable */
+proc freq data=work.students;
+    tables Rank;
+    format Rank rankfmt.;
+    title "Frequency Table for Class Rank";
+run;
+
+/* Custom format for Rank variable */
+proc format;
+    value rankfmt
+    1 = "Freshman"
+    2 = "Sophomore"
+    3 = "Junior"
+    4 = "Senior";
+run;
+
+/* Additional Code to Display Rank with Labels */
+proc freq data=work.students;
+    tables Rank;
+    format Rank rankfmt.;
+    title "Frequency Table for Class Rank (With Labels)";
+run;
+

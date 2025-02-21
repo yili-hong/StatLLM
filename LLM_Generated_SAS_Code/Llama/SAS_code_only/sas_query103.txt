@@ -1,0 +1,46 @@
+/* Select continuous variables */
+data continuous;
+    set imports;
+    keep 
+        wheelbase
+        length
+        width
+        height
+        curbweight
+        normalized_losses
+        bore
+        stroke
+        compression_ratio
+        hp
+        peakrpm
+        citympg
+        highwaympg
+        price
+        enginesize
+    ;
+run;
+
+/* Regression of engine size versus all continuous variables */
+proc reg data=continuous;
+    model enginesize = wheelbase length width height curbweight normalized_losses bore stroke compression_ratio hp peakrpm citympg highwaympg price;
+    output out=residuals r=r resid=resid;
+run;
+
+/* Calculate Cook's Distance */
+proc reg data=residuals;
+    model enginesize = wheelbase length width height curbweight normalized_losses bore stroke compression_ratio hp peakrpm citympg highwaympg price / influence;
+    output out=influence h=h;
+run;
+
+/* Identify influential observations */
+proc print data=influence;
+    var enginesize wheelbase length width height curbweight normalized_losses bore stroke compression_ratio hp peakrpm citympg highwaympg price r h;
+    where h > 0.5;
+run;
+
+/* Check the observations with Cook's Distance greater than 1 */
+proc print data=residuals;
+    var enginesize wheelbase length width height curbweight normalized_losses bore stroke compression_ratio hp peakrpm citympg highwaympg price r resid;
+    where abs(resid) > 1;
+run;
+

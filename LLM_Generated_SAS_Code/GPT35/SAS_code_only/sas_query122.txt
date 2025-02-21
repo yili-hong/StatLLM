@@ -1,0 +1,5 @@
+proc logistic data=smoke2;
+class parents_smoke (param=ref ref='0') / param=glm;
+model student_smoke(event='1')=parents_smoke / link=logit;
+run;
+

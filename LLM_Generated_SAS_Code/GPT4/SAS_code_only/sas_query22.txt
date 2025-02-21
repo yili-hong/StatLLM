@@ -1,0 +1,18 @@
+
+/* print out the imported dataset to check */
+PROC PRINT DATA=Work.Horse;
+RUN;
+
+/* Perform Wilcoxon Signed Rank Test */
+PROC UNIVARIATE DATA=Work.Horse NOPRINT;
+ID Horse;
+PAIR site1 * site2;
+OUTPUT OUT=Work.test WilcoxonSignedRank=Rank;
+RUN;
+
+/* Print the result of Wilcoxon Signed Rank Test */
+PROC PRINT DATA=Work.test;
+VAR Horse Rank;
+RUN;
+
+

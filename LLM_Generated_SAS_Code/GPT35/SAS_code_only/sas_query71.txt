@@ -1,0 +1,11 @@
+/* Subset the dataset to include only records for glass type of vehicle windows;*/
+data vehicle_windows;
+    set glassid;
+    where Type = 3; * Type 3 represents vehicle_windows_float_processed;
+run;
+
+* Perform a one-sample t-test to check the hypothesis;
+proc ttest data=vehicle_windows h0=1.52;
+    var RI;
+run;
+

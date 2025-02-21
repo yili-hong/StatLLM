@@ -1,0 +1,4 @@
+ proc Reg data=measurement;
+	title "Example of linear regression";
+	model weight = height;
+	run;

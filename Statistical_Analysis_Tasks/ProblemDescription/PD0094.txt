@@ -1,0 +1,1 @@
+For the dataset of imports, the consumer wonders if wheelbase is noticeably different across fuel types, aspirations and drive wheels. Obtain ANOVA model for wheelbase as a function of fuel type, aspiration and drive wheels. 

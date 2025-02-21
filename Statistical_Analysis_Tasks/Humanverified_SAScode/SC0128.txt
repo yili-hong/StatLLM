@@ -1,0 +1,6 @@
+proc logistic data = Neuralgia;
+   class Treatment Sex / param=glm;
+   model Pain= Treatment|Sex Age;
+   oddsratio Treatment;
+   lsmeans Treatment / e diff oddsratio cl adjust=bon;
+run;

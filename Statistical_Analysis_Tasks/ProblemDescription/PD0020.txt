@@ -1,0 +1,1 @@
+For the response dataset, the question is whether the response time differs between the two conditions (i.e., the treatment and control conditions). 

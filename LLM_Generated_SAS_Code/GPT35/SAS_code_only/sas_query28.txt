@@ -1,0 +1,5 @@
+proc freq data=race;
+  tables race / chisq expected; 
+  weight count;  /* assuming you have a variable named 'count' with the frequency of each race */
+run;
+

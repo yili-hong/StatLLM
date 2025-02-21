@@ -1,0 +1,1 @@
+For the dataset of test, generates N, Mean, Standard Deviation, Minimum and Maximum statistics of variables from q1 to q5.

@@ -1,0 +1,4 @@
+Using dataset sample2014, look at the means and standard deviations of Writing for males and females. 
+
+
+

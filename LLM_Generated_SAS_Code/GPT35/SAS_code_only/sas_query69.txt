@@ -1,0 +1,16 @@
+proc sql;
+   create table glassid2_summary as
+   select groupedtype,
+          count(*) as num_observations,
+          mean(ri) as mean_ri,
+          min(ri) as min_ri,
+          max(ri) as max_ri,
+          std(ri) as std_dev_ri
+   from glassid
+   group by groupedtype;
+quit;
+
+proc print data=glassid2_summary;
+   title 'Descriptive Analysis of RI for Vehicle Window Glass and Building Window Glass (groupedtype)';
+run;
+

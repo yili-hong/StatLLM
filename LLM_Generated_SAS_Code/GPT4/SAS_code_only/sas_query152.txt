@@ -1,0 +1,4 @@
+proc print data=t3(obs=15);
+   var state crime poverty single res cookd lev wgt;
+run;
+

@@ -1,0 +1,27 @@
+
+/* Load the data and omit Pete Rose's statistics */
+data baseball;
+  set sashelp.baseball;
+  if name = 'Rose, Pete' then delete;
+  logSalary = log(salary);
+run;
+
+/* Build the regression model and save the residuals and Cook's D */
+proc reg data=baseball plots=none;
+  model logSalary = nhits nruns nrbi nbb yrmajor crhits;
+  id name team league;
+  output out=reg_output p=pred r=stdres StudentRes=stdres CookD=cookd;
+run;
+
+/* Sort the data by Cook's D */
+proc sort data=reg_output;
+  by descending cookd;
+run;
+
+/* Plot Cook's D by observation */
+proc sgplot data=reg_output;
+  scatter x=_obs_ y=cookd;
+  xaxis label='Observation Number';
+  yaxis label='Cook''s D';
+run;
+

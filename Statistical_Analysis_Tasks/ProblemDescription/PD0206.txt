@@ -1,0 +1,1 @@
+For the dataset of grades, Create a block frequency chart for the numeric variable ExamGrade1

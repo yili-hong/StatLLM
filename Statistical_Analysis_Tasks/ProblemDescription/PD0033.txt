@@ -1,0 +1,2 @@
+For the ecmo dataset, we want to test the relationship between X and Y, considering left and right foot of the same subject are dependent.
+ 

@@ -1,0 +1,11 @@
+proc univariate data=sashelp.shoes noprint;
+   class Region;
+   var Sales;
+   output out=Stats
+      pctlpre=P_
+      pctlpts=25 to 75 by 25  //Percentiles
+      pctlname=Q1, Median, Q3;
+run;
+
+proc print data=Stats;
+run;

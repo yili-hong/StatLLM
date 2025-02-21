@@ -1,0 +1,15 @@
+
+proc glm data=copper;
+    class temp pct;
+    model warp = temp pct temp*pct;
+    run;
+    quit;
+
+
+proc glm data=copper;
+    class temp pct;
+    model warp = temp pct temp*pct;
+    lsmeans temp pct temp*pct / pdiff;
+    run;
+    quit;
+

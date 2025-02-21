@@ -1,0 +1,5 @@
+
+/* Crosstabulation to check frequencies */
+proc freq data=auto;
+  tables rep78*foreign / chisq;
+run;

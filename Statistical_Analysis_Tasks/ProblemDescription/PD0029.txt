@@ -1,0 +1,1 @@
+For the racecounts dataset, we want to use the count data to test the hypothesis that the general population consists of 10% Hispanic, 10% Asian, 10% African American and 70% White folks.

@@ -1,0 +1,30 @@
+/* Inputting the dataset */
+data abalone;
+    set abalone;
+    input Id_number Sex $ whole_weight agegroup $ weightgroup $ Rings;
+    format Id_number 8. Sex $1. whole_weight 8.3 agegroup $8. weightgroup $8. Rings 8.;
+    /* conditionally assign Weight and Age Group base on rules */
+    if Rings < 8 then agegroup = 'youngest';
+        else if 8 <= Rings < 11 then agegroup = 'middle';
+        else agegroup = 'oldest';
+    if whole_weight > 1.15 then weightgroup = 'heaviest';
+        else if 0.45 <= whole_weight <= 1.15 then weightgroup = 'middle';
+        else weightgroup = 'lightest';
+run;
+
+/* Weight Group by Sex */
+proc freq data=abalone;
+    tables weightgroup*sex / chisq;
+run;
+
+/* Age Group by Sex */
+proc freq data=abalone;
+    tables agegroup*sex / chisq;
+run;
+
+/* ANOVA Analysis */
+proc glm data=abalone;
+    class sex agegroup weightgroup;
+    model Rings = sex agegroup weightgroup /solution;
+run;
+

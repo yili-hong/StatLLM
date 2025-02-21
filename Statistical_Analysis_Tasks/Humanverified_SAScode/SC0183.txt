@@ -1,0 +1,3 @@
+proc corr data=fitness outp=r noprint;
+   var Oxygen RunTime Age Weight RunPulse MaxPulse RestPulse;
+run;

@@ -1,0 +1,6 @@
+PROC IMPORT OUT=baseball 
+     DATAFILE='/StatLLM/Statistical_Analysis_Tasks/TaskDatasets/DS0056/baseball.csv' 
+     DBMS=CSV 
+     REPLACE; 
+     GETNAMES=YES; 
+RUN; 

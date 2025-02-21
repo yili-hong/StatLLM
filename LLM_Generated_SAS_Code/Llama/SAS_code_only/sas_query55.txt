@@ -1,0 +1,41 @@
+/* Import the Sashelp.Baseball dataset */
+data baseball;
+  set sashelp.baseball;
+  /* Apply log transformation to salary */
+  logSalary = log(salary);
+run;
+
+
+/* Perform multiple linear regression analysis */
+proc reg data=baseball;
+  model logSalary = nhits nruns nrbi nbb yrmajor crhits;
+  id name team league;
+run;
+
+/* Check for multicollinearity */
+proc reg data=baseball;
+  model logSalary = nhits nruns nrbi nbb yrmajor crhits / vif;
+  id name team league;
+run;
+
+/* Perform stepwise regression to select the best subset of variables */
+proc reg data=baseball;
+  model logSalary = nhits nruns nrbi nbb yrmajor crhits / selection=stepwise;
+  id name team league;
+run;
+
+/* Perform residual analysis to check the assumptions of linear regression */
+proc reg data=baseball;
+  model logSalary = nhits nruns nrbi nbb yrmajor crhits;
+  id name team league;
+  output out=residuals p=pred r=residual;
+run;
+
+proc print data=residuals;
+  var name team league logSalary pred residual;
+run;
+
+proc plot data=residuals;
+  plot residual * pred;
+run;
+

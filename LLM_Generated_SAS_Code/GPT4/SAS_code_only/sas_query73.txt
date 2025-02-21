@@ -1,0 +1,27 @@
+
+
+*Isolate the data for vehicle windows;
+data vehicle;
+   set glass;
+   if Type = 3 or Type = 4;
+run;
+
+*Investigate the normality visually;
+proc sgplot data=vehicle;
+   histogram Na / group=Type;
+   density Na / group=Type;
+run;
+
+proc univariate data=vehicle;
+   qqplot Na / group=Type;
+run;
+
+*Test the normality statistically;
+proc univariate data=vehicle normaltest;
+   var Na;
+   class Type;
+   histogram Na / normal(mu=est sigma=est) kernel;
+   qqplot Na / normal(mu=est sigma=est);
+   title "Univariate Analysis of Na by Type";
+run;
+

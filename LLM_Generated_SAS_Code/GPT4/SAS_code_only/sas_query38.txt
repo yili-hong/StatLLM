@@ -1,0 +1,17 @@
+
+PROC REG DATA=measurement;
+   MODEL Height = Weight Weight*Weight;
+   OUTPUT OUT=residualsData R=R;
+   /* R is the residuals, OUTPUT OUT creates a dataset containing residuals */
+RUN;
+
+PROC UNIVARIATE DATA=residualsData;
+   /* Draw a histogram to visually inspect the distribution of residuals */
+   HISTOGRAM R;
+RUN;
+
+PROC MEANS DATA=residualsData;
+   /* Compute the mean of residuals to check if it's close to 0 */
+   VAR R;
+RUN;
+

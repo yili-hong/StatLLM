@@ -1,0 +1,8 @@
+data t2;
+    set t;
+    rabs = abs(Residuals);
+run;
+
+proc print data=t2(obs=10);
+run;
+

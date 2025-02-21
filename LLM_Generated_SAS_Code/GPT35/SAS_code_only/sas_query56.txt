@@ -1,0 +1,11 @@
+/* Create a log transformation of the salary variable */
+data baseball;
+set sashelp.baseball;
+logSalary = log(salary);
+run;
+
+/* Fit a linear regression model */
+proc reg data=baseball plots(only)=(cookd);
+model logSalary = nhits nruns nrbi nbb yrmajor crhits;
+run;
+

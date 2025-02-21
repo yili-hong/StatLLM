@@ -1,0 +1,6 @@
+proc means data=mydata.binary n mean std min max;
+run;
+
+proc freq data=mydata.binary;
+    tables _all_;
+run;

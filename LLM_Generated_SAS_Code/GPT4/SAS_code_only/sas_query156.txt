@@ -1,0 +1,13 @@
+/* Use PROC MEANS to obtain mean and standard deviation for Writing scores segregated by gender */
+proc means data=sample2014 n mean stddev;
+    class Gender; /* This variable codes 0 as Male, 1 as Female */
+    var Writing;
+    where Gender in (0, 1); /* Ensuring to use only valid gender codes */
+    format Gender genderfmt.; /* Gender format should be applied based on its description */
+run;
+
+proc format;
+    value genderfmt 0 = 'Male'
+                    1 = 'Female';
+run;
+

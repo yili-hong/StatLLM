@@ -1,0 +1,5 @@
+proc phreg data=BMT;
+class Group(ref="2");
+model T*Status(1) = Group / risklimits;
+run;
+

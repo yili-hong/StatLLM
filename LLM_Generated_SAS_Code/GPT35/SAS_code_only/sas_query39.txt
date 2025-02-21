@@ -1,0 +1,4 @@
+proc corr data=measurement pearson;
+var Height Weight Age;
+run;
+

@@ -1,0 +1,10 @@
+
+PROC REG DATA=imports;
+MODEL enginesize= symboling normalized_losses wheelbase length width height curbweight bore stroke compression_ratio hp peakrpm citympg highwaympg price / INFLUENCE;
+OUTPUT OUT=out p=predicted r=residual dffits=DFFITS cookd=COOKD;
+RUN;
+
+PROC PRINT DATA=out;
+VAR enginesize predicted residual DFFITS COOKD;
+RUN;
+

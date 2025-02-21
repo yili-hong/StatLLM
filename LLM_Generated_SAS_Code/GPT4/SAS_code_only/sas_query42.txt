@@ -1,0 +1,13 @@
+PROC SORT DATA=sashelp.shoes;
+   BY Region;
+RUN;
+
+PROC MEANS DATA=sashelp.shoes MEAN MEDIAN MODE STD STDERR MIN MAX;
+   BY Region;
+   VAR Sales;
+   OUTPUT OUT=StatsOfSales MEAN= AVG_Sales MEDIAN= Median_Sales MODE= Mode_Sales
+          STD= StdDev_Sales STDERR= StdError_Sales MIN= Min_Sales MAX= Max_Sales;
+RUN;
+
+PROC PRINT DATA=StatsOfSales;
+RUN;

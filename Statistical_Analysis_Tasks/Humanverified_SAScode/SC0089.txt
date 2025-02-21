@@ -1,0 +1,5 @@
+proc anova data=abalone;
+	class sex;
+	model whole_weight=sex;
+	means sex/ hovtest tukey cldiff welch;
+run;

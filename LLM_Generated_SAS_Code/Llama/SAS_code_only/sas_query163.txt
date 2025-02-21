@@ -1,0 +1,5 @@
+proc reg data=baseball outest=estimates;
+  model logSalary = nhits nruns nrbi nbb yrmajor crhits;
+  output out=predicted p=predicted_salary;
+run;
+

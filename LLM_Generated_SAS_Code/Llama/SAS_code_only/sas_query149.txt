@@ -1,0 +1,42 @@
+/* Create new dataset t2 from t with additional variable rabs */
+data t2;
+  set t;
+  rabs = abs(Residuals);
+run;
+
+/* Run robust regression using Huber weights */
+proc robustreg data=t2 method=mm(outliers=1);
+  model dependent = independent / leverage;
+  output out=t3 residual=r weight=weight;
+run;
+
+/* Create new dataset t2 from t with additional variable rabs */
+data t2;
+  set t;
+  rabs = abs(Residuals);
+run;
+
+/* Run robust regression using Huber weights with IWLS process */
+proc genmod data=t2;
+  model dependent = independent / dist=normal link=identity;
+  weight _weight_ / var=rabs;
+  make 'robust' _weights_ out=t3;
+  repeated subject=_obs_ / type=un;
+  model _weight_ / dist=normal;
+  estimate 'Huber' intercept 1 exp(-0.5*(rabs/1.345)**2);
+run;
+
+/* Create new dataset t2 from t with additional variable rabs */
+data t2;
+  set t;
+  rabs = abs(Residuals);
+run;
+
+/* Define Huber weight function */
+proc nlin data=t2;
+  parameters b0=0 b1=1;
+  model dependent = b0 + b1 * independent;
+  weight = 1 / (1 + (rabs/1.345)**2);
+  output out=t3 residual=r weight=weight;
+run;
+

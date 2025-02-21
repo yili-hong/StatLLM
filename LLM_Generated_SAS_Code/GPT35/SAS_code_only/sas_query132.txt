@@ -1,0 +1,10 @@
+
+/* Calculate correlation matrix */
+proc corr data=measurement2 noprint outp=corr_matrix;
+var Height Weight Age;
+run;
+
+/* Print correlation matrix */
+proc print data=corr_matrix;
+run;
+

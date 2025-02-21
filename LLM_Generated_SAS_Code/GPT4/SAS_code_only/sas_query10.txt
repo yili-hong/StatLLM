@@ -1,0 +1,22 @@
+/* Plot load vs age */
+PROC SGPLOT DATA=crack;
+SCATTER X=age Y=load;
+RUN;
+
+/* Perform regression analysis and output results */
+PROC REG DATA=crack;
+MODEL load = age;
+OUTPUT OUT=crackreg P=predicted_residuals;
+RUN;
+
+/* Plot the output from regression */
+PROC SGPLOT DATA=crackreg;
+SCATTER X=age Y=predicted_residuals;
+RUN;
+
+/* Regression using age as a factor */
+PROC GLM DATA=crack;
+CLASS agef;
+MODEL load = agef;
+RUN;
+

@@ -1,0 +1,16 @@
+/* Fit the ANOVA model */
+proc glm data=imports;
+  class fueltype aspiration drivewheels;
+  model wheelbase = fueltype aspiration drivewheels;
+  means fueltype aspiration drivewheels / hovtest=levene;
+run;
+
+/* Fit the ANOVA model with interactions */
+proc glm data=imports;
+  class fueltype aspiration drivewheels;
+  model wheelbase = fueltype aspiration drivewheels fueltype*aspiration
+                    fueltype*drivewheels aspiration*drivewheels
+                    fueltype*aspiration*drivewheels;
+  means fueltype aspiration drivewheels / hovtest=levene;
+run;
+

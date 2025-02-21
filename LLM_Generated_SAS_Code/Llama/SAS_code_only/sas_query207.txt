@@ -1,0 +1,12 @@
+proc means data=GRADE mean std;
+  var Examgrade1;
+run;
+
+proc means data=GRADE mean std min max range skewness kurtosis;
+  var Examgrade1;
+run;
+
+proc univariate data=GRADE;
+  var Examgrade1;
+run;
+

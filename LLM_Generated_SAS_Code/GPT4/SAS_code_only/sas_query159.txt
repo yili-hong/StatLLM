@@ -1,0 +1,25 @@
+/* Assuming that the data set is named 'baseball', and it is already loaded into SAS. */
+
+/* First, check if the logSalary variable exists. If not, create it. */
+data baseball;
+    set baseball;
+    if logSalary = . then logSalary = log(Salary);
+run;
+
+/* Now perform a linear regression with logSalary as the dependent variable,
+   and nhits, nruns, nrbi, nbb, yrmajor, crhits as independent variables. */
+proc reg data=baseball;
+    model logSalary = nHits nRuns nRBI nBB YrMajor CrHits;
+    title "Linear Regression Model for logSalary";
+run;
+
+/* Output the results or possibly plot them. */
+proc plot data=baseball;
+    plot logSalary*nHits logSalary*nRuns logSalary*nRBI logSalary*nBB logSalary*YrMajor logSalary*CrHits / overlay;
+run;
+
+/* To improve diagnostics and model evaluation including statistical significance and goodness of fit */
+proc reg data=baseball plots=diagnostics;
+    model logSalary = nHits nRuns nRBI nBB YrMajor CrHits;
+run;
+

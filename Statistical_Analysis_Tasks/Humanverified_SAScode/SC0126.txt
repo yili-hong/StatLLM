@@ -1,0 +1,19 @@
+proc means data=pulse_data noprint;
+    class group;                  
+    var pulse;                    
+    output out=group_median median=median_pulse;
+run;
+
+data pulse_with_median;
+    merge pulse_data group_median; 
+    by group;                       
+    residual = pulse - median_pulse;
+run;
+
+proc glm data=pulse_with_median;
+    class group;                        
+    model residual = group;              
+    means group / hovtest=levene;        
+    title "Levene's Test for Equality of Variances of Median-Based Residuals Across Groups";
+run;
+quit;

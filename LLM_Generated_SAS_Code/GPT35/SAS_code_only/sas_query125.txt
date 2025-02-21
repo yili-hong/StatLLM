@@ -1,0 +1,7 @@
+PROC GLM DATA=Lettuce_Data;
+   CLASS Fertilizer;
+   MODEL Heads = Fertilizer / SOLUTION;
+   MEANS Fertilizer / LSD;
+   TEST H = Fertilizer / LAMBDA;
+   TITLE 'Levene''s Test for Equality of Variances of Pulse among Different Fertilizer Groups';
+RUN;

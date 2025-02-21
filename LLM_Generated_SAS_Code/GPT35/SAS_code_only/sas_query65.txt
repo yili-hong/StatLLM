@@ -1,0 +1,13 @@
+/* Filter the dataset to include only the required glass type */
+data building_windows_float;
+  set glassid;
+  where type=1; /* Type 1 represents 'building_windows_float_processed' */
+run;
+
+/* Perform the one-sample t-test */
+proc univariate data=building_windows_float;
+  var RI;
+  ods select BasicStats TestsForLocation;
+  ttest testvar=1.52;
+run;
+

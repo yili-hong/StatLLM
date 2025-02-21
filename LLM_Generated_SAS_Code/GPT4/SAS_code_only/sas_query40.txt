@@ -1,0 +1,24 @@
+
+* Sort the data;
+proc sort data=read;
+by Method;
+run;
+
+* Generate QQ plots;
+ods graphics on;
+
+proc univariate data=read normal noprint;
+class Method;
+var Grade;
+qqplot Grade /square;
+run;
+
+ods graphics off;
+
+* Perform Shapiro-Wilk W test for normality;
+proc univariate data=read normal;
+class Method;
+var Grade;
+histogram Grade /normal (mu=est sigma=est W);
+run;
+

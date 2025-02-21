@@ -1,0 +1,1 @@
+For the dataset of abalone, perform and comment on appropriate tests of association for the table, and interpret what the results tell us about the relationship between weight group(weightgroup) and age group(agegroup).

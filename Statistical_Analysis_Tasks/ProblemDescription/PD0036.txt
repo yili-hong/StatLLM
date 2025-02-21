@@ -1,0 +1,1 @@
+For the measurement dataset, after fiting the regression model of height on weight. We want to check regression assumptions such as the linear relationship between two variables and if the residuals  are normally distributed. 

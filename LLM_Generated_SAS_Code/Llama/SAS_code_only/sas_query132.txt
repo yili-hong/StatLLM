@@ -1,0 +1,14 @@
+
+/* Check for collinearity using VIF */
+proc reg data=measurement;
+  model Height = Weight Age / vif;
+  model Weight = Height Age / vif;
+  model Age = Height Weight / vif;
+run;
+
+
+/* Calculate correlation coefficients */
+proc corr data=measurement;
+  var Height Weight Age;
+run;
+

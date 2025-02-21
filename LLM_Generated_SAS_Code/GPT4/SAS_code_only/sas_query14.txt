@@ -1,0 +1,10 @@
+PROC GLM DATA=work.toxic;
+    CLASS poison treatment;
+    MODEL life = poison treatment;
+RUN;
+
+QUIT;
+
+
+    MODEL life = poison treatment poison*treatment;
+

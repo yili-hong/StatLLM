@@ -1,0 +1,2 @@
+For the dataset of t2, run robust regression using the Huber weights. Robust regression is done by iterated re-weighted least squares. Save the final weights created by the IWLS process.
+Save output as t3.

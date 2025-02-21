@@ -1,0 +1,6 @@
+title 'Extreme Blood Pressure Observations';
+ods select ExtremeObs;
+proc univariate data=BPressure;
+   var Systolic Diastolic;
+   id PatientID;
+run;

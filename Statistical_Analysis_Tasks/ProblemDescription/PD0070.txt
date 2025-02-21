@@ -1,0 +1,5 @@
+For the glassid dataset, test normality of RI for groupedtype of vehicle window and building window.
+
+
+
+

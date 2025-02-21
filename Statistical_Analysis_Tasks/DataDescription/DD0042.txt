@@ -1,0 +1,21 @@
+1, Name: measurement
+
+2. Data Set Information: 
+Suppose in a health screening, seven people take measurement on Gender, Height, Weight and Age.
+
+3. Attribute Information:
+
+Number of observations: 7
+Number of variables: 4
+
+Attribute: Attribute Range
+
+
+Reference:
+https://www.stat.purdue.edu/~tqin/system101/method/method_linear_sas.htm
+Citation: required 
+
+
+
+
+

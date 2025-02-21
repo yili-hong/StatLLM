@@ -1,0 +1,45 @@
+proc univariate data=BPpressure;
+  var Systolic Diastolic;
+  output out=stats;
+run;
+
+proc print data=stats;
+  var _STAT_ Systolic Diastolic;
+  where _STAT_ in ('MEAN', 'STD', 'MIN', 'MAX', 'N');
+  title 'Basic Measures';
+  label _STAT_ = 'Statistic';
+run;
+
+proc means data=BPpressure p25 p50 p75;
+  var Systolic Diastolic;
+run;
+
+/* Calculate Basic Measures */
+proc means data=BPpressure mean std min max n;
+  var Systolic Diastolic;
+  title 'Basic Measures';
+run;
+
+/* Calculate Quantiles */
+proc univariate data=BPpressure;
+  var Systolic Diastolic;
+  output out=stats p25=p25 p50=p50 p75=p75;
+  title 'Quantiles';
+run;
+proc print data=stats;
+  var p25 p50 p75;
+  var Systolic Diastolic;
+run;
+
+/* Basic measures */
+proc means data=BPpressure mean std min max n;
+  var Systolic Diastolic;
+  title 'Basic Measures';
+run;
+
+/* Quantiles */
+proc means data=BPpressure p25 p50 p75;
+  var Systolic Diastolic;
+  title 'Quantiles';
+run;
+

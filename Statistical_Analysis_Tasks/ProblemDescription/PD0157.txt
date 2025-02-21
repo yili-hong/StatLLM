@@ -1,0 +1,2 @@
+Using dataset sample2014, do an Independent Samples t Test to compare the mean writing scores for males and females.
+

@@ -1,0 +1,4 @@
+PROC MEANS DATA=sleeptime MEAN STDERR T PRT alpha=0.10;
+VAR SleepingTime;
+TITLE '90% Confidence Interval for the Average Sleeping Time';
+RUN;

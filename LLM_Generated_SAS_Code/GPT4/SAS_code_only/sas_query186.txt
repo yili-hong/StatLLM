@@ -1,0 +1,19 @@
+proc sql;
+   create table QuarterlySales as
+   select Quarter, SalesRep, sum(AmountSold) as TotalAmountSold
+   from year_sales
+   group by Quarter, SalesRep
+   order by Quarter, SalesRep;
+quit;
+
+proc print data=QuarterlySales;
+   title "Total Amount Sold by Each Sales Representative per Quarter";
+run;
+
+proc tabulate data=year_sales;
+   class Quarter SalesRep; 
+   var AmountSold;
+   table SalesRep, Quarter*AmountSold*sum;
+   title "Total Amount Sold by Each Sales Representative per Quarter";
+run;
+

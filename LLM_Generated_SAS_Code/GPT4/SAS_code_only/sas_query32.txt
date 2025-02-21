@@ -1,0 +1,18 @@
+
+PROC FORMAT;
+value $treatfmt '0' = 'CMT'
+                '1' = 'ECMO';
+value $resfmt '0' = 'Died'
+               '1' = 'Survived';
+RUN;
+
+DATA ecmo;
+SET ecmo;
+FORMAT treatment $treatfmt.;
+FORMAT result $resfmt.;
+RUN;
+                
+PROC FREQ DATA=ecmo;
+TABLES treatment*result/ chisq;
+RUN;
+

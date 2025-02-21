@@ -1,0 +1,7 @@
+
+
+proc reg data=baseball;
+  model logSalary = nhits nruns nrbi nbb yrmajor crhits;
+  plot cooksd leverage;
+run;
+

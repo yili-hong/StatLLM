@@ -1,0 +1,6 @@
+PROC IMPORT OUT=Sashelp.Baseball 
+     DATAFILE='/StatLLM/Statistical_Analysis_Tasks/TaskDatasets/DS0021/Sashelp.Baseball.csv' 
+     DBMS=CSV 
+     REPLACE; 
+     GETNAMES=YES; 
+RUN; 

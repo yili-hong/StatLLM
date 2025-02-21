@@ -1,0 +1,4 @@
+proc means data=highlow mean std;
+var LogDowHigh LogDowLow;
+run;
+

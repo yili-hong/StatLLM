@@ -1,0 +1,4 @@
+
+proc reg data=measurement;
+model Weight = Height;
+run;

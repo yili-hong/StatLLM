@@ -1,0 +1,8 @@
+
+    
+/* Perform one-way ANOVA */
+proc glm data=manova;
+    class group;
+    model useful = group;
+    means group / hovtest=levene;
+run;

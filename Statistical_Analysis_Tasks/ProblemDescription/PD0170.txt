@@ -1,0 +1,1 @@
+Using the sample dataset, let's print the height and weight of each student (rounded to the nearest whole number), grouping them by gender, and use the students' IDs in place of the observation numbers.

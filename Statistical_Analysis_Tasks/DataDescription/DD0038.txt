@@ -1,0 +1,40 @@
+1, Name: pulse_data
+
+2. Data Set Information: 
+Lettuce heads data regarding the growth of lettuce versus the fertilizer
+3. Attribute Information:
+
+Variables
+pulse
+Type: Numeric
+Description: Represents the pulse rate of an individual, measured in beats per minute (bpm).
+Range: 20 bpm to 47 bpm
+Units: Beats per minute (bpm)
+Example Values: 27, 29, 34, 44
+group
+Type: Categorical (Numeric)
+Description: Indicates the group membership of each individual. There are six groups, labeled from 1 to 6.
+Categories:
+1: Group 1
+2: Group 2
+3: Group 3
+4: Group 4
+5: Group 5
+6: Group 6
+Example Values: 1, 2, 3, 4, 5, 6
+
+
+ 
+
+
+
+Reference:
+
+https://s3-us-west-2.amazonaws.com/mtvernon.wsu.edu/uploads/2016/12/SAS-Tutorial-6.pdf
+
+Citation: required 
+
+
+
+
+

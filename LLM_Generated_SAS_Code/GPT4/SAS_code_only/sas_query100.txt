@@ -1,0 +1,10 @@
+
+DATA imports;
+SET imports;
+log_enginesize = LOG(enginesize);
+RUN;
+
+PROC REG DATA=imports;
+MODEL log_enginesize = curbweight;
+RUN;
+

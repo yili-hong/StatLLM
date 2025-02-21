@@ -1,0 +1,1 @@
+For the dataset of FERT, perform the two sample t-test for FRET data set to compare the effect of two brand fertilizer

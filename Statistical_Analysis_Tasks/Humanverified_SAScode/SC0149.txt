@@ -1,0 +1,4 @@
+proc robustreg data=t2 method=m (wf=huber) ;
+   model crime = poverty single; 
+   output out = t3 weight=wgt;
+run;

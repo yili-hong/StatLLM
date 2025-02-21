@@ -1,0 +1,50 @@
+proc univariate data=BPressure;
+   var Systolic Diastolic;
+   output out=ExtremeObs
+          extreme = 5
+          pctlpts = 1 99
+          pctlpre = pct_
+          pctlname = P1 P99;
+run;
+
+proc print data=ExtremeObs;
+   var _all_;
+run;
+
+proc univariate data=BPressure;
+   var Systolic Diastolic;
+   output out=ExtremeObs
+          extreme = 5
+          pctlpts = 2.5 97.5
+          pctlpre = pct_
+          pctlname = P2_5 P97_5;
+run;
+
+proc print data=ExtremeObs;
+   var _all_;
+run;
+
+proc sort data=BPressure out=Systolic_Extreme;
+   by Systolic;
+run;
+
+proc print data=Systolic_Extreme (obs=5);
+   var Systolic Diastolic;
+run;
+
+proc print data=Systolic_Extreme (firstobs=18);
+   var Systolic Diastolic;
+run;
+
+proc sort data=BPressure out=Diastolic_Extreme;
+   by Diastolic;
+run;
+
+proc print data=Diastolic_Extreme (obs=5);
+   var Systolic Diastolic;
+run;
+
+proc print data=Diastolic_Extreme (firstobs=18);
+   var Systolic Diastolic;
+run;
+

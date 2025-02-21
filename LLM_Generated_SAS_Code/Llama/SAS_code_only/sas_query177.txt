@@ -1,0 +1,8 @@
+proc means data=mvreg mean std;
+  var locus_of_control self_concept motivation read write science;
+run;
+
+proc univariate data=mvreg;
+  var locus_of_control self_concept motivation read write science;
+run;
+

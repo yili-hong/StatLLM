@@ -1,0 +1,39 @@
+data shopping_long;
+    set shopping;
+    array a[3] a1 a2 a3;
+    do preference = 1 to 3;
+        reaction_time = a[preference];
+        preference_name = cats('a', preference);
+        output;
+    end;
+    drop a1 a2 a3;
+run;
+
+proc print data=shopping_long;
+    title "Long Format Shopping Data";
+run;
+proc mixed data=shopping_long method=REML;
+    where group = 'A';
+    class employee preference;
+    model reaction_time = preference;
+    repeated preference / 
+        subject=employee
+        type=cs;
+    ods output Tests=Tests_A;
+run;
+
+proc mixed data=shopping_long method=REML;
+    where group = 'B';
+    class employee preference;
+    model reaction_time = preference;
+    repeated preference / 
+        subject=employee
+        type=cs;
+    ods output Tests=Tests_B;
+run;
+
+proc corr data=shopping;
+    var a1 a2 a3;
+    by group;
+    title "Correlation Matrix for Each Group";
+run;

@@ -1,0 +1,1 @@
+For the dataset of auto, perform a t-test to determine whether the average mpg for domestic cars differ from the foreign cars.

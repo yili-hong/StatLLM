@@ -1,0 +1,42 @@
+/* Perform one-way ANOVA */
+proc anova data=abalone;
+  class sex;
+  model whole_weight = sex;
+  means sex / hovtest welch;
+  lsmeans sex / pdiff cl;
+run;
+
+/* Perform HOVFTest, FitStatistics, CLDiffs, and Welch tests */
+ods output hovtest=hovtest_output;
+ods output fitstatistics=fitstatistics_output;
+ods output cliffs=cliffs_output;
+ods output welch=welch_output;
+
+proc anova data=abalone;
+  class sex;
+  model whole_weight = sex;
+  means sex / hovtest welch;
+  lsmeans sex / pdiff cl;
+run;
+
+/* Print the results */
+proc print data=hovtest_output;
+  var _stat_ _prob_;
+  title 'HOVFTest Results';
+run;
+
+proc print data=fitstatistics_output;
+  var _stat_ _prob_;
+  title 'FitStatistics Results';
+run;
+
+proc print data=cliffs_output;
+  var _diff_ _prob_;
+  title 'CLDiffs Results';
+run;
+
+proc print data=welch_output;
+  var _stat_ _prob_;
+  title 'Welch Test Results';
+run;
+

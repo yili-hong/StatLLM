@@ -1,0 +1,9 @@
+proc sgplot data=GRADE;
+  histogram ExamGrade1 / 
+    block blockwidth=5 
+    fillattrs=(color="lightblue");
+  xaxis label="Exam Grade 1" values=(0 to 100 by 5);
+  yaxis label="Frequency";
+  title "Block Frequency Chart of Exam Grade 1";
+run;
+

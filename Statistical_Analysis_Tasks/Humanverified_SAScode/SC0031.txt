@@ -1,0 +1,3 @@
+proc freq data=opinion;
+	tables opinion*gender / chisq nocol norow nopercent expected;
+	run;	

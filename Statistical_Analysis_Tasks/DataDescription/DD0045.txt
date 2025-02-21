@@ -1,0 +1,5 @@
+The data set hernio includes information about 32 herniorrhaphy patients. It contains the condition and length of hospital stay for the patients.
+The data set is given by Mosteller and Tukey (1977). The response variables are the condition of the patient upon leaving the operating room (leave) and the length of hospital stay
+after the operation (los). The variable leave is binary variable indicating if a patient experiences a routine
+recovery (value 1) or if postoperative intensive care was required (value 0). The binary variable OKstatus
+denote their postoperative physical status (“1” implies better status). 

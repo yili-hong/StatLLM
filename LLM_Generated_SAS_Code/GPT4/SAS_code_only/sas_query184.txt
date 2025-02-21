@@ -1,0 +1,17 @@
+proc sql;
+   select SalesRep, count(*) as NumberOfSales
+   from year_sales
+   group by SalesRep
+   order by NumberOfSales DESC; /* Optional: order by count to see the most active sales reps at the top */
+quit;
+
+proc freq data=year_sales;
+   tables SalesRep / nocum nopercent out=sales_rep_freq;
+   title "Number of Sales Made by Each Sales Representative";
+run;
+
+proc print data=sales_rep_freq;
+   var SalesRep COUNT;
+   title "Summary of Sales by Sales Representative";
+run;
+

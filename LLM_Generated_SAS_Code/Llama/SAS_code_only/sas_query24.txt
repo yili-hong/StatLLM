@@ -1,0 +1,21 @@
+/* Run ANOVA to test the difference between the three instructions */
+proc anova data=words;
+  class method;
+  model words = method;
+  means method / tukey;
+run;
+
+
+/* Run ANOVA to test the difference between the three instructions */
+proc anova data=words;
+  class method;
+  model words = method;
+run;
+
+/* Run Tukey's test for multiple comparisons */
+proc glm data=words;
+  class method;
+  model words = method;
+  lsmeans method / pdiff;
+run;
+

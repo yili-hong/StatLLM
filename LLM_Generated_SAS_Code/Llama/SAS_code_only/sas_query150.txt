@@ -1,0 +1,17 @@
+/* Perform linear regression to predict crime from poverty and single */
+proc reg data=crime_data outest=coeffs;
+    model crime = poverty single;
+    output out=t p=pred r=residual h=lev leverage=lev cookd=cook;
+run;
+
+/* Create dataset t2 with an additional variable rabs (absolute value of residuals) */
+data t2;
+    set t;
+    rabs = abs(residual);
+run;
+
+/* Run robust regression using the default weighting function */
+proc robustreg data=crime_data out=t4;
+    model crime = poverty single / method=mm;
+run;
+

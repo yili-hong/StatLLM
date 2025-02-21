@@ -1,0 +1,4 @@
+proc corr data=glassid;
+	where groupedtype in("vehiclewindow", "headlamps");
+	ods select PearsonCorr;
+run;

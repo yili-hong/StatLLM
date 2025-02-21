@@ -1,0 +1,21 @@
+/* Load the dataset */
+data baseball;
+    set baseball;
+run;
+
+/* Creating polynomial (squared) terms for yrmajor and crhits */
+data baseball_polynomial;
+    set baseball;
+    yrmajor2 = yrmajor**2;
+    crhits2 = crhits**2;
+run;
+
+/* Fit the polynomial regression model */
+proc glm data=baseball_polynomial;
+    class League Division Position;
+    model Salary = nAtBat nHits nHome nRuns nRBI nBB YrMajor CrAtBat CrHits CrHome CrRuns CrRbi CrBB League Division Position nOuts nAssts nError yrmajor crhits yrmajor2 crhits2;
+    run;
+
+/* Output the results */
+quit;
+

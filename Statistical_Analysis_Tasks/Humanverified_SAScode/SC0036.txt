@@ -1,0 +1,10 @@
+proc reg data=measurement;	
+	title "Regression and residual plots";
+	model weight=height;
+	plot weight * height;
+	plot residual. * height;
+	output out=myout r=resid;
+run;
+
+	
+	

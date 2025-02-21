@@ -1,0 +1,4 @@
+
+PROC CONTENTS DATA=sample2014;
+RUN;
+

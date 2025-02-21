@@ -1,0 +1,12 @@
+proc means data=year_sales noprint;
+  class SalesRep Type;
+  var AmountSold;
+  output out=summary_table sum=AmountSold_total;
+run;
+
+proc print data=summary_table noobs;
+  title 'Summary Table: Amount Sold of Each Type of Coffee Maker by Each Sales Representative';
+  title2 ' ';
+  var SalesRep Type AmountSold_total;
+run;
+

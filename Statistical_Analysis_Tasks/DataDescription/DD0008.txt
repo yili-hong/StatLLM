@@ -1,0 +1,9 @@
+Soil respiration is a measure of Microbioal activity in soil, which affects plant growth. In one study, soil cores were taken from two locations in a forest: 1) under an opening in the forest canopy (the "gap"location) and 2) at a nearby area under heavy tree growth (the "growth" location). The amount of carbon dioxide given off by each soil core was measured (in mol CO2/g soio/hr).  
+
+The variable respiration is the response variable, which gives the measurement for soil respiration.
+The variable condition is a categorical variable, which gives the treatment group. 
+
+The dataset is named as soil.
+
+
+

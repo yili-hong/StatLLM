@@ -1,0 +1,21 @@
+
+/* Generate histogram */
+ods graphics / width=8in height=6in;
+proc sgplot data=sashelp.shoes;
+    histogram sales;
+    title "Histogram of Sales";
+run;
+
+/* Generate box plot */
+ods graphics / width=8in height=6in;
+proc sgplot data=sashelp.shoes;
+    vbox sales;
+    title "Box Plot of Sales";
+run;
+
+/* Generate normal probability plot */
+ods graphics / width=8in height=6in;
+proc univariate data=sashelp.shoes normal plot;
+    var sales;
+run;
+

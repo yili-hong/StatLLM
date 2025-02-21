@@ -1,0 +1,21 @@
+/* Get data */
+proc sql;
+   create table work.shoes as
+   select *
+   from sashelp.shoes;
+quit;
+
+/* Run PROC MEANS to get mean and standard deviation of sales */
+proc means data=work.shoes mean std;
+   var Sales;
+   output out=work.descStats mean=meanSales std=stdSales;
+run;
+
+/* Display descriptive statistics */
+proc print data=work.descStats;
+run;
+
+/* Run PROC TTEST to test null hypothesis */
+proc ttest data=work.shoes H0=0;
+   var Sales;
+run;

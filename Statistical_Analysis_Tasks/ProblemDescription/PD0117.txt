@@ -1,0 +1,1 @@
+For the dataset of hsb2, test whether the mean of write differs between the three program types (prog). 

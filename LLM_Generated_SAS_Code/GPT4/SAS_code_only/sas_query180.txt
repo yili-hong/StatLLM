@@ -1,0 +1,5 @@
+
+/* Compute pairwise correlation */
+proc corr data=mvreg;
+    var read write science;
+run;

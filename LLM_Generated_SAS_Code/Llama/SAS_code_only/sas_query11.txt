@@ -1,0 +1,14 @@
+
+/* Linear Regression using PROC REG */
+proc reg data=crack;
+    model load = age agef;
+    output out=regoutput predicted=predicted residual=residual;
+run;
+
+/* Overlay Plot */
+proc sgplot data=regoutput;
+    reg x=age y=load / group=agef;
+    xaxis label='Age';
+    yaxis label='Load';
+run;
+

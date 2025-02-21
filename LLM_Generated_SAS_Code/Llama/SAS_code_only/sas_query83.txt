@@ -1,0 +1,26 @@
+/* Perform Chi-Square Test of Association */
+proc freq data=abalone;
+  tables weightgroup*agegroup / chisq;
+run;
+
+/* Perform Fisher's Exact Test of Association (for 2x2 tables) */
+proc freq data=abalone;
+  tables weightgroup*agegroup / exact;
+run;
+
+/* Perform Cochran-Mantel-Haenszel Test of Association (for stratified data) */
+proc freq data=abalone;
+  tables weightgroup*agegroup / cmh;
+run;
+
+/* Perform Odds Ratio Analysis */
+proc logistic data=abalone;
+  class weightgroup agegroup (ref='youngest') / param=ref;
+  model weightgroup = agegroup;
+run;
+
+/* Perform Correspondence Analysis */
+proc corresp data=abalone;
+  tables weightgroup*agegroup;
+run;
+

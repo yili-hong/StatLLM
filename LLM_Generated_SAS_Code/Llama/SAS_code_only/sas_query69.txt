@@ -1,0 +1,30 @@
+
+/* Import the glassid dataset */
+data glassid;
+  set glassid;
+  input id ri na al si ca type;
+  if type = 3 then type_group = "vehicle_windows";
+  else if type = 1 or type = 2 then type_group = "building_windows";
+  else type_group = "other";
+run;
+
+/* Descriptive analysis of RI for vehicle window glass and building window glass */
+proc means data=glassid mean std min max;
+  class type_group;
+  var ri;
+run;
+
+/* Boxplot of RI for vehicle window glass and building window glass */
+proc sgplot data=glassid;
+  vbox ri / category=type_group;
+  xaxis label="Type of Glass";
+  yaxis label="Refractive Index";
+run;
+
+/* Distribution of RI for vehicle window glass and building window glass */
+proc sgplot data=glassid;
+  histogram ri / group=type_group;
+  xaxis label="Refractive Index";
+  yaxis label="Frequency";
+run;
+

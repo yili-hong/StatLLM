@@ -1,0 +1,1 @@
+For the measurement dataset, fit a quadratic relationship of height on weight and check residuals.

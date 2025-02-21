@@ -1,0 +1,10 @@
+These measurements were made on men involved in a physical fitness course at N.C.State Univ. The variables are Age (years), Weight (kg), Oxygen intake rate (ml per kg body weight per minute), time to run 1.5 miles (minutes), heart rate while resting, heart rate while running (same time Oxygen rate measured), and maximum heart rate recorded while running. 
+
+The dataset is named as fitness.
+
+The independent variables are Age, Weight, RunTime, RestPulse, RunPulse and MaxPulse. 
+
+The dependent variable is Oxygen. 
+
+
+

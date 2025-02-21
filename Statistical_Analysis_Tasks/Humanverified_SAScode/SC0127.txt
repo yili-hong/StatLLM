@@ -1,0 +1,5 @@
+proc glm data = Phospholipid;
+ class hormone time;
+ model y = hormone time hormone*time;
+ lsmeans hormone time hormone*time / pdiff stderr;
+run;

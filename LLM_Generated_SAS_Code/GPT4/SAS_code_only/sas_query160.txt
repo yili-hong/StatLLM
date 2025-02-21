@@ -1,0 +1,40 @@
+/* Transform Salary into logSalary if it's not already transformed */
+data Baseball;
+    set Baseball;
+    if Salary > 0 then logSalary=log(Salary);
+run;
+
+/* Linear regression model */
+proc reg data=Baseball;
+    model logSalary = nHits nRuns nRBI nBB YrMajor CrHits;
+    /* Output the plots for diagnostics */
+    output out=RegOut r=Residuals p=predicted;
+
+    /* Plot leverage values */
+    plot leverage.*predicted. / vaxis=axis1 haxis=axis2;
+    id Name; /* Add player’s Name to identify points in the plot */
+
+    /* Plot Cook’s Distance */
+    plot cooksd.*predicted. / vaxis=axis1 haxis=axis2;
+    id Name; /* Add player’s Name to identify points in the plot */
+run;
+
+/* You might want to increase graphical output size and resolution */
+goptions reset=all gunit=pct hsize=100 vsize=100 htext=1.5 ftext='Helvetica';
+
+title "Leverage versus Predicted Values with Labels";
+proc sgplot data=RegOut;
+    scatter x=predicted y=leverage / markerattrs=(symbol=CircleFilled) datalabel=Name;
+    xaxis label="Predicted logSalary";
+    yaxis label="Leverage";
+run;
+
+title "Cook's Distance versus Predicted Values with Labels";
+proc sgplot data=RegOut;
+    scatter x=predicted y=cooksd / markerattrs=(symbol=CircleFilled) datalabel=Name;
+    xaxis label="Predicted logSalary";
+    yaxis label="Cook's Distance";
+run;
+
+title;
+

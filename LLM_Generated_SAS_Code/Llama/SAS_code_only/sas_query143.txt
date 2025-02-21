@@ -1,0 +1,21 @@
+/* Calculate squared residuals */
+data t_squared;
+  set t;
+  squared_residual = residuals ** 2;
+run;
+
+proc reg data=t;
+  model crime = poverty single;
+  output out=t_squared residuals=residuals;
+  data t_squared;
+    set t_squared;
+    squared_residual = residuals ** 2;
+  run;
+run;
+
+proc sql;
+  create table t_squared as
+  select *, residuals ** 2 as squared_residual
+  from t;
+quit;
+

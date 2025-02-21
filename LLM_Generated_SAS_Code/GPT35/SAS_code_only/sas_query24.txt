@@ -1,0 +1,6 @@
+/* Perform one-way ANOVA to test for differences in reading scores */
+proc glm data=words;
+  class method;
+  model words = method;
+  means method / tukey;
+run;

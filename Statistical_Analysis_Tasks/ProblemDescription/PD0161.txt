@@ -1,0 +1,2 @@
+Using dataset baseball, omit the observation where name=Pete Rose and build the model again.
+Add leverage plot with label and residual plot.

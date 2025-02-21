@@ -1,0 +1,36 @@
+/* Load the baseball dataset */
+data baseball;
+  set baseball;
+run;
+
+/* Create polynomial terms for YrMajor and CrHits */
+data baseball_poly;
+  set baseball;
+  YrMajor_sq = YrMajor ** 2;
+  CrHits_sq = CrHits ** 2;
+run;
+
+/* Fit the model with polynomial terms */
+proc reg data=baseball_poly;
+  model logSalary = YrMajor YrMajor_sq CrHits CrHits_sq;
+  output out=model_output p=pred r=resid;
+run;
+
+/* Check for assumptions and model fit */
+proc plot data=model_output;
+  plot resid * pred;
+  plot resid * YrMajor;
+  plot resid * CrHits;
+run;
+
+proc reg data=baseball_poly;
+  model logSalary = YrMajor YrMajor_sq CrHits CrHits_sq;
+  output out=model_output cookd=cook_d;
+  ods output FitStatistics = fit_stats;
+run;
+
+/* Check for multicollinearity */
+proc reg data=baseball_poly;
+  model logSalary = YrMajor YrMajor_sq CrHits CrHits_sq / vif;
+run;
+

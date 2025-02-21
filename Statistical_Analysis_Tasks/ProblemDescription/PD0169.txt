@@ -1,0 +1,1 @@
+print all of the observations in the sample dataset from row 20 through row 30.

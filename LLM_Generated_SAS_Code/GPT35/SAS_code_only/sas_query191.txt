@@ -1,0 +1,5 @@
+PROC MEANS DATA=mydata NMISS;
+  CLASS Age;
+  VAR Q1 Q2 Q3 Q4 Q5;
+RUN;
+

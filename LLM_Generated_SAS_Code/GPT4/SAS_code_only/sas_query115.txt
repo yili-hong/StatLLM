@@ -1,0 +1,9 @@
+
+
+PROC TTEST DATA=hsb2;
+    CLASS Female;
+    VAR write;
+    TITLE 'T-Test of Write Score Between Male and Female Students';
+RUN;
+
+

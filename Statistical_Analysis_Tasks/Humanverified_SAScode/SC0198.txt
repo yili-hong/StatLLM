@@ -1,0 +1,4 @@
+proc plot data=highlow;
+plot DowJonesHigh*Year;
+title ’Dow Jones Industrial Average Yearly High’;
+run;

@@ -1,0 +1,4 @@
+proc glimmix data=hernio_uv(where=(dist="Binary"));
+model response(event='1') = age OKStatus / s dist=binary;
+run;
+

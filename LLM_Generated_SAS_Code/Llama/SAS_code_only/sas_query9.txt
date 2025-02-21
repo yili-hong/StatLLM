@@ -1,0 +1,57 @@
+/* Import the dataset */
+data crack;
+  /* Assuming the dataset is in a CSV file named 'crack.csv' */
+  set crack;
+  input id load age agef;
+run;
+
+/* Summary statistics for the variables */
+proc means data=crack;
+  var load age;
+run;
+
+/* Correlation analysis between load and age */
+proc corr data=crack;
+  var load age;
+run;
+
+/* Scatter plot to visualize the relationship between load and age */
+ods graphics / width=8in height=6in;
+proc sgplot data=crack;
+  scatter x=age y=load;
+  xaxis label="Age";
+  yaxis label="Load";
+run;
+
+/* Linear regression analysis to model the relationship between load and age */
+proc reg data=crack;
+  model load = age;
+  output out=residuals p=pred r=residual;
+run;
+
+/* Check for normality of residuals */
+ods graphics / width=8in height=6in;
+proc sgplot data=residuals;
+  histogram residual / normal;
+  density residual / normal;
+run;
+
+/* Check for equal variance of residuals */
+ods graphics / width=8in height=6in;
+proc sgplot data=residuals;
+  reg y=residual x=pred;
+run;
+
+/* Analysis of variance (ANOVA) to compare the means of load across different age groups */
+proc anova data=crack;
+  class agef;
+  model load = agef;
+run;
+
+/* Multiple comparison test to compare the means of load across different age groups */
+ods graphics / width=8in height=6in;
+proc glm data=crack;
+  class agef;
+  model load = agef;
+  means agef / tukey;
+run;

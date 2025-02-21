@@ -1,0 +1,41 @@
+/* Import the data */
+data imports;
+ set imports;
+  input symboling normalized_losses make $ fueltype $ aspiration $ 
+        num_of_doors $ body_style $ drivewheels $ engine_location $ 
+        wheelbase length width height curbweight enginetype $ 
+        num_of_cylinders $ enginesize fuelsystem $ bore stroke 
+        compression_ratio hp peakrpm citympg highwaympg price;
+run;
+
+/* Perform multiple linear regression analysis */
+proc reg data=imports;
+  model enginesize = curbweight hp citympg;
+  output out=reg_output p=pred r=residual;
+run;
+
+/* Print the regression output */
+proc print data=reg_output;
+  var enginesize curbweight hp citympg pred residual;
+run;
+
+/* Print the regression statistics */
+proc reg data=imports;
+  model enginesize = curbweight hp citympg;
+  output out=reg_output p=pred r=residual;
+  ods output FitStatistics=fit_stats;
+  ods output ANOVA=anova_stats;
+  ods output ParameterEstimates=param_est;
+run;
+
+proc print data=fit_stats;
+  var _type_ _value_;
+run;
+
+proc print data=anova_stats;
+  var source df sum_of_squares mean_square f_value probf;
+run;
+
+proc print data=param_est;
+  var parameter estimate std_err t_value prob_t;
+run;

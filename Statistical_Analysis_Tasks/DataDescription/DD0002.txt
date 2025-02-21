@@ -1,0 +1,5 @@
+The dataset name is copper. 
+The variable id gives the id of the observation. 
+The variable warp is the response, which gives the warp amount. 
+The varialbe temp is a factor, which gives the temperature. 
+The variable pct is a factor, which gives the percentage.

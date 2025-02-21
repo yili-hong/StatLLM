@@ -1,0 +1,21 @@
+
+PROC SQL;
+   CREATE TABLE work.headlamp AS 
+   SELECT glassid, Na
+   FROM libname.glassdata
+   WHERE Type_of_glass=7;
+QUIT;
+
+PROC MEANS DATA=work.headlamp;
+   VAR Na;
+   OUTPUT OUT=DescriptiveStats 
+      MEAN=Mean 
+      MIN=Min 
+      MAX=Max 
+      STD=Std;
+RUN;
+
+PROC PRINT DATA=DescriptiveStats;
+   TITLE 'Descriptive Statistics of Sodium Content for Headlamp Glass Type';
+RUN;
+

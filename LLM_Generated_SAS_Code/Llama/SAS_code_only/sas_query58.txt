@@ -1,0 +1,23 @@
+
+proc reg data=sashelp.baseball;
+    where name ^= 'Pete Rose';
+    model log(salary) = nhits nruns nrbi nbb yrmajor yrmajor*2 crhits crhits*2;
+    id name team league;
+    output out=diagnostic r=idual rstudent=predicted d=cookd;
+run;
+
+proc sort data=diagnostic;
+    by cookd;
+run;
+
+proc print data=diagnostic;
+    var name team league cookd;
+    where cookd > 4/104;
+run;
+
+proc sgplot data=diagnostic;
+    scatter x=_n_ y=cookd;
+    xaxis label='Observation';
+    yaxis label='Cook''s D';
+run;
+

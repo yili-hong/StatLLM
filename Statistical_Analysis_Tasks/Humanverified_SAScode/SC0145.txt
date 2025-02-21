@@ -1,0 +1,4 @@
+proc print data = t;
+  where cookd > 4/51;
+  var state crime poverty single cookd;
+run;

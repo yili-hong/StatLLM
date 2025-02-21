@@ -1,0 +1,6 @@
+proc univariate data=glassid normaltest;
+	var Na;
+	histogram/normal;
+	by groupedtype;
+	where groupedtype in( "vehiclewindow");
+run;

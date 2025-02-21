@@ -1,0 +1,21 @@
+/* Perform linear regression */
+proc reg data=imports;
+  model enginesize = curbweight;
+  output out=reg_output predicted=pred enginesize_resid=resid;
+run;
+
+/* Print the summary statistics */
+proc print data=reg_output (obs=5);
+  var curbweight enginesize pred resid;
+run;
+
+/* Print the summary of the regression model */
+proc reg data=imports;
+  model enginesize = curbweight;
+  output out=reg_output predicted=pred enginesize_resid=resid;
+  ods output ParameterEstimates=Reg_Params;
+run;
+
+proc print data=Reg_Params;
+run;
+

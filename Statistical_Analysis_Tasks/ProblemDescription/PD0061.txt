@@ -1,0 +1,4 @@
+For the imports dataset, fit anova model with horsepower (hp) versus fueltypes, aspiration and drivewheels.
+
+
+

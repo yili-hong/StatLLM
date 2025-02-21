@@ -1,0 +1,23 @@
+/*Procedures to fit ANOVA model;*/
+PROC GLM DATA=imports;
+    CLASS fueltype drivewheels;
+    MODEL wheelbase = fueltype drivewheels fueltype*drivewheels;
+    MEANS fueltype drivewheels / LSMEANS E;
+RUN;
+
+*Check Contrasts for interaction;
+PROC GLM DATA=imports;
+    CLASS fueltype drivewheels;
+    MODEL wheelbase = fueltype drivewheels fueltype*drivewheels;
+    CONTRAST 'Interaction contrasts' fueltype*drivewheels;
+RUN;
+
+*Check ANOVA table for significance;
+PROC GLM DATA=imports;
+    CLASS fueltype drivewheels;
+    MODEL wheelbase  = fueltype drivewheels fueltype*drivewheels / SS3;
+    TEST H = fueltype E = drivewheels / HTYPE=3 ETYPE=3;
+RUN;
+
+*Quit the procedure;
+QUIT;

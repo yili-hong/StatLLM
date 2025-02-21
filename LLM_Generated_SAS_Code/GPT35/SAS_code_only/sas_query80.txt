@@ -1,0 +1,11 @@
+/* Filter the dataset to only include male (M) and female (F) abalones */
+data abalone_filtered;
+    set abalone;
+    where Sex in ('M', 'F');
+run;
+
+/* Frequency table to examine the association between Sex and agegroup */
+proc freq data=abalone_filtered;
+    tables Sex * agegroup / chisq;
+run;
+

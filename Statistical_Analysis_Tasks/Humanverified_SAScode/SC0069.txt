@@ -1,0 +1,5 @@
+proc univariate data=glassid;
+	var RI;
+	where groupedtype in("vehiclewindow","buildingwindow");
+	by groupedtype;
+run;

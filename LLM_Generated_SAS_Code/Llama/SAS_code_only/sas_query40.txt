@@ -1,0 +1,42 @@
+
+/* Create QQplots for Normality check */
+proc univariate data=read normal;
+  class Method;
+  var Grade;
+  qqplot / normal(mu=est sigma=est);
+run;
+
+/* Test statistics for Normality check */
+proc univariate data=read normal;
+  class Method;
+  var Grade;
+  qqplot / normal(mu=est sigma=est);
+  output out=normtest pvalues=ShapiroWilk;
+run;
+
+/* Print the Shapiro-Wilk test results */
+proc print data=normtest;
+  var Method _P_;
+run;
+
+
+/* Test statistics for Normality check */
+proc univariate data=read normal;
+  by Method;
+  var Grade;
+  qqplot / normal(mu=est sigma=est);
+  output out=normtest pvalues=ShapiroWilk;
+run;
+
+/* Print the Shapiro-Wilk test results */
+proc print data=normtest;
+  var Method _P_;
+run;
+
+
+/* Create separate QQplots for each method */
+ods graphics / width=8in height=6in;
+proc sgplot data=read;
+  qqplot Grade / group=Method;
+run;
+

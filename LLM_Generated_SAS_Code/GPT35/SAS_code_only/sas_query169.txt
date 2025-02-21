@@ -1,0 +1,10 @@
+
+DATA Subset;
+   SET sample2014;;
+RUN;
+
+PROC PRINT data=Subset;
+RUN;
+
+LIBNAME MyXLSX CLEAR;
+

@@ -1,0 +1,10 @@
+The data set highlow contains information about the high and low values of the Dow Jones Industrial Average from 1968 to 2008.
+
+The data contains the following values from left to right:
+
+the year that the observation describes the date of the yearly high for the Dow Jones Industrial Average
+the yearly high value for the Dow Jones Industrial Average
+the date of the yearly low for the Dow Jones Industrial Average
+the yearly low value for the Dow Jones Industrial Average
+
+Source: https://documentation.sas.com/doc/en/pgmsascdc/9.4_3.5/basess/n1c9ntj3zkt7f1n14n6g0i2xl5k7.htm

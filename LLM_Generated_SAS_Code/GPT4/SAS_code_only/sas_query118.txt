@@ -1,0 +1,7 @@
+
+
+PROC REG DATA=ART;
+    MODEL Task = Create;
+RUN;
+QUIT;
+

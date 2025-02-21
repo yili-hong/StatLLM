@@ -1,0 +1,4 @@
+proc ttest data=sample2014;
+   paired English* Math;
+run;
+

@@ -1,0 +1,2 @@
+For the copper dataset, conduct an one-way ANOVA analysis for the respone variable warp with respect to the factor temperature. 
+ 

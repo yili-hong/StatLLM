@@ -1,0 +1,4 @@
+proc freq data=BMT;
+by Grorup;
+tables Status;
+run;

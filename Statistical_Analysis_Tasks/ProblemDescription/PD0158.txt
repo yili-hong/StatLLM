@@ -1,0 +1,2 @@
+Using dataset sample2014, do a paired t test to test if there was a significant difference in the average of the two tests, English and Math.
+

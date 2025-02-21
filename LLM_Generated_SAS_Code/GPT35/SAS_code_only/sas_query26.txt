@@ -1,0 +1,5 @@
+proc glm data=retention;
+  class Fe Zn;
+  model FeRetention = Fe Zn / nouni;
+run;
+

@@ -1,0 +1,5 @@
+proc ttest data=soil;
+class condition;
+var respiration;
+run;
+

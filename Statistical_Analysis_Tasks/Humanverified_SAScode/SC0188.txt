@@ -1,0 +1,6 @@
+proc tabulate data=year_sales format=comma10.;
+class SalesRep Type;
+var AmountSold;
+table SalesRep*Type,
+AmountSold*mean*f=dollar16.2;
+run;

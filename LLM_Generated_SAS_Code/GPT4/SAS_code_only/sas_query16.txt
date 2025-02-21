@@ -1,0 +1,8 @@
+
+PROC ANOVA DATA=toxic;
+    CLASS poison;
+    MODEL life = poison;
+    MEANS poison / TUKEY;
+RUN;
+QUIT;
+

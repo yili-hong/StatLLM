@@ -1,0 +1,13 @@
+/* Restrict dataset to only headlamps */
+DATA headlamps;
+SET work.glass;
+IF Type_of_glass = 7;
+RUN;
+
+/* Test Normality */
+PROC UNIVARIATE DATA= headlamps;
+VAR Na;
+HISTOGRAM / NORMAL;
+QQPLOT / NORMAL;
+RUN;
+

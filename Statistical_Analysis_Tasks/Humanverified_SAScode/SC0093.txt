@@ -1,0 +1,4 @@
+PROC TTEST DATA=auto;
+  CLASS foreign;
+  VAR mpg;
+RUN;

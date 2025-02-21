@@ -1,0 +1,5 @@
+
+/* Calculate the correlation matrix among 'useful', 'difficulty', and 'importance' */
+proc corr data=manova pearson;
+   var useful difficulty importance;
+run;

@@ -1,0 +1,10 @@
+/* Frequency table for the variable State */
+proc freq data=sample2014;
+  tables State / nocum nocol;
+run;
+
+/* Frequency table for the variable Rank */
+proc freq data=sample2014;
+  tables Rank / nocum nocol;
+run;
+

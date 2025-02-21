@@ -1,0 +1,2 @@
+For the dataset of glassid, discuss normality of Na for glass type (grouped type) of vehicle window.
+

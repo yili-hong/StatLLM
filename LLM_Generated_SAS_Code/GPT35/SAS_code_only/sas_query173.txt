@@ -1,0 +1,5 @@
+
+PROC FREQ DATA=sample2014;
+  TABLES Rank*LiveOnCampus / LIST MISSING;
+RUN;
+

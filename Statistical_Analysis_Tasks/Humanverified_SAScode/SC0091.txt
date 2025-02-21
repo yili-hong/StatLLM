@@ -1,0 +1,8 @@
+proc glm data= manova;
+  class group;
+  model useful = group / ss3;
+  contrast '1 vs 2&3' group 2 -1 -1;
+  contrast '2 vs 3' group 0 1 -1;
+  manova h=_all_;
+  manova h=group m=(1 0 1);
+run;

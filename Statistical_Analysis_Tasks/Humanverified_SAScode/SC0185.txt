@@ -1,0 +1,7 @@
+
+proc tabulate data=year_sales format=comma10.;
+class SalesRep;
+var AmountSold;
+table SalesRep,
+AmountSold;
+run;

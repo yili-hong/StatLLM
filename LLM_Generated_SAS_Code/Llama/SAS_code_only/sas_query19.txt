@@ -1,0 +1,33 @@
+
+/* Perform a two-sample t-test to compare the means of the Grade variable */
+proc ttest data=read;
+  class Method;
+  var Grade;
+run;
+
+
+/* Perform an ANOVA to compare the means of the Grade variable */
+proc glm data=read;
+  class Method;
+  model Grade = Method;
+run;
+
+
+means Method / hovtest;
+
+
+/* Perform a two-sample t-test to compare the means of the Grade variable */
+proc ttest data=read;
+  class Method;
+  var Grade;
+  means Method / hovtest;
+run;
+
+
+/* Perform an ANOVA to compare the means of the Grade variable */
+proc glm data=read;
+  class Method;
+  model Grade = Method;
+  means Method / hovtest;
+run;
+

@@ -1,0 +1,5 @@
+proc npar1way data=glassid wilcoxon;
+	class groupedtype;
+	var Na;
+	where groupedtype in("vehiclewindow", "headlamps");
+run;

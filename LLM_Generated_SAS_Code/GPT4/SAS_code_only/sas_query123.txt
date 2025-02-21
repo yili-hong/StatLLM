@@ -1,0 +1,7 @@
+
+
+* Perform the two-sample t-test;
+proc ttest data=FERT;
+  class Brand;
+  var Height;
+run;

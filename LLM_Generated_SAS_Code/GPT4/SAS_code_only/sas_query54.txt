@@ -1,0 +1,19 @@
+
+* Histogram Plot;
+proc sgplot data=sashelp.shoes;
+    histogram Sales;
+    title 'Histogram of Sales';
+run;
+
+* Box Plot;
+proc sgplot data=sashelp.shoes;
+    vbox Sales / category=Product;
+    title 'Box Plot of Sales by Product';
+run;
+
+* Normal Probability Plot;
+proc univariate data=sashelp.shoes normal;
+    var Sales;
+    title 'Normal Probability Plot of Sales';
+run;
+

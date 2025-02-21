@@ -1,0 +1,5 @@
+
+PROC GLMSELECT DATA=Work.est;
+  MODEL Y = X1-X10 / selection=stepwise(select=aic) details=all;
+RUN;
+

@@ -1,0 +1,1 @@
+Using the dataset binary, start out by looking at some descriptive statistics on continuous variable (gre,gpa).

@@ -1,0 +1,1 @@
+For the dataset of abalone, decide whether there exists association between the age group and weight group. 

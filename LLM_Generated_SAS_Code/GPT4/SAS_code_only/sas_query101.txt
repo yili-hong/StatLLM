@@ -1,0 +1,4 @@
+
+proc corr data=manova noprint;
+  var Useful Difficulty Importance;
+  run;

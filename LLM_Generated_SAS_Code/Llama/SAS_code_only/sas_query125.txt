@@ -1,0 +1,7 @@
+/* Perform Levene's test */
+PROC GLM DATA=lettuce_brand;
+  CLASS Fertilizer;
+  MODEL Heads = Fertilizer;
+  MEANS Fertilizer / HOVTEST=LEVENE;
+RUN;
+

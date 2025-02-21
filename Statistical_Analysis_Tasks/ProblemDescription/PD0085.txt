@@ -1,0 +1,1 @@
+For the dataset of abalone, make a frequency table for the group variable ageroup.

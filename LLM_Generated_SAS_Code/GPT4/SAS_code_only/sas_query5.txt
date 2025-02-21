@@ -1,0 +1,8 @@
+
+PROC ANOVA DATA=copper;
+    CLASS temp;
+    MODEL warp = temp;
+    MEANS temp / TUKEY ALPHA=0.05;
+RUN;
+QUIT;
+

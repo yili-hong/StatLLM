@@ -1,0 +1,2 @@
+Using dataset crime, we are going to use poverty and single to predict crime. Run an OLS regression and output the residuals, leverage and cooks distance.
+Save the output as data name t.

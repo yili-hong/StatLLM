@@ -1,0 +1,10 @@
+/* Creating a new dataset t2 from t with the additional variable rabs */
+data t2;
+    set t;  /* Set t as the input dataset */
+    rabs = abs(residuals);  /* Compute the absolute value of Residuals */
+run;
+
+/* Printing the first ten observations of dataset t2 */
+proc print data=t2(obs=10);
+run;
+

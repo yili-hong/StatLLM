@@ -1,0 +1,1 @@
+For the dataset of mvreg, calculate the mean and standard deviation of variable locus_of_control, self_concept, motivation, read, write, and science.

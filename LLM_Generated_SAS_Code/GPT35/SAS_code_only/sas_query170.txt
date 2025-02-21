@@ -1,0 +1,12 @@
+proc format;
+    value $gender
+        0='Male'
+        1='Female';
+run;
+
+proc print data=sample2014 noobs;
+    format Gender $gender.;
+    var ids Gender Height Weight;
+    by Gender;
+run;
+

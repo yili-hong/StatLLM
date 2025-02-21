@@ -1,0 +1,1 @@
+For the dataset of hsb2, suppose that we believe that the general population consists of 10% Hispanic, 10% Asian, 10% African American and 70% White folks.  We want to test whether the observed proportions from our sample differ significantly from these hypothesized proportions. 

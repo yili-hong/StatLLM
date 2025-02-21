@@ -1,0 +1,12 @@
+
+/* Import the dataset */
+data work.grad_admissions;
+    set binary;
+run;
+
+/* Descriptive Statistics for GRE and GPA */
+proc means data=work.grad_admissions n mean std min max;
+    var gre gpa;
+    title "Descriptive Statistics for GRE and GPA";
+run;
+

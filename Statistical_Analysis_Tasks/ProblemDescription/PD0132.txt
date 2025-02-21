@@ -1,0 +1,1 @@
+For the dataset of measurement, check whether there exists collinearity problems among the variables of height, weight and age. 

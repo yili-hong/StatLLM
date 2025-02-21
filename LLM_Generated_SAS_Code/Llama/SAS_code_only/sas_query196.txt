@@ -1,0 +1,6 @@
+proc lifetest data=sashelp.bmt plots=(survival);
+  time T*Status(1);
+  strata Group;
+  title "Kaplan-Meier Plot of Disease-Free Survival Time";
+run;
+

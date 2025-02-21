@@ -1,0 +1,44 @@
+
+/* Perform linear regression with y versus all variables in the model */
+proc reg data=est2;
+  model y = x1 x2 x3 x4 x5 x6 x7 x8 x9 x10 / selection=none;
+  output out=temp;
+run;
+
+/* Calculate AIC for all possible subsets of multiple regression model */
+proc glmselect data=est2;
+  model y = x1 x2 x3 x4 x5 x6 x7 x8 x9 x10 / selection=backward;
+  model y = x1 x2 x3 x4 x5 x6 x7 x8 x9 x10 / selection=forward;
+  model y = x1 x2 x3 x4 x5 x6 x7 x8 x9 x10 / selection=stepwise;
+  model y = x1 x2 x3 x4 x5 x6 x7 x8 x9 x10 / selection=none;
+  score out=results;
+run;
+
+/* Choose the best subset based on AIC */
+proc print data=results;
+  var model aic;
+run;
+
+
+/* Import the data */
+data est2;
+  set est2;
+run;
+
+/* Create a macro to try all possible combinations of variables */
+%macro tryall;
+  %do i = 1 %to 1024;
+    %let vars =;
+    %do j = 0 %to 9;
+      %if %sysfunc(and(&i, %sysfunc(power(2,&j)))) = %sysfunc(power(2,&j)) %then %let vars =&vars x&j+1;
+    %end;
+    proc reg data=est2;
+      model y = &vars / selection=none aic;
+      title "Model &i: &vars";
+    run;
+  %end;
+%mend tryall;
+
+/* Run the macro */
+%tryall;
+

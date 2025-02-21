@@ -1,0 +1,16 @@
+ods output extremeobs = outlier;
+proc univariate data = sashelp.shoes;
+var sales;
+class region;
+run;
+ods output close;
+
+	
+
+
+	
+		
+	
+
+	
+	

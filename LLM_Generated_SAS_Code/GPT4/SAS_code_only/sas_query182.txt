@@ -1,0 +1,5 @@
+proc reg data=fitness;
+   model Oxygen = RunTime Age Weight RunPulse MaxPulse RestPulse / vif;
+run;
+quit;
+

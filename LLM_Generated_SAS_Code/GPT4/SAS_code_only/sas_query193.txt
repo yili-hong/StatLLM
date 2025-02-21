@@ -1,0 +1,29 @@
+/* Assuming the dataset is already loaded into SAS with name 'bmt' */
+/* Calculate Mean */
+proc means data=bmt noprint;
+    class Group;
+    var T;
+    output out=mean_results mean=Mean;
+run;
+
+/* Print Mean Results */
+proc print data=mean_results;
+    title "Mean of Disease-Free Survival Time by Group";
+run;
+
+/* Calculate Median using PROC UNIVARIATE */
+proc sort data=bmt;
+    by Group;
+run;
+
+proc univariate data=bmt noprint;
+    class Group;
+    var T;
+    output out=median_results pctlpre=P_ pctlpts=50 pctlname=Median;
+run;
+
+/* Print Median Results */
+proc print data=median_results;
+    title "Median of Disease-Free Survival Time by Group";
+run;
+

@@ -1,0 +1,13 @@
+/* Create log transformation of DowHigh */
+data highlow_log;
+	set highlow;
+	logDowHigh = log(DowHigh);
+run;
+
+/* Plotting the log transformation of DowHigh for each Year */
+proc sgplot data=highlow_log;
+	scatter x=Year y=logDowHigh;
+	xaxis label="Year";
+	yaxis label="Log(DowHigh)";
+run;
+

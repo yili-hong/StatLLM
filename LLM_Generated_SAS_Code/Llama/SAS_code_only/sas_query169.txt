@@ -1,0 +1,6 @@
+proc print data=sample2014(obs=20-30);
+run;
+
+proc print data=sample2014(firstobs=20 obs=11);
+run;
+

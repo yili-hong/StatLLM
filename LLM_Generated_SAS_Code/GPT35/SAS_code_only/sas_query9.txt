@@ -1,0 +1,6 @@
+/* Proc GLM to analyze relationship between load and age */
+proc glm data=crack;
+   class agef;
+   model load = age agef;
+   run;
+quit;

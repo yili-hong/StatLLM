@@ -1,0 +1,10 @@
+/* Viewing basic descriptive statistics */
+proc means data=work.sample2014 mean std; 
+    var English Math;
+run;
+
+/* Performing a paired t-test on the English and Math scores */
+proc ttest data=work.sample2014;
+    paired English*Math;
+run;
+

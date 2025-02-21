@@ -1,0 +1,5 @@
+/* Perform a regression analysis to investigate the impact of height, age, and gender on weight */
+proc reg data=measurement;
+    model Weight = Height Age Gender;
+run;
+

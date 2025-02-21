@@ -1,0 +1,1 @@
+For the dataset of abalone, perform a one-way ANOVA for whole_weight with sex as the categorical predictor. Perform turkey's test, Homogeneity of Variance, Welch's t-test, pairwise comparison test for whole_weight acorss sex.

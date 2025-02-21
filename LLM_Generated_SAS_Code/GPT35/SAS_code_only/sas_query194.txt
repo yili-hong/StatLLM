@@ -1,0 +1,4 @@
+proc freq data=bmt;
+  tables Group*Status / nocol nopercent nocum;
+run;
+

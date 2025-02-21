@@ -1,0 +1,6 @@
+title 'Robust Estimates for Blood Pressure Data';
+ods select TrimmedMeans WinsorizedMeans RobustScale;
+proc univariate data=BPressure trimmed=1 .1
+                winsorized=.1  robustscale;
+   var Systolic;
+run;

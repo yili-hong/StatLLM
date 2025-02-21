@@ -1,0 +1,5 @@
+
+proc freq data=abalone order=data;
+	table agegroup*weightgroup/ norow nocol nopercent expected chisq;
+	ods select CrossTabFreqs ChiSq;
+run;

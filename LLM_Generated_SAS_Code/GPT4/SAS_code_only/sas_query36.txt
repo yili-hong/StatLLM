@@ -1,0 +1,19 @@
+
+* Run the regression of height on weight;
+proc reg data=measurement;
+   model Height = Weight;
+   output out=outResiduals r=residual; /* Save the residuals to a new dataset */
+run;
+quit; 
+
+* Plot the scatter plot of height and weight to verify linearity;
+proc sgplot data=measurement;
+    scatter x=Weight y=Height;
+run;
+
+* Plot residuals to verify normality and constant variance;
+proc univariate data=outResiduals;
+   histogram residual / normal; /* This plots the distribution of residuals with a superimposed normal curve */
+   qqplot residual / normal; /* This generates a Q-Q plot to check normality*/
+run;
+

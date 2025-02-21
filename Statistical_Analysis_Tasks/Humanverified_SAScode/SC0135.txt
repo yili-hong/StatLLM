@@ -1,0 +1,3 @@
+proc glimmix data=hernio_uv(where=(dist="Poisson"));
+model response = age OKStatus / s dist=Poisson;
+run;

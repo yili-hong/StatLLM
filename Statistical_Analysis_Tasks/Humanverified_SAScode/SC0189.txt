@@ -1,0 +1,3 @@
+Proc Means Data = test;
+Var q1 - q5;
+Run;

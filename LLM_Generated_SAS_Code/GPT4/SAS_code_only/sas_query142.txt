@@ -1,0 +1,34 @@
+/* Run the regression model */
+proc reg data=crime;
+   model crime = poverty single;
+   output out=residuals (drop=_TYPE_ _NAME_)
+          r=residual
+          p=predicted
+          h=leverage
+          cookd=cooksD;
+run;
+quit;
+
+/* Create a new dataset 't' containing the residuals, leverage, and Cook's distance */
+data t;
+   set residuals;
+   /* Optionally add more variables or manipulations here if needed */
+run;
+
+/* Print the new dataset 't' to view the values */
+proc print data=t;
+run;
+
+/* If desired, you could visualize the diagnostics */
+proc sgplot data=t;
+   scatter x=predicted y=residual / markerattrs=(symbol=circlefilled);
+   xaxis label="Predicted Crime";
+   yaxis label="Residuals";
+run;
+
+proc sgplot data=t;
+   scatter x=predicted y=cooksD / markerattrs=(symbol=circlefilled);
+   xaxis label="Predicted Crime";
+   yaxis label="Cook's Distance";
+run;
+

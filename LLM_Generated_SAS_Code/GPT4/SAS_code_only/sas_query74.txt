@@ -1,0 +1,17 @@
+
+/* Then, create subsets for headlamps and vehicle windows */
+
+DATA headlamps vehicle_windows;
+	SET glassid;
+	IF type_of_glass = 7 THEN OUTPUT headlamps;
+	ELSE IF type_of_glass = 3 THEN OUTPUT vehicle_windows;
+RUN;
+
+/* Perform a hypothesis test (T- Test) */
+
+PROC TTEST DATA=glassid;
+	CLASS type_of_glass;
+	VAR Na;
+	WHERE type_of_glass IN (7, 3);
+RUN;
+

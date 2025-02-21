@@ -1,0 +1,13 @@
+
+PROC SORT data=words;
+  by SUBJECT;
+run;
+
+PROC GLM data=words; 
+  CLASS method; 
+  MODEL words = method; 
+  MEANS method / hovtest=levene; 
+  title 'Analysis of Variance of Reading Test'; 
+RUN;
+
+QUIT;

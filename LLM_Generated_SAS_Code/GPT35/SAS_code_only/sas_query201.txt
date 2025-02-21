@@ -1,0 +1,5 @@
+/* Creating a bar chart for DowJonesLow for each Year */
+proc sgplot data=highlow;
+vbar Year / response=DowJonesLow datalabel;
+title 'DowJonesLow for Each Year';
+run;

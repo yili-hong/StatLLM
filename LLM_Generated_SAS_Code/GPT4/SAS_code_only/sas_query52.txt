@@ -1,0 +1,5 @@
+
+PROC MEANS DATA=sashelp.shoes MEAN TRIM=0.2;
+VAR Sales;
+RUN;
+

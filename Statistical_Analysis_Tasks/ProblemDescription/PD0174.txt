@@ -1,0 +1,1 @@
+Using the height and weight variables, calculate the student’s body mass index (BMI). Also, convert the height variable (currently in inches) to meters.

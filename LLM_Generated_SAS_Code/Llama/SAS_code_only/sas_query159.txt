@@ -1,0 +1,33 @@
+/* Import the baseball dataset */
+data baseball;
+  set baseball;
+run;
+
+/* Select the variables of interest */
+data baseball_subset;
+  set baseball;
+  keep logSalary nhits nruns nrbi nbb yrmajor crhits;
+run;
+
+/* Perform simple linear regression */
+proc reg data=baseball_subset;
+  model logSalary = nhits nruns nrbi nbb yrmajor crhits;
+  output out=reg_output p=predicted r=residual;
+run;
+
+/* Print the regression output */
+proc print data=reg_output;
+  var logSalary nhits nruns nrbi nbb yrmajor crhits predicted residual;
+run;
+
+/* Print the regression coefficients and statistics */
+proc reg data=baseball_subset;
+  model logSalary = nhits nruns nrbi nbb yrmajor crhits;
+  output out=reg_output p=predicted r=residual;
+  ods output ParameterEstimates=reg_coeff;
+run;
+
+proc print data=reg_coeff;
+  var Parameter Estimate StdErr tValue Probt;
+run;
+

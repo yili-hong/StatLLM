@@ -1,0 +1,1 @@
+For the dataset of auto, compare the mpg among the cars in the different repair groups using Analysis of Variance, only considering cars with repair records of 3, 4 and 5.

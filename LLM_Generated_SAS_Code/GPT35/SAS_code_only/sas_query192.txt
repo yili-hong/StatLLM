@@ -1,0 +1,4 @@
+proc freq data = BMT;
+  tables Group;
+run;
+

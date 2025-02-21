@@ -1,0 +1,5 @@
+
+PROC PRINT DATA=chisq;
+    VAR df;
+RUN;
+

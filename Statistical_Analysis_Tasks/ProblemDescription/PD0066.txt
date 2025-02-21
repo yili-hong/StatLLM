@@ -1,0 +1,1 @@
+For the iron dataset, Plot the scatter plot with corrosion resistance(loss) versus iron content(fe).

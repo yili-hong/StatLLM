@@ -1,0 +1,3 @@
+proc freq data = abalone;
+  tables agegroup;
+run;

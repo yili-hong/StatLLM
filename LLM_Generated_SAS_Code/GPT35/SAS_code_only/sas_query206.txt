@@ -1,0 +1,13 @@
+proc freq data=grades;
+  table ExamGrade1 / nocum missing out=grade_freq;
+run;
+
+data grade_freq_plot;
+  set grade_freq;
+  format ExamGrade1 ExamGrade1.;
+run;
+
+proc sgplot data=grade_freq_plot;
+  block x=ExamGrade1 block=Freq;
+run;
+

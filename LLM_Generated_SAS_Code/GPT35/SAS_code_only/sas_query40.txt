@@ -1,0 +1,6 @@
+/* Create QQplot and test statistics for Grade variable by Method */
+proc univariate data=read normal;
+  qqplot Grade / by=Method;
+  var Grade;
+run;
+

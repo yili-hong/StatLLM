@@ -1,0 +1,13 @@
+The dataset year_sales contains sales records for a company, TruBlend Coffee Makers, that distributes the coffee machines. 
+
+The dataset contains the following values from left to right:
+
+Month: the month in which a sale was made
+Quarter: the quarter of the year in which a sale was made
+SalesRep: the name of the sales representative
+Type: the type of coffee maker sold (standard or deluxe)
+Units: the number of units sold
+Price: the price of each unit in US dollars
+AmountSold: multiplying Units by Price.
+
+Source: https://documentation.sas.com/doc/en/pgmsascdc/9.4_3.5/basess/n12w48ni27larxn1lqiny5wdsnic.htm

@@ -1,0 +1,4 @@
+proc ttest data = hsb2
+h0 = 50;
+var write;
+run;

@@ -1,0 +1,5 @@
+proc glm data=toxic;
+   class poison;
+   model life = poison;
+   lsmeans poison / pdiff;
+run;

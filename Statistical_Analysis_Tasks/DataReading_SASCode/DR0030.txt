@@ -1,0 +1,6 @@
+PROC IMPORT OUT=hsb2 
+     DATAFILE='/StatLLM/Statistical_Analysis_Tasks/TaskDatasets/DS0030/hsb2.csv' 
+     DBMS=CSV 
+     REPLACE; 
+     GETNAMES=YES; 
+RUN; 

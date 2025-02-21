@@ -1,0 +1,6 @@
+
+
+PROC FREQ DATA=abalone;
+TABLES agegroup*weightgroup / CHISQ;
+OUTPUT OUT=contingency;
+RUN;

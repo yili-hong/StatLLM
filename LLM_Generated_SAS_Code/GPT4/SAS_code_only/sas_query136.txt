@@ -1,0 +1,29 @@
+/* Ensure the dataset is loaded - here assumed as elemapi2 */
+
+/* Summary Statistics for API scores by Meal Categories */
+proc means data = elemapi2;
+    class mealcat;
+    var api00;
+    output out = meal_summary mean=mean_api00 std=std_api00 min=min_api00 max=max_api00;
+run;
+
+proc print data = meal_summary;
+    title "Summary statistics for API00 by meal categories";
+run;
+
+/* Summary Statistics for API scores by Parent Education (Collage) Categories */
+proc means data = elemapi2;
+    class collcat;
+    var api00;
+    output out = coll_summary mean=mean_api00 std=std_api00 min=min_api00 max=max_api00;
+run;
+
+proc print data = coll_summary;
+    title "Summary statistics for API00 by college (some college education) categories";
+run;
+
+/* Frequency tables for mealcat and collcat to verify the distribution of categories */
+proc freq data = elemapi2;
+    tables mealcat collcat;
+run;
+

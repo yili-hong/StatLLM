@@ -1,0 +1,1 @@
+For the dataset of highlow, produce descriptive statistics such as mean and standard deviation of variables LogDowHigh and LogDowLow.

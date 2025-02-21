@@ -1,0 +1,6 @@
+
+
+PROC REG DATA=WORK.measurement;
+   MODEL height = weight age / vif collin;
+RUN;
+QUIT;

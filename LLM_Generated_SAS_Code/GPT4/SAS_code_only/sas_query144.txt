@@ -1,0 +1,18 @@
+/* Create a new dataset with squared residuals */
+proc sql;
+    create table t_modified as
+    select state_abbrev, /* Assuming your dataset contains a column for state abbreviations */
+           leverage,
+           residuals,
+           residuals**2 as squared_residuals /* Compute squared residuals */
+    from t;
+quit;
+
+/* Create the graph with PROC SGPLOT */
+proc sgplot data=t_modified noautolegend; 
+    scatter x=leverage y=squared_residuals / datalabel=state_abbrev;
+    xaxis label='Leverage';
+    yaxis label='Squared Residuals';
+    title 'Leverage vs. Squared Residuals with State Labels';
+run;
+

@@ -1,0 +1,15 @@
+ods output Quantiles = temp;
+proc univariate data = sashelp.shoes;
+var sales;
+class region;
+run;
+ods output close;
+	
+
+
+	
+		
+	
+
+	
+	

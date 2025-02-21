@@ -1,0 +1,1 @@
+For the dataset of auto, request a chi-square test that tests if rep78 and foreign are independent.

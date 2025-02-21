@@ -1,0 +1,5 @@
+proc means data=grade maxdec=3;
+   var Score;
+   class Status Year;
+   title 'Final Exam Grades for Student Status and Year of Graduation';
+run;

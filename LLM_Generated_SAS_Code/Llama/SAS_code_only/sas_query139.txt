@@ -1,0 +1,8 @@
+proc glm data=elemapi2;
+  class mealcat collcat;
+  model api00 = mealcat collcat mealcat*collcat;
+  lsmeans collcat / at(mealcat=1) pdiff;
+  lsmeans collcat / at(mealcat=2) pdiff;
+  lsmeans collcat / at(mealcat=3) pdiff;
+run;
+

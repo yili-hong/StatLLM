@@ -1,0 +1,7 @@
+
+
+/* Perform logistic regression */
+proc logistic data=Neuralgia;
+class Treatment Sex;
+model Pain(event='Yes') = Duration Treatment Sex / link=logit;
+run;

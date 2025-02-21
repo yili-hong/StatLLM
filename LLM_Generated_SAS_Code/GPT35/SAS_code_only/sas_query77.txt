@@ -1,0 +1,4 @@
+proc freq data=abalone;
+  table weightgroup * sex / norow nocol nopercent;
+run;
+

@@ -1,0 +1,4 @@
+proc freq data=abalone;
+tables weightgroup * agegroup;
+run;
+

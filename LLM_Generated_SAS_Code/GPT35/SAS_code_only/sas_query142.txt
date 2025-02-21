@@ -1,0 +1,7 @@
+proc reg data=crime outest=t outresid outlev=lev outcook=cook;
+  model crime = poverty single;
+run;
+
+proc print data=t;
+run;
+

@@ -1,0 +1,20 @@
+/* Fit a full model with all independent variables */
+proc reg data=fitness;
+  model Oxygen = Age Weight RunTime RestPulse RunPulse MaxPulse;
+run;
+
+/* FORWARD model selection method */
+proc reg data=fitness;
+  model Oxygen = Age Weight RunTime RestPulse RunPulse MaxPulse / selection=forward;
+run;
+
+/* BACKWARD model selection method */
+proc reg data=fitness;
+  model Oxygen = Age Weight RunTime RestPulse RunPulse MaxPulse / selection=backward;
+run;
+
+/* MAXR model selection method */
+proc reg data=fitness;
+  model Oxygen = Age Weight RunTime RestPulse RunPulse MaxPulse / selection=rsquare;
+run;
+

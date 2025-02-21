@@ -1,0 +1,5 @@
+proc reg data=imports;
+	model enginesize=wheelbase length curbweight hp citympg highwaympg/ selection=stepwise sle=.05 sls=.05;
+	output out=diag cookd=cd;
+	ods select SelectionSummary DiagnosticsPanel;
+run;

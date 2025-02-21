@@ -1,0 +1,12 @@
+/* Create a contingency table for age group and weight group */
+proc freq data=abalone;
+  tables agegroup*weightgroup / chisq;
+run;
+
+
+ods output ChiSq = chisq_results;
+proc freq data=abalone;
+  tables agegroup*weightgroup / chisq;
+run;
+ods output close;
+

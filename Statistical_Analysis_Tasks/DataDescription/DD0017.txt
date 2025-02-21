@@ -1,0 +1,11 @@
+Extracorporeal membrane oxygenation (ECMO) is a potentially life-saving procedure that is used to treat newborn babies who suffer from severe respiratory failure. An experiment was conduted in which 29 babies were treated with EcMO and 10 babies were treated with conventional medical therapy (CMT). Among the 5 babies died, 4 were treated with CMT and among the 34 babies survided, 6 were treated with CMT. 
+
+
+The subject column gives the id of individuals.
+The treatment column gives the treatment types, which is categorical and has two levels.
+The result column gives outcome, which is categorical and has two levels.
+
+The dataset is named as ecmo.
+
+
+

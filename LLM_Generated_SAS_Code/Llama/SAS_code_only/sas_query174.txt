@@ -1,0 +1,17 @@
+/* Convert height from inches to meters and calculate BMI */
+DATA sample2014;
+  SET WORK.sample2014;
+  
+  /* Convert height from inches to meters */
+  height_meters = height / 39.37;
+  
+  /* Calculate BMI (weight in kg / height in meters squared) */
+  weight_kg = weight / 2.205; /* Convert weight from pounds to kg */
+  bmi = weight_kg / (height_meters ** 2);
+RUN;
+
+/* Print the first 10 observations of the sample2014 dataset */
+PROC PRINT DATA=sample2014 (OBS=10);
+  VAR ids height height_meters weight bmi;
+RUN;
+

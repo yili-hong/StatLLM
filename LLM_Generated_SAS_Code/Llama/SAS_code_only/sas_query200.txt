@@ -1,0 +1,14 @@
+data highlow;
+  set highlow;
+  LogDowHigh = log(DowHigh);
+  LogDowLow = log(DowLow);
+run;
+
+proc means data=highlow mean std;
+  var LogDowHigh LogDowLow;
+run;
+
+proc means data=highlow mean std min max range var;
+  var LogDowHigh LogDowLow;
+run;
+

@@ -1,0 +1,8 @@
+
+PROC GLM DATA=hsb2; 
+  CLASS prog; 
+  MODEL write = prog; 
+  MEANS prog /  TUKEY ALPHA=0.05; /*Tukey test for pairwise comparisons*/
+RUN;
+QUIT;
+

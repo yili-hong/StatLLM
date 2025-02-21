@@ -1,0 +1,5 @@
+
+PROC LOGISTIC DATA=binary DESCENDING;
+    CLASS rank / PARAM=REF; 
+    MODEL admit(EVENT='1') = gre gpa rank / LINK=LOGIT;
+RUN;

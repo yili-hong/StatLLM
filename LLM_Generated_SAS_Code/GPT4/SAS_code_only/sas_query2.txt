@@ -1,0 +1,5 @@
+
+PROC SGPLOT DATA=chisq;
+    HISTOGRAM df;
+RUN;
+

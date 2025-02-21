@@ -1,0 +1,1 @@
+For the dataset of elemapi2, analyze how the categorical variables mealcat and collcat relate to api00, assessing their impact on API performance in schools.

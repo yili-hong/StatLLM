@@ -1,0 +1,23 @@
+ods graphics on;
+
+proc reg data=fitness plots=(criteria sbc);
+   model Oxygen=Age Weight RunTime RunPulse RestPulse MaxPulse
+         / selection=forward details=summary;
+run;
+
+
+
+ 
+
+
+
+
+	
+
+
+	
+		
+	
+
+	
+	

@@ -1,0 +1,5 @@
+/* Perform linear regression to predict weight based on height */
+proc reg data=measurement;
+   model Weight = Height;
+run;
+

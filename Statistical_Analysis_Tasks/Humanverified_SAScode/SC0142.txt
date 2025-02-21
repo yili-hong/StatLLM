@@ -1,0 +1,6 @@
+proc reg data = crime;
+  model crime = poverty single ;
+  output out = t student=res cookd = cookd h = lev;
+run;
+quit;
+

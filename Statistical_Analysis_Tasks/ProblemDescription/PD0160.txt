@@ -1,0 +1,1 @@
+For the dataset of baseball, display only the leverage plot and cook's distance plot with label after building a model to understand simple linear relationship logSalary and predictors nhits, nruns, nrbi, nbb, yrmajor, crhits, and

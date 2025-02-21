@@ -1,0 +1,4 @@
+
+proc reg data=auto;
+model price = mpg weight;
+run;

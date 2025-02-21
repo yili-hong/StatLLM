@@ -1,0 +1,5 @@
+proc anova data=toxic;
+class poison treatment;
+model life = poison treatment;
+run;
+

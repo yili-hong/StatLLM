@@ -1,0 +1,4 @@
+proc ttest data = hsb2；
+  class female;
+  var write;
+run;

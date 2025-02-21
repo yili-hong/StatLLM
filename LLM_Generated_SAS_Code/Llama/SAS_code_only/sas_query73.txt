@@ -1,0 +1,35 @@
+
+/* Import the glassid dataset */
+data glassid;
+  set glassid;
+  input id ri na al si ca type;
+  if type = 3 then vehicle_window_float = 1;
+  else if type = 4 then vehicle_window_float = 0;
+  else delete;
+run;
+
+/* Group by vehicle window type */
+proc sort data=glassid;
+  by vehicle_window_float;
+run;
+
+/* Normality test for Na by vehicle window type */
+proc univariate data=glassid normal;
+  by vehicle_window_float;
+  var na;
+  histogram na / normal;
+run;
+
+/* Box-Cox transformation to check for normality */
+proc transreg data=glassid;
+  model BoxCox(na) = vehicle_window_float / maxiter=0;
+  output out=boxcox p=nabox;
+run;
+
+/* Normality test for transformed Na */
+proc univariate data=boxcox normal;
+  by vehicle_window_float;
+  var nabox;
+  histogram nabox / normal;
+run;
+

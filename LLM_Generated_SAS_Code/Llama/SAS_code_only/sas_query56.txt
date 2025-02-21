@@ -1,0 +1,21 @@
+
+/* Load the sashelp.baseball dataset */
+data baseball;
+  set sashelp.baseball;
+  logSalary = log(salary);
+run;
+
+/* Perform multiple linear regression */
+proc reg data=baseball;
+  model logSalary = nhits nruns nrbi nbb yrmajor crhits / influence;
+  id name team league;
+  output out=residuals r=residual p=predicted;
+run;
+
+/* Plot Cook's D by observation */
+proc sgplot data=residuals;
+  scatter x=_obs_ y=cooksD;
+  xaxis label="Observation Number";
+  yaxis label="Cook's D";
+run;
+

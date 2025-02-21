@@ -1,0 +1,9 @@
+/* Set the options to display results with three decimal places */
+options pageno=1 pagesize=60 linesize=80;
+
+/* Proc Means to calculate default statistics */
+proc means data=BPressure mean std min max;
+   var Systolic Diastolic; /* Specify variables here if needed */
+   format Systolic Diastolic 8.3; /* Display results with three decimals */
+run;
+

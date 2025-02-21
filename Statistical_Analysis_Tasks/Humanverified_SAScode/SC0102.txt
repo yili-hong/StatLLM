@@ -1,0 +1,6 @@
+PROC GLM DATA=auto;
+  WHERE (rep78 = 3) OR (rep78 = 4) OR (rep78 = 5);
+  CLASS rep78;
+  MODEL mpg = rep78 ;
+  MEANS rep78 ;
+RUN;

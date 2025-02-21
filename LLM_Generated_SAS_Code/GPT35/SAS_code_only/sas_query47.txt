@@ -1,0 +1,6 @@
+
+/* Check the normality of the Sales variable */
+proc univariate data=shoes normal plot;
+    var Sales;
+run;
+

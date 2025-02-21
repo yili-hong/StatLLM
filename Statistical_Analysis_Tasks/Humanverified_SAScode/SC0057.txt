@@ -1,0 +1,24 @@
+proc reg data=sashelp.baseball
+         plots=(RStudentByLeverage(label) residuals(smooth));
+   where name^="Rose, Pete";
+   id name team league;
+   model logSalary = nhits nruns nrbi nbb yrmajor crhits;
+run;
+
+
+
+
+ 
+
+
+
+
+	
+
+
+	
+		
+	
+
+	
+	

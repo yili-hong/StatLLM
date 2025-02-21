@@ -1,0 +1,27 @@
+1, Name: lettuce_brand
+
+2. Data Set Information: 
+Lettuce heads data regarding the growth of lettuce versus the fertilizer
+3. Attribute Information:
+
+
+Attribute: Attribute Range
+
+(1). Fertilizer: brand of fertilizer
+(2). Heads: height of lettuce
+
+
+ 
+
+
+
+Reference:
+
+https://s3-us-west-2.amazonaws.com/mtvernon.wsu.edu/uploads/2016/12/SAS-Tutorial-6.pdf
+
+Citation: required 
+
+
+
+
+

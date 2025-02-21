@@ -1,0 +1,5 @@
+/* Calculate the pairwise correlation among locus_of_control, self_concept, and motivation */
+proc corr data=mvreg;
+   var locus_of_control self_concept motivation;
+run;
+

@@ -1,0 +1,26 @@
+/* Transpose the dataset to have one observation per individual per foot */
+PROC TRANSPOSE DATA=work.athelete
+	OUT=work.athelete_transpose (DROP=_NAME_)
+	PREFIX=Foot;
+	ID Subject;
+	VAR X Y;
+RUN;
+
+/* Create a new variable denoting whether the foot was cured or not */
+DATA work.athelete_transpose;
+	SET work.athelete_transpose;
+	IF Foot1='Cured' THEN Cured=1;
+	ELSE IF Foot1='Not Cured' THEN Cured=0;
+	ELSE DO;
+		PUT 'Invalid value for Foot1: ' Foot1;
+		STOP;
+	END;
+RUN;
+
+/* Perform McNemar's test */
+PROC FREQ DATA=work.athelete_transpose;
+  BY Subject;
+	TABLES Cured*Foot2/ AGREE;
+	EXACT AGREE;
+RUN;
+

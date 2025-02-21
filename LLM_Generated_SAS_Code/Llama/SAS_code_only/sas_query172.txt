@@ -1,0 +1,81 @@
+proc freq data=sample2014;
+    tables Rank / out=freq_table;
+run;
+
+proc sort data=freq_table;
+    by COUNT descending;
+run;
+
+proc print data=freq_table;
+run;
+
+proc freq data=sample2014;
+    tables Rank Gender Athlete Smoking State LiveOnCampus HowCommute / out=freq_table;
+run;
+
+proc sort data=freq_table;
+    by TABLE descending COUNT;
+run;
+
+proc print data=freq_table;
+run;
+
+proc freq data=sample2014;
+    tables Rank / out=freq_rank;
+    tables Gender / out=freq_gender;
+    tables Athlete / out=freq_athlete;
+    tables Smoking / out=freq_smoking;
+    tables State / out=freq_state;
+    tables LiveOnCampus / out=freq_liveoncampus;
+    tables HowCommute / out=freq_howcommute;
+run;
+
+proc sort data=freq_rank;
+    by COUNT descending;
+run;
+
+proc sort data=freq_gender;
+    by COUNT descending;
+run;
+
+proc sort data=freq_athlete;
+    by COUNT descending;
+run;
+
+proc sort data=freq_smoking;
+    by COUNT descending;
+run;
+
+proc sort data=freq_state;
+    by COUNT descending;
+run;
+
+proc sort data=freq_liveoncampus;
+    by COUNT descending;
+run;
+
+proc sort data=freq_howcommute;
+    by COUNT descending;
+run;
+
+proc print data=freq_rank;
+run;
+
+proc print data=freq_gender;
+run;
+
+proc print data=freq_athlete;
+run;
+
+proc print data=freq_smoking;
+run;
+
+proc print data=freq_state;
+run;
+
+proc print data=freq_liveoncampus;
+run;
+
+proc print data=freq_howcommute;
+run;
+

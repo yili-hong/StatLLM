@@ -1,0 +1,15 @@
+
+PROC GLMSELECT DATA=fitness;
+MODEL Oxygen = Age Weight RunTime RestPulse RunPulse MaxPulse / SELECTION=forward;
+OUTPUT OUT=FitResiduals1 P=PREDICT;
+TITLE 'Forward Model Selection OV: Oxygen';
+RUN;
+
+
+PROC REG DATA=fitness;
+MODEL Oxygen = Age Weight RunTime RestPulse RunPulse MaxPulse / SELECTION=forward;
+OUTPUT OUT=FitResiduals P=PREDICT;
+TITLE 'Forward Model Selection OV: Oxygen';
+RUN;
+QUIT;
+

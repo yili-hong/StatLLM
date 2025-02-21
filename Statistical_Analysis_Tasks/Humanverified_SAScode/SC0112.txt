@@ -1,0 +1,4 @@
+proc univariate data = hsb2
+loccount mu0 = 50;
+  var write;
+run;

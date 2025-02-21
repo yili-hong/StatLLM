@@ -1,0 +1,5 @@
+proc reg data=crack;
+   model load = age agef / overlay;
+   plot load*age agef;
+run;
+

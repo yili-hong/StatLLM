@@ -1,0 +1,10 @@
+/* Calculate 20% Winsorized Mean for the 'Sales' variable */
+proc univariate data=shoes windsorized=0.20 noprint;
+    var Sales;
+    output out=summary mean=Winsorized_Mean_20pct;
+run;
+
+/* Display the results */
+proc print data=summary;
+run;
+

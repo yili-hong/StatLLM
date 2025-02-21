@@ -1,0 +1,1 @@
+For the sashelp.shoes dataset, which is avaialle through SAS help files. For the sales variable, with PCTLPTS= option, we can calculate custom percentiles. Suppose you need to generate 10, 20, 30, 40, 50, 60, 70, 80, 90, 100 percentiles.

@@ -1,0 +1,9 @@
+
+
+PROC GLM DATA=measurement;
+  CLASS Gender;
+  MODEL Weight=Gender Age Height;
+  MEANS Gender / HOVTEST=LEVEN;
+RUN;
+QUIT;
+

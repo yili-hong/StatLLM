@@ -1,0 +1,5 @@
+DATA sample_new_vars;
+    SET sample2014;
+    IF siblings >= 1 THEN sibling_indicator = 1;
+    IF siblings = 0 THEN sibling_indicator = 0;
+RUN;

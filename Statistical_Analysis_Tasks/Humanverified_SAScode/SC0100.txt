@@ -1,0 +1,7 @@
+data imports;
+	set imports;
+	logenginesize=log(enginesize);
+run;
+proc reg data=imports;
+	model logenginesize=curbweight;
+run;

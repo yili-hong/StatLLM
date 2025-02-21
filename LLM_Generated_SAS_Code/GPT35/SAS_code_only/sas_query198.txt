@@ -1,0 +1,6 @@
+/* Plot using PROC SGPLOT */
+proc sgplot data=highlow;
+  title 'Dow Jones Industrial Average - High Values by Year';
+  scatter x=Year y=DowJonesHigh / markerattrs=(symbol=circlefilled color=blue);
+run;
+

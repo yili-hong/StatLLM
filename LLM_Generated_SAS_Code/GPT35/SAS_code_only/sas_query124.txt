@@ -1,0 +1,7 @@
+/* Perform analysis of variance (ANOVA) */
+proc glm data=lettuce_fertilizer;
+  class Fertilizer;
+  model Heads = Fertilizer;
+  means Fertilizer / lsd clm alpha=0.05;
+run;
+

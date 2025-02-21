@@ -1,0 +1,4 @@
+proc logistic data= binary descending;
+  class rank / param=ref ;
+  model admit = gre gpa rank;
+run;

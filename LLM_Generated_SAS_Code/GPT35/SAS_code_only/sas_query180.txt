@@ -1,0 +1,4 @@
+PROC CORR DATA=mvreg PLOTS=NONE;
+   VAR read write science;
+RUN;
+

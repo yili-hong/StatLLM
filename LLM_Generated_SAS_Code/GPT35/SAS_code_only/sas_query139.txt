@@ -1,0 +1,6 @@
+proc glm data=elemapi2;
+   class mealcat collcat;
+   model api00 = mealcat|collcat;
+   lsmeans mealcat*collcat / slice=mealcat;
+run;
+

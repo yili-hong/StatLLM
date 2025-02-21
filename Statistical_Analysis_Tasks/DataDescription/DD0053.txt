@@ -1,0 +1,14 @@
+The dataset t3 is derived from the robust regression analysis performed on t2 using the Huber weighting method. Robust regression is designed to handle outliers and influential data points by assigning weights to observations, reducing the influence of those that deviate substantially from the trend.
+
+Key Features of Dataset t3:
+Source:
+Derived from t2, which includes Residuals, Leverage, Cook's Distance, and rabs (absolute residuals).
+Methodology:
+Robust Regression: Applied to predict Residuals using the independent variables while accounting for the Huber weights.
+The process uses Iterated Reweighted Least Squares (IWLS) to assign weights iteratively, refining them until convergence.
+Huber weights are designed to reduce the impact of outliers by applying smaller weights to observations with larger residuals.
+New Variable (Weights):
+The final weights computed during the IWLS process.
+Observations with smaller residuals receive higher weights, while those with larger residuals (potential outliers) receive lower weights.
+Structure:
+The dataset includes all columns from t2, with the addition of the Weights column.

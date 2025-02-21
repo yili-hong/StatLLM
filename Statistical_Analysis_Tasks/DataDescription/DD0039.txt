@@ -1,0 +1,28 @@
+1, Name:  Phospholipid
+
+2. Data Set Information: 
+This dataset mainly reflects the Plasma Phospholipid Variation in Lambs
+
+3. Attribute Information:
+
+
+Attribute: Attribute Range
+
+(1). Hormone 
+(2). Time 
+(3). Y 
+
+ 
+
+
+
+Reference:
+
+https://s3-us-west-2.amazonaws.com/mtvernon.wsu.edu/uploads/2016/12/SAS-Tutorial-6.pdf
+
+Citation: required 
+
+
+
+
+

@@ -1,0 +1,10 @@
+proc means data=your_dataset n mean std min max;
+  var q1-q5;
+run;
+
+proc means data=your_dataset n mean std min max;
+  var q1-q5;
+  title 'Summary Statistics for Survey Responses';
+  label q1-q5 = 'Survey Questions 1-5';
+run;
+

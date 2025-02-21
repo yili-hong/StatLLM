@@ -1,0 +1,5 @@
+proc ttest data=response sides=2 alpha=0.05 h0=0;
+	title "Paired sample t-test example";
+	paired Control * Treatment;
+run
+

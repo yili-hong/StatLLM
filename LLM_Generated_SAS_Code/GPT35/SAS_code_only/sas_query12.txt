@@ -1,0 +1,5 @@
+
+
+proc reg data=crack plots(only)=(diagnostics);
+model load = age agef;
+run;

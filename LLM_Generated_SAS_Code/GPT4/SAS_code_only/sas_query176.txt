@@ -1,0 +1,6 @@
+proc reg data=ART;
+   model TASK = CREATE;
+   title 'Linear Regression Analysis: Predicting TASK from CREATE';
+run;
+quit;
+

@@ -1,0 +1,1 @@
+For the dataset of elemapi, check whether there exists collinearity problems among the variables in the regression. 

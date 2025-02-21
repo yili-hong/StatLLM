@@ -1,0 +1,1 @@
+For the read dataset, create QQplots and test statistics for accessing Normality for the grade variable for each method.

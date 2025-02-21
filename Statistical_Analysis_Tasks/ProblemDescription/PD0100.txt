@@ -1,0 +1,1 @@
+For the dataset of imports,Fit a linear regression model for log(enginesize) as a function of curb weight.

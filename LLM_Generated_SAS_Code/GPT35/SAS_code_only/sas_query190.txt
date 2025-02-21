@@ -1,0 +1,6 @@
+
+/* Checking for missing values in the dataset */
+proc means data=survey_data nmiss;
+var Age Q1 Q2 Q3 Q4 Q5;
+run;
+

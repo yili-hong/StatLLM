@@ -1,0 +1,12 @@
+
+/* Subset data for building_windows_float_processed type only */
+DATA glass_sub;
+    SET glass;
+    IF Type = '1_building_windows_float_processed';
+RUN;
+
+/* One sample T-test */
+PROC TTEST DATA=glass_sub H0=1.52; 
+    VAR RI; 
+RUN;
+

@@ -1,0 +1,18 @@
+/* Sort the dataset by Gender and bday where bday is sorted in descending order */
+proc sort data=sample2014;
+    by Gender descending bday;
+run;
+
+/* Optional: Print the sorted dataset to view the results */
+proc print data=sample2014(obs=10); /* 'obs=10' limits the output to the first 10 observations */
+    title "First 10 Observations of Sorted Dataset";
+run;
+
+/* Converting string dates to SAS date format */
+data sample2014;
+    set sample2014;
+    bday = input(bday, mmddyy10.); /* Convert bday from string to SAS date */
+run;
+
+/* Now proceed with the aforementioned sorting code */
+

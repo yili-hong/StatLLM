@@ -1,0 +1,6 @@
+PROC IMPORT OUT=marketing_data 
+     DATAFILE='/StatLLM/Statistical_Analysis_Tasks/TaskDatasets/DS0023/marketing_data.csv' 
+     DBMS=CSV 
+     REPLACE; 
+     GETNAMES=YES; 
+RUN; 

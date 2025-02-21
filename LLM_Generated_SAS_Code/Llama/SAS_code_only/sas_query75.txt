@@ -1,0 +1,20 @@
+/* Create a new variable for grouped type */
+data glassid;
+  set glassid;
+  if type in (3) then grouped_type = 1;
+  else if type in (7) then grouped_type = 1;
+  else grouped_type = 0;
+run;
+
+/* Select only numeric variables and the new grouped type variable */
+data numeric_variables;
+  set glassid;
+  keep ri na al si ca grouped_type;
+run;
+
+/* Calculate the Pearson correlation matrix */
+proc corr data=numeric_variables;
+  by grouped_type;
+  var ri na al si ca;
+run;
+

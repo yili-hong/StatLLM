@@ -1,0 +1,9 @@
+proc glm data = elemapi2;
+  class collcat mealcat;
+  model api00 = collcat | mealcat /ss3;
+  lsmeans collcat*mealcat;
+  output out = pred p = pred;
+run;
+quit;
+
+

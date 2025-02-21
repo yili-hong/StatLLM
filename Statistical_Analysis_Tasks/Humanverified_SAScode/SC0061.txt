@@ -1,0 +1,4 @@
+proc glm data=imports;
+	class fueltype aspiration drivewheels;
+	model hp = fueltype aspiration drivewheels;
+run;

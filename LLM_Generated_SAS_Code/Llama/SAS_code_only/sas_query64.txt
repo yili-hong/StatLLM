@@ -1,0 +1,41 @@
+/* Create a new variable 'groupedtype' to categorize glass type into headlamps and others */
+data glassid;
+  set glassid;
+  if type = 7 then groupedtype = 'headlamps';
+  else groupedtype = 'others';
+run;
+
+/* Perform descriptive analysis of Sodium (Na) in glass type of headlamps */
+ods graphics / width=10in height=6in;
+ods noproctitle;
+ods html close;
+ods html;
+
+proc univariate data=glassid;
+  class groupedtype;
+  var na;
+  histogram na / midpoints=0 to 20 by 2;
+  by groupedtype;
+run;
+
+proc means data=glassid mean std min max maxdec=2;
+  class groupedtype;
+  var na;
+  by groupedtype;
+run;
+
+proc freq data=glassid;
+  tables groupedtype;
+run;
+
+/* Box Plot to compare Sodium (Na) levels across headlamps and others */
+ods graphics / width=10in height=6in;
+proc sgplot data=glassid;
+  vbox na / category=groupedtype;
+  xaxis label='Glass Type';
+  yaxis label='Sodium (Na)';
+run;
+
+ods html close;
+ods noproctitle;
+

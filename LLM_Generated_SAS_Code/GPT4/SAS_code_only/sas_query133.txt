@@ -1,0 +1,26 @@
+/* Assume the existing dataset 'hernio' is in the WORK library and contains 
+   variables 'id', 'leave', 'los', 'OKstatus' for 32 patients */
+
+/* Create a long format dataset suitable for the GLIMMIX procedure */
+data hernio_long;
+    set hernio;
+
+    /* Create entries for the 'leave' response */
+    Response_Type = 'leave';
+    Response_Value = leave;
+    output;
+
+    /* Create entries for the 'los' response */
+    Response_Type = 'los';
+    losValue = los;
+    Response_Value = losValue;
+    output;
+    
+    /* Removing the variable used for value transformation */
+    drop losValue;
+run;
+
+/* Output dataset */
+proc print data=hernio_long;
+run;
+

@@ -1,0 +1,18 @@
+
+proc anova data=imports2;
+    class fueltype aspiration drivewheels;
+    model hp = fueltype aspiration drivewheels;
+    run;
+
+
+proc anova data=imports2;
+    class fueltype aspiration drivewheels;
+    model hp = fueltype|aspiration|drivewheels;
+    run;
+
+
+proc anova data=imports2;
+    class fueltype aspiration drivewheels;
+    model hp = fueltype aspiration drivewheels fueltype*aspiration aspiration*drivewheels;
+    run;
+

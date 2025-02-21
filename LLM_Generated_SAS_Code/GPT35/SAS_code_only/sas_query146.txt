@@ -1,0 +1,5 @@
+data t2;
+   set t;
+   rabs = abs(Residuals);
+run;
+

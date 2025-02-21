@@ -1,0 +1,12 @@
+* Load the example dataset if not already loaded;
+data bmt;
+    set BMT;
+run;
+
+* Perform Kaplan-Meier survival estimation with PROC LIFETEST;
+proc lifetest data=bmt plots=survival;
+    time T*Status(0); * Specify the time to event and censoring indicator;
+    strata Group; * Stratify the analysis by the risk category in Group variable;
+    title 'Kaplan-Meier Survival Estimates for BMT Patients';
+run;
+

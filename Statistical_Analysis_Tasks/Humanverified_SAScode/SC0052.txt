@@ -1,0 +1,20 @@
+ods select trimmedmeans;
+ods output trimmedmeans=means;
+proc univariate trimmed = 0.2 data=sashelp.shoes;
+var sales;
+run;
+
+ 
+
+
+
+
+	
+
+
+	
+		
+	
+
+	
+	

@@ -1,0 +1,31 @@
+/* Import the dataset */
+data pulse_data;
+  set pulse_data;
+  input pulse group;
+run;
+
+/* Sort data by group */
+proc sort data=pulse_data;
+  by group;
+run;
+
+/* Calculate median and residuals for each group */
+proc means data=pulse_data noprint;
+  by group;
+  var pulse;
+  output out=medians median(pulse)=median_pulse residual(residuals);
+run;
+
+/* Calculate variance of residuals for each group */
+proc var data=medians noprint;
+  by group;
+  var residual_pulse; 
+run;
+
+/* Print results in a nice format */
+ods html file="results.html";
+title "Variance of Median-Based Residuals of Pulse among Groups";
+proc print data=variance_results label noobs; 
+var _TYPE_ GROUP N Mean StdDev Variance StdErr Minimum Maximum AUTO10001PULSE-residually ;
+label _TYPE_='Group' GROUP='Group ID' N='Number of Observations';
+ods html close; 

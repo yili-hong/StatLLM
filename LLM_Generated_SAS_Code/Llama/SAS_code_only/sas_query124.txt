@@ -1,0 +1,7 @@
+/* Perform ANOVA and Fisher's LSD procedure */
+proc anova data=lettuce_fertilizer;
+  class Fertilizer;
+  model Heads = Fertilizer;
+  means Fertilizer / lsd;
+run;
+

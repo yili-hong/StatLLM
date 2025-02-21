@@ -1,0 +1,8 @@
+
+PROC GLM DATA=copper;
+  CLASS temp pct;
+  MODEL warp = temp|pct;
+  MEANS temp|pct / TUKEY;
+RUN;
+QUIT;
+

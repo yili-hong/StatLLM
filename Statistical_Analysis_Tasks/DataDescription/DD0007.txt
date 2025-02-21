@@ -1,0 +1,8 @@
+In an experiment where the response time is measured with or without taking a drug. Each subject could have been measured twice, once in the absence of the drug (control value) and the other after taking the drug (treatment value).   
+
+The variable Control gives the response time for the control group.
+The variable Treatment gives the response time for the treatment group.  
+The dataset is named as response.
+
+
+

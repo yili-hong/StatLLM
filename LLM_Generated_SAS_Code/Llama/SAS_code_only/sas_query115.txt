@@ -1,0 +1,21 @@
+/* Perform a t-test to compare the means of 'write' for males and females */
+proc ttest data=hsb2;
+  class female;
+  var write;
+run;
+
+
+/* Perform a one-way ANOVA to compare the means of 'write' for males and females */
+proc glm data=hsb2;
+  class female;
+  model write = female;
+run;
+
+
+/* Perform a one-way ANOVA with a robust test for the difference between means */
+proc glm data=hsb2;
+  class female;
+  model write = female;
+  lsmeans female / pdiff=control('0');
+run;
+

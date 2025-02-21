@@ -1,0 +1,9 @@
+data t2;
+   set t;
+   rabs = abs(Residuals);
+run;
+
+proc sort data=t2;
+   by descending rabs;
+run;
+

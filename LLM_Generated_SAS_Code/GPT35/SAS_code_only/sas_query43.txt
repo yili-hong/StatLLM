@@ -1,0 +1,10 @@
+proc univariate data=sashelp.shoes noprint;
+    var Sales;
+    by Region;
+    output out=Sales_Stats pctlpre=P_ pctlpts=10 to 90 by 10 pctlname=p_;
+run;
+
+proc print data=Sales_Stats;
+    var Region P_10 - P_90;
+run;
+

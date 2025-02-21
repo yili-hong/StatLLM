@@ -1,0 +1,34 @@
+The marketing_data.csv file contains information about a simulated email marketing campaign conducted on 20 customers. The dataset includes variables tracking customer behavior and responses to the campaign. Below is the description of each column:
+
+Customer_ID:
+Unique identifier for each customer.
+Type: Integer.
+Group:
+Indicates whether the customer belongs to the control or treatment group.
+Values:
+Control: Received an email without a discount offer.
+Treatment: Received an email with a 20% discount offer.
+Type: Categorical.
+Opened_Email:
+Indicates whether the customer opened the email.
+Values:
+1: Opened the email.
+0: Did not open the email.
+Type: Binary.
+Clicked_Link:
+Indicates whether the customer clicked on the product link in the email.
+Values:
+1: Clicked the link.
+0: Did not click the link.
+Type: Binary.
+Purchased:
+Indicates whether the customer made a purchase after receiving the email.
+Values:
+1: Made a purchase.
+0: Did not make a purchase.
+Type: Binary.
+Revenue:
+The amount of money spent by the customer (in dollars).
+Value is 0 if the customer did not make a purchase.
+Type: Continuous numeric.
+This dataset is designed for statistical analysis and machine learning tasks such as exploring customer behaviors, testing campaign effectiveness, and predicting purchase likelihood.

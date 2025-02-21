@@ -1,0 +1,17 @@
+* Example SAS Code;
+data grades;
+    set grades;  /* Replace your_dataset with the name of your dataset */
+    /* Categorize exam grades into intervals */
+    if ExamGrade1 >= 90 then GradeCategory = '90-100';
+    else if ExamGrade1 >= 80 then GradeCategory = '80-89';
+    else if ExamGrade1 >= 70 then GradeCategory = '70-79';
+    else if ExamGrade1 >= 60 then GradeCategory = '60-69';
+    else GradeCategory = 'Below 60';
+run;
+
+* Create a frequency chart;
+proc freq data=grades;
+    tables GradeCategory / nocum nocol norow nopercent;
+    title 'Frequency Chart for Exam Grades 1';
+run;
+

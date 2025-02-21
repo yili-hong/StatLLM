@@ -1,0 +1,5 @@
+PROC ANOVA DATA=toxic;
+   CLASS treatment;
+   MODEL life = treatment;
+   MEANS treatment / TUKEY;
+RUN;

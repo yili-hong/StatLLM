@@ -1,0 +1,47 @@
+/* Explore the data */
+proc print data=measurement;
+  var Gender Height Weight Age;
+run;
+
+/* Perform linear regression to investigate the impact of height on weight */
+proc reg data=measurement;
+  model Weight = Height;
+  output out=prediction p=predicted;
+run;
+
+/* Print the regression output */
+proc print data=prediction;
+  var Height Weight predicted;
+run;
+
+/* Predict weight based on a given height value */
+data prediction;
+  set prediction;
+  if Height = 175 then Weight_Predicted = predicted;
+run;
+
+proc print data=prediction;
+  var Height Weight predicted Weight_Predicted;
+run;
+
+
+/* Predict weight based on a given height value */
+data new;
+  input Height;
+  datalines;
+175
+;
+
+proc reg data=measurement;
+  model Weight = Height;
+  output out=prediction p=predicted;
+run;
+
+proc score data=new score=measurement type=parms out=prediction_new;
+  var Height;
+run;
+
+proc print data=prediction_new;
+  var Height predicted;
+run;
+

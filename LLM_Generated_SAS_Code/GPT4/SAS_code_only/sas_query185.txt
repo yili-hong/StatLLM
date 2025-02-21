@@ -1,0 +1,15 @@
+proc sql;
+   title "Total Amount Sold by Each Sales Representative";
+   select SalesRep, sum(AmountSold) as TotalAmountSold
+   from year_sales
+   group by SalesRep
+   order by SalesRep;
+quit;
+
+proc tabulate data=year_sales;
+   class SalesRep;
+   var AmountSold;
+   table SalesRep, 
+        AmountSold*sum='Total Amount Sold' / misstext='0';
+run;
+

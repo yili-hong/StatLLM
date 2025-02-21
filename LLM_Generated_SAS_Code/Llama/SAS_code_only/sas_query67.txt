@@ -1,0 +1,19 @@
+/* Fit the linear model */
+proc reg data=iron;
+  model loss = fe;
+  output out=iron_pred predicted=pred residual=res;
+run;
+
+/* Print the model summary */
+proc print data=iron_pred;
+  var fe loss pred res;
+run;
+
+/* Plot the data and the regression line */
+proc sgplot data=iron_pred;
+  scatter x=fe y=loss;
+  series x=fe y=pred;
+  xaxis label="Iron Content (fe)";
+  yaxis label="Weight Loss (loss)";
+run;
+

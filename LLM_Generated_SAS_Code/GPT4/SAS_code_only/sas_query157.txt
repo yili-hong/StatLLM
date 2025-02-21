@@ -1,0 +1,11 @@
+/* Check for any missing values in the relevant columns and handle them if necessary */
+proc sort data=work.sample2014;
+    where Gender in (0, 1) and not missing(Writing);
+run;
+
+/* Independent Samples t-Test */
+proc ttest data=work.sample2014;
+    class Gender;
+    var Writing;
+run;
+

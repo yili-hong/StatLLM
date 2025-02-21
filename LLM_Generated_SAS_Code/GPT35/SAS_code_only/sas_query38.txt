@@ -1,0 +1,14 @@
+proc glm data=measurement;
+   model height = weight weight*weight / noint;
+   output out=residuals r=residual;
+run;
+
+data residuals;
+   set residuals;
+   residual_squared = residual**2;
+run;
+
+proc print data=residuals;
+   title 'Residuals for Quadratic Relationship of Height on Weight';
+run;
+

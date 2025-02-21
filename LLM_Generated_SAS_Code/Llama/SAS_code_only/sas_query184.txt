@@ -1,0 +1,6 @@
+proc freq data=year_sales;
+  tables SalesRep;
+run;
+
+
+

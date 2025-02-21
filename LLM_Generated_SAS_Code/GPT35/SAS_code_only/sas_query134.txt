@@ -1,0 +1,5 @@
+proc logistic data=hernio_uv;
+   class OKstatus;
+   model response(event='1') = age OKstatus / link=logit dist=binary;
+run;
+

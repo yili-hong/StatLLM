@@ -1,0 +1,5 @@
+PROC TTEST DATA=FERT;
+CLASS BRAND;
+VAR HEIGHT;
+Title 'Independent Group t-Test Example';
+RUN;

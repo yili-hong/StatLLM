@@ -1,0 +1,4 @@
+PROC FREQ DATA=abalone;
+  TABLES Weightgroup * Sex / CHISQ;
+RUN;
+

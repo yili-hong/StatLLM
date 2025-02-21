@@ -1,0 +1,12 @@
+/* Perform ANOVA for wheelbase by fuel type, aspiration, and drive wheels */
+proc glm data=imports;
+  class fueltype aspiration drivewheels;
+  model wheelbase = fueltype aspiration drivewheels fueltype*aspiration fueltype*drivewheels aspiration*drivewheels;
+  means fueltype / hovtest=levene;
+  means aspiration / hovtest=levene;
+  means drivewheels / hovtest=levene;
+  lsmeans fueltype / pdiff adjust=tukey;
+  lsmeans aspiration / pdiff adjust=tukey;
+  lsmeans drivewheels / pdiff adjust=tukey;
+run;
+

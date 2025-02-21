@@ -1,0 +1,6 @@
+PROC IMPORT OUT=racecounts 
+     DATAFILE='/StatLLM/Statistical_Analysis_Tasks/TaskDatasets/DS0014/racecounts.csv' 
+     DBMS=CSV 
+     REPLACE; 
+     GETNAMES=YES; 
+RUN; 

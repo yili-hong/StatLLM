@@ -1,0 +1,5 @@
+proc ttest data=diabetic;
+   paired Number;
+   class Treatment;
+run;
+

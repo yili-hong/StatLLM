@@ -1,0 +1,8 @@
+PROC FREQ DATA=sample2014.ORDER=FREQ;
+TABLES Variable_Name / OUT=FreqTable;
+RUN;
+
+PROC SORT DATA=FreqTable;
+BY descending COUNT;
+RUN;
+

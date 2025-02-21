@@ -1,0 +1,4 @@
+PROC CORR data=mvreg
+   var locus_of_control self_concept motivation;
+run;
+

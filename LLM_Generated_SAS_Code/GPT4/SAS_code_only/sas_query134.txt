@@ -1,0 +1,11 @@
+/* Applying PROC LOGISTIC to analyze the binary distribution */
+proc logistic data=hernio_uv;
+   /* Only select records where dist is 'Binary' */
+   where dist = 'Binary';
+   /* Defining the model with response as the dependent variable and 
+      age and OKstatus as independent predictors */
+   model response(event='1') = age OKstatus / lackfit rsquare;
+   /* Print out the odds ratio for interpretability */
+   oddsratio age OKstatus;
+run;
+

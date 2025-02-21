@@ -1,0 +1,13 @@
+proc sgplot data=highlow;
+  xaxis label="Year";
+  yaxis label="Dow Jones Low";
+  series x=Year y=DowJonesLow;
+run;
+
+proc sgplot data=highlow;
+  title "Dow Jones Low by Year";
+  xaxis label="Year";
+  yaxis label="Dow Jones Low";
+  series x=Year y=DowJonesLow / lineattrs=(color=blue);
+run;
+

@@ -1,0 +1,1 @@
+For the dataset of ART, Develop an equation (a linear regression line) for predicting the TASK score given a value of CREATE score.

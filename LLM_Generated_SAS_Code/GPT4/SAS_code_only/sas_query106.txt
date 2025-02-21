@@ -1,0 +1,9 @@
+
+/* Calculate correlations among price, mpg, and weight */
+proc corr data=auto noprint outp=corr_out;
+   var price mpg weight;
+run;
+
+/* Print correlation results */
+proc print data=corr_out;
+run;

@@ -1,0 +1,36 @@
+proc sql;
+    select Age,
+           /* Non-missing counts for each question */
+           count(Q1) as Q1_NonMissing, 
+           count(Q2) as Q2_NonMissing,
+           count(Q3) as Q3_NonMissing,
+           count(Q4) as Q4_NonMissing,
+           count(Q5) as Q5_NonMissing,
+
+           /* Missing counts for each question */
+           sum(case when Q1 is null then 1 else 0 end) as Q1_Missing,
+           sum(case when Q2 is null then 1 else 0 end) as Q2_Missing,
+           sum(case when Q3 is null then 1 else 0 end) as Q3_Missing,
+           sum(case when Q4 is null then 1 else 0 end) as Q4_Missing,
+           sum(case when Q5 is null then 1 else 0 end) as Q5_Missing
+    from your_dataset
+    group by Age;
+quit;
+
+data work.transformed;
+    set your_dataset;
+    array qs Q1-Q5;
+    array missing_Qs(5) Q1_missing-Q5_missing;
+
+    do i = 1 to 5;
+        if qs(i) = . then missing_Qs(i) = 1;
+        else missing_Qs(i) = 0;
+    end;
+    drop i;
+run;
+
+proc freq data=work.transformed;
+    tables Age*(Q1_missing--Q5_missing) / missing nocum norow nocol nopercent;
+    /* Additional output options can be specified */
+run;
+

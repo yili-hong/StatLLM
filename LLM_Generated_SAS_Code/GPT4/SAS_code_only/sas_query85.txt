@@ -1,0 +1,12 @@
+
+PROC FREQ DATA=your_dataset;
+    TABLES agegroup /NOCUM NOCOL NOPERCENT;
+    TITLE "Frequency distribution of agegroup";
+RUN;
+
+
+PROC FREQ DATA=your_dataset;
+    TABLES agegroup;
+    TITLE "Frequency distribution of agegroup";
+RUN;
+

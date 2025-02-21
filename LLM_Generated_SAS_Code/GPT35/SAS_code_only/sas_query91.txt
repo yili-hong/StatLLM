@@ -1,0 +1,5 @@
+
+PROC ANOVA DATA=manova;
+  CLASS Group;
+  MODEL Useful = Group;
+RUN;

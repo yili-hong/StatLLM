@@ -1,0 +1,11 @@
+/* Create new dataset t2 with additional variable rabs */
+data t2;
+  set t;
+  rabs = abs(Residuals);
+run;
+
+/* Print first 10 observations of t2 */
+proc print data=t2 (obs=10);
+  var Residuals Leverage 'Cook''s Distance'n rabs;
+run;
+

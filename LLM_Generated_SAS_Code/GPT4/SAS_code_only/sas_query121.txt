@@ -1,0 +1,12 @@
+/* Assuming the dataset is named HEADACHE_MEDS and contains columns for medicine brand and time to relief */
+/* 1 represents Brand 1, 2 represents Brand 2, and 3 represents Brand 3 */
+
+/* Example code for comparing time to relief for the three headache medicine brands */
+proc ttest data=HEADACHE_MEDS;
+   class medicine_brand;
+   var time_to_relief;
+   ods select ttests;
+   title 'Comparison of Time to Relief for Three Headache Medicines';
+   title2 'Brand 1 vs. Brand 2 vs. Brand 3';
+   means medicine_brand / tukey clm;
+run;

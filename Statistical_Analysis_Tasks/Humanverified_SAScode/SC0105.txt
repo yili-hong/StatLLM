@@ -1,0 +1,29 @@
+
+proc reg data=imports;
+    title "Regression Model: Engine Size vs. Curb Weight, Horsepower, and City MPG";
+    model enginesize = curbweight hp citympg;
+    /* Output parameter estimates, fit statistics, and ANOVA table */
+    ods select ParameterEstimates FitStatistics ANOVA;
+run;
+quit;
+
+proc reg data=imports;
+    model enginesize = curbweight hp citympg;
+    /* Output Cook's Distance for diagnostic purposes */
+    output out=diagnostics cookd=CookD;
+    title "Diagnostics for Regression Model: Cook's Distance";
+run;
+quit;
+
+
+data imports_clean;
+    set diagnostics;
+    if CookD < 0.5;
+run;
+
+proc reg data=imports_clean;
+    model enginesize = curbweight hp citympg;
+    ods select ParameterEstimates FitStatistics ANOVA;
+    title "Refined Regression Model After Removing Influential Observations";
+run;
+quit;

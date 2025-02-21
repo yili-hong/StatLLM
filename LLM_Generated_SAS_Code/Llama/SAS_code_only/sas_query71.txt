@@ -1,0 +1,15 @@
+
+/* Import the glassid dataset */
+data glassid;
+  set glassid;
+  input id ri na al si ca type;
+  if type = 3 then vehicle_window_ri = ri;
+  else vehicle_window_ri = .;
+run;
+
+/* Perform a t-test to check whether the mean of RI of glass type of vehicle window is significantly different from 1.52 */
+proc ttest data=glassid h0=1.52 alpha=0.05;
+  var vehicle_window_ri;
+  where type = 3;
+run;
+

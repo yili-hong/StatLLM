@@ -1,0 +1,16 @@
+
+/* Create a frequency table for the 'Major' variable */
+proc freq data=sample2014 noprint;
+    table Major / out=major_freq;
+run;
+
+/* Sort the frequency table in descending order based on the 'Count' column */
+proc sort data=major_freq;
+    by descending count;
+run;
+
+/* Print the sorted frequency table */
+proc print data=major_freq;
+    title "Frequency Table Sorted by Count of Major";
+run;
+

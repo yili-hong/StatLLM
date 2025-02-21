@@ -1,0 +1,7 @@
+
+/* Perform chi-square test */
+proc freq data=auto order=data;
+    tables rep78*foreign / chisq nocum nopercent norow relrisk plots=freqplot ;
+run;
+
+proc print data=auto; run; 

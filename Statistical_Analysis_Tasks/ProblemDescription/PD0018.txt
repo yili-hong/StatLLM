@@ -1,0 +1,1 @@
+For the sleep dataset, an alternative test of one sample median test can be used, in which case we test the median (not mean) sleeping time is different than 7 hours. This is done with the loccount option on the proc univariate. 

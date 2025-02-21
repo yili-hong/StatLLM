@@ -1,0 +1,1 @@
+For the dataset of imports, Based on the regression of engine size versus all continuous variables in the regression, check whether there exists unduly influential observations.

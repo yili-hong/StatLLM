@@ -1,0 +1,9 @@
+
+/* Step 2: Perform the Levene's Test using PROC GLM (General Linear Model Procedure) */
+
+PROC GLM DATA=work.lettuce_brand;
+  CLASS Fertilizer;  /* categorical variable */
+  MODEL Heads = Fertilizer;  /* response variable and its predictors */
+  MEANS Fertilizer / HOVTEST=LEVENE;  /* performs the Levene’s test */
+RUN;
+

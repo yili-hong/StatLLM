@@ -1,0 +1,8 @@
+Three reading instructions are given to 15 jubjects; then a reading test is given where the number of words per minute is recorded for each subject.  
+
+The variable words is the response variable, which gives the number of words.
+The variable method gives the types of reading instructions. 
+The dataset is named as words.
+
+
+

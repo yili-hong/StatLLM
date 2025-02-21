@@ -1,0 +1,11 @@
+/* Filter the dataset for glass types of vehicle windows and headlamps combined (groupedtype) */
+data glassid2_filtered;
+   set glassid2;
+   if Type in (3, 7); /* Select Type 3 (vehicle_windows_float_processed) and Type 7 (headlamps) */
+run;
+
+/* Compute the Pearson correlation matrix for the numeric variables */
+proc corr data=glassid2_filtered pearson nosimple;
+   var RI Na Al Si Ca;
+run;
+

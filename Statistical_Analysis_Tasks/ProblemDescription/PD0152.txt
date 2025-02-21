@@ -1,0 +1,1 @@
+Using the dataset t3, print the first 15 observations keeping variables with state, crime, poverty, single, res, cookd, lev,and wgt.

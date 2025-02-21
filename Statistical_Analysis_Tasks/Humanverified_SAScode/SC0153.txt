@@ -1,0 +1,4 @@
+title 'Box Plot for Power Output';
+proc boxplot data=Turbine;
+   plot KWatts*Day;
+run;

@@ -1,0 +1,14 @@
+
+/* Check normality of the 'Sales' variable using Shapiro-Wilk test and normal probability plot */
+
+/* Shapiro-Wilk test */
+proc univariate data=sashelp.shoes normal;
+  var Sales;
+run;
+
+/* Normal probability plot */
+ods graphics / width=8in height=6in;
+proc univariate data=sashelp.shoes plots normal;
+  var Sales;
+run;
+

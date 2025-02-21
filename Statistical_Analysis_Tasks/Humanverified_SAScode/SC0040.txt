@@ -1,0 +1,10 @@
+proc univariate data=read normal; 
+		qqplot grade /Normal(mu=est sigma=est color=red l=1);
+		by method;
+		run;
+	
+		
+	
+
+	
+	

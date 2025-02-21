@@ -1,0 +1,10 @@
+/* Create a frequency table for the 'agegroup' variable */
+proc freq data=abalone;
+  tables agegroup;
+run;
+
+
+proc freq data=abalone;
+  tables agegroup / nocum plots=freqplot;
+run;
+

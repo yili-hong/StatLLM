@@ -1,0 +1,43 @@
+
+data abalone;
+   set abalone;
+run;
+
+
+proc glm data = abalone;
+    class sex;
+    model whole_weight = sex;
+    means sex/duncan alpha=0.05;    
+run;
+quit;
+
+
+proc glm data = abalone;
+   class sex;
+   model whole_weight = sex /hsb; 
+   lsmeans sex/diff adjust=tukey lines;
+run;
+quit;
+
+
+proc glm data=abalone;
+   class sex;
+   model whole_weight = sex;
+   test h=sex;
+run;
+quit;
+
+
+proc ttest data=abalone;
+   class sex;
+   var whole_weight;
+run;
+
+
+proc glm data = abalone;
+    class sex;
+    model whole_weight = sex;
+    means sex / tukey; /*pairwise comparisons with Tukey adjustment for multiple comparisons*/
+run;
+quit;
+

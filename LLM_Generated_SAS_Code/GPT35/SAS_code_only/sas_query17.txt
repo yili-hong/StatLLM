@@ -1,0 +1,10 @@
+/* Calculate sample statistics */
+proc means data=sleeptime mean std meancl alpha=0.1;
+var time;
+run;
+
+/* One-sample t-test to test if the mean is different from 7 */
+proc ttest data=sleeptime h0=7;
+var time;
+run;
+

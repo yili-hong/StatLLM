@@ -1,0 +1,22 @@
+data sashelp.shoes;
+   set sashelp.shoes;
+run;
+
+/* Summary for SALES variable */
+proc univariate data=sashelp.shoes noprint;
+   var Sales;
+   output out=Sales_Summary
+       mean=Mean
+       median=Median
+       min=Min
+       max=Max
+       q1=Q1
+       q3=Q3
+       n=N;
+run;
+
+/* Display the summary statistics */
+proc print data=Sales_Summary;
+   title 'Summary of SALES variable in Sashelp.shoes dataset';
+run;
+

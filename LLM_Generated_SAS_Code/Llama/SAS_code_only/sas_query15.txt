@@ -1,0 +1,23 @@
+
+/* One-way ANOVA for life with respect to treatment */
+
+proc anova data=toxic;
+  class treatment;
+  model life = treatment;
+  means treatment / tukey;
+run;
+
+
+/* One-way ANOVA for life with respect to treatment */
+
+proc anova data=toxic;
+  class treatment;
+  model life = treatment;
+  means treatment / tukey alpha=0.05;
+  lsmeans treatment / pdiff;
+  output out=anova_output;
+run;
+
+proc print data=anova_output;
+run;
+

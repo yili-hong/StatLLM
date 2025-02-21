@@ -1,0 +1,4 @@
+proc anova data=retention;
+      class Fe Zn;
+	  model retention = Fe Zn Fe*Zn;
+run;

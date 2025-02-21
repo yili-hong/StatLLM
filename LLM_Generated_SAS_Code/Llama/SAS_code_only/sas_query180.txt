@@ -1,0 +1,9 @@
+proc corr data=mvreg;
+  var read write science;
+run;
+
+proc corr data=mvreg;
+  var read write science;
+  with read write science;
+run;
+

@@ -1,0 +1,6 @@
+proc glm data=imports2;
+  class fueltype drivewheels;
+  model wheelbase = fueltype drivewheels fueltype*drivewheels / solution;
+  lsmeans fueltype drivewheels fueltype*drivewheels / adjust=tukey;
+run;
+

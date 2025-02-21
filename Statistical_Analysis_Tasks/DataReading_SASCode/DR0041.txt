@@ -1,0 +1,6 @@
+PROC IMPORT OUT=elemapi 
+     DATAFILE='/StatLLM/Statistical_Analysis_Tasks/TaskDatasets/DS0041/elemapi.csv' 
+     DBMS=CSV 
+     REPLACE; 
+     GETNAMES=YES; 
+RUN; 

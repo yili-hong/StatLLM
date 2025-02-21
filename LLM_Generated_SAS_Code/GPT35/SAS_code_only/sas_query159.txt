@@ -1,0 +1,3 @@
+proc reg data=baseball;
+   model logSalary = nhits nruns nrbi nbb yrmajor crhits;
+run;

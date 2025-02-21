@@ -1,0 +1,6 @@
+PROC IMPORT OUT=chisq 
+     DATAFILE='/StatLLM/Statistical_Analysis_Tasks/TaskDatasets/DS0001/chisq.csv' 
+     DBMS=CSV 
+     REPLACE; 
+     GETNAMES=YES; 
+RUN; 

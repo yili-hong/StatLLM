@@ -1,0 +1,4 @@
+proc robustreg data=t2 outest=t4_est;
+    model crime = poverty single;
+    output out=t4_pred p=Predicted_Rcrime r=Residual_Rcrime;
+run;

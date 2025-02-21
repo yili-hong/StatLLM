@@ -1,0 +1,38 @@
+/* Load the baseball dataset */
+data baseball;
+  set baseball;
+run;
+
+/* Omit the observation where name=Pete Rose */
+data baseball_rose_omitted;
+  set baseball;
+  if name ^= "Pete Rose";
+run;
+
+/* Build the linear regression model */
+proc reg data=baseball_rose_omitted;
+  model logSalary = nAtBat nHits nHome nRuns nRBI nBB YrMajor CrAtBat CrHits CrHome CrRuns CrRbi CrBB;
+  output out=results p=predicted r=residual;
+run;
+
+/* Create leverage plot with label */
+proc plot data=results;
+  plot predicted * residual / vref=0;
+  label predicted="Predicted Log Salary";
+  label residual="Residual";
+  symbol1 v=dot color=black;
+run;
+
+/* Create residual plot */
+proc plot data=results;
+  plot nAtBat * residual / vref=0;
+  label nAtBat="Times at Bat in 1986";
+  label residual="Residual";
+  symbol1 v=dot color=black;
+run;
+
+/* Leverage plot with Cook's Distance */
+proc reg data=baseball_rose_omitted plots(only)=(cooksd);
+  model logSalary = nAtBat nHits nHome nRuns nRBI nBB YrMajor CrAtBat CrHits CrHome CrRuns CrRbi CrBB;
+run;
+

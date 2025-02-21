@@ -1,0 +1,7 @@
+/* Kruskal-Wallis test */
+proc npar1way data=poplar Wilcoxon;
+   class treatment;
+   var weight;
+   exact Wilcoxon;
+run;
+

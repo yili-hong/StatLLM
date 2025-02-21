@@ -1,0 +1,10 @@
+
+/* Checking the data */
+proc print data=elemapi2;
+run;
+
+/* Performing the regression analysis */
+proc reg data=elemapi2;
+    model api00 = acs_k3 meals full;
+run;
+

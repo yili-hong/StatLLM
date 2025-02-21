@@ -1,0 +1,4 @@
+Proc Means data = test N NMISS NOLABELS;
+Class Age;
+Var q1 - q5;
+Run;

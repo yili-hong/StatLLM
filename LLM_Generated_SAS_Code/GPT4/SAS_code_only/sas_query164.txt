@@ -1,0 +1,8 @@
+/* Assuming the dataset BPressure is already loaded in the SAS environment */
+
+/* PROC MEANS to calculate descriptive statistics and quantiles */
+proc means data=BPressure N mean std min max p25 p50 p75;
+   var Systolic Diastolic;
+   title "Descriptive Statistics and Quantiles for Systolic and Diastolic Blood Pressure";
+run;
+

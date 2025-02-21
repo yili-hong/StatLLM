@@ -1,0 +1,11 @@
+
+ods trace on;  /* Turns on ODS tracing to get table names. */
+
+proc means data=sashelp.shoes n mean std min max;
+  class Region;  /* We categorize by Region. */
+  var Sales;  /* We are calculating statistics for Sales. */
+  output out=Sales_Stats; /* Output dataset with statistics. */
+run;
+
+ods trace off; /* Turns off ODS tracing. */
+

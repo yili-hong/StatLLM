@@ -1,0 +1,25 @@
+/* Fit the linear regression model */
+proc reg data=imports;
+  model log(enginesize) = curbweight;
+  output out=model_out predicted=predicted residual=residual;
+run;
+
+/* Print the regression output */
+proc print data=model_out;
+  var curbweight enginesize predicted residual;
+run;
+
+/* Print the regression coefficients */
+proc print data=reg_out;
+  var parameter estimate;
+  where parameter='Intercept' or parameter='curbweight';
+run;
+
+/* Plot the data and the regression line */
+proc sgplot data=model_out;
+  scatter x=curbweight y=enginesize;
+  reg x=curbweight y=enginesize / lineattrs=(color=red);
+  xaxis label='Curb Weight';
+  yaxis label='Engine Size (log)';
+run;
+

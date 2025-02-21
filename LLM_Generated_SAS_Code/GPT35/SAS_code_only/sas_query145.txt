@@ -1,0 +1,8 @@
+data large_cooks_d;
+    set t;
+    if CooksD > 4/51;
+run;
+
+proc print data=large_cooks_d;
+run;
+

@@ -1,0 +1,17 @@
+
+
+/* Fit the regression model with logSalary as response and specified predictors */
+proc reg data=baseball;
+  model logSalary = nhits nruns nrbi nbb yrmajor crhits;
+run;
+
+/* Create a new dataset with predicted values */
+data baseball_predicted;
+  set baseball;
+  predicted_logSalary = _Predicted_;
+run;
+
+/* Print the dataset with predicted values */
+proc print data=baseball_predicted;
+run;
+

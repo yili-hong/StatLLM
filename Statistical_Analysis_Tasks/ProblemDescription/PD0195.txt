@@ -1,0 +1,1 @@
+Print first 5 observations

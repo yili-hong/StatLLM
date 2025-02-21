@@ -1,0 +1,1 @@
+For the dataset of mvreg, measure the degree to which the various independent variable (read, write, science, and prog) and various dependent variables (locus_of_control, self_concept,and motivation ) are linearly related to each other. 

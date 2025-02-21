@@ -1,0 +1,8 @@
+/* Fit ANOVA model */
+proc glm data=imports;
+    class fueltype aspiration drivewheels;
+    model hp = fueltype aspiration drivewheels;
+    means fueltype aspiration drivewheels / hovtest=levene;
+    title 'ANOVA Model for Horsepower vs. Fueltypes, Aspiration, and Drivewheels';
+run;
+

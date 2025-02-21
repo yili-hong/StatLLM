@@ -1,0 +1,23 @@
+
+/* Display the dataset content */
+PROC PRINT DATA=work.sample2014(OBS=10);
+    TITLE 'First 10 Observations of Imported Data';
+RUN;
+
+/* Create a new dataset where you calculate the BMI and convert height from inches to meters */
+DATA work.student_bmi;
+    SET work.sample2014;
+    /* Convert Height from inches to meters (1 inch = 0.0254 meters) */
+    Height_meters = Height * 0.0254;
+    /* Calculate BMI: BMI formula is weight in kg divided by square of height in meters.
+       Weight is in pounds, and 1 pound = 0.453592 kg */
+    Weight_kg = Weight * 0.453592;
+    BMI = Weight_kg / (Height_meters**2);
+RUN;
+
+/* Display the new dataset with BMI and converted height */
+PROC PRINT DATA=work.student_bmi;
+    TITLE "BMI and Converted Heights";
+    VAR ids Height Height_meters Weight BMI;
+RUN;
+

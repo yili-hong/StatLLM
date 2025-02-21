@@ -1,0 +1,1 @@
+For the dataset of lettuce_brand, produce Levene’s test for equality of the variances of heads among different fertilizer. 

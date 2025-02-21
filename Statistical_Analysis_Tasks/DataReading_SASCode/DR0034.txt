@@ -1,0 +1,6 @@
+PROC IMPORT OUT=ACHE 
+     DATAFILE='/StatLLM/Statistical_Analysis_Tasks/TaskDatasets/DS0034/ACHE.csv' 
+     DBMS=CSV 
+     REPLACE; 
+     GETNAMES=YES; 
+RUN; 

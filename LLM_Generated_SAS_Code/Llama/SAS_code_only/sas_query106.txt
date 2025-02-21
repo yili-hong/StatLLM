@@ -1,0 +1,6 @@
+
+
+/* Examine the correlations among price, mpg, and weight */
+proc corr data=auto;
+  var price mpg weight;
+run;

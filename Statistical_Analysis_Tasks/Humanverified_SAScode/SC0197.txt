@@ -1,0 +1,5 @@
+proc phreg data=BMT;
+ class group(ref='2') / param=ref;
+ model t*status(0) = group / ties=breslow;
+ hazardratio group / diff=ref;
+run; 

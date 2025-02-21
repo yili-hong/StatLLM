@@ -1,0 +1,8 @@
+proc freq data=sashelp.bmt;
+  tables Group;
+run;
+
+proc freq data=sashelp.bmt;
+  tables Group / list;
+run;
+

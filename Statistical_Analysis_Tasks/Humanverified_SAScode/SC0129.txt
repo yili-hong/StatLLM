@@ -1,0 +1,3 @@
+proc reg data= elemapi;
+  model api00 = acs_k3 meals full;
+run;

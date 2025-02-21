@@ -1,0 +1,22 @@
+
+
+/* Check for missing values */
+proc means data=elemapi n nmiss;
+  var _all_;
+run;
+
+/* Perform correlation analysis */
+proc corr data=elemapi;
+  var api00 api99 growth meals ell yr_rnd mobility acs_k3 acs_46 not_hsg hsg some_col col_grad grad_sch avg_ed full emer enroll;
+run;
+
+/* Perform VIF (Variance Inflation Factor) analysis */
+proc reg data=elemapi;
+  model api00 = api99 growth meals ell yr_rnd mobility acs_k3 acs_46 not_hsg hsg some_col col_grad grad_sch avg_ed full emer enroll / vif;
+  ods output vif=vif;
+run;
+
+proc print data=vif;
+  var parameter vif;
+run;
+

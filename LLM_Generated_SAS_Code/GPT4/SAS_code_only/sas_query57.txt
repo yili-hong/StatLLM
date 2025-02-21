@@ -1,0 +1,15 @@
+
+DATA baseball;
+SET Sashelp.Baseball;
+WHERE name ^= 'Pete Rose';
+logSalary = LOG(salary);
+RUN;
+
+PROC REG DATA = baseball;
+MODEL logSalary = nhits nruns nrbi nbb yrmajor crhits;
+ID name team league;
+PLOTS(only) = COOKSD;
+RUN;
+
+QUIT;
+

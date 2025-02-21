@@ -1,0 +1,6 @@
+PROC IMPORT OUT=hernio_uv 
+     DATAFILE='/StatLLM/Statistical_Analysis_Tasks/TaskDatasets/DS0046/hernio_uv.csv' 
+     DBMS=CSV 
+     REPLACE; 
+     GETNAMES=YES; 
+RUN; 

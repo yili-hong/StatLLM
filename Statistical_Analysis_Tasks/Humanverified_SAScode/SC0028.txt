@@ -1,0 +1,3 @@
+proc freq data = race;
+   tables race / chisq testp=(10 10 10 70);
+run;

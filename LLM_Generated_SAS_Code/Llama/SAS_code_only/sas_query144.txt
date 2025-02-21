@@ -1,0 +1,17 @@
+/* First, ensure that your dataset t is in the correct library and has the necessary variables */
+/* For demonstration purposes, let's assume the dataset is in the work library and has variables named 'leverage', 'residuals', and 'state' */
+
+/* If your residuals are not squared, you'll need to square them */
+data t;
+    set t;
+    squared_residuals = residuals ** 2;
+run;
+
+/* Now, use PROC SGPLOT to create the graph */
+proc sgplot data=t;
+    scatter x=leverage y=squared_residuals / datalabel=state;
+    title "Leverage vs. Squared Residuals";
+    xaxis label="Leverage";
+    yaxis label="Squared Residuals";
+run;
+

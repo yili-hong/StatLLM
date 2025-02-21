@@ -1,0 +1,19 @@
+proc reg data=baseball;
+  model logSalary = nhits nruns nrbi nbb yrmajor crhits;
+  output out=residuals r=residual h=leverage;
+run;
+
+proc sgplot data=residuals;
+  scatter y=residual x=logSalary;
+  xaxis label="Leverage";
+  yaxis label="Residual";
+  title "Leverage Plot";
+run;
+
+proc sgplot data=residuals;
+  scatter y=CookD x=logSalary;
+  xaxis label="Cook's Distance";
+  yaxis label="Residual";
+  title "Cook's Distance Plot";
+run;
+

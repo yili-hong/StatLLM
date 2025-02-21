@@ -1,0 +1,3 @@
+proc reg data=iron;
+   model loss=fe;
+run;

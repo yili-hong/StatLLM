@@ -1,0 +1,6 @@
+proc glm data=imports;
+	class fueltype drivewheels;
+	model wheelbase = fueltype|drivewheels;
+	lsmeans fueltype|drivewheels/ pdiff=all cl;
+	ods select ModelANOVA OverallANOVA FitStatistics LSMeans LSMeanDiffCL;
+run;

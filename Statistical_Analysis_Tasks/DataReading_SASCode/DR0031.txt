@@ -1,0 +1,6 @@
+PROC IMPORT OUT=art 
+     DATAFILE='/StatLLM/Statistical_Analysis_Tasks/TaskDatasets/DS0031/art.csv' 
+     DBMS=CSV 
+     REPLACE; 
+     GETNAMES=YES; 
+RUN; 

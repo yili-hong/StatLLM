@@ -1,0 +1,10 @@
+
+PROC UNIVARIATE DATA=sashelp.shoes NOPRINT;
+   VAR Sales;
+   OUTPUT OUT=Percentiles PCTLPTS=97.5 99.5 PCTLPRE=P;
+RUN;
+
+PROC PRINT DATA=Percentiles;
+   VAR Sales P97_5 P99_5;
+RUN;
+

@@ -1,0 +1,10 @@
+/* Fit quadratic regression with loss versus fe */
+proc reg data=iron;
+    model Loss = fe fe*fe / noint;
+    output out=quadratic_regression_predicted;
+run;
+
+/* Display the result */
+proc print data=quadratic_regression_predicted;
+run;
+

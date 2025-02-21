@@ -1,0 +1,6 @@
+PROC IMPORT OUT=opinion 
+     DATAFILE='/StatLLM/Statistical_Analysis_Tasks/TaskDatasets/DS0016/opinion.csv' 
+     DBMS=CSV 
+     REPLACE; 
+     GETNAMES=YES; 
+RUN; 

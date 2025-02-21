@@ -1,0 +1,33 @@
+1, Name: ACHE
+
+2. Data Set Information: 
+This data set is from a paper by Raskin and Unger (1978) where four diabetic patients were used to compare the effects of insulin infusion regimens. One treatment was insulin and somatostatin (IS) and the other treatment was insulin, somatostatin and gulcagon (ISG). Each subject was given each treatment with a period of washout between treatments. 
+3. Attribute Information:
+
+Number of Obs: 4
+Number of Variables: 2
+
+Attribute: Attribute Range
+
+(1). NUMBER 
+(2). TREATMENT
+
+
+ 
+
+
+
+Reference:
+
+Louis TA, Lavori, PW, Bailer, JC and Polansky, M (1984), “Crossover and Self Controlled Designs in Clinical Research,” NEJM, 310:24-31.
+
+Raskin, P, Unger, RH, Hyperglucagonemia and its suppression: importance in the metabolic control of diabetes. N Engl J Med 1978: 299;433-6.
+
+
+https://www.stattutorials.com/SAS/TUTORIAL-PROC-TTEST-2.htm
+Citation: required 
+
+
+
+
+

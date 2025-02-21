@@ -1,0 +1,7 @@
+PROC SORT DATA=response;
+   BY SubjectID;
+RUN;
+
+PROC TTEST DATA=response PAIRED Control*Treatment;
+   TITLE 'Paired T-Test of Response Time for Control vs Treatment';
+RUN;

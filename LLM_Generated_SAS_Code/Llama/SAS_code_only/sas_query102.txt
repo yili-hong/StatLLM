@@ -1,0 +1,16 @@
+
+
+/* Filter Data to only include cars with repair records of 3,4 and/or/with missing values removed*/
+data auto_filtered;
+	set auto;
+	if rep78 in (3,4,5) and not missing(mpg);
+run;
+
+/* Run ANOVA on filtered data */
+proc anova data=auto_filtered;
+	class rep78; /* specify classification variable(s) */
+	model mpg = rep78; /* specify response variable(s) */
+_means_; /* displays overall mean as well as means by each group*/
+run;
+
+quit;

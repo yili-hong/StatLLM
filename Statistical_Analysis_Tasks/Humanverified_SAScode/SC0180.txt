@@ -1,0 +1,3 @@
+proc corr data = mvreg nosimple;
+  var read write science;
+run;

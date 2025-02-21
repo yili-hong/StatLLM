@@ -1,0 +1,15 @@
+/* Create a contingency table for weightgroup and sex */
+proc freq data=abalone;
+  tables weightgroup*sex;
+run;
+
+
+proc freq data=abalone;
+  tables weightgroup*sex / crosslist;
+run;
+
+
+proc freq data=abalone;
+  tables weightgroup*sex / out=freq_output;
+run;
+

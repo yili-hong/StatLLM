@@ -1,0 +1,26 @@
+proc reg data=fitness;
+   model Oxygen=Age Weight RunTime RunPulse RestPulse MaxPulse
+         / selection=forward;
+   model Oxygen=Age Weight RunTime RunPulse RestPulse MaxPulse
+         / selection=backward;
+   model Oxygen=Age Weight RunTime RunPulse RestPulse MaxPulse
+         / selection=maxr;
+run;
+
+
+
+
+ 
+
+
+
+
+	
+
+
+	
+		
+	
+
+	
+	

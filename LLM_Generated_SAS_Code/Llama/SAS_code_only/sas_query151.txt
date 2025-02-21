@@ -1,0 +1,8 @@
+proc sort data=t3;
+  by wgt;
+run;
+
+proc sort data=t3;
+  by descending wgt;
+run;
+

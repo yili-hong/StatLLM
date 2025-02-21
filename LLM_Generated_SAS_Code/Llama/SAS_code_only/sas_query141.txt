@@ -1,0 +1,10 @@
+/* Print descriptive statistics for gre and gpa */
+proc means data=binary mean std min max;
+    var gre gpa;
+run;
+
+/* Alternatively, you can use proc univariate for more detailed statistics */
+proc univariate data=binary;
+    var gre gpa;
+run;
+

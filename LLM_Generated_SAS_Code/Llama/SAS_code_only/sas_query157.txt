@@ -1,0 +1,6 @@
+/* Perform the Independent Samples t Test */
+proc ttest data=sample2014;
+  class Gender;
+  var Writing;
+run;
+

@@ -1,0 +1,23 @@
+proc corr data=mvreg;
+  var locus_of_control self_concept motivation;
+run;
+
+proc corr data=mvreg;
+  var locus_of_control;
+  with self_concept motivation;
+run;
+
+proc corr data=mvreg;
+  var self_concept;
+  with locus_of_control motivation;
+run;
+
+proc corr data=mvreg;
+  var motivation;
+  with locus_of_control self_concept;
+run;
+
+proc corr data=mvreg noprob;
+  var locus_of_control self_concept motivation;
+run;
+

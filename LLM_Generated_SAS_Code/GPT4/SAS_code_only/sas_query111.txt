@@ -1,0 +1,11 @@
+
+/* Print summary statistics for write variable */
+PROC MEANS DATA=hsb2;
+    VAR Write;
+RUN;
+
+/* Perform a One-Sample T-Test */
+PROC TTEST DATA=hsb2 H0=50;
+    VAR Write;
+RUN;
+

@@ -1,0 +1,42 @@
+
+proc univariate data=sashelp.shoes;
+  var sales;
+  output out=trimmed pctlpts=10 90 pctlpre=trimmed_;
+run;
+
+proc means data=trimmed mean;
+  var sales;
+  where sales >= trimmed_10 and sales <= trimmed_90;
+run;
+
+
+proc univariate data=sashelp.shoes;
+  var sales;
+  output out=trimmed pctlpts=10 90 pctlpre=trimmed_;
+run;
+
+data trimmed;
+  set trimmed;
+  if sales >= trimmed_10 and sales <= trimmed_90;
+  trimmed_sales = sales;
+run;
+
+proc means data=trimmed mean;
+  var trimmed_sales;
+run;
+
+
+proc sort data=sashelp.shoes out=sorted;
+  by sales;
+run;
+
+data trimmed;
+  set sorted;
+  if _n_ > 79 and _n_ < 316; /* 395 * 0.2 = 79, 395 - 79 = 316 */
+  trimmed_sales = sales;
+run;
+
+proc means data=trimmed mean;
+  var trimmed_sales;
+run;
+

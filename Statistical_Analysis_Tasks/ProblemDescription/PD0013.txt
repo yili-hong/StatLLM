@@ -1,0 +1,2 @@
+For the toxic dataset, conduct an two-way ANOVA analysis for the respone variable life with respect to factors poison and treatment with interaction. 
+ 

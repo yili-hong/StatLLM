@@ -1,0 +1,33 @@
+
+/* Plot load vs age */
+proc sgplot data=crack;
+  scatter x=age y=load;
+  title "Load vs Age";
+  xaxis label="Age";
+  yaxis label="Load";
+run;
+
+/* Proc reg for crackreg */
+proc reg data=crack outest=crackreg;
+  model load = age;
+  id id;
+run;
+
+/* Print the output from proc reg */
+proc print data=crackreg;
+  var _model_ _rmse_ _rsq_ Intercept age;
+  title "Output from Proc Reg for Crack Dataset";
+run;
+
+
+proc reg data=crack outest=crackreg;
+  model load = agef;
+  id id;
+run;
+
+
+proc reg data=crack outest=crackreg;
+  model load = age agef;
+  id id;
+run;
+

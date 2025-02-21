@@ -1,0 +1,3 @@
+proc reg data=imports;
+	model enginesize=curbweight;
+run;

@@ -1,0 +1,3 @@
+The dataset name is chisq. 
+The variable name is df. 
+df gives the degree of freedom. 

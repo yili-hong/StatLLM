@@ -1,0 +1,4 @@
+proc print data=sashelp.bmt(obs=5);
+  var Group T Status;
+run;
+

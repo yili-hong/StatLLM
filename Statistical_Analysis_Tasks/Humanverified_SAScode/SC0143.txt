@@ -1,0 +1,3 @@
+data t; set t;
+  resid_sq = res*res;
+run;

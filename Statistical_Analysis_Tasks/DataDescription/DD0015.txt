@@ -1,0 +1,9 @@
+The dataset gives the counts of individuals' opinion and gender
+
+The opinion column gives the yes or no of the opinion.
+The gender column gives the gender of the individuals.
+the count column gives the counts for each category 
+The dataset is named as opinioncounts.
+
+
+

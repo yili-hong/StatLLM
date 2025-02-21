@@ -1,0 +1,4 @@
+proc glm data=words;
+class method;
+model words = method;
+run;

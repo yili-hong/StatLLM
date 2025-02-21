@@ -1,0 +1,6 @@
+PROC IMPORT OUT=crime 
+     DATAFILE='/StatLLM/Statistical_Analysis_Tasks/TaskDatasets/DS0050/crime.csv' 
+     DBMS=CSV 
+     REPLACE; 
+     GETNAMES=YES; 
+RUN; 

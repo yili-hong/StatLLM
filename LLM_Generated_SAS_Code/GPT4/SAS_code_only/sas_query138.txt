@@ -1,0 +1,14 @@
+
+/* Sorting the data might be needed to properly manage the order in the graph */
+proc sort data=pred;
+    by mealcat collcat;
+run;
+
+/* Create the graph of cell means for api00 */
+proc sgplot data=pred;
+    vbar mealcat / response=api00 stat=mean group=collcat groupdisplay=cluster;
+    xaxis label="Meal Category";
+    yaxis label="Average API 00 score";
+    title "Graph of Cell Means of API00 by Meal Category and Collcat";
+run;
+

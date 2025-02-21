@@ -1,0 +1,3 @@
+proc print data=bmt(obs=5);
+run;
+

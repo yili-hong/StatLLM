@@ -1,0 +1,4 @@
+proc sgplot data=chisq;
+  histogram df;
+run;
+

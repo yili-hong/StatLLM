@@ -1,0 +1,16 @@
+
+*Assuming your dataset is named 'diabetic' and variables are 'treatment' and 'number';
+
+PROC SORT DATA=diabetic;
+    BY number;
+RUN;
+
+PROC TRANSPOSE DATA=diabetic OUT=transpose_diabetic (DROP=_NAME_) PREFIX=treatment;
+    BY number;
+    VAR treatment;
+RUN;
+
+PROC TTEST DATA=transpose_diabetic;
+    PAIRED treatment1*treatment2;
+RUN;
+

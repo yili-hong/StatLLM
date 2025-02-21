@@ -1,0 +1,16 @@
+
+/* Perform simple linear regression using PROC REG */
+proc reg data=crack;
+    model load = age;
+    output out=reg_out predicted=y_pred residual=residual;
+run;
+
+/* Plot the result using PROC SGPLOT */
+proc sgplot data=reg_out;
+    scatter x=age y=load;
+    series x=age y=y_pred;
+    xaxis label="Age";
+    yaxis label="Load";
+    keylegend / title="Legend";
+run;
+

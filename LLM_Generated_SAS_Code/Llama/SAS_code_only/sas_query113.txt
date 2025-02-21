@@ -1,0 +1,19 @@
+/* Calculate the proportion of females */
+proc freq data=hsb2;
+    tables female / binomial;
+    title "Proportion of Females in the HSB2 Dataset";
+run;
+
+/* Perform a one-sample binomial test to check if the proportion is significantly different from 0.5 */
+proc freq data=hsb2;
+    tables female;
+    exact binomial p=0.5;
+    title "Binomial Test: Proportion of Females vs. 0.5";
+run;
+
+
+proc freq data=hsb2;
+    tables female;
+    test p=0.5;
+run;
+

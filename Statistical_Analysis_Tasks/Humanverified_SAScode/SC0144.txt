@@ -1,0 +1,4 @@
+proc sgplot data = t;
+  scatter y = lev x = resid_sq / datalabel = state;
+run;
+quit;

@@ -1,0 +1,12 @@
+proc summary data=year_sales;
+  class SalesRep;
+  var AmountSold;
+  output out=sum_sales sum=;
+run;
+
+proc print data=sum_sales;
+  var SalesRep _FREQ_ AmountSold;
+  label _FREQ_ = 'Number of Sales';
+  label AmountSold = 'Total Amount Sold';
+run;
+

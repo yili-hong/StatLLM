@@ -1,0 +1,5 @@
+proc reg data=fitness;
+   model Oxygen = Age Weight RunTime RestPulse RunPulse MaxPulse / selection=forward;
+   title 'Model Selection Summary for Oxygen';
+run;
+

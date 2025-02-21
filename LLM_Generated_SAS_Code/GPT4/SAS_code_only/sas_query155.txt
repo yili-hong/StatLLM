@@ -1,0 +1,10 @@
+* Check the dataset;
+proc contents data=sample2014;
+run;
+
+* Perform Pearson Correlation;
+proc corr data=sample2014 Pearson;
+    var Height Weight;
+    title 'Pearson Correlation between Height and Weight';
+run;
+

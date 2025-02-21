@@ -1,0 +1,11 @@
+/* Assuming the highlow dataset is already loaded into the SAS environment */
+/* Plotting the yearly low of the Dow Jones Industrial Average */
+
+proc sgplot data=highlow;
+    title "Yearly Low of the Dow Jones Industrial Average (1968-2008)";
+    series x=Year y=LowValue / markers markerattrs=(symbol=CircleFilled color=red);
+    xaxis label="Year";
+    yaxis label="Dow Jones Low";
+    grid;
+run;
+

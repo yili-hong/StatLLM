@@ -1,0 +1,7 @@
+
+PROC FREQ DATA=abalone;
+  WHERE agegroup in ('middle', 'oldest') and weightgroup in ('middle', 'heaviest');
+  TABLES agegroup*weightgroup / NOROW NOCOL NOPERCENT;
+  FORMAT agegroup agegrpfmt. weightgroup wgfmt.;
+RUN;
+

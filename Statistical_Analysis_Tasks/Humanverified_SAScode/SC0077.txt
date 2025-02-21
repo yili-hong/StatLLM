@@ -1,0 +1,3 @@
+proc freq data=abalone order=data;
+	table weightgroup*sex;
+run;

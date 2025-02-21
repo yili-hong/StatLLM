@@ -1,0 +1,8 @@
+/* Check the structure of the dataset */
+proc contents data=mydata;
+
+/* Perform linear regression modeling */
+proc reg data=mydata;
+    model enginesize = curbweight / clb;
+run;
+

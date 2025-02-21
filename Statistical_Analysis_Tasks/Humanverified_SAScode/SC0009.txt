@@ -1,0 +1,4 @@
+proc reg data=crack;
+  model load = age / p;
+  output out=crackreg p=pred r=resid;
+run;

@@ -1,0 +1,1 @@
+For the dataset of hsb2, test whether the average writing score (write) differs significantly from 50.

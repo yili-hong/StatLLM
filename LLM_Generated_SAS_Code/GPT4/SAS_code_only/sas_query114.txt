@@ -1,0 +1,14 @@
+DATA hsb2freq;
+   set hsb2;
+   INPUT id female race $ scocst schtyp math write read socst prog science;
+   
+   IF race = "Hispanic" THEN race_cat = 1;
+   ELSE IF race = "Asian" THEN race_cat = 2;
+   ELSE IF race = "African American" THEN race_cat = 3;
+    ELSE IF race = "White" THEN race_cat = 4;
+RUN;
+
+PROC FREQ DATA=hsb2freq;
+   TABLES race_cat / CHISQ;
+   WEIGHT COUNT;
+RUN;

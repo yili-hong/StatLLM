@@ -1,0 +1,13 @@
+/* Summary statistics table */
+proc means data=elemapi2 noprint;
+  var api00;
+  class mealcat collcat;
+  output out=summary_stats mean=mean_api00 std=std_api00 n=n_api00;
+run;
+
+/* Print the summary statistics table */
+proc print data=summary_stats;
+  title 'Summary Statistics Table for elemapi2 Dataset';
+  var mealcat collcat mean_api00 std_api00 n_api00;
+run;
+

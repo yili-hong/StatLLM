@@ -1,0 +1,15 @@
+/* Compute Robust Estimates */
+proc univariate data=BPressure;
+    var Systolic;
+    /* Requesting trimmed means, winsorized means, and robust scale */
+    output out=Results
+        trimmedMean=TrimmedMean
+        winsorizedMean=WinsorizedMean
+        robustScale=RobustScale;
+run;
+
+/* Print only the desired results to simplify the output */
+proc print data=Results;
+    var TrimmedMean WinsorizedMean RobustScale;
+run;
+

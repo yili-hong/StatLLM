@@ -1,0 +1,19 @@
+
+proc reg data=fitness;
+  model Oxygen = Age Weight RunTime RestPulse RunPulse MaxPulse / selection=forward;
+  output out=forward p=pred r=resid;
+  title 'Forward Selection Method';
+run;
+
+proc reg data=fitness;
+  model Oxygen = Age Weight RunTime RestPulse RunPulse MaxPulse / selection=backward;
+  output out=backward p=pred r=resid;
+  title 'Backward Selection Method';
+run;
+
+proc reg data=fitness;
+  model Oxygen = Age Weight RunTime RestPulse RunPulse MaxPulse / selection=maxr;
+  output out=maxr p=pred r=resid;
+  title 'MAXR Selection Method';
+run;
+

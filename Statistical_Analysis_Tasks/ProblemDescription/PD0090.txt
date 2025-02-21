@@ -1,0 +1,1 @@
+For the dataset of abalone, Assuming normality, perform a one-way ANOVA for whole_weight with sex as the categorical predictor. According to results of HOVFTest FitStatistics CLDiffs Welch, explain what that tells us about differences in whole weight across the sexes

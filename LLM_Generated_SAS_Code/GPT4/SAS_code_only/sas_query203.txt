@@ -1,0 +1,16 @@
+* Assume `highlow` data is loaded;
+data transformed;
+    set highlow;
+    
+    /* Compute the logarithm of the DowLow */
+    LogDowLow = log(DowLow);
+run;
+
+proc sgplot data=transformed;
+    title "Log Transformation of DowLow by Year";
+    /* Plot LogDowLow against Year using a line */
+    series x=Year y=LogDowLow / markers;
+    xaxis label="Year";
+    yaxis label="Log of DowLow";
+run;
+

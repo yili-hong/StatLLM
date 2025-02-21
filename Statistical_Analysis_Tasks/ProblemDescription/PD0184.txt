@@ -1,0 +1,2 @@
+Creating a Basic One-Dimensional Summary that answering the following question, “How many times did each sales representative 
+make a sale?"

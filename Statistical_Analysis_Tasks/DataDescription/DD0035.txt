@@ -1,0 +1,30 @@
+1, Name: smoke
+
+2. Data Set Information: 
+It is a 2*2 contingency table with two variables: whether parents smoke or not; whether student smokes or not 
+
+3. Attribute Information:
+
+It is a 2*2 contingency table 
+
+Attribute: Attribute Range
+
+(1). Predictor: whether parents smoke or not 
+(2). Response: whether student smokes or not 
+
+
+ 
+
+
+
+Reference:
+
+https://online.stat.psu.edu/stat504/book/export/html/768
+
+
+Citation: required 
+
+
+
+
+

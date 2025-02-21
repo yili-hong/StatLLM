@@ -1,0 +1,1 @@
+For the dataset of mvreg, calculate the frequency and percentage of each group in PROG.

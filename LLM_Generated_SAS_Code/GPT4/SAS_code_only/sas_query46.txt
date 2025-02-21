@@ -1,0 +1,15 @@
+
+PROC MEANS data=sashelp.shoes nway;
+    CLASS Region;
+    VAR Sales;
+    OUTPUT OUT=want (drop=_TYPE_ _FREQ_)
+        N= N_Sales
+        MEAN= Mean_Sales
+        STD= Std_Sales
+        MIN= Min_Sales 
+        Q1= Q1_Sales 
+        MEDIAN= Median_Sales 
+        Q3= Q3_Sales 
+        MAX= Max_Sales;
+RUN;
+

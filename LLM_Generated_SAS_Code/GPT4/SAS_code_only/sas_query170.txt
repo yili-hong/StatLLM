@@ -1,0 +1,33 @@
+/* Import the Excel data file */
+data studentData;
+  set sample2014;
+run;
+
+/* Create a new dataset with rounded height and weight, renamed columns */
+data formattedData;
+    set studentData;
+    format RHeight RWeight 8.;  /* Set variable formats */
+    RHeight = round(Height);  /* Round height to the nearest whole number */
+    RWeight = round(Weight);  /* Round weight to the nearest whole number */
+    rename ids=StudentID RHeight=RoundedHeight RWeight=RoundedWeight;
+run;
+
+/* Group by Gender using PROC SQL for better control over grouping and sorting */
+proc sql;
+    create table groupedData as
+    select 
+        Gender, 
+        StudentID, 
+        RoundedHeight, 
+        RoundedWeight
+    from formattedData
+    order by Gender, StudentID;
+quit;
+
+/* Print the height and weight grouped by Gender */
+proc print data=groupedData;
+    title "Height and Weight of Students by Gender";
+    by Gender;
+    var StudentID RoundedHeight RoundedWeight;
+run;
+

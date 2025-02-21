@@ -1,0 +1,9 @@
+/* PROC GLM to analyze the effects of collcat and mealcat on api00 */
+proc glm data=elemapi2;
+    class mealcat collcat;  /* Declare categorical variables */
+    model api00 = mealcat collcat mealcat*collcat; /* Specify the model with main effects and interaction */
+    means mealcat collcat / tukey; /* Get mean api00 scores with Tukey adjustment for multiple comparisons */
+    lsmeans mealcat*collcat / pdiff=all adjust=tukey; /* Output the LS-means of the interaction with all pairwise differences */
+run;
+quit;
+

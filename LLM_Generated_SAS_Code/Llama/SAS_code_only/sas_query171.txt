@@ -1,0 +1,13 @@
+proc freq data=sample2014;
+  tables State Rank;
+run;
+
+proc freq data=sample2014;
+  tables State Rank / nocum;
+run;
+
+proc freq data=sample2014;
+  format Rank 1="Freshman" 2="Sophomore" 3="Junior" 4="Senior";
+  tables State Rank;
+run;
+

@@ -1,0 +1,12 @@
+
+proc freq data=race;
+  tables race / chisq testp=(0.10 0.10 0.10 0.70);
+run;
+
+
+proc freq data=race;
+  tables race / chisq testp=(0.10 0.10 0.10 0.70);
+  format race $racefmt.;
+  format $racefmt. 1='Hispanic' 2='Asian' 3='African American' 4='White';
+run;
+

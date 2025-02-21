@@ -1,0 +1,1 @@
+For the dataset of binary, Perform logistic regression with outcome variable admit/don't admit versus GRE, GPA and rank.

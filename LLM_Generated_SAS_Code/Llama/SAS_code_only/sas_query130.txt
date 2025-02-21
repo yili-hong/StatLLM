@@ -1,0 +1,34 @@
+
+/* Check the structure of the dataset */
+proc contents data=elemapi;
+run;
+
+/* Perform multiple linear regression to predict api00 */
+proc reg data=elemapi;
+  model api00 = meals ell yr_rnd mobility acs_k3 acs_46 not_hsg hsg some_col col_grad grad_sch avg_ed full emer enroll mealcat;
+  output out=reg_output predicted=predicted residuals=residuals;
+run;
+
+/* Check the regression results */
+proc print data=reg_output;
+  var api00 predicted residuals;
+run;
+
+/* Check the regression output for coefficients, t-values, and p-values */
+proc print data=reg_output;
+  var _MODEL_ meals ell yr_rnd mobility acs_k3 acs_46 not_hsg hsg some_col col_grad grad_sch avg_ed full emer enroll mealcat;
+run;
+
+/* Check the regression diagnostics */
+proc reg data=elemapi;
+  model api00 = meals ell yr_rnd mobility acs_k3 acs_46 not_hsg hsg some_col col_grad grad_sch avg_ed full emer enroll mealcat;
+  output out=reg_output predicted=predicted residuals=residuals;
+  plot residual.*predicted / vref=0;
+run;
+
+
+proc reg data=elemapi;
+  model api00 = meals ell yr_rnd mobility acs_k3 acs_46 not_hsg hsg some_col col_grad grad_sch avg_ed full emer enroll mealcat / selection=stepwise slentry=0.05 slstay=0.05;
+  output out=reg_output predicted=predicted residuals=residuals;
+run;
+

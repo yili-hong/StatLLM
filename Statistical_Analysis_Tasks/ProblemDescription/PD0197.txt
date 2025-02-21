@@ -1,0 +1,1 @@
+produces the unadjusted hazard ratios.  set “AML-Low Risk” (group=2) as the reference group. 

@@ -1,0 +1,31 @@
+/* Ensure the dataset is loaded with the name BPressure */
+/* Check for the existence and proper loading of dataset */
+proc contents data=BPressure;
+run;
+
+/* Generating Extreme Observations for Systolic and Diastolic */
+proc univariate data=BPressure noprint;
+   var Systolic Diastolic;
+   id PatientID; /* Make sure you replace 'PatientID' with the actual ID variable name in your dataset;
+                    if there's no identifier variable, you might omit this line. */
+   
+   /* Output the table of extreme values for systolic pressure */
+   output out=Extreme_Systolic (drop=_TYPE_ _FREQ_)
+        extremes;
+   label Systolic = 'Extreme Observations for Systolic BP';
+   
+   /* Output the table of extreme values for diastolic pressure */
+   output out=Extreme_Diastolic (drop=_TYPE_ _FREQ_)
+        extremes;
+   label Diastolic = 'Extreme Observations for Diastolic BP';
+run;
+
+/* Print the tables with extreme observations */
+proc print data=Extreme_Systolic;
+   title "Extreme Observations for Systolic Blood Pressure";
+run;
+
+proc print data=Extreme_Diastolic;
+   title "Extreme Observations for Diastolic Blood Pressure";
+run;
+

@@ -1,0 +1,7 @@
+The data includes seven variables and 499 observations. 
+It comprises of survey responses from variables Q1 through Q5 and two demographics -
+Age and BU (Business Unit). The survey responses lie between 1 to 6.
+
+variables:BU (Business Unit), Age, Q1, Q2, Q3, Q4, Q5
+
+source: https://www.listendata.com/2015/01/sas-detailed-explanation-of-proc-means.html

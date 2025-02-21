@@ -1,0 +1,13 @@
+
+proc anova data=copper;
+  class temp;
+  model warp = temp;
+  run;
+
+
+proc anova data=copper;
+  class temp;
+  model warp = temp;
+  means temp;
+  run;
+

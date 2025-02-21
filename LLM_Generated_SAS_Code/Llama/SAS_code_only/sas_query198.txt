@@ -1,0 +1,14 @@
+proc sgplot data=highlow;
+  title 'Dow Jones High by Year';
+  xaxis label='Year';
+  yaxis label='Dow Jones High';
+  series x=year y=DowJonesHigh;
+run;
+
+proc gplot data=highlow;
+  plot DowJonesHigh*year;
+  title 'Dow Jones High by Year';
+  label year='Year';
+  label DowJonesHigh='Dow Jones High';
+run;
+

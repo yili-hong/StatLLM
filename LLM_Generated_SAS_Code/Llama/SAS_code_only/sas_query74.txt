@@ -1,0 +1,17 @@
+
+/* Import the glassid dataset */
+data glassid;
+  set glassid;
+  input id ri na al si ca type;
+  if type = 7 then type_name = 'headlamps';
+  else if type = 3 then type_name = 'vehicle_windows';
+  else delete;
+run;
+
+/* Perform a two-sample t-test */
+proc ttest data=glassid;
+  class type_name;
+  var na;
+  title 'Two-sample t-test for Na in headlamps and vehicle windows';
+run;
+

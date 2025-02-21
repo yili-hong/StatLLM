@@ -1,0 +1,17 @@
+
+* Forward Selection Method;
+proc reg data=fitness;
+   model Oxygen = Age Weight RunTime RestPulse RunPulse MaxPulse / selection=forward;
+run;
+
+* Backward Selection Method;
+proc reg data=fitness;
+   model Oxygen = Age Weight RunTime RestPulse RunPulse MaxPulse / selection=backward;
+run;
+
+* MaxR (Maximal R-Square Improvement) Selection Method;
+proc reg data=fitness;
+   model Oxygen = Age Weight RunTime RestPulse RunPulse MaxPulse / selection=maxr;
+run;
+quit;
+

@@ -1,0 +1,6 @@
+proc ttest data=sample2014;
+   class Gender;
+   var Writing;
+   ods select ttest;
+run;
+

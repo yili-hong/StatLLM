@@ -1,0 +1,11 @@
+proc sql;
+    create table quarter_sales as
+    select Quarter, SalesRep, sum(AmountSold) as TotalAmountSold
+    from year_sales
+    group by Quarter, SalesRep;
+quit;
+
+proc print data=quarter_sales;
+    title 'Amount Sold by Sales Representative and Quarter';
+run;
+

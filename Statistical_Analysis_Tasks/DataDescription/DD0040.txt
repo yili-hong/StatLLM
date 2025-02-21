@@ -1,0 +1,31 @@
+1, Name: Neuralgia
+
+2. Data Set Information: 
+These data arise from a study of analgesic effects of treatments of elderly patients who have neuralgia. Two treatments and a placebo are compared. The response variable is whether the patient reported pain or not. Researchers recorded the age and gender of 60 patients along with the duration of complaint before the treatment began.
+
+3. Attribute Information:
+
+Number of observations: 600
+Number of variables: 5
+
+Treatment
+Factor with 3 levels A, B, and P. The latter is placebo
+
+Sex
+Factor with two levels F and M
+
+Age
+Numeric covariate – patient's age in years
+
+Duration
+Numeric covariate – duration of the condition before beginning treatment
+
+Pain
+Binary response factor with levels No and Yes
+
+Reference:
+Cai, Weijie (2014) Making Comparisons Fair: How LS-Means Unify the Analysis of Linear Models, SAS Institute, Inc. Technical paper 142-2014, page 12, http://support.sas.com/resources/papers/proceedings14/SAS060-2014.pdf
+
+
+
+

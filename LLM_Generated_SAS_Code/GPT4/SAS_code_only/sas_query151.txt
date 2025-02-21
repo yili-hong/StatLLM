@@ -1,0 +1,9 @@
+/* Sorting the dataset t3 by the variable 'wgt' */
+proc sort data=t3;
+    by wgt;
+run;
+
+/* Optional: Display the sorted dataset */
+proc print data=t3(obs=10); /* Printing only the first 10 observations for brevity */
+run;
+

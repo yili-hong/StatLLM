@@ -1,0 +1,32 @@
+/* One-way ANOVA */
+proc glm data=abalone2;
+    class Sex;
+    model Whole_Weight = Sex;
+    means Sex / turkey;
+    run;
+quit;
+
+/* Homogeneity of Variance */
+proc glm data=abalone2;
+    class Sex;
+    model Whole_Weight = Sex / lackfit;
+    run;
+quit;
+
+/* Welch's t-test */
+proc ttest data=abalone2;
+    class Sex;
+    var Whole_Weight;
+    
+    ttest Sex / welch;
+    run;
+quit;
+
+/* Pairwise comparison test */
+proc glm data=abalone2;
+    class Sex;
+    model Whole_Weight = Sex;
+    lsmeans Sex / pdiff;
+    run;
+quit;
+

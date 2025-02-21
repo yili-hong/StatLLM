@@ -1,0 +1,4 @@
+proc chart data=grades;
+hbar Examgrade1;
+title ’Grades for First Chemistry Exam’;
+run;

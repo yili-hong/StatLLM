@@ -1,0 +1,13 @@
+
+/* Step 2: Filter vehicle window glass type */
+/* Here we assume that the vehicle window glass type is type '3', but you should replace with correct type if it differs */
+DATA vehicle_glass;   
+    SET glass_data;
+    IF type_of_glass = 3;  /* Replace '3' with the correct type if it's different */
+RUN;
+
+/* Step 3: One-sample t-test to test if RI mean is different than 1.52 */
+PROC TTEST DATA=vehicle_glass H0=1.52;
+    VAR RI; /* Variable to test */
+RUN;
+

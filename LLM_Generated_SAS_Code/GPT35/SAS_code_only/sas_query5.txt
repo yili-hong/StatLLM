@@ -1,0 +1,5 @@
+PROC GLM DATA=copper;
+CLASS temp;
+MODEL warp = temp;
+RUN;
+

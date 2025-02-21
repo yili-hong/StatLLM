@@ -1,0 +1,9 @@
+
+PROC GLM data=work.data;
+   CLASS sex;
+   MODEL whole_weight = sex;
+   MEANS sex / hovtest=welch;
+RUN;
+
+QUIT;
+

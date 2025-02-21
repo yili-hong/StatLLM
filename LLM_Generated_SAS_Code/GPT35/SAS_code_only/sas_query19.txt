@@ -1,0 +1,6 @@
+proc ttest data=read;
+   class Method;
+   var Grade;
+   ods select ttests;
+run;
+

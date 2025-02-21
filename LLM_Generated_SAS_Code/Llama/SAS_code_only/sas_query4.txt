@@ -1,0 +1,7 @@
+
+proc glm data=copper;
+  class temp pct;
+  model warp = temp pct temp*pct;
+  run;
+  quit;
+

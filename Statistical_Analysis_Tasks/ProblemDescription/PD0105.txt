@@ -1,0 +1,1 @@
+For the dataset of imports, Based on the regression model with engine size versus curb weight, horsepower and city mpg,  Comment on whether the model is significant and how much variation in engine size is explained by the model.

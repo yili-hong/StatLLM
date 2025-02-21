@@ -1,0 +1,14 @@
+/* Perform the one-sample Wilcoxon signed-rank test */
+proc univariate data=hsb2;
+  var write;
+  test mean=50 / wilcoxon;
+run;
+
+
+proc npar1way data=hsb2 wilcoxon;
+  class write;
+  var write;
+  exact wilcoxon;
+  test median=50;
+run;
+

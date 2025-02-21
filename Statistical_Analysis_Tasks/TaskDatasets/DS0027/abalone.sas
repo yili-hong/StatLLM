@@ -1,0 +1,18 @@
+data abalone;
+	infile '/home/u57842640/SAS_code_Project/Code_Data/abalone.data' dlm=',';
+	input sex $ length diameter height whole_weight meat_weight gut_weight shell_weight rings;
+	if rings<8 then agegroup='youngest';
+	if 8<=rings<11 then agegroup='middle';
+	if rings>=11 then agegroup='oldest';
+	if whole_weight>1.15 then weightgroup='heaviest';
+	if 0.45<=whole_weight<=1.15 then weightgroup='middle';
+	if whole_weight< 0.45 then weightgroup='lightest';
+	keep sex agegroup whole_weight weightgroup rings;
+run;
+proc sort data=abalone;
+	by rings;
+run;
+data abalone;
+	set abalone;
+	drop rings;
+run;

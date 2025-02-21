@@ -1,0 +1,5 @@
+/* Step 2: Compute the correlation matrix */
+proc corr data=fitness;
+    var Oxygen RunTime Age Weight RunPulse MaxPulse RestPulse;
+run;
+

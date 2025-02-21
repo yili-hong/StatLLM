@@ -1,0 +1,5 @@
+PROC GLM DATA=imports2;
+  CLASS fueltype drivewheels;
+  MODEL wheelbase = fueltype drivewheels;
+  LSMEANS fueltype drivewheels / PDIFF;
+RUN;

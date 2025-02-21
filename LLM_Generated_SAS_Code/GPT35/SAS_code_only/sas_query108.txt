@@ -1,0 +1,13 @@
+/* Perform repeated measures analysis for Group A */
+proc mixed data=shopping;
+class group;
+model a1 a2 a3 = /solution;
+repeated / type=cs subject=employee(group="A");
+run;
+
+/* Perform repeated measures analysis for Group B */
+proc mixed data=shopping;
+class group;
+model a1 a2 a3 = /solution;
+repeated / type=cs subject=employee(group="B");
+run;

@@ -1,0 +1,16 @@
+* Load the dataset if it's from an external file, otherwise assume the dataset is already in the work library;
+* Example: If the dataset is in a CSV file, you might use the PROC IMPORT step or other data input methods.
+* Here, I will assume the dataset is already in the SAS work library under the name 'highlow'.
+
+proc sort data=highlow;
+    by year;
+run;
+
+* Use PROC SGPLOT to create a line plot of the DowJonesHigh for each year;
+proc sgplot data=highlow;
+    series x=year y=dowjoneshigh / markers markerattrs=(symbol=circlefilled size=8 color=blue) lineattrs=(color=blue);
+    xaxis label="Year";
+    yaxis label="Dow Jones Yearly High";
+    title "Yearly High Values of the Dow Jones Industrial Average";
+run;
+

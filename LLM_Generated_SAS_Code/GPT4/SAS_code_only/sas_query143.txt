@@ -1,0 +1,12 @@
+/* Load the dataset 't' which already exists with necessary columns */
+data updated_t;
+    set t;
+
+    /* Calculate the squared residuals */
+    squared_residuals = residuals**2;
+run;
+
+/* Print the updated dataset to view the squared residuals */
+proc print data=updated_t;
+run;
+

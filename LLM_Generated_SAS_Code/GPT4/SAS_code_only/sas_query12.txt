@@ -1,0 +1,6 @@
+
+
+proc reg data=crack;
+model load = age agef;
+plot;
+run;

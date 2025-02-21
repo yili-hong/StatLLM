@@ -1,0 +1,5 @@
+proc logistic data=smoke descending;
+class s (ref=first) / param=ref;
+model y/n = s /scale=none;
+output out=predict pred=prob;
+run;

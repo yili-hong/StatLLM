@@ -1,0 +1,1 @@
+For the sashelp.shoes dataset, which is avaialle through SAS help files. For the sales variable, generates the Histogram, Box Plot and Normal Probability Plot.

@@ -1,0 +1,31 @@
+/* Perform regression analysis */
+proc reg data=elemapi;
+  model api00 = acs_k3 meals full;
+  output out=reg_out
+         p=y_pred
+         r=resid
+         student=r_student
+         leverage=h_leverage;
+run;
+
+/* Print the regression output */
+proc print data=reg_out;
+  var api00 acs_k3 meals full y_pred resid r_student h_leverage;
+run;
+
+/* Print the regression coefficients and statistics */
+proc print data=reg_out;
+  var _MODEL_ _RMSE_ _RSQ_;
+run;
+
+/* Perform ANOVA to check the significance of the model */
+proc anova data=elemapi;
+  model api00 = acs_k3 meals full;
+run;
+
+/* Check for multicollinearity */
+proc reg data=elemapi;
+  model api00 = acs_k3 meals full;
+  vif;
+run;
+

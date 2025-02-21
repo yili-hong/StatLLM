@@ -1,0 +1,28 @@
+
+* Step 1: Fit the regression model;
+proc glm data=baseball;
+   class league division;  /* In case you want to include categorical predictors later */
+   model logSalary = nhits nruns nrbi nbb yrmajor crhits;
+   output out=regout predicted=pred_logsalary residual=residual;
+run;
+quit;
+
+* Step 2: Check the results and diagnostics;
+proc print data=regout;
+   var nhits nruns nrbi nbb yrmajor crhits logSalary pred_logsalary residual;
+run;
+
+* Additional analysis or diagnostics can be performed here with the data;
+* For example, you can create scatter plots or use PROC UNIVARIATE to look at summaries;
+
+* Step 3: Create a final dataset containing only the actual and predicted values;
+data predictions;
+   set regout;
+   keep logSalary pred_logsalary;
+run;
+
+* Step 4: View the dataset with actual and predicted log salaries;
+proc print data=predictions;
+   title "Actual vs. Predicted Log Salaries for Baseball Players";
+run;
+

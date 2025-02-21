@@ -1,0 +1,18 @@
+/* Check the data */
+proc print data=glassid;
+run;
+
+/* Filter the data for headlamps and vehicle windows */
+data glassid_filtered;
+    set glassid;
+    if type_of_glass = 7 then output headlamps;
+    else if type_of_glass = 3 then output vehicle_windows;
+run;
+
+/* Perform t-test to compare Na content for headlamps and vehicle windows */
+proc ttest data=glassid_filtered;
+    class type_of_glass;
+    var Na;
+    ods select ttest;
+run;
+
